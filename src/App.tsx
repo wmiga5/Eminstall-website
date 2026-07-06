@@ -129,7 +129,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-800 font-sans selection:bg-orange-500 selection:text-white overflow-x-hidden antialiased">
+    <div className="relative min-h-screen w-full bg-[#F8FAFC] text-slate-800 font-sans selection:bg-orange-500 selection:text-white overflow-x-hidden antialiased">
       {/* Skip to Content link for keyboard-only screen reader navigation */}
       <a 
         href="#main-content" 
@@ -458,31 +458,31 @@ export default function App() {
           </div>
 
           {/* Quick Stats Grid */}
-          <div className="mt-16 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-6" id="stats-grid">
+          <div className="mt-16 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="stats-grid">
             <motion.div 
               whileHover={{ y: -3 }}
-              className="p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
+              className="p-4 md:p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
             >
               <span className="block font-display text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">{t.stats.stat1Val}</span>
               <span className="block mt-1.5 font-mono text-xs uppercase tracking-wider text-slate-500">{t.stats.stat1Lbl}</span>
             </motion.div>
             <motion.div 
               whileHover={{ y: -3 }}
-              className="p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
+              className="p-4 md:p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
             >
               <span className="block font-display text-3xl md:text-4xl font-bold text-orange-600 tracking-tight">{t.stats.stat2Val}</span>
               <span className="block mt-1.5 font-mono text-xs uppercase tracking-wider text-slate-500">{t.stats.stat2Lbl}</span>
             </motion.div>
             <motion.div 
               whileHover={{ y: -3 }}
-              className="p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
+              className="p-4 md:p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
             >
               <span className="block font-display text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">{t.stats.stat3Val}</span>
               <span className="block mt-1.5 font-mono text-xs uppercase tracking-wider text-slate-500">{t.stats.stat3Lbl}</span>
             </motion.div>
             <motion.div 
               whileHover={{ y: -3 }}
-              className="p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
+              className="p-4 md:p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
             >
               <span className="block font-display text-xl md:text-2xl font-bold text-slate-800 tracking-tight mt-1 mb-1">{t.stats.stat4Val}</span>
               <span className="block mt-1.5 font-mono text-xs uppercase tracking-wider text-slate-500">{t.stats.stat4Lbl}</span>
