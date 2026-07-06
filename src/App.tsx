@@ -912,31 +912,31 @@ export default function App() {
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.95, opacity: 0 }}
                   onClick={(e) => e.stopPropagation()}
-                  className="relative w-full max-w-3xl overflow-hidden rounded-2xl bg-white p-3 shadow-2xl"
+                  className="relative w-full max-w-3xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto rounded-2xl bg-white p-4 md:p-6 shadow-2xl"
                 >
                   <button
                     onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-slate-900/85 text-white hover:bg-orange-600 transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 cursor-pointer"
+                    className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-slate-900/85 text-white hover:bg-orange-600 transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 cursor-pointer shadow-md"
                     aria-label={lang === 'PL' ? 'Zamknij szczegóły' : lang === 'EN' ? 'Close details' : 'Details schließen'}
                   >
                     <X className="h-5 w-5" />
                   </button>
 
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div className="md:col-span-7 rounded-xl overflow-hidden aspect-4/3 bg-slate-150">
+                    <div className="md:col-span-7 rounded-xl overflow-hidden aspect-4/3 bg-slate-950 flex items-center justify-center">
                       <img
                         src={currentProj.image}
                         alt={currentProj.title}
                         referrerPolicy="no-referrer"
-                        className="h-full w-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
-                    <div className="md:col-span-5 p-4 space-y-4">
+                    <div className="md:col-span-5 space-y-4 py-2">
                       <div className="space-y-1">
                         <span className="inline-block text-[9px] font-mono font-bold uppercase tracking-wider bg-orange-500/10 text-orange-700 px-2.5 py-0.5 rounded-full">
                           {currentProj.category}
                         </span>
-                        <h3 id="modal-title" className="font-display text-xl font-bold text-slate-900">{currentProj.title}</h3>
+                        <h3 id="modal-title" className="font-display text-xl font-bold text-slate-900 leading-tight">{currentProj.title}</h3>
                       </div>
                       
                       <p className="text-sm text-slate-600 leading-relaxed">
