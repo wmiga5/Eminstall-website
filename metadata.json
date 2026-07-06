@@ -1,0 +1,6 @@
+{
+  "name": "Eminstall",
+  "description": "Profesjonalne usługi inżynieryjne dla obiektów telekomunikacyjnych: kontenery, klimatyzacja HVAC, zasilanie gwarantowane, szafy elektryczne.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
