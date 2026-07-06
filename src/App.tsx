@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Shield,
@@ -32,6 +32,48 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const t = TRANSLATIONS[lang];
+
+  // Dynamic SEO & Accessibility Language Synchronization
+  useEffect(() => {
+    // Synchronize HTML lang attribute
+    document.documentElement.lang = lang.toLowerCase();
+
+    // Synchronize Dynamic Document Title based on selected locale
+    document.title = lang === 'PL' 
+      ? 'Eminstall | Szafy elektryczne, Klimatyzacja precyzyjna, Kontenery telekomunikacyjne' 
+      : lang === 'EN' 
+      ? 'Eminstall | Electrical Cabinets, Precision Cooling, Telecom Containers' 
+      : 'Eminstall | Schaltschränke, Präzisionskühlung, Telekommunikationscontainer';
+
+    // Update dynamic SEO Meta Description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute('content', lang === 'PL' 
+      ? 'Profesjonalne usługi inżynieryjne dla telekomunikacji w Polsce i Niemczech. Prefabrykacja szaf elektrycznych (Hager, Socomec), montaż klimatyzacji precyzyjnej Vertiv, zasilanie gwarantowane UPS, serwis kontenerów.'
+      : lang === 'EN'
+      ? 'Professional engineering services for telecommunications in Poland and Germany. Prefabrication of electrical cabinets, installation of Vertiv precision cooling, UPS power systems, shelter retrofits.'
+      : 'Professionelle Ingenieurdienstleistungen für die Telekommunikation in Polen und Deutschland. Schaltschrankbau, Vertiv Präzisionskühlung, USV-Anlagen, Container-Sanierung.'
+    );
+  }, [lang]);
+
+  // Accessibility: Handle Escape key press to dismiss modal dialog
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedProject(null);
+      }
+    };
+    if (selectedProject !== null) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedProject]);
 
   const handleScrollTo = (id: string) => {
     setIsMobileMenuOpen(false);
@@ -88,6 +130,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800 font-sans selection:bg-orange-500 selection:text-white overflow-x-hidden antialiased">
+      {/* Skip to Content link for keyboard-only screen reader navigation */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-orange-500 focus:text-white focus:px-4 focus:py-2.5 focus:rounded-lg focus:shadow-lg focus:font-bold focus:outline-hidden focus:ring-2 focus:ring-orange-600"
+      >
+        {lang === 'PL' ? 'Przejdź do treści' : lang === 'EN' ? 'Skip to content' : 'Zum Hauptinhalt springen'}
+      </a>
+
       {/* Background patterns */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f080_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f080_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-sky-500/5 rounded-full blur-[120px] pointer-events-none" />
@@ -97,10 +147,11 @@ export default function App() {
       <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-xs transition-all duration-300">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <div 
+          <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex cursor-pointer items-center space-x-2.5"
+            className="flex items-center space-x-2.5 text-left focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg p-1 cursor-pointer"
             id="logo-container"
+            aria-label="Eminstall - Home / Powrót na górę"
           >
             <div className="relative flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-orange-500 to-amber-600 shadow-md shadow-orange-500/25">
               <span className="font-display text-xl font-bold text-white tracking-wider">E</span>
@@ -114,7 +165,7 @@ export default function App() {
                 Engineering Group
               </span>
             </div>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -208,18 +259,25 @@ export default function App() {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="rounded-lg p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none"
+              className="rounded-lg p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 transition-all cursor-pointer"
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu-drawer"
               id="mobile-menu-toggle"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
 
         {/* Mobile menu drawer */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-b border-slate-200 bg-white px-4 py-6 space-y-4 shadow-md animate-in fade-in slide-in-from-top-5 duration-200" id="mobile-menu-drawer">
+          <div 
+            className="md:hidden border-b border-slate-200 bg-white px-4 py-6 space-y-4 shadow-md animate-in fade-in slide-in-from-top-5 duration-200" 
+            id="mobile-menu-drawer"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
             <div className="grid grid-cols-1 gap-1">
               <button
                 onClick={() => handleScrollTo('o-nas')}
@@ -271,6 +329,9 @@ export default function App() {
           </div>
         )}
       </header>
+
+      {/* MAIN CONTENT AREA */}
+      <main id="main-content" className="outline-hidden" tabIndex={-1}>
 
       {/* HERO SECTION */}
       <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-linear-to-b from-white to-slate-50">
@@ -677,7 +738,7 @@ export default function App() {
                     <span className="flex h-5 w-5 items-center justify-center rounded bg-orange-500/10 text-orange-600 text-xs font-bold font-mono">01</span>
                     <h3 className="font-bold text-slate-900 text-base">{t.whyUs.point1Title}</h3>
                   </div>
-                  <p className="text-slate-500 text-xs font-light leading-relaxed pl-7">
+                  <p className="text-slate-600 text-sm leading-relaxed pl-7">
                     {t.whyUs.point1Desc}
                   </p>
                 </div>
@@ -688,7 +749,7 @@ export default function App() {
                     <span className="flex h-5 w-5 items-center justify-center rounded bg-orange-500/10 text-orange-600 text-xs font-bold font-mono">02</span>
                     <h3 className="font-bold text-slate-900 text-base">{t.whyUs.point2Title}</h3>
                   </div>
-                  <p className="text-slate-500 text-xs font-light leading-relaxed pl-7">
+                  <p className="text-slate-600 text-sm leading-relaxed pl-7">
                     {t.whyUs.point2Desc}
                   </p>
                 </div>
@@ -699,7 +760,7 @@ export default function App() {
                     <span className="flex h-5 w-5 items-center justify-center rounded bg-orange-500/10 text-orange-600 text-xs font-bold font-mono">03</span>
                     <h3 className="font-bold text-slate-900 text-base">{t.whyUs.point3Title}</h3>
                   </div>
-                  <p className="text-slate-500 text-xs font-light leading-relaxed pl-7">
+                  <p className="text-slate-600 text-sm leading-relaxed pl-7">
                     {t.whyUs.point3Desc}
                   </p>
                 </div>
@@ -710,7 +771,7 @@ export default function App() {
                     <span className="flex h-5 w-5 items-center justify-center rounded bg-orange-500/10 text-orange-600 text-xs font-bold font-mono">04</span>
                     <h3 className="font-bold text-slate-900 text-base">{t.whyUs.point4Title}</h3>
                   </div>
-                  <p className="text-slate-500 text-xs font-light leading-relaxed pl-7">
+                  <p className="text-slate-600 text-sm leading-relaxed pl-7">
                     {t.whyUs.point4Desc}
                   </p>
                 </div>
@@ -783,7 +844,18 @@ export default function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
                 onClick={() => setSelectedProject(project.id)}
-                className="group cursor-pointer overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-xs transition-all hover:border-orange-500 hover:shadow-md"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSelectedProject(project.id);
+                  }
+                }}
+                className="group cursor-pointer overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-xs transition-all hover:border-orange-500 hover:shadow-md focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
+                role="button"
+                tabIndex={0}
+                aria-haspopup="dialog"
+                aria-expanded={selectedProject === project.id}
+                aria-label={`${lang === 'PL' ? 'Szczegóły projektu' : lang === 'EN' ? 'Project details' : 'Projektdetails'}: ${project.title}`}
               >
                 {/* Image Container with Hover zoom */}
                 <div className="relative aspect-4/3 overflow-hidden rounded-lg bg-slate-100">
@@ -831,6 +903,9 @@ export default function App() {
                 exit={{ opacity: 0 }}
                 onClick={() => setSelectedProject(null)}
                 className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-xs"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-title"
               >
                 <motion.div
                   initial={{ scale: 0.95, opacity: 0 }}
@@ -841,8 +916,8 @@ export default function App() {
                 >
                   <button
                     onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-slate-900/85 text-white hover:bg-orange-600 transition-colors"
-                    aria-label="Close modal"
+                    className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-slate-900/85 text-white hover:bg-orange-600 transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 cursor-pointer"
+                    aria-label={lang === 'PL' ? 'Zamknij szczegóły' : lang === 'EN' ? 'Close details' : 'Details schließen'}
                   >
                     <X className="h-5 w-5" />
                   </button>
@@ -861,7 +936,7 @@ export default function App() {
                         <span className="inline-block text-[9px] font-mono font-bold uppercase tracking-wider bg-orange-500/10 text-orange-700 px-2.5 py-0.5 rounded-full">
                           {currentProj.category}
                         </span>
-                        <h3 className="font-display text-xl font-bold text-slate-900">{currentProj.title}</h3>
+                        <h3 id="modal-title" className="font-display text-xl font-bold text-slate-900">{currentProj.title}</h3>
                       </div>
                       
                       <p className="text-sm text-slate-600 leading-relaxed">
@@ -992,6 +1067,7 @@ export default function App() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* MINIMAL HIGH-CONTRAST FOOTER */}
       <footer className="border-t border-slate-800 bg-slate-900 py-8 md:py-12 text-slate-400">
