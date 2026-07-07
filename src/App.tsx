@@ -15,6 +15,7 @@ import {
   Menu,
   X,
   ArrowUpRight,
+  ChevronLeft,
   ChevronRight,
   Server,
   Building,
@@ -30,8 +31,26 @@ export default function App() {
   const [lang, setLang] = useState<Language>('PL');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [visibleCount, setVisibleCount] = useState(4);
+  const [startIndex, setStartIndex] = useState(0);
 
   const t = TRANSLATIONS[lang];
+
+  // Dynamic responsive breakpoint observer for realizations carousel
+  useEffect(() => {
+    const updateCount = () => {
+      if (window.innerWidth >= 1024) {
+        setVisibleCount(4);
+      } else if (window.innerWidth >= 640) {
+        setVisibleCount(2);
+      } else {
+        setVisibleCount(1);
+      }
+    };
+    updateCount();
+    window.addEventListener('resize', updateCount);
+    return () => window.removeEventListener('resize', updateCount);
+  }, []);
 
   // Dynamic SEO & Accessibility Language Synchronization
   useEffect(() => {
@@ -125,8 +144,24 @@ export default function App() {
       title: t.whyUs.realization4Title,
       desc: t.whyUs.realization4Desc,
       stats: 'Hager • Socomec • CE Standard Prefabrication',
+    },
+    {
+      id: 5,
+      image: 'https://drive.google.com/thumbnail?id=17ND9zCIn8hiQJgAlTHHErUm85TmF5dTj&sz=w1000',
+      category: lang === 'PL' ? 'PROTOKOŁY PRZEGLĄDÓW' : lang === 'EN' ? 'INSPECTION PROTOCOLS' : 'PRÜFPROTOKOLLE',
+      title: t.whyUs.realization5Title,
+      desc: t.whyUs.realization5Desc,
+      stats: 'ISO Compliant • Full Technical Diagnostics • Electric Measurements',
     }
   ];
+
+  // Safeguard: make sure the start index doesn't exceed the max bounds when screen size changes
+  useEffect(() => {
+    setStartIndex((prev) => {
+      const maxIdx = Math.max(0, realizationsData.length - visibleCount);
+      return Math.min(Math.max(0, prev), maxIdx);
+    });
+  }, [visibleCount, realizationsData.length]);
 
   return (
     <div className="relative min-h-screen w-full bg-[#F8FAFC] text-slate-800 font-sans selection:bg-orange-500 selection:text-white overflow-x-hidden antialiased">
@@ -403,7 +438,13 @@ export default function App() {
                     <div className="flex items-center space-x-2">
                       <span className="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-ping" />
                       <span className="flex h-2.5 w-2.5 absolute rounded-full bg-emerald-500" />
-                      <span className="font-mono text-xs text-emerald-600 tracking-wider font-semibold uppercase">SYSTEM STATUS: ACTIVE</span>
+                      <span className="font-mono text-xs text-emerald-600 tracking-wider font-semibold uppercase">
+                        {lang === 'PL' 
+                          ? 'STATUS SYSTEMU: AKTYWNY' 
+                          : lang === 'EN' 
+                          ? 'SYSTEM STATUS: ACTIVE' 
+                          : 'SYSTEMSTATUS: AKTIV'}
+                      </span>
                     </div>
                     <span className="font-mono text-[10px] text-slate-400">EMIN_INFRA_2026</span>
                   </div>
@@ -416,8 +457,12 @@ export default function App() {
                         <Layers className="h-5 w-5" />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold tracking-wide uppercase text-slate-900">CONTAINERS & SHELTERS</h4>
-                        <p className="text-[11px] text-slate-500 mt-0.5">Execution & periodic structure reviews</p>
+                        <h4 className="text-xs font-bold tracking-wide uppercase text-slate-900">
+                          {lang === 'PL' ? 'KONTENERY TELEKOMUNIKACYJNE' : lang === 'EN' ? 'TELECOM CONTAINERS' : 'TELEKOMUNIKATIONSCONTAINER'}
+                        </h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5">
+                          {lang === 'PL' ? 'Przeglądy okresowe i wykonawstwo' : lang === 'EN' ? 'Execution & periodic structure reviews' : 'Prüfungen & Ausführung'}
+                        </p>
                       </div>
                     </div>
 
@@ -430,8 +475,12 @@ export default function App() {
                         <Wind className="h-5 w-5" />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold tracking-wide uppercase text-slate-900">HVAC SYSTEMS</h4>
-                        <p className="text-[11px] text-slate-500 mt-0.5">Precision climate control & maintenance</p>
+                        <h4 className="text-xs font-bold tracking-wide uppercase text-slate-900">
+                          {lang === 'PL' ? 'SYSTEMY KLIMATYZACJI' : lang === 'EN' ? 'HVAC SYSTEMS' : 'KLIMAANLAGEN'}
+                        </h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5">
+                          {lang === 'PL' ? 'Precyzyjna kontrola klimatu i serwis' : lang === 'EN' ? 'Precision climate control & maintenance' : 'Präzisionsklimatisierung & Wartung'}
+                        </p>
                       </div>
                     </div>
 
@@ -444,8 +493,12 @@ export default function App() {
                         <Zap className="h-5 w-5" />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold tracking-wide uppercase text-slate-900">POWER & CABINETS</h4>
-                        <p className="text-[11px] text-slate-500 mt-0.5">UPS, Hager, Socomec & Vertiv assembly</p>
+                        <h4 className="text-xs font-bold tracking-wide uppercase text-slate-900">
+                          {lang === 'PL' ? 'ZASILANIE I SZAFY' : lang === 'EN' ? 'POWER & CABINETS' : 'STROM & SCHRÄNKE'}
+                        </h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5">
+                          {lang === 'PL' ? 'Montaż UPS, Hager, Socomec i Vertiv' : lang === 'EN' ? 'UPS, Hager, Socomec & Vertiv assembly' : 'Montage von USV, Hager, Socomec & Vertiv'}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -584,8 +637,171 @@ export default function App() {
         </div>
       </section>
 
+      {/* NEW PORTFOLIO / REALIZATIONS PHOTOS GALLERY SECTION */}
+      <section id="realizacje" className="relative py-20 md:py-28 border-t border-slate-200 bg-slate-50/50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
+            <span className="text-xs font-bold tracking-widest text-orange-600 uppercase font-mono">{t.whyUs.projectsTitle}</span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">{t.whyUs.realizationsTitle}</h2>
+            <div className="h-0.5 w-12 bg-orange-500 mx-auto my-4" />
+            <p className="text-slate-600 text-sm md:text-base font-light">{t.whyUs.realizationsSubtitle}</p>
+          </div>
+
+          {/* Slider Navigation Buttons */}
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <button
+              onClick={() => setStartIndex((prev) => Math.max(0, prev - 1))}
+              disabled={startIndex === 0}
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-2xs hover:border-orange-500 hover:text-orange-600 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-slate-200 disabled:hover:text-slate-600 transition-all cursor-pointer"
+              aria-label={lang === 'PL' ? 'Poprzednia realizacja' : lang === 'EN' ? 'Previous realization' : 'Vorherige Realisierung'}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <span className="text-xs font-mono font-bold text-slate-500 select-none bg-white border border-slate-200/60 px-3 py-1.5 rounded-full shadow-2xs">
+              {startIndex + 1} - {Math.min(realizationsData.length, startIndex + visibleCount)} / {realizationsData.length}
+            </span>
+            <button
+              onClick={() => setStartIndex((prev) => Math.min(realizationsData.length - visibleCount, prev + 1))}
+              disabled={startIndex >= realizationsData.length - visibleCount}
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-2xs hover:border-orange-500 hover:text-orange-600 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-slate-200 disabled:hover:text-slate-600 transition-all cursor-pointer"
+              aria-label={lang === 'PL' ? 'Następna realizacja' : lang === 'EN' ? 'Next realization' : 'Nächste Realisierung'}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
+
+          {/* Interactive Photo Gallery Grid (Filtered by startIndex and visibleCount) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="realizations-gallery-grid">
+            <AnimatePresence mode="popLayout">
+              {realizationsData.slice(startIndex, startIndex + visibleCount).map((project) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.35 }}
+                  onClick={() => setSelectedProject(project.id)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setSelectedProject(project.id);
+                    }
+                  }}
+                  className="group cursor-pointer overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-xs transition-all hover:border-orange-500 hover:shadow-md focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
+                  role="button"
+                  tabIndex={0}
+                  aria-haspopup="dialog"
+                  aria-expanded={selectedProject === project.id}
+                  aria-label={`${lang === 'PL' ? 'Szczegóły projektu' : lang === 'EN' ? 'Project details' : 'Projektdetails'}: ${project.title}`}
+                >
+                  {/* Image Container with Hover zoom */}
+                  <div className="relative aspect-4/3 overflow-hidden rounded-lg bg-slate-100">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      referrerPolicy="no-referrer"
+                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    {/* Subtle hover overlay */}
+                    <div className="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <span className="bg-white/95 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+                        <Sparkles className="h-3 w-3 text-orange-500" />
+                        {lang === 'PL' ? 'Szczegóły' : lang === 'EN' ? 'Details' : 'Details'}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Info Area */}
+                  <div className="p-3.5 space-y-1.5">
+                    <span className="block text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600">
+                      {project.category}
+                    </span>
+                    <h3 className="font-bold text-sm text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-1">
+                      {project.title}
+                    </h3>
+                    <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+                      {project.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+        </div>
+
+        {/* Gallery Lightbox Modal */}
+        <AnimatePresence>
+          {selectedProject !== null && (() => {
+            const currentProj = realizationsData.find(p => p.id === selectedProject);
+            if (!currentProj) return null;
+            return (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setSelectedProject(null)}
+                className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-xs"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-title"
+              >
+                <motion.div
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.95, opacity: 0 }}
+                  onClick={(e) => e.stopPropagation()}
+                  className="relative w-full max-w-lg md:max-w-5xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto rounded-2xl bg-white p-4 md:p-8 shadow-2xl"
+                >
+                  <button
+                    onClick={() => setSelectedProject(null)}
+                    className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-slate-900/85 text-white hover:bg-orange-600 transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 cursor-pointer shadow-md"
+                    aria-label={lang === 'PL' ? 'Zamknij szczegóły' : lang === 'EN' ? 'Close details' : 'Details schließen'}
+                  >
+                    <X className="h-5 w-5" />
+                  </button>
+
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-2">
+                    <div className="md:col-span-7 rounded-xl overflow-hidden bg-slate-50 border border-slate-100/80 flex items-center justify-center p-1 md:p-2 max-h-[60vh] md:max-h-[70vh]">
+                      <img
+                        src={currentProj.image}
+                        alt={currentProj.title}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-auto max-h-[55vh] md:max-h-[68vh] object-contain rounded-lg shadow-2xs"
+                      />
+                    </div>
+                    <div className="md:col-span-5 space-y-6 py-2">
+                      <div className="space-y-1">
+                        <span className="inline-block text-[9px] font-mono font-bold uppercase tracking-wider bg-orange-500/10 text-orange-700 px-2.5 py-0.5 rounded-full">
+                          {currentProj.category}
+                        </span>
+                        <h3 id="modal-title" className="font-display text-xl font-bold text-slate-900 leading-tight">{currentProj.title}</h3>
+                      </div>
+                      
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        {currentProj.desc}
+                      </p>
+
+                      <div className="pt-4 border-t border-slate-100 space-y-1">
+                        <span className="block text-[9px] font-mono uppercase tracking-widest text-slate-400">
+                          {lang === 'PL' ? 'SPECYFIKACJA' : lang === 'EN' ? 'SPECIFICATION' : 'SPEZIFIKATION'}
+                        </span>
+                        <span className="block text-xs font-semibold text-slate-700">
+                          {currentProj.stats}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            );
+          })()}
+        </AnimatePresence>
+      </section>
+
       {/* USŁUGI (SERVICES) SECTION */}
-      <section id="uslugi" className="relative py-20 md:py-28 border-t border-slate-200 bg-slate-50/50">
+      <section id="uslugi" className="relative py-20 md:py-28 border-t border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16" id="services-header">
@@ -721,7 +937,7 @@ export default function App() {
       </section>
 
       {/* WHY US & PROJECTS HIGHLIGHT */}
-      <section id="dlaczego-my" className="relative py-20 md:py-28 border-t border-slate-200 bg-white">
+      <section id="dlaczego-my" className="relative py-20 md:py-28 border-t border-slate-200 bg-slate-50/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left side: Why Us Pillars */}
@@ -823,142 +1039,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* NEW PORTFOLIO / REALIZATIONS PHOTOS GALLERY SECTION */}
-      <section id="realizacje" className="relative py-20 md:py-28 border-t border-slate-200 bg-slate-50/50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
-            <span className="text-xs font-bold tracking-widest text-orange-600 uppercase font-mono">{t.whyUs.projectsTitle}</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">{t.whyUs.realizationsTitle}</h2>
-            <div className="h-0.5 w-12 bg-orange-500 mx-auto my-4" />
-            <p className="text-slate-600 text-sm md:text-base font-light">{t.whyUs.realizationsSubtitle}</p>
-          </div>
 
-          {/* Interactive Photo Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="realizations-gallery-grid">
-            {realizationsData.map((project, idx) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                onClick={() => setSelectedProject(project.id)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    setSelectedProject(project.id);
-                  }
-                }}
-                className="group cursor-pointer overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-xs transition-all hover:border-orange-500 hover:shadow-md focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
-                role="button"
-                tabIndex={0}
-                aria-haspopup="dialog"
-                aria-expanded={selectedProject === project.id}
-                aria-label={`${lang === 'PL' ? 'Szczegóły projektu' : lang === 'EN' ? 'Project details' : 'Projektdetails'}: ${project.title}`}
-              >
-                {/* Image Container with Hover zoom */}
-                <div className="relative aspect-4/3 overflow-hidden rounded-lg bg-slate-100">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    referrerPolicy="no-referrer"
-                    className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
-                  {/* Subtle hover overlay */}
-                  <div className="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="bg-white/95 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
-                      <Sparkles className="h-3 w-3 text-orange-500" />
-                      {lang === 'PL' ? 'Szczegóły' : lang === 'EN' ? 'Details' : 'Details'}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Info Area */}
-                <div className="p-3.5 space-y-1.5">
-                  <span className="block text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600">
-                    {project.category}
-                  </span>
-                  <h3 className="font-bold text-sm text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-1">
-                    {project.title}
-                  </h3>
-                  <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
-                    {project.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Gallery Lightbox Modal */}
-        <AnimatePresence>
-          {selectedProject !== null && (() => {
-            const currentProj = realizationsData.find(p => p.id === selectedProject);
-            if (!currentProj) return null;
-            return (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setSelectedProject(null)}
-                className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-xs"
-                role="dialog"
-                aria-modal="true"
-                aria-labelledby="modal-title"
-              >
-                <motion.div
-                  initial={{ scale: 0.95, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.95, opacity: 0 }}
-                  onClick={(e) => e.stopPropagation()}
-                  className="relative w-full max-w-3xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto rounded-2xl bg-white p-4 md:p-6 shadow-2xl"
-                >
-                  <button
-                    onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-slate-900/85 text-white hover:bg-orange-600 transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 cursor-pointer shadow-md"
-                    aria-label={lang === 'PL' ? 'Zamknij szczegóły' : lang === 'EN' ? 'Close details' : 'Details schließen'}
-                  >
-                    <X className="h-5 w-5" />
-                  </button>
-
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div className="md:col-span-7 rounded-xl overflow-hidden aspect-4/3 bg-slate-950 flex items-center justify-center">
-                      <img
-                        src={currentProj.image}
-                        alt={currentProj.title}
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <div className="md:col-span-5 space-y-4 py-2">
-                      <div className="space-y-1">
-                        <span className="inline-block text-[9px] font-mono font-bold uppercase tracking-wider bg-orange-500/10 text-orange-700 px-2.5 py-0.5 rounded-full">
-                          {currentProj.category}
-                        </span>
-                        <h3 id="modal-title" className="font-display text-xl font-bold text-slate-900 leading-tight">{currentProj.title}</h3>
-                      </div>
-                      
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {currentProj.desc}
-                      </p>
-
-                      <div className="pt-4 border-t border-slate-100 space-y-1">
-                        <span className="block text-[9px] font-mono uppercase tracking-widest text-slate-400">
-                          {lang === 'PL' ? 'SPECYFIKACJA' : lang === 'EN' ? 'SPECIFICATION' : 'SPEZIFIKATION'}
-                        </span>
-                        <span className="block text-xs font-semibold text-slate-700">
-                          {currentProj.stats}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
-            );
-          })()}
-        </AnimatePresence>
-      </section>
 
       {/* KONTAKT & DIRECT DETAILS SECTION */}
       <section id="kontakt" className="relative py-20 md:py-28 border-t border-slate-200 bg-white">
@@ -978,7 +1059,7 @@ export default function App() {
               {/* Channel: Phone */}
               <motion.a 
                 whileHover={{ scale: 1.01 }}
-                href="tel:517715585" 
+                href="tel:696381123" 
                 className="flex flex-col justify-between p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:border-orange-500/50 hover:bg-slate-50/80 transition-all group shadow-xs"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500/10 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all mb-4">
@@ -986,7 +1067,7 @@ export default function App() {
                 </div>
                 <div>
                   <span className="block text-xs text-slate-400 font-mono uppercase tracking-wider">{t.contact.infoPhone}</span>
-                  <span className="block text-xl font-bold text-slate-900 mt-1 group-hover:text-orange-600 transition-colors">+48 517 715 585</span>
+                  <span className="block text-xl font-bold text-slate-900 mt-1 group-hover:text-orange-600 transition-colors">+48 696 381 123</span>
                   <p className="text-xs text-slate-500 mt-2 font-light">
                     {lang === 'PL' ? 'Zadzwoń do nas, aby omówić szczegóły' : lang === 'EN' ? 'Call us to discuss details' : 'Rufen Sie uns an, um Details zu besprechen'}
                   </p>
@@ -996,7 +1077,7 @@ export default function App() {
               {/* Channel: Email */}
               <motion.a 
                 whileHover={{ scale: 1.01 }}
-                href="mailto:wojtek.miga@gmail.com" 
+                href="mailto:biuro@eminstall.pl" 
                 className="flex flex-col justify-between p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:border-orange-500/50 hover:bg-slate-50/80 transition-all group shadow-xs"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500/10 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all mb-4">
@@ -1004,7 +1085,7 @@ export default function App() {
                 </div>
                 <div className="overflow-hidden">
                   <span className="block text-xs text-slate-400 font-mono uppercase tracking-wider">{t.contact.infoEmail}</span>
-                  <span className="block text-base sm:text-lg font-bold text-slate-900 mt-1 group-hover:text-orange-600 transition-colors truncate">wojtek.miga@gmail.com</span>
+                  <span className="block text-base sm:text-lg font-bold text-slate-900 mt-1 group-hover:text-orange-600 transition-colors truncate">biuro@eminstall.pl</span>
                   <p className="text-xs text-slate-500 mt-2 font-light">
                     {lang === 'PL' ? 'Odpowiadamy w ciągu kilku godzin' : lang === 'EN' ? 'We reply within a few hours' : 'Wir antworten innerhalb weniger Stunden'}
                   </p>
@@ -1037,8 +1118,37 @@ export default function App() {
                 <div className="space-y-4">
                   <span className="block text-xs font-mono text-slate-400 uppercase tracking-widest">{t.contact.infoCompanyDetails}</span>
                   <div className="space-y-1">
-                    <span className="block text-lg font-bold text-slate-900">Eminstall Engineering Group</span>
+                    <span className="block text-lg font-bold text-slate-900">EMINSTALL Tomasz Miga</span>
                     <span className="block text-sm font-semibold text-orange-600">{t.contact.infoWojtek}</span>
+                  </div>
+
+                  {/* Registered Company Details */}
+                  <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-3.5 text-xs text-slate-700 shadow-2xs">
+                    <div>
+                      <span className="block text-[10px] font-mono uppercase text-slate-400 tracking-wider">
+                        {lang === 'PL' ? 'Nazwa pełna' : lang === 'EN' ? 'Full name' : 'Vollständiger Name'}
+                      </span>
+                      <span className="font-semibold text-slate-900 text-sm">EMINSTALL Tomasz Miga</span>
+                    </div>
+                    <div>
+                      <span className="block text-[10px] font-mono uppercase text-slate-400 tracking-wider">
+                        {lang === 'PL' ? 'Adres rejestrowy' : lang === 'EN' ? 'Registered address' : 'Registrierte Adresse'}
+                      </span>
+                      <span className="font-semibold text-slate-900 leading-normal">
+                        Chojnicka 19<br />
+                        78-400 Szczecinek
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 pt-1">
+                      <div>
+                        <span className="block text-[10px] font-mono uppercase text-slate-400 tracking-wider">NIP</span>
+                        <span className="font-mono font-semibold text-slate-900">6731587106</span>
+                      </div>
+                      <div>
+                        <span className="block text-[10px] font-mono uppercase text-slate-400 tracking-wider">REGON</span>
+                        <span className="font-mono font-semibold text-slate-900">365455350</span>
+                      </div>
+                    </div>
                   </div>
                   
                   {/* Credentials Bullet list */}

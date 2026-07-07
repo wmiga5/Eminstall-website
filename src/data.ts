@@ -68,6 +68,8 @@ export interface TranslationSet {
     realization3Desc: string;
     realization4Title: string;
     realization4Desc: string;
+    realization5Title: string;
+    realization5Desc: string;
   };
   contact: {
     header: string;
@@ -135,7 +137,7 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
       title: 'Kompleksowe usługi inżynieryjne',
       subtitle: 'Zapewniamy profesjonalizm na każdym etapie cyklu życia obiektu telekomunikacyjnego.',
       serv1Title: 'Kontenery telekomunikacyjne',
-      serv1Desc: 'Kompleksowe wykonawstwo, modernizacja, konserwacja oraz okresowe przeglądy techniczne kontenerów telekomunikacyjnych (shelterów). Dbamy o szczelność, izolację i optymalne warunki pracy wrażliwych urządzeń nadawczych.',
+      serv1Desc: 'Kompleksowe wykonawstwo, modernizacja, konserwacja oraz okresowe przeglądy techniczne kontenerów telekomunikacyjnych. Po każdym przeglądzie sporządzamy profesjonalny, szczegółowy protokół wykonania z kompletną diagnozą techniczną i pomiarami.',
       serv2Title: 'Klimatyzacja (HVAC)',
       serv2Desc: 'Montaż, serwis oraz drobiazgowe przeglądy systemów chłodzenia – w tym specjalistycznej klimatyzacji precyzyjnej. Gwarantujemy stałą temperaturę i wilgotność powietrza, chroniąc krytyczną elektronikę przed przegrzaniem.',
       serv3Title: 'Zasilanie gwarantowane',
@@ -166,6 +168,8 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
       realization3Desc: 'Wdrożenie modułowych systemów UPS oraz układu przełączania zasilania awaryjnego (SZR) dla stacji bazowych.',
       realization4Title: 'Prefabrykacja Szaf Rozdzielczych',
       realization4Desc: 'Zaprojektowanie i montaż rozdzielnic elektrycznych opartych na niezawodnych komponentach Hager i Socomec.',
+      realization5Title: 'Profesjonalne Protokoły Przeglądów',
+      realization5Desc: 'Sporządzamy szczegółowe, profesjonalne protokoły z każdego przeglądu technicznego, zawierające pełną diagnozę, pomiary elektryczne oraz wytyczne konserwacyjne.',
     },
     contact: {
       header: 'KONTAKT',
@@ -183,7 +187,7 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
       infoArea: 'Obszar działalności',
       infoAreaDesc: 'Polska i Niemcy (Mobilne ekipy serwisowe)',
       infoCompanyDetails: 'Dane firmy',
-      infoWojtek: 'Wojciech Miga — Właściciel',
+      infoWojtek: 'Tomasz Miga — Właściciel',
     },
     footer: {
       copyright: 'Eminstall',
@@ -229,7 +233,7 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
       title: 'Comprehensive Engineering Solutions',
       subtitle: 'We guarantee absolute professionalism at every phase of a telecom facility\'s lifecycle.',
       serv1Title: 'Telecom Containers',
-      serv1Desc: 'Comprehensive build, modernization, maintenance, and periodic technical audits of telecom shelters. We ensure complete structural sealing, insulation, and optimal operating conditions for sensitive broadcasting hardware.',
+      serv1Desc: 'Comprehensive build, modernization, maintenance, and periodic technical audits of telecom containers. Following each audit, we issue a professional, detailed inspection report complete with diagnostic data and electrical measurements.',
       serv2Title: 'Air Conditioning (HVAC)',
       serv2Desc: 'Installation, professional servicing, and detailed inspections of cooling systems – including highly specialized precision climate systems. We guarantee stable temperature and humidity levels, safeguarding critical electronics.',
       serv3Title: 'Uninterruptible Power Supply',
@@ -260,6 +264,8 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
       realization3Desc: 'Deployment of modular UPS blocks and Automatic Transfer Switch (ATS) systems for base stations.',
       realization4Title: 'Custom Electrical Distribution Cabinets',
       realization4Desc: 'Design and assembly of custom electrical switchboards using certified components from Hager and Socomec.',
+      realization5Title: 'Professional Inspection Reports',
+      realization5Desc: 'We prepare detailed, professional inspection protocols for every technical review, including complete diagnosis, electrical measurements, and maintenance guidelines.',
     },
     contact: {
       header: 'CONTACT US',
@@ -277,7 +283,7 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
       infoArea: 'Operational Area',
       infoAreaDesc: 'Poland & Germany (Fully mobile field crews)',
       infoCompanyDetails: 'Company Info',
-      infoWojtek: 'Wojciech Miga — Owner',
+      infoWojtek: 'Tomasz Miga — Owner',
     },
     footer: {
       copyright: 'Eminstall',
@@ -323,7 +329,7 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
       title: 'Ganzheitliche Engineering-Lösungen',
       subtitle: 'Wir gewährleisten höchste Professionalität in jeder Phase des Lebenszyklus einer Telekommunikationsanlage.',
       serv1Title: 'Telekom-Container',
-      serv1Desc: 'Komplettbau, Modernisierung, Sanierung und wiederkehrende technische Prüfungen von Technikcontainern (Sheltern). Wir sichern die Dichtigkeit, thermische Isolation und optimale Betriebsbedingungen für Sendetechnik.',
+      serv1Desc: 'Komplettbau, Modernisierung, Sanierung und wiederkehrende technische Prüfungen von Technikcontainern. Nach jeder Prüfung erstellen wir ein professionelles, detailliertes Prüfprotokoll mit vollständiger technischer Diagnose und elektrischen Messungen.',
       serv2Title: 'Klimatisierung (HVAC)',
       serv2Desc: 'Montage, Service und Wartung komplexer Klimasysteme – einschließlich hocheffizienter Präzisionsklimatisierung. Wir sichern konstante Raumtemperaturen und Feuchtigkeitswerte zum Schutz kritischer Elektronik.',
       serv3Title: 'Unterbrechungsfreie Stromversorgung',
@@ -354,6 +360,8 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
       realization3Desc: 'Implementierung modularer USV-Anlagen und automatischer Netzumschalter (ATS) für Mobilfunkstationen.',
       realization4Title: 'Schaltschrankbau & Prefabrikation',
       realization4Desc: 'Planung und präzise Montage von Energieverteilern basierend auf hochwertigen Komponenten von Hager und Socomec.',
+      realization5Title: 'Professionelle Prüfprotokolle',
+      realization5Desc: 'Wir erstellen detaillierte, professionelle Prüfprotokolle für jede technische Überprüfung, einschließlich vollständiger Diagnose, elektrischer Messungen und Wartungsrichtlinien.',
     },
     contact: {
       header: 'KONTAKT',
@@ -371,7 +379,7 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
       infoArea: 'Einsatzgebiet',
       infoAreaDesc: 'Polen & Deutschland (Mobile Serviceteams im Dauereinsatz)',
       infoCompanyDetails: 'Unternehmensdaten',
-      infoWojtek: 'Wojciech Miga — Inhaber',
+      infoWojtek: 'Tomasz Miga — Inhaber',
     },
     footer: {
       copyright: 'Eminstall',
