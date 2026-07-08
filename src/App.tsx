@@ -27,6 +27,12 @@ import {
 } from 'lucide-react';
 import { TRANSLATIONS, Language } from './data';
 
+import realization1Img from './Kontener-Eminstall1.jpg';
+import realization2Img from './Kilma-Eminstall2.jpg';
+import realization3Img from './battery_rack_1783491532019.jpg';
+import realization4Img from './Rozdzielnia-Eminstall4.jpg';
+import realization5Img from './Protokol-Eminstall5.png';
+
 export default function App() {
   const [lang, setLang] = useState<Language>('PL');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -115,7 +121,7 @@ export default function App() {
   const realizationsData = [
     {
       id: 1,
-      image: 'https://lh3.googleusercontent.com/pw/AP1GczNBRRm82Yq5CmduRoA0P2MStf4CV7OqTi0EDBUkw9jpDh9sd2AmtlaoNLK3PQHuwBP6bZ-OOaH7TqdKcqx5h1LtkDrSKplQMbrtOwEeY5ep1pJFtDM=w1000',
+      image: realization1Img,
       category: lang === 'PL' ? 'KONTENERY TELEKOMUNIKACYJNE' : lang === 'EN' ? 'TELECOM SHELTERS' : 'TELEKOM-CONTAINER',
       title: t.whyUs.realization1Title,
       desc: t.whyUs.realization1Desc,
@@ -123,7 +129,7 @@ export default function App() {
     },
     {
       id: 2,
-      image: 'https://lh3.googleusercontent.com/pw/AP1GczMHHTaVmWOkPYJh25vuasJzl4hdDVBn-vBuJgRlB4Y0DE63sRvUB70Y5YQL-quLZuzKGQMQ0o5u3-7F8RDTuVJyuxJNVKrQRzX9uGHYxyMDHDCvhbI=w1000',
+      image: realization2Img,
       category: lang === 'PL' ? 'KLIMATYZACJA HVAC' : lang === 'EN' ? 'PRECISION COOLING' : 'PRÄZISIONSKÜHLUNG',
       title: t.whyUs.realization2Title,
       desc: t.whyUs.realization2Desc,
@@ -131,7 +137,7 @@ export default function App() {
     },
     {
       id: 3,
-      image: 'https://lh3.googleusercontent.com/pw/AP1GczPopr8ojf0WnDSYcJVNjYkgvbft1kW07XXs9vqggfeS4XcQ1GQXbNum6w9CHQnY6b4pL4eA8q_msplV5wP-orqMg3ZGW_g1rFfKLgOjZ3dv6PBOGKE=w1000',
+      image: realization3Img,
       category: lang === 'PL' ? 'ZASILANIE KRYTYCZNE' : lang === 'EN' ? 'POWER & UPS' : 'USV-ANLAGEN',
       title: t.whyUs.realization3Title,
       desc: t.whyUs.realization3Desc,
@@ -139,7 +145,7 @@ export default function App() {
     },
     {
       id: 4,
-      image: 'https://lh3.googleusercontent.com/pw/AP1GczNjDSsoC8JYlTw_s0i_cSsTsDtu6LNoIkz2gkXShhi8MdvZ8Jv6fRImOQxF0g7l3b3GOmxKcf6jV7lqXUNs57x9FPfbFvOuLpvyDx-kVvemFaLCr0k=w1000',
+      image: realization4Img,
       category: lang === 'PL' ? 'PREFABRYKACJA ROZDZIELNIC' : lang === 'EN' ? 'ELECTRICAL CABINETS' : 'SCHALTSCHRÄNKE',
       title: t.whyUs.realization4Title,
       desc: t.whyUs.realization4Desc,
@@ -147,7 +153,7 @@ export default function App() {
     },
     {
       id: 5,
-      image: 'https://drive.google.com/thumbnail?id=17ND9zCIn8hiQJgAlTHHErUm85TmF5dTj&sz=w1000',
+      image: realization5Img,
       category: lang === 'PL' ? 'PROTOKOŁY PRZEGLĄDÓW' : lang === 'EN' ? 'INSPECTION PROTOCOLS' : 'PRÜFPROTOKOLLE',
       title: t.whyUs.realization5Title,
       desc: t.whyUs.realization5Desc,
