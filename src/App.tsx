@@ -17,6 +17,7 @@ import {
   ArrowUpRight,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   Server,
   Building,
   Check,
@@ -39,6 +40,7 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [visibleCount, setVisibleCount] = useState(4);
   const [startIndex, setStartIndex] = useState(0);
+  const [activeMobileService, setActiveMobileService] = useState<number | null>(null);
 
   const t = TRANSLATIONS[lang];
 
@@ -225,13 +227,6 @@ export default function App() {
               {t.nav.services}
             </button>
             <button
-              onClick={() => handleScrollTo('dlaczego-my')}
-              className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors cursor-pointer"
-              id="nav-link-why-us"
-            >
-              {t.nav.whyUs}
-            </button>
-            <button
               onClick={() => handleScrollTo('realizacje')}
               className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors cursor-pointer"
               id="nav-link-realizations"
@@ -269,12 +264,12 @@ export default function App() {
 
             {/* Quick Contact phone header */}
             <a
-              href="tel:517715585"
+              href="tel:696381123"
               className="inline-flex items-center justify-center rounded-lg bg-slate-900 hover:bg-orange-600 px-4 py-2 text-sm font-semibold text-white transition-all cursor-pointer shadow-xs"
               id="header-phone-cta"
             >
               <Phone className="mr-2 h-3.5 w-3.5" />
-              517 715 585
+              696 381 123
             </a>
           </div>
 
@@ -335,13 +330,6 @@ export default function App() {
                 {t.nav.services}
               </button>
               <button
-                onClick={() => handleScrollTo('dlaczego-my')}
-                className="flex w-full items-center py-2.5 px-3 text-base font-semibold rounded-lg text-slate-700 hover:bg-slate-50 hover:text-orange-600 transition-all cursor-pointer"
-                id="mobile-link-why"
-              >
-                {t.nav.whyUs}
-              </button>
-              <button
                 onClick={() => handleScrollTo('realizacje')}
                 className="flex w-full items-center py-2.5 px-3 text-base font-semibold rounded-lg text-slate-700 hover:bg-slate-50 hover:text-orange-600 transition-all cursor-pointer"
                 id="mobile-link-realizations"
@@ -359,12 +347,12 @@ export default function App() {
 
             <div className="pt-4 border-t border-slate-100">
               <a
-                href="tel:517715585"
+                href="tel:696381123"
                 className="flex items-center justify-center w-full rounded-lg bg-orange-500 py-3 text-center text-sm font-bold text-white shadow-xs hover:bg-orange-600 transition-all"
                 id="mobile-phone-cta"
               >
                 <Phone className="mr-2 h-4 w-4" />
-                +48 517 715 585
+                +48 696 381 123
               </a>
             </div>
           </div>
@@ -665,7 +653,9 @@ export default function App() {
               <ChevronLeft className="h-5 w-5" />
             </button>
             <span className="text-xs font-mono font-bold text-slate-500 select-none bg-white border border-slate-200/60 px-3 py-1.5 rounded-full shadow-2xs">
-              {startIndex + 1} - {Math.min(realizationsData.length, startIndex + visibleCount)} / {realizationsData.length}
+              {visibleCount === 1 
+                ? `${startIndex + 1} / ${realizationsData.length}`
+                : `${startIndex + 1} - ${Math.min(realizationsData.length, startIndex + visibleCount)} / ${realizationsData.length}`}
             </span>
             <button
               onClick={() => setStartIndex((prev) => Math.min(realizationsData.length - visibleCount, prev + 1))}
@@ -817,8 +807,8 @@ export default function App() {
             <p className="text-slate-600 text-sm md:text-base font-light">{t.services.subtitle}</p>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8" id="services-grid">
+          {/* Services Grid - Desktop View */}
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8" id="services-grid-desktop">
             {/* Service 1: Telecom Containers */}
             <motion.div 
               whileHover={{ y: -5 }}
@@ -939,111 +929,116 @@ export default function App() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
 
-      {/* WHY US & PROJECTS HIGHLIGHT */}
-      <section id="dlaczego-my" className="relative py-20 md:py-28 border-t border-slate-200 bg-slate-50/50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            {/* Left side: Why Us Pillars */}
-            <div className="lg:col-span-7 space-y-8" id="why-us-pillars">
-              <div className="space-y-2">
-                <span className="text-xs font-bold tracking-widest text-orange-600 uppercase font-mono">{t.whyUs.header}</span>
-                <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">{t.whyUs.title}</h2>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {/* Pillar 1 */}
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2.5">
-                    <span className="flex h-5 w-5 items-center justify-center rounded bg-orange-500/10 text-orange-600 text-xs font-bold font-mono">01</span>
-                    <h3 className="font-bold text-slate-900 text-base">{t.whyUs.point1Title}</h3>
-                  </div>
-                  <p className="text-slate-600 text-sm leading-relaxed pl-7">
-                    {t.whyUs.point1Desc}
-                  </p>
-                </div>
-
-                {/* Pillar 2 */}
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2.5">
-                    <span className="flex h-5 w-5 items-center justify-center rounded bg-orange-500/10 text-orange-600 text-xs font-bold font-mono">02</span>
-                    <h3 className="font-bold text-slate-900 text-base">{t.whyUs.point2Title}</h3>
-                  </div>
-                  <p className="text-slate-600 text-sm leading-relaxed pl-7">
-                    {t.whyUs.point2Desc}
-                  </p>
-                </div>
-
-                {/* Pillar 3 */}
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2.5">
-                    <span className="flex h-5 w-5 items-center justify-center rounded bg-orange-500/10 text-orange-600 text-xs font-bold font-mono">03</span>
-                    <h3 className="font-bold text-slate-900 text-base">{t.whyUs.point3Title}</h3>
-                  </div>
-                  <p className="text-slate-600 text-sm leading-relaxed pl-7">
-                    {t.whyUs.point3Desc}
-                  </p>
-                </div>
-
-                {/* Pillar 4 */}
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2.5">
-                    <span className="flex h-5 w-5 items-center justify-center rounded bg-orange-500/10 text-orange-600 text-xs font-bold font-mono">04</span>
-                    <h3 className="font-bold text-slate-900 text-base">{t.whyUs.point4Title}</h3>
-                  </div>
-                  <p className="text-slate-600 text-sm leading-relaxed pl-7">
-                    {t.whyUs.point4Desc}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right side: Projects Highlight Description */}
-            <div className="lg:col-span-5" id="why-us-highlight-card">
-              <div className="relative rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-8 space-y-6 shadow-xs">
-                <div className="flex items-center space-x-3 border-b border-slate-250 pb-4">
-                  <CheckCircle2 className="text-orange-500 h-5.5 w-5.5 shrink-0" />
-                  <h3 className="font-display text-lg font-bold text-slate-900 uppercase tracking-wide">
-                    {t.whyUs.projectsTitle}
-                  </h3>
-                </div>
-
-                <p className="text-slate-600 font-light text-sm leading-relaxed">
-                  {t.whyUs.projectsDesc}
-                </p>
-
-                {/* Scope badges */}
-                <div className="pt-4 border-t border-slate-200 space-y-3">
-                  <span className="block text-[10px] font-mono uppercase tracking-widest text-slate-400">
-                    {lang === 'PL' ? 'SPECYFIKACJA TECHNICZNA' : lang === 'EN' ? 'TECHNICAL SPECIFICATION' : 'TECHNISCHE DATEN'}
-                  </span>
-                  
-                  <div className="grid grid-cols-2 gap-3 text-xs">
-                    <div className="flex items-center space-x-2 text-slate-600">
-                      <div className="h-1.5 w-1.5 rounded-full bg-orange-500" />
-                      <span>{lang === 'PL' ? 'Uprawnienia SEP' : lang === 'EN' ? 'SEP Certified' : 'SEP-Zertifiziert'}</span>
+          {/* Services Accordion - Mobile View */}
+          <div className="grid md:hidden grid-cols-1 gap-4" id="services-grid-mobile">
+            {[
+              {
+                id: 1,
+                icon: Layers,
+                title: t.services.serv1Title,
+                desc: t.services.serv1Desc,
+                category: lang === 'PL' ? 'KATEGORIA: INFRASTRUKTURA' : lang === 'EN' ? 'CATEGORY: INFRASTRUCTURE' : 'KATEGORIE: INFRASTRUKTUR',
+                badge: lang === 'PL' ? 'Pełna konserwacja' : lang === 'EN' ? 'Full maintenance' : 'Komplette Wartung'
+              },
+              {
+                id: 2,
+                icon: Wind,
+                title: t.services.serv2Title,
+                desc: t.services.serv2Desc,
+                category: lang === 'PL' ? 'KATEGORIA: SYSTEMY CHŁODZENIA' : lang === 'EN' ? 'CATEGORY: COOLING SYSTEMS' : 'KATEGORIE: KÜHLSYSTEME',
+                badge: lang === 'PL' ? 'Klimatyzacja precyzyjna' : lang === 'EN' ? 'Precision cooling' : 'Präzisionskühlung'
+              },
+              {
+                id: 3,
+                icon: Zap,
+                title: t.services.serv3Title,
+                desc: t.services.serv3Desc,
+                category: lang === 'PL' ? 'KATEGORIA: ENERGETYKA' : lang === 'EN' ? 'CATEGORY: POWER' : 'KATEGORIE: ENERGIE',
+                badge: lang === 'PL' ? 'Systemy UPS & Agregaty' : lang === 'EN' ? 'UPS & Generators' : 'USV & Generatoren'
+              },
+              {
+                id: 4,
+                icon: Server,
+                title: t.services.serv4Title,
+                desc: t.services.serv4Desc,
+                category: lang === 'PL' ? 'KATEGORIA: PREFABRYKACJA' : lang === 'EN' ? 'CATEGORY: PREFABRICATION' : 'KATEGORIE: VORFERTIGUNG',
+                badge: lang === 'PL' ? 'Certyfikowane komponenty' : lang === 'EN' ? 'Certified components' : 'Zertifizierte Bauteile',
+                partners: ['Hager', 'Socomec', 'Vertiv']
+              }
+            ].map((service) => {
+              const IconComponent = service.icon;
+              const isOpen = activeMobileService === service.id;
+              return (
+                <div 
+                  key={service.id}
+                  className="rounded-xl border border-slate-200 bg-white shadow-xs overflow-hidden transition-all"
+                >
+                  <button
+                    onClick={() => setActiveMobileService(isOpen ? null : service.id)}
+                    className="w-full flex items-center justify-between p-4 text-left hover:bg-slate-50 transition-colors focus:outline-hidden"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className={`flex h-10 w-10 items-center justify-center rounded-lg transition-colors ${isOpen ? 'bg-orange-500 text-white' : 'bg-orange-500/10 text-orange-600'}`}>
+                        <IconComponent className="h-5 w-5" />
+                      </div>
+                      <h3 className="font-display text-sm font-bold text-slate-900 pr-2">
+                        {service.title}
+                      </h3>
                     </div>
-                    <div className="flex items-center space-x-2 text-slate-600">
-                      <div className="h-1.5 w-1.5 rounded-full bg-orange-500" />
-                      <span>{lang === 'PL' ? 'Przeglądy 24h' : lang === 'EN' ? '24h Audits' : '24h Prüfungen'}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-slate-600">
-                      <div className="h-1.5 w-1.5 rounded-full bg-orange-500" />
-                      <span>{lang === 'PL' ? 'Klimatyzacja precyzyjna' : lang === 'EN' ? 'Precision Cooling' : 'Präzisionskühlung'}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-slate-600">
-                      <div className="h-1.5 w-1.5 rounded-full bg-orange-500" />
-                      <span>Hager, Socomec, Vertiv</span>
-                    </div>
-                  </div>
+                    <motion.div
+                      animate={{ rotate: isOpen ? 180 : 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="text-slate-400 shrink-0"
+                    >
+                      <ChevronDown className="h-5 w-5" />
+                    </motion.div>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: 'easeInOut' }}
+                        className="overflow-hidden"
+                      >
+                        <div className="p-4 pt-1 border-t border-slate-100 bg-slate-50/30 space-y-4">
+                          <p className="text-slate-600 font-light text-xs leading-relaxed">
+                            {service.desc}
+                          </p>
+
+                          {service.partners && (
+                            <div className="flex flex-wrap gap-1.5 items-center">
+                              {service.partners.map((partner) => (
+                                <span key={partner} className="text-[9px] font-mono text-slate-600 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">
+                                  {partner}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+
+                          <div className="flex items-center justify-between text-[9px] pt-2 border-t border-slate-100">
+                            <span className="font-mono uppercase tracking-wider text-slate-400">
+                              {service.category}
+                            </span>
+                            <span className="font-semibold text-orange-600 flex items-center gap-0.5">
+                              {service.badge} <ChevronRight className="h-2.5 w-2.5" />
+                            </span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
+
+
 
 
 
@@ -1205,7 +1200,6 @@ export default function App() {
             <div className="flex flex-wrap justify-center gap-6 text-xs text-slate-300">
               <button onClick={() => handleScrollTo('o-nas')} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.about}</button>
               <button onClick={() => handleScrollTo('uslugi')} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.services}</button>
-              <button onClick={() => handleScrollTo('dlaczego-my')} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.whyUs}</button>
               <button onClick={() => handleScrollTo('realizacje')} className="hover:text-orange-400 transition-colors cursor-pointer">{t.whyUs.projectsTitle}</button>
               <button onClick={() => handleScrollTo('kontakt')} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.contact}</button>
             </div>
