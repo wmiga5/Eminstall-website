@@ -421,12 +421,6 @@ export default function App() {
               <div className="relative mx-auto max-w-[420px] lg:max-w-none">
                 {/* Visual Glass Box */}
                 <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-xl shadow-slate-100">
-                  {/* Decorative corner elements */}
-                  <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-orange-500/40" />
-                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-orange-500/40" />
-                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-orange-500/40" />
-                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-orange-500/40" />
-
                   {/* Header Info */}
                   <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
                     <div className="flex items-center space-x-2">
