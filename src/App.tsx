@@ -35,7 +35,14 @@ import realization4Img from './Rozdzielnia-Eminstall4.jpg';
 import realization5Img from './Protokol-Eminstall5.png';
 
 export default function App() {
-  const [lang, setLang] = useState<Language>('PL');
+  const [lang, setLang] = useState<Language>(() => {
+    if (typeof window !== 'undefined' && navigator) {
+      const browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || '').toLowerCase();
+      if (browserLang.startsWith('pl')) return 'PL';
+      if (browserLang.startsWith('de')) return 'DE';
+    }
+    return 'EN';
+  });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [visibleCount, setVisibleCount] = useState(4);
@@ -420,7 +427,7 @@ export default function App() {
             >
               <div className="relative mx-auto max-w-[420px] lg:max-w-none">
                 {/* Visual Glass Box */}
-                <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 md:p-8 shadow-xl shadow-slate-100">
+                <div className="relative overflow-hidden rounded-2xl border-2 border-slate-100 bg-white p-6 md:p-8 shadow-sm">
                   {/* Header Info */}
                   <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
                     <div className="flex items-center space-x-2">
@@ -502,28 +509,28 @@ export default function App() {
           <div className="mt-16 md:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="stats-grid">
             <motion.div 
               whileHover={{ y: -3 }}
-              className="p-4 md:p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
+              className="p-4 md:p-6 rounded-2xl bg-white border-2 border-slate-100 shadow-sm text-center lg:text-left"
             >
               <span className="block font-display text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">{t.stats.stat1Val}</span>
               <span className="block mt-1.5 font-mono text-xs uppercase tracking-wider text-slate-500">{t.stats.stat1Lbl}</span>
             </motion.div>
             <motion.div 
               whileHover={{ y: -3 }}
-              className="p-4 md:p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
+              className="p-4 md:p-6 rounded-2xl bg-white border-2 border-slate-100 shadow-sm text-center lg:text-left"
             >
               <span className="block font-display text-3xl md:text-4xl font-bold text-orange-600 tracking-tight">{t.stats.stat2Val}</span>
               <span className="block mt-1.5 font-mono text-xs uppercase tracking-wider text-slate-500">{t.stats.stat2Lbl}</span>
             </motion.div>
             <motion.div 
               whileHover={{ y: -3 }}
-              className="p-4 md:p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
+              className="p-4 md:p-6 rounded-2xl bg-white border-2 border-slate-100 shadow-sm text-center lg:text-left"
             >
               <span className="block font-display text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">{t.stats.stat3Val}</span>
               <span className="block mt-1.5 font-mono text-xs uppercase tracking-wider text-slate-500">{t.stats.stat3Lbl}</span>
             </motion.div>
             <motion.div 
               whileHover={{ y: -3 }}
-              className="p-4 md:p-6 rounded-xl bg-white border border-slate-200 shadow-xs text-center lg:text-left"
+              className="p-4 md:p-6 rounded-2xl bg-white border-2 border-slate-100 shadow-sm text-center lg:text-left"
             >
               <span className="block font-display text-xl md:text-2xl font-bold text-slate-800 tracking-tight mt-1 mb-1">{t.stats.stat4Val}</span>
               <span className="block mt-1.5 font-mono text-xs uppercase tracking-wider text-slate-500">{t.stats.stat4Lbl}</span>
@@ -540,7 +547,7 @@ export default function App() {
             <div className="lg:col-span-5 order-2 lg:order-1">
               <div className="relative" id="about-graphic">
                 {/* Structural Graphic Representation */}
-                <div className="relative rounded-2xl border border-slate-200 bg-slate-50 p-8 overflow-hidden shadow-sm">
+                <div className="relative rounded-2xl border-2 border-slate-100 bg-white p-8 overflow-hidden shadow-sm">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl" />
                   
                   {/* Decorative blueprint Grid */}
@@ -572,7 +579,7 @@ export default function App() {
                     </div>
 
                     {/* Family credentials badge */}
-                    <div className="mt-6 pt-4 border-t border-slate-200 flex items-center space-x-3 bg-white p-3.5 rounded-lg border border-slate-100 shadow-xs">
+                    <div className="mt-6 flex items-center space-x-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200/60 shadow-xs">
                       <HardHat className="text-orange-600 h-5 w-5 shrink-0" />
                       <span className="text-xs text-slate-500 leading-normal">
                         {lang === 'PL' 
@@ -604,7 +611,7 @@ export default function App() {
 
               {/* Core Values Highlight */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
-                <div className="p-4 rounded-lg bg-slate-50 border border-slate-100">
+                <div className="p-4 rounded-2xl bg-white border-2 border-slate-100 shadow-sm">
                   <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-600 mb-2.5">
                     <Shield className="h-4 w-4" />
                   </div>
@@ -612,7 +619,7 @@ export default function App() {
                   <p className="text-xs text-slate-500 leading-normal">{t.about.precisionDesc}</p>
                 </div>
 
-                <div className="p-4 rounded-lg bg-slate-50 border border-slate-100">
+                <div className="p-4 rounded-2xl bg-white border-2 border-slate-100 shadow-sm">
                   <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-600 mb-2.5">
                     <Globe className="h-4 w-4" />
                   </div>
@@ -679,7 +686,7 @@ export default function App() {
                       setSelectedProject(project.id);
                     }
                   }}
-                  className="group cursor-pointer overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-xs transition-all hover:border-orange-500 hover:shadow-md focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
+                  className="group cursor-pointer overflow-hidden rounded-2xl border-2 border-slate-100 bg-white p-2 md:p-2.5 shadow-sm transition-all hover:border-orange-500 hover:shadow-md focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
                   role="button"
                   tabIndex={0}
                   aria-haspopup="dialog"
@@ -806,7 +813,7 @@ export default function App() {
             {/* Service 1: Telecom Containers */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="group relative rounded-xl border border-slate-200 bg-white p-6 md:p-8 transition-all hover:border-orange-500/50 hover:shadow-lg shadow-xs"
+              className="group relative rounded-2xl border-2 border-slate-100 bg-white p-6 md:p-8 transition-all hover:border-orange-500/60 hover:shadow-md shadow-sm"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/[0.01] rounded-bl-3xl group-hover:bg-orange-500/[0.02] transition-all" />
               
@@ -834,7 +841,7 @@ export default function App() {
             {/* Service 2: Klimatyzacja HVAC */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="group relative rounded-xl border border-slate-200 bg-white p-6 md:p-8 transition-all hover:border-orange-500/50 hover:shadow-lg shadow-xs"
+              className="group relative rounded-2xl border-2 border-slate-100 bg-white p-6 md:p-8 transition-all hover:border-orange-500/60 hover:shadow-md shadow-sm"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/[0.01] rounded-bl-3xl group-hover:bg-orange-500/[0.02] transition-all" />
 
@@ -862,7 +869,7 @@ export default function App() {
             {/* Service 3: Zasilanie gwarantowane */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="group relative rounded-xl border border-slate-200 bg-white p-6 md:p-8 transition-all hover:border-orange-500/50 hover:shadow-lg shadow-xs"
+              className="group relative rounded-2xl border-2 border-slate-100 bg-white p-6 md:p-8 transition-all hover:border-orange-500/60 hover:shadow-md shadow-sm"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/[0.01] rounded-bl-3xl group-hover:bg-orange-500/[0.02] transition-all" />
 
@@ -890,7 +897,7 @@ export default function App() {
             {/* Service 4: Szafy elektryczne */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="group relative rounded-xl border border-slate-200 bg-white p-6 md:p-8 transition-all hover:border-orange-500/50 hover:shadow-lg shadow-xs"
+              className="group relative rounded-2xl border-2 border-slate-100 bg-white p-6 md:p-8 transition-all hover:border-orange-500/60 hover:shadow-md shadow-sm"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/[0.01] rounded-bl-3xl group-hover:bg-orange-500/[0.02] transition-all" />
 
@@ -1055,7 +1062,7 @@ export default function App() {
               <motion.a 
                 whileHover={{ scale: 1.01 }}
                 href="tel:696381123" 
-                className="flex flex-col justify-between p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:border-orange-500/50 hover:bg-slate-50/80 transition-all group shadow-xs"
+                className="flex flex-col justify-between p-6 rounded-2xl border-2 border-slate-100 bg-white hover:border-orange-500/60 hover:shadow-md transition-all group shadow-sm"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500/10 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all mb-4">
                   <Phone className="h-5 w-5" />
@@ -1073,7 +1080,7 @@ export default function App() {
               <motion.a 
                 whileHover={{ scale: 1.01 }}
                 href="mailto:biuro@eminstall.pl" 
-                className="flex flex-col justify-between p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:border-orange-500/50 hover:bg-slate-50/80 transition-all group shadow-xs"
+                className="flex flex-col justify-between p-6 rounded-2xl border-2 border-slate-100 bg-white hover:border-orange-500/60 hover:shadow-md transition-all group shadow-sm"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500/10 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all mb-4">
                   <Mail className="h-5 w-5" />
@@ -1088,7 +1095,7 @@ export default function App() {
               </motion.a>
 
               {/* Channel: Operational Area */}
-              <div className="sm:col-span-2 flex items-start gap-4 p-6 rounded-2xl border border-slate-200 bg-slate-50 shadow-xs">
+              <div className="sm:col-span-2 flex items-start gap-4 p-6 rounded-2xl border-2 border-slate-100 bg-white shadow-sm">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-orange-500/10 text-orange-600">
                   <Globe className="h-5 w-5" />
                 </div>
@@ -1108,7 +1115,7 @@ export default function App() {
 
             {/* Company Credentials & Trust Panel (5 Cols for excellent weight balance) */}
             <div className="lg:col-span-5" id="company-credentials-card">
-              <div className="h-full p-6 md:p-8 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between space-y-6 shadow-xs">
+              <div className="h-full p-6 md:p-8 rounded-2xl border-2 border-slate-100 bg-white flex flex-col justify-between space-y-6 shadow-sm">
                 
                 <div className="space-y-4">
                   <span className="block text-xs font-mono text-slate-400 uppercase tracking-widest">{t.contact.infoCompanyDetails}</span>
@@ -1118,7 +1125,7 @@ export default function App() {
                   </div>
 
                   {/* Registered Company Details */}
-                  <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-3.5 text-xs text-slate-700 shadow-2xs">
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/60 space-y-3.5 text-xs text-slate-700 shadow-2xs">
                     <div>
                       <span className="block text-[10px] font-mono uppercase text-slate-400 tracking-wider">
                         {lang === 'PL' ? 'Nazwa pełna' : lang === 'EN' ? 'Full name' : 'Vollständiger Name'}
