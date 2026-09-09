@@ -123,8 +123,8 @@
           "Cykliczne przeglądy prewencyjne instalacji elektrycznych i klimatyzacyjnych",
           "Nadzór nad sprawnością agregatów prądotwórczych i systemów UPS",
           "Kontrola stanu budowlanego kontenerów i obiektów technicznych",
-          "Utrzymanie terenu przyległego, ogrodzeń czy zieleni",
-          "Usuwanie awarii w reżimie podwyższonej gotowości technicznej"
+          "Utrzymanie terenu przyległego, ogrodzeń i zieleni",
+          "Reagowanie na awarie w trybie pilnym"
         ],
         "specifications": "Gotowość serwisowa; Dedykowane procedury SLA; Pełne raportowanie elektroniczne z każdego przeglądu",
         "targetSector": "Rozproszone stacje bazowe, punkty retransmisyjne, obiekty bezobsługowe"

@@ -20,23 +20,3 @@ html {
   scroll-behavior: smooth;
 }
 
-/* WorkScope carousel track centering padding across breakpoints */
-.work-scope-track {
-  padding-left: calc((100% - min(86vw, 360px)) / 2);
-  padding-right: calc((100% - min(86vw, 360px)) / 2);
-}
-
-@media (min-width: 640px) {
-  .work-scope-track {
-    padding-left: calc((100% - 460px) / 2);
-    padding-right: calc((100% - 460px) / 2);
-  }
-}
-
-@media (min-width: 1024px) {
-  .work-scope-track {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-

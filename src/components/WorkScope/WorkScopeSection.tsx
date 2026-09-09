@@ -16,162 +16,112 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
   onContactClick
 }) => {
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
-  const [activeDot, setActiveDot] = useState(0);
-  const activeDotRef = useRef(0);
+  const [currentPosition, setCurrentPosition] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(3);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const isProgrammaticScrollRef = useRef(false);
+  const isScrollingRef = useRef(false);
   const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Sync activeDotRef
+  // Responsywna liczba wyświetlanych kart: 1 na telefonie, 2 na tablecie, 3 na komputerze
   useEffect(() => {
-    activeDotRef.current = activeDot;
-  }, [activeDot]);
-
-  // Compute activeDot based on container scroll position
-  const handleScroll = useCallback(() => {
-    if (isProgrammaticScrollRef.current) return;
-    if (!sliderRef.current) return;
-
-    const container = sliderRef.current;
-    const cards = container.querySelectorAll<HTMLElement>('.work-scope-card-wrapper');
-    if (!cards.length) return;
-
-    const maxScroll = container.scrollWidth - container.clientWidth;
-    const currentScroll = container.scrollLeft;
-
-    // Edge check: at start or at end
-    if (currentScroll <= 15) {
-      setActiveDot(0);
-      activeDotRef.current = 0;
-      return;
-    }
-    if (maxScroll > 0 && currentScroll >= maxScroll - 15) {
-      setActiveDot(WORK_SCOPE_ITEMS.length - 1);
-      activeDotRef.current = WORK_SCOPE_ITEMS.length - 1;
-      return;
-    }
-
-    // Find card closest to horizontal center
-    const containerCenter = container.getBoundingClientRect().left + container.clientWidth / 2;
-    let closestIndex = 0;
-    let minDistance = Infinity;
-
-    cards.forEach((card, index) => {
-      const rect = card.getBoundingClientRect();
-      const cardCenter = rect.left + rect.width / 2;
-      const distance = Math.abs(containerCenter - cardCenter);
-      if (distance < minDistance) {
-        minDistance = distance;
-        closestIndex = index;
+    const updateVisible = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCount(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleCount(2);
+      } else {
+        setVisibleCount(3);
       }
-    });
+    };
 
-    setActiveDot(closestIndex);
-    activeDotRef.current = closestIndex;
+    updateVisible();
+    window.addEventListener('resize', updateVisible);
+    return () => window.removeEventListener('resize', updateVisible);
   }, []);
 
-  const scrollToPosition = useCallback((targetScrollLeft: number, explicitDotIndex?: number) => {
+  // Wzór: Ilość pozycji = Ilość obiektów - (ilość wyświetlanych - 1)
+  // Np. dla 7 kart na komputerze (3 karty): 7 - 2 = 5 pozycji
+  // Np. dla 7 kart na telefonie (1 karta): 7 - 0 = 7 pozycji
+  const totalPositions = Math.max(1, WORK_SCOPE_ITEMS.length - (visibleCount - 1));
+
+  // Zabezpieczenie pozycji przy zmianie rozmiaru okna
+  useEffect(() => {
+    setCurrentPosition((prev) => Math.min(prev, totalPositions - 1));
+  }, [totalPositions]);
+
+  // Przejście do danej pozycji
+  const goToPosition = useCallback((targetIndex: number) => {
+    const newPos = (targetIndex + totalPositions) % totalPositions;
+    setCurrentPosition(newPos);
+
     if (!sliderRef.current) return;
     const container = sliderRef.current;
+    const cards = container.querySelectorAll<HTMLElement>('.work-scope-card-wrapper');
+    const card = cards[newPos];
+    if (!card) return;
 
-    isProgrammaticScrollRef.current = true;
-    if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current);
-    }
+    isScrollingRef.current = true;
+    if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
 
-    if (explicitDotIndex !== undefined) {
-      setActiveDot(explicitDotIndex);
-      activeDotRef.current = explicitDotIndex;
-    }
+    // Na telefonie centrujemy pojedynczą kartę, na komputerze dosuwamy do lewej
+    const targetScroll = visibleCount === 1
+      ? card.offsetLeft - (container.clientWidth - card.clientWidth) / 2
+      : card.offsetLeft;
 
     container.scrollTo({
-      left: Math.max(0, targetScrollLeft),
+      left: Math.max(0, targetScroll),
       behavior: 'smooth'
     });
 
     scrollTimeoutRef.current = setTimeout(() => {
-      isProgrammaticScrollRef.current = false;
-      handleScroll();
-    }, 550);
-  }, [handleScroll]);
+      isScrollingRef.current = false;
+    }, 450);
+  }, [totalPositions, visibleCount]);
 
-  const scrollToCard = useCallback((index: number) => {
-    if (!sliderRef.current) return;
+  const handleNext = () => goToPosition(currentPosition + 1);
+  const handlePrev = () => goToPosition(currentPosition - 1);
+
+  // Synchronizacja kropki podczas ręcznego przewijania (swipe na telefonie / trackpad)
+  const handleScroll = useCallback(() => {
+    if (isScrollingRef.current || !sliderRef.current) return;
     const container = sliderRef.current;
     const cards = container.querySelectorAll<HTMLElement>('.work-scope-card-wrapper');
-    const targetCard = cards[index];
-    if (!targetCard) return;
+    if (!cards.length) return;
 
-    const maxScrollLeft = container.scrollWidth - container.clientWidth;
-
-    let targetScrollLeft = 0;
-    if (index === 0) {
-      targetScrollLeft = 0;
-    } else if (index === WORK_SCOPE_ITEMS.length - 1) {
-      targetScrollLeft = maxScrollLeft;
+    if (visibleCount === 1) {
+      const center = container.scrollLeft + container.clientWidth / 2;
+      let closest = 0;
+      let minDist = Infinity;
+      cards.forEach((card, idx) => {
+        const cardCenter = card.offsetLeft + card.clientWidth / 2;
+        const dist = Math.abs(center - cardCenter);
+        if (dist < minDist) {
+          minDist = dist;
+          closest = idx;
+        }
+      });
+      setCurrentPosition(closest);
     } else {
-      targetScrollLeft = targetCard.offsetLeft - (container.clientWidth - targetCard.clientWidth) / 2;
-      targetScrollLeft = Math.max(0, Math.min(maxScrollLeft, targetScrollLeft));
-    }
-
-    scrollToPosition(targetScrollLeft, index);
-  }, [scrollToPosition]);
-
-  const handleNext = () => {
-    if (!sliderRef.current) return;
-    const container = sliderRef.current;
-    const cards = container.querySelectorAll<HTMLElement>('.work-scope-card-wrapper');
-    if (!cards.length) return;
-
-    const maxScrollLeft = container.scrollWidth - container.clientWidth;
-    // If at the end, wrap smoothly to start
-    if (container.scrollLeft >= maxScrollLeft - 15) {
-      scrollToPosition(0, 0);
-      return;
-    }
-
-    const cardWidth = cards[0].offsetWidth;
-    const gap = cards.length > 1 ? cards[1].offsetLeft - (cards[0].offsetLeft + cardWidth) : 24;
-    const step = cardWidth + gap;
-    const nextScroll = Math.min(maxScrollLeft, container.scrollLeft + step);
-    scrollToPosition(nextScroll);
-  };
-
-  const handlePrev = () => {
-    if (!sliderRef.current) return;
-    const container = sliderRef.current;
-    const cards = container.querySelectorAll<HTMLElement>('.work-scope-card-wrapper');
-    if (!cards.length) return;
-
-    const maxScrollLeft = container.scrollWidth - container.clientWidth;
-    // If at start, wrap smoothly to end
-    if (container.scrollLeft <= 15) {
-      scrollToPosition(maxScrollLeft, WORK_SCOPE_ITEMS.length - 1);
-      return;
-    }
-
-    const cardWidth = cards[0].offsetWidth;
-    const gap = cards.length > 1 ? cards[1].offsetLeft - (cards[0].offsetLeft + cardWidth) : 24;
-    const step = cardWidth + gap;
-    const prevScroll = Math.max(0, container.scrollLeft - step);
-    scrollToPosition(prevScroll);
-  };
-
-  // Re-sync on window resize
-  useEffect(() => {
-    const handleResize = () => {
-      if (!sliderRef.current) return;
-      handleScroll();
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
+      const scrollLeft = container.scrollLeft;
+      let closest = 0;
+      let minDist = Infinity;
+      for (let i = 0; i < totalPositions; i++) {
+        if (!cards[i]) continue;
+        const dist = Math.abs(scrollLeft - cards[i].offsetLeft);
+        if (dist < minDist) {
+          minDist = dist;
+          closest = i;
+        }
       }
+      setCurrentPosition(closest);
+    }
+  }, [totalPositions, visibleCount]);
+
+  useEffect(() => {
+    return () => {
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
     };
-  }, [handleScroll]);
+  }, []);
 
   const selectedItem = WORK_SCOPE_ITEMS.find((item) => item.id === selectedItemId);
   const selectedTranslation = selectedItemId && translation.items[selectedItemId]
@@ -209,11 +159,11 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
           </p>
         </div>
 
-        {/* Real Horizontal Carousel Slider Track (3 cards side-by-side on desktop, 1 centered on mobile) */}
+        {/* Horizontal Carousel Slider Track (Phone: 1 centered card, Tablet: 2 cards, Desktop: 3 cards) */}
         <div 
           ref={sliderRef}
           onScroll={handleScroll}
-          className="work-scope-track flex gap-4 sm:gap-6 lg:gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth pb-6 pt-2 -mx-4 sm:-mx-6 lg:mx-0"
+          className="flex gap-4 sm:gap-6 lg:gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth pb-6 pt-2 px-[7vw] sm:px-6 lg:px-0 -mx-4 sm:-mx-6 lg:mx-0"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {WORK_SCOPE_ITEMS.map((item) => {
@@ -228,7 +178,7 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
             return (
               <div 
                 key={item.id} 
-                className="work-scope-card-wrapper w-[86vw] max-w-[360px] sm:w-[460px] lg:w-[calc((100%-3rem)/3)] flex-shrink-0 snap-center sm:snap-center"
+                className="work-scope-card-wrapper w-[86vw] max-w-[360px] sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] flex-shrink-0 snap-center sm:snap-start"
               >
                 <WorkScopeCard
                   item={item}
@@ -251,18 +201,18 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
             <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
 
-          {/* Indicators Capsule */}
+          {/* Indicators Capsule: Dokładnie tyle kropek, ile jest realnych pozycji */}
           <div className="flex items-center gap-1.5 sm:gap-2.5 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-md backdrop-blur-xs">
-            {WORK_SCOPE_ITEMS.map((_, index) => (
+            {Array.from({ length: totalPositions }).map((_, index) => (
               <button
                 key={index}
-                onClick={() => scrollToCard(index)}
+                onClick={() => goToPosition(index)}
                 className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  activeDot === index
+                  currentPosition === index
                     ? 'w-7 sm:w-9 bg-orange-500 shadow-md shadow-orange-500/50'
                     : 'w-2 sm:w-2.5 bg-slate-600 hover:bg-slate-400'
                 }`}
-                aria-label={`Przewiń do karty ${index + 1}`}
+                aria-label={`Pozycja ${index + 1}`}
               />
             ))}
           </div>
