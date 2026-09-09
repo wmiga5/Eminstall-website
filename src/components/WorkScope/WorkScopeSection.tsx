@@ -137,8 +137,6 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
       <span id="uslugi" className="absolute -top-24 pointer-events-none" />
       <span id="realizacje" className="absolute -top-24 pointer-events-none" />
 
-      {/* Modern industrial blueprint background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b40_1px,transparent_1px),linear-gradient(to_bottom,#1e293b40_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none opacity-60" />
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[140px] pointer-events-none" />
 
