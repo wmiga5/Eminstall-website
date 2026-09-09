@@ -44,7 +44,7 @@
         "badge": "AC/DC Power & Batteries",
         "title": "Uninterruptible Power Supply Systems (AC & DC)",
         "shortDesc": "Assembly, routine maintenance, and complete retrofits of industrial DC power systems and UPS units. Battery capacity testing and cell conductance/resistance analysis.",
-        "fullDesc": "We engineer, deploy, and service professional uninterruptible power systems for critical telecommunications and infrastructure facilities. Our comprehensive lifecycle support covers VRLA/AGM battery bank replacements, controlled discharge testing, and complete modernizations of legacy telecom power plants.",
+        "fullDesc": "We engineer, deploy, and service professional uninterruptible power systems for critical telecommunications and infrastructure facilities. Our comprehensive lifecycle support covers battery bank replacements, controlled discharge capacity testing, and complete modernizations of legacy telecom power plants.",
         "scopeList": [
           "Deployment and commissioning of industrial DC power plants (-48V DC)",
           "Comprehensive retrofits of existing power cabinets and switchgear",
@@ -52,7 +52,7 @@
           "Advanced battery health diagnostics: controlled load discharge and internal resistance tests",
           "Periodic technical inspections and preventive maintenance for critical UPS systems"
         ],
-        "specifications": "48V DC / 230V / 400V AC systems; VRLA AGM / Gel battery technology; Certified measurement test reports",
+        "specifications": "48V DC / 230V / 400V AC systems; Professional measurement test reports",
         "targetSector": "Cellular base stations, telecom transmission nodes, server rooms, and broadcast facilities"
       },
       "reactive-power": {
@@ -79,7 +79,6 @@
           "Installation of FreeCooling modular ventilation systems and control units",
           "Mounting of weather-resistant air intake louvers on technical containers and facades",
           "Installation and commissioning of precision climate control cooling units",
-          "Automation programming for seamless transitional cooling mode switching",
           "Certified refrigerant leak detection and system performance audits (F-gas compliant)"
         ],
         "specifications": "Precision cooling units; Variable speed EC electronically commutated fans; Integrated F7/G4 cassette filtration",
@@ -87,8 +86,8 @@
       },
       "telecom-containers": {
         "badge": "Containers & Infrastructure",
-        "title": "Technological Containers & Raised Access Floors",
-        "shortDesc": "Complete technological outfitting of POP telecom container shelters. Installation of modular raised access floors, cable tray routing, power distribution, and 19\" racks.",
+        "title": "Technological Containers & Technical Raised Floors",
+        "shortDesc": "Complete technological outfitting of access node telecom containers. Installation of technical flooring, cable tray containment, lighting, and 19\" rack cabinets.",
         "fullDesc": "We carry out comprehensive turn-key fit-outs for telecommunication shelters and modular server hubs. Work includes high-load technical raised flooring, 19\" server rack suites, overhead and underfloor cable tray containment, equipotential bonding, and environmental monitoring.",
         "scopeList": [
           "Design and construction of modular heavy-load raised access floors and access platforms",
@@ -97,20 +96,20 @@
           "Equipotential bonding grounding bar (GSW) and earthing network connectivity",
           "Access control, environmental telemetry sensors, and automated fire detection systems"
         ],
-        "specifications": "Heavy-load modular floor panels; Structural galvanized steel pedestals; Certified fire classification",
-        "targetSector": "Point-of-Presence (POP) hubs, modular containerized telecom nodes, and micro edge data centers"
+        "specifications": "Heavy-load modular floor panels; Structural galvanized steel support frames;",
+        "targetSector": "Access nodes, containerized telecom stations, modular server rooms"
       },
       "switchboards": {
         "badge": "Prefabrication & Testing",
         "title": "Switchboard Prefabrication & Certified Inspection Protocols",
         "shortDesc": "Custom engineering and prefabrication of LV distribution boards, ATS cabinets, and outdoor weather-rated switchgear. Complete electrical verification and test reports.",
-        "fullDesc": "We prefabricate low-voltage distribution and automation switchboards using certified components from leading European manufacturers. Prior to delivery, each enclosure undergoes rigorous insulation resistance, short-circuit loop impedance, and functionality testing, completed with accredited test certification.",
+        "fullDesc": "We prefabricate modern low-voltage switchboards based on components from leading European manufacturers. Prior to dispatch, each enclosure undergoes rigorous functional testing, dielectric property verification, and electrical parameter measurements, concluded with a routine test report in accordance with EN 61439 and a CE Declaration of Conformity.",
         "scopeList": [
           "Prefabrication of main low-voltage power distribution switchboards and control cabinets",
           "Assembly of facility distribution panels and weather-rated outdoor weatherproof cabinets",
           "Automatic Transfer Switch (ATS) emergency power changeover systems",
           "Insulation resistance, fault loop impedance, and protective bonding continuity testing",
-          "Preparation of comprehensive as-built technical documentation and electrical test certificates"
+          "Preparation of complete as-built documentation, routine inspection and acceptance test reports, and CE Declaration of Conformity"
         ],
         "specifications": "Ingress protection up to IP65; Certified modular & compact switchgear; Compliance with IEC/EN 61439",
         "targetSector": "Transmission sites, industrial automation cabinets, and infrastructure power distribution"
@@ -124,8 +123,8 @@
           "Scheduled preventive maintenance of electrical installations and climate control systems",
           "Operational oversight and load-testing of diesel generators and UPS units",
           "Structural and thermal envelope condition audits of technical containers and shelters",
-          "Site perimeter maintenance, fence integrity, and access path clearance",
-          "High-readiness emergency fault remediation for critical infrastructure"
+          "Maintenance of adjacent grounds, fencing, and landscaping",
+          "Urgent emergency response to technical faults"
         ],
         "specifications": "High-readiness technical availability; Dedicated SLA procedures; Full digital inspection reporting",
         "targetSector": "Distributed cellular towers, broadcast retransmission sites, and unstaffed technical nodes"

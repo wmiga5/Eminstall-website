@@ -44,7 +44,7 @@
         "badge": "AC/DC-Strom & Batterien",
         "title": "Unterbrechungsfreie Stromversorgungssysteme (AC & DC)",
         "shortDesc": "Montage, wiederkehrende Prüfungen und Modernisierung industrieller Gleichstrom-Gleichrichteranlagen (DC) und USV-Systeme. Batteriekapazitätsprüfungen und Innenwiderstandsmessungen.",
-        "fullDesc": "Wir planen, installieren und warten professionelle unterbrechungsfreie Stromversorgungssysteme für kritische Telekommunikations- und Industrieinfrastrukturen. Unser technischer Support reicht vom Austausch von VRLA/AGM-Batteriebänken über Zustandskontrollen per Entladeprüfung bis hin zur Modernisierung bestehender Gleichrichteranlagen.",
+        "fullDesc": "Wir planen, installieren und warten professionelle unterbrechungsfreie Stromversorgungssysteme für kritische Telekommunikations- und Industrieinfrastrukturen. Unser technischer Support reicht vom Austausch von Batteriebänken über Zustandskontrollen per Entladeprüfung bis hin zur Modernisierung bestehender Gleichrichteranlagen.",
         "scopeList": [
           "Montage und Inbetriebnahme industrieller DC-Stromversorgungen (-48V DC)",
           "Umfassende Modernisierung bestehender Versorgungsstationen und Schaltanlagen",
@@ -52,7 +52,7 @@
           "Batteriezustandsdiagnose: kontrollierte Lastentladung und Innenwiderstandsmessungen",
           "Regelmäßige technische Inspektionen und Wartung von USV- und Notstromanlagen"
         ],
-        "specifications": "48V DC / 230V / 400V AC Systeme; VRLA AGM- und Gel-Technologie; Zertifizierte Prüfprotokolle",
+        "specifications": "48V DC / 230V / 400V AC Systeme; Professionelle Prüfprotokolle",
         "targetSector": "Mobilfunk-Basisstationen, Telekommunikationsknoten, Serverräume und Sendeanlagen"
       },
       "reactive-power": {
@@ -79,7 +79,6 @@
           "Montage und Inbetriebnahme modularer FreeCooling-Lüftungszentralen",
           "Installation witterungsbeständiger Außenluftansaugungen an Containern und Fassaden",
           "Fachgerechte Einbringung und Anschluss von Präzisionsklimageräten",
-          "Programmierung intelligenter Steuerungen für nahtlose Kühlmodus-Umschaltung",
           "Zertifizierte Dichtheitsprüfungen und Kältekreislauf-Inspektionen (F-Gase-zertifiziert)"
         ],
         "specifications": "Präzisionsklimageräte; Drehzahlgeregelte EC-Ventilatoren; Kassettenfilterklassen F7 / G4",
@@ -87,8 +86,8 @@
       },
       "telecom-containers": {
         "badge": "Container & Infrastruktur",
-        "title": "Technikcontainer & Modulare Doppelböden",
-        "shortDesc": "Kompletter technologischer Ausbau von POP-Telekommunikationscontainern. Errichtung von Doppelböden, Kabeltrassensystemen, Beleuchtung und 19\"-Racks.",
+        "title": "Technikcontainer & Technische Systemböden",
+        "shortDesc": "Kompletter technologischer Ausbau von Telekommunikationscontainern. Errichtung technischer Doppelböden, Kabeltrassensystemen, Beleuchtung und 19\"-Racks.",
         "fullDesc": "Wir rüsten Technikcontainer und modulare Serverstationen schlüsselfertig aus. Zu unseren Leistungen zählen hochbelastbare Systemböden für unterirdische Leitungsführung, 19\"-Serverschränke, Decken- und Unterflurkabeltrassen, Erdungssysteme sowie Umweltüberwachung.",
         "scopeList": [
           "Konstruktion und Montage schwerlastfähiger modulare Doppelböden und Podeste",
@@ -97,20 +96,20 @@
           "Potentialausgleich-Haupterdungsschiene (HES) und strukturierte Erdung",
           "Zutrittskontrollsysteme, Brandmelde- und Umweltüberwachungssensoren"
         ],
-        "specifications": "Hochbelastbare Bodenplatten; Verzinkte Stahlunterkonstruktion; Geprüfte Brandschutzklasse",
-        "targetSector": "POP-Hauptverteilerstationen, modulare Mobilfunkcontainer und Edge-Rechenzentren"
+        "specifications": "Hochbelastbare modulare Bodenplatten; Stahlunterkonstruktionen;",
+        "targetSector": "Netzknoten, modulare Mobilfunkcontainer, modulare Serverräume"
       },
       "switchboards": {
         "badge": "Schaltanlagenbau & Prüfung",
         "title": "Schaltanlagenbau & Zertifizierte Abnahmeprotokolle",
         "shortDesc": "Planung und Bau von Niederspannungshauptverteilern, Steuerschränken und witterungsbeständigen Außenschaltschränken. Umfassende elektrische Prüfungen und Prüfberichte.",
-        "fullDesc": "Wir fertigen Niederspannungsschaltanlagen auf Basis europäischer Spitzenkomponenten. Jede Anlage wird vor Auslieferung einer vollständigen messtechnischen Prüfung unterzogen (Isolationswiderstand, Schleifenimpedanz, Schutzleiterdurchgängigkeit) und mit normgerechten Prüfprotokollen versehen.",
+        "fullDesc": "Wir fertigen moderne Niederspannungsschaltanlagen auf Basis europäischer Spitzenkomponenten. Jede Anlage durchläuft vor der Auslieferung strenge Funktionstests, Prüfungen der dielektrischen Eigenschaften sowie elektrische Messungen, abgeschlossen mit einem Stücknachweis nach DIN EN 61439 und einer CE-Konformitätserklärung.",
         "scopeList": [
           "Fertigung von Niederspannungshauptverteilungen (NSHV) und Steuerungsschränken",
           "Bau von Standort-Unterverteilern und wetterfesten Outdoor-Schaltschränken",
           "Automatische Netzumschaltungen (USV / Notstrom-ATS)",
           "Elektrische Messungen nach geltenden Normen (Schleifenimpedanz, Isolation, RCD)",
-          "Erstellung lückenloser Revisionsdokumentationen und elektrotechnischer Prüfzertifikate"
+          "Erstellung vollständiger Revisionsdokumentationen, Prüf- und Abnahmeprotokolle sowie der CE-Konformitätserklärung"
         ],
         "specifications": "Schutzarten bis IP65; Modulare Marken-Schaltgeräte; Konformität mit DIN EN 61439",
         "targetSector": "Sendeanlagen, Industrieautomationsschränke und Energieverteiler kritischer Infrastrukturen"
@@ -124,8 +123,8 @@
           "Wiederkehrende präventive Inspektion elektrischer und klimatechnischer Anlagen",
           "Funktionsüberwachung und Probeläufe von Notstromaggregaten und USV-Anlagen",
           "Bauliche und thermische Zustandsprüfungen von Technikgebäuden und Containern",
-          "Pflege von Außenflächen, Umzäunungen und Zufahrtswegen",
-          "Störungsbeseitigung mit erhöhter technischer Einsatzbereitschaft"
+          "Pflege von Außenflächen, Umzäunungen und Grünanlagen",
+          "Dringliche Störungsbeseitigung im Havariefall"
         ],
         "specifications": "Hohe Rufbereitschaft; Dedizierte SLA-Protokolle; Vollständige digitale Einsatzberichte",
         "targetSector": "Mobilfunk-Basisstationen, Richtfunkstandorte und unbemannte Technikstützpunkte"
