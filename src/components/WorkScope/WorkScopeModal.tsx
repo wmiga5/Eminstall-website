@@ -227,14 +227,14 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
 
               {/* Thumbnails Row (if > 1 photo) */}
               {hasPhotos && photos.length > 1 && (
-                <div className="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-thin">
+                <div className="flex items-center gap-3 overflow-x-auto py-2.5 px-1.5 custom-scrollbar">
                   {photos.map((imgUrl, idx) => (
                     <button
                       key={idx}
                       onClick={() => handleSelectThumbnail(idx)}
                       className={`relative flex-shrink-0 w-20 h-16 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${
                         activePhotoIndex === idx
-                          ? 'border-orange-500 ring-2 ring-orange-500/20 shadow-md scale-105'
+                          ? 'border-orange-500 ring-2 ring-orange-500/30 shadow-md scale-105'
                           : 'border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-300'
                       }`}
                     >
@@ -461,7 +461,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
               onClick={(e) => e.stopPropagation()}
               className="flex items-center justify-between px-4 sm:px-8 py-3 bg-slate-950/80 border-t border-white/10 z-20 gap-4"
             >
-              <div className="flex items-center gap-2.5 overflow-x-auto max-w-full scrollbar-thin py-1">
+              <div className="flex items-center gap-2.5 overflow-x-auto max-w-full custom-scrollbar py-2 px-1">
                 {photos.length > 1 && photos.map((imgUrl, idx) => (
                   <button
                     key={idx}
