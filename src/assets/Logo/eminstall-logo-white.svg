@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradient: from-orange-500 (#F97316) to-amber-600 (#D97706) -->
+    <linearGradient id="eminstall-grad-white" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Shadow filter: shadow-orange-500/25 -->
+    <filter id="eminstall-shadow-white" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#F97316" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Logo Mark Container (Emblem) -->
+  <g transform="translate(10, 10)">
+    <!-- Shadow & Rounded Box -->
+    <rect width="80" height="80" rx="18" fill="url(#eminstall-grad-white)" filter="url(#eminstall-shadow-white)" />
+
+    <!-- Bold Font Display Letter 'E' -->
+    <text x="41" y="58" font-family="'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="0.04em">
+      E
+    </text>
+
+    <!-- Corner Status Node / Electrical Indicator Dot -->
+    <circle cx="74" cy="74" r="9" fill="#ffffff" />
+    <circle cx="74" cy="74" r="6" fill="#F97316" />
+    <circle cx="74" cy="74" r="2.5" fill="#FED7AA" />
+  </g>
+
+  <!-- Typography Wordmark -->
+  <g transform="translate(108, 0)">
+    <!-- Primary Brand Name 'Eminstall' -->
+    <text x="0" y="55" font-family="'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="700" letter-spacing="-0.02em" fill="#ffffff">
+      Eminstall
+    </text>
+
+    <!-- Subtitle 'ENGINEERING GROUP' (orange-500 #F97316) -->
+    <text x="2" y="78" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="12" font-weight="700" letter-spacing="0.2em" fill="#FB923C">
+      ENGINEERING GROUP
+    </text>
+  </g>
+</svg>

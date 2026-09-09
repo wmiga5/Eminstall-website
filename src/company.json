@@ -1,0 +1,40 @@
+{
+  "name": "EMINSTALL Tomasz Miga",
+  "shortName": "Eminstall",
+  "brandTagline": "Engineering Group",
+  "owner": {
+    "name": "Tomasz Miga",
+    "role": {
+      "PL": "Właściciel",
+      "EN": "Owner",
+      "DE": "Inhaber"
+    }
+  },
+  "contact": {
+    "phone": {
+      "display": "+48 696 381 123",
+      "raw": "+48696381123"
+    },
+    "email": "biuro@eminstall.pl"
+  },
+  "address": {
+    "street": "Chojnicka 19",
+    "postalCode": "78-400",
+    "city": "Szczecinek",
+    "country": "Polska",
+    "full": "Chojnicka 19, 78-400 Szczecinek"
+  },
+  "legal": {
+    "nip": "6731587106",
+    "regon": "365455350"
+  },
+  "operationalArea": {
+    "short": "PL / DE",
+    "full": "PL / DE (Polska & Deutschland)"
+  },
+  "partners": [
+    "Hager",
+    "Socomec",
+    "Vertiv"
+  ]
+}

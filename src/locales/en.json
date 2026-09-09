@@ -1,0 +1,279 @@
+{
+  "seo": {
+    "title": "Eminstall | Electrical Cabinets, Precision Cooling, Telecom Containers",
+    "description": "Professional engineering services for telecommunications in Poland and Germany. Prefabrication of electrical cabinets, installation of Vertiv precision cooling, UPS power systems, shelter retrofits."
+  },
+  "accessibility": {
+    "skipToContent": "Skip to content",
+    "logoAria": "Eminstall - Home / Back to top",
+    "prevRealization": "Previous realization",
+    "nextRealization": "Next realization",
+    "projectDetails": "Project details",
+    "closeDetails": "Close details",
+    "details": "Details"
+  },
+  "nav": {
+    "about": "About Us",
+    "services": "Work Scope",
+    "whyUs": "Why Us",
+    "realizations": "Projects",
+    "scopeAndRealizations": "Scope of Work & Projects",
+    "contact": "Contact"
+  },
+  "workScope": {
+    "header": "SCOPE OF WORK & PROJECTS",
+    "title": "Comprehensive Engineering & Technical Projects",
+    "subtitle": "From electrical switchboard design and prefabrication, to uninterrupted power systems and FreeCooling, to ongoing maintenance of critical infrastructure.",
+    "viewDetails": "View scope & gallery",
+    "closeDetails": "Close details",
+    "galleryTitle": "Detailed technical scope",
+    "galleryCount": "Project photos",
+    "noPhotosNotice": "Photo documentation in preparation",
+    "noPhotosDesc": "Photographs and case studies from these technical projects will soon be published in our portfolio.",
+    "scopeListTitle": "Scope of completed work",
+    "specsTitle": "Technical specifications & standards",
+    "sectorTitle": "Application sector",
+    "contactPrompt": "Planning an installation in a similar technical field?",
+    "contactBtn": "Consult your project",
+    "prevCard": "Previous item",
+    "nextCard": "Next item",
+    "prevPhoto": "Previous photo",
+    "nextPhoto": "Next photo",
+    "items": {
+      "power-systems": {
+        "badge": "AC/DC Power & Batteries",
+        "title": "Uninterruptible Power Supply Systems (AC & DC)",
+        "shortDesc": "Assembly, routine maintenance, and complete retrofits of industrial DC power systems and UPS units. Battery capacity testing and cell conductance/resistance analysis.",
+        "fullDesc": "We engineer, deploy, and service professional uninterruptible power systems for critical telecommunications and infrastructure facilities. Our comprehensive lifecycle support covers VRLA/AGM battery bank replacements, controlled discharge testing, and complete modernizations of legacy telecom power plants.",
+        "scopeList": [
+          "Deployment and commissioning of industrial DC power plants (-48V DC)",
+          "Comprehensive retrofits of existing power cabinets and switchgear",
+          "Battery bank replacements in modular cabinets and heavy-duty racks",
+          "Advanced battery health diagnostics: controlled load discharge and internal resistance tests",
+          "Periodic technical inspections and preventive maintenance for critical UPS systems"
+        ],
+        "specifications": "48V DC / 230V / 400V AC systems; VRLA AGM / Gel battery technology; Certified measurement test reports",
+        "targetSector": "Cellular base stations, telecom transmission nodes, server rooms, and broadcast facilities"
+      },
+      "reactive-power": {
+        "badge": "Power Factor Correction",
+        "title": "Reactive Power Compensation Systems",
+        "shortDesc": "Engineering, assembly, and modernization of automatic capacitor banks and detuned reactor cabinets. Elimination of penalties for inductive and capacitive reactive energy.",
+        "fullDesc": "We deliver end-to-end solutions to minimize industrial electricity costs through power factor correction. We perform power network quality audits, engineer detuned capacitor steps, and prefabricate automated compensation cabinets with microprocessor controllers.",
+        "scopeList": [
+          "Assembly and installation of reactive power compensation cabinets",
+          "Installation of heavy-duty capacitor banks and detuned harmonic filters",
+          "Programming and commissioning of digital automatic reactive power controllers",
+          "Power quality audits, power factor (cos φ) measurements, and harmonic distortion analysis",
+          "Routine servicing and replacement of aged capacitor switching contactors"
+        ],
+        "specifications": "Capacitor banks with detuned filter reactors; Overcurrent & thermal protection; Automatic microprocessor controller",
+        "targetSector": "Technical infrastructure nodes, transmission stations, and industrial manufacturing plants"
+      },
+      "freecooling-hvac": {
+        "badge": "HVAC & FreeCooling",
+        "title": "FreeCooling Ventilation & Precision Air Conditioning",
+        "shortDesc": "Energy-efficient FreeCooling direct air systems and precision climate control for technical shelters and server rooms. Installation, certified servicing, and F-gas compliance.",
+        "fullDesc": "We deploy specialized thermal management systems maintaining optimal temperature and humidity for mission-critical IT and telecom hardware. Combining precision air conditioning with automated FreeCooling dampers dramatically slashes operational energy consumption by harnessing cold outside air.",
+        "scopeList": [
+          "Installation of FreeCooling modular ventilation systems and control units",
+          "Mounting of weather-resistant air intake louvers on technical containers and facades",
+          "Installation and commissioning of precision climate control cooling units",
+          "Automation programming for seamless transitional cooling mode switching",
+          "Certified refrigerant leak detection and system performance audits (F-gas compliant)"
+        ],
+        "specifications": "Precision cooling units; Variable speed EC electronically commutated fans; Integrated F7/G4 cassette filtration",
+        "targetSector": "Telecommunication containers, server rooms, optical fiber nodes, and data centers"
+      },
+      "telecom-containers": {
+        "badge": "Containers & Infrastructure",
+        "title": "Technological Containers & Raised Access Floors",
+        "shortDesc": "Complete technological outfitting of POP telecom container shelters. Installation of modular raised access floors, cable tray routing, power distribution, and 19\" racks.",
+        "fullDesc": "We carry out comprehensive turn-key fit-outs for telecommunication shelters and modular server hubs. Work includes high-load technical raised flooring, 19\" server rack suites, overhead and underfloor cable tray containment, equipotential bonding, and environmental monitoring.",
+        "scopeList": [
+          "Design and construction of modular heavy-load raised access floors and access platforms",
+          "Installation of 19\" server and distribution racks, ceiling-suspended and underfloor cable baskets",
+          "Backup power cabling, internal LED technological illumination, and emergency escape lighting",
+          "Equipotential bonding grounding bar (GSW) and earthing network connectivity",
+          "Access control, environmental telemetry sensors, and automated fire detection systems"
+        ],
+        "specifications": "Heavy-load modular floor panels; Structural galvanized steel pedestals; Certified fire classification",
+        "targetSector": "Point-of-Presence (POP) hubs, modular containerized telecom nodes, and micro edge data centers"
+      },
+      "switchboards": {
+        "badge": "Prefabrication & Testing",
+        "title": "Switchboard Prefabrication & Certified Inspection Protocols",
+        "shortDesc": "Custom engineering and prefabrication of LV distribution boards, ATS cabinets, and outdoor weather-rated switchgear. Complete electrical verification and test reports.",
+        "fullDesc": "We prefabricate low-voltage distribution and automation switchboards using certified components from leading European manufacturers. Prior to delivery, each enclosure undergoes rigorous insulation resistance, short-circuit loop impedance, and functionality testing, completed with accredited test certification.",
+        "scopeList": [
+          "Prefabrication of main low-voltage power distribution switchboards and control cabinets",
+          "Assembly of facility distribution panels and weather-rated outdoor weatherproof cabinets",
+          "Automatic Transfer Switch (ATS) emergency power changeover systems",
+          "Insulation resistance, fault loop impedance, and protective bonding continuity testing",
+          "Preparation of comprehensive as-built technical documentation and electrical test certificates"
+        ],
+        "specifications": "Ingress protection up to IP65; Certified modular & compact switchgear; Compliance with IEC/EN 61439",
+        "targetSector": "Transmission sites, industrial automation cabinets, and infrastructure power distribution"
+      },
+      "facility-maintenance": {
+        "badge": "Facility Management",
+        "title": "Technical Facility Maintenance & 24/7 Operations",
+        "shortDesc": "Comprehensive lifecycle technical management for critical infrastructure: backup power, HVAC systems, structural inspections, and perimeter facility maintenance.",
+        "fullDesc": "We guarantee operational uptime for distributed technical assets. Our engineering team conducts preventive maintenance cycles, oversees cooling and power systems, and responds rapidly to field incidents under strict SLA agreements.",
+        "scopeList": [
+          "Scheduled preventive maintenance of electrical installations and climate control systems",
+          "Operational oversight and load-testing of diesel generators and UPS units",
+          "Structural and thermal envelope condition audits of technical containers and shelters",
+          "Site perimeter maintenance, fence integrity, and access path clearance",
+          "High-readiness emergency fault remediation for critical infrastructure"
+        ],
+        "specifications": "High-readiness technical availability; Dedicated SLA procedures; Full digital inspection reporting",
+        "targetSector": "Distributed cellular towers, broadcast retransmission sites, and unstaffed technical nodes"
+      },
+      "industrial-lines": {
+        "badge": "Industrial & Automation",
+        "title": "Industrial Installations & Production Line Relocation",
+        "shortDesc": "Electrical installation, machinery cabling for automated manufacturing lines, and professional decommissioning, transport, and equipment relocation.",
+        "fullDesc": "We provide specialized electromechanical installation services for industrial and manufacturing plants. Our scope includes machine cabling, high-capacity cable containment, control cabinet hookups, and precise relocation of production lines.",
+        "scopeList": [
+          "Power and signal cabling for automated machinery and manufacturing lines",
+          "Erection of heavy-duty industrial cable containment, ladders, and support channels",
+          "Safe electrical decommissioning, labeling, and preparation of machinery for transport",
+          "Connection of industrial motors, drives, sensors, and automation panels",
+          "Post-assembly electrical verification and technical support during line commissioning"
+        ],
+        "specifications": "Heavy-duty industrial cable containment; Machine power supply up to 1000V; Compliance with Machinery Directive",
+        "targetSector": "Manufacturing plants, automated factories, processing halls, and industrial facilities"
+      }
+    }
+  },
+  "hero": {
+    "badge": "FAMILY-OWNED ENGINEERING COMPANY",
+    "title": "Telecommunication Infrastructure at its Finest",
+    "subtitle": "Comprehensive services for telecom facilities – from professional design and precise construction to reliable critical maintenance.",
+    "ctaPrimary": "Get in Touch",
+    "ctaSecondary": "Our Services",
+    "status": "SYSTEM STATUS: ACTIVE",
+    "systemCode": "EMIN_INFRA_2026",
+    "features": {
+      "containersTitle": "TELECOM CONTAINERS",
+      "containersDesc": "Execution & periodic structure reviews",
+      "hvacTitle": "HVAC SYSTEMS",
+      "hvacDesc": "Precision climate control & maintenance",
+      "powerTitle": "POWER & CABINETS",
+      "powerDesc": "UPS, Hager, Socomec & Vertiv assembly"
+    }
+  },
+  "stats": {
+    "stat1Val": "100%",
+    "stat1Lbl": "Operational Reliability",
+    "stat2Val": "24/7",
+    "stat2Lbl": "Emergency Support",
+    "stat3Val": "PL & DE",
+    "stat3Lbl": "Area of Operation",
+    "stat4Val": "Hager & Vertiv",
+    "stat4Lbl": "Certified Equipment"
+  },
+  "about": {
+    "header": "WHO WE ARE",
+    "title": "A Reliable Partner in Critical Infrastructure",
+    "p1": "Eminstall is a family-owned engineering business born from a genuine passion for modern technologies and high-precision execution. We specialize in the technical maintenance and development of advanced infrastructure for telecommunications facilities.",
+    "p2": "For us, every single detail counts. We deeply understand how crucial network continuity is for mobile, radio, and fiber-optic operations. That is why we combine sound engineering expertise with fast response times, delivering solutions you can completely rely on under any circumstances.",
+    "precision": "Engineering Precision",
+    "precisionDesc": "We take care of every millimeter of the installation, eliminating faults before they even occur.",
+    "safety": "Safety & Certitude",
+    "safetyDesc": "We operate in strict accordance with the highest HSE standards and EU technical regulations.",
+    "engineeringControl": "Two-stage engineering control over every single project."
+  },
+  "services": {
+    "header": "OUR SERVICES",
+    "title": "Comprehensive Engineering Solutions",
+    "subtitle": "We guarantee absolute professionalism at every phase of a telecom facility's lifecycle.",
+    "categoryInfrastructure": "CATEGORY: INFRASTRUCTURE",
+    "categoryCooling": "CATEGORY: COOLING SYSTEMS",
+    "categoryPower": "CATEGORY: POWER",
+    "categoryPrefabrication": "CATEGORY: PREFABRICATION",
+    "badgeMaintenance": "Full maintenance",
+    "badgeCooling": "Precision cooling",
+    "badgePower": "UPS & Generators",
+    "badgeComponents": "Certified components",
+    "serv1Title": "Telecom Containers",
+    "serv1Desc": "Comprehensive build, modernization, maintenance, and periodic technical audits of telecom containers. Following each audit, we issue a professional, detailed inspection report complete with diagnostic data and electrical measurements.",
+    "serv2Title": "Air Conditioning (HVAC)",
+    "serv2Desc": "Installation, professional servicing, and detailed inspections of cooling systems – including highly specialized precision climate systems. We guarantee stable temperature and humidity levels, safeguarding critical electronics.",
+    "serv3Title": "Uninterruptible Power Supply",
+    "serv3Desc": "Installation and maintenance of fail-safe UPS systems and backup generators. We secure critical facilities against sudden voltage fluctuations and power grid blackouts.",
+    "serv4Title": "Electrical Cabinets",
+    "serv4Desc": "Prefabrication, assembly, and integration of dedicated electrical distribution and automation cabinets. We build exclusively using certified, high-grade components from renowned brands like Hager, Socomec, and Vertiv."
+  },
+  "whyUs": {
+    "header": "WHY CHOOSE US",
+    "title": "The Foundation We Build Trust Upon",
+    "point1Title": "Family Values & Dedication",
+    "point1Desc": "As a family business, we take full personal responsibility for every project. Our name is our absolute pledge of integrity.",
+    "point2Title": "Engineering Expertise & Licensing",
+    "point2Desc": "Our technical team holds full industry certifications, specialized electrical permits (SEP), and extensive telecom experience.",
+    "point3Title": "Rapid Response Times",
+    "point3Desc": "We know that every minute of network downtime means commercial losses. We are structured to mobilize and react instantly.",
+    "point4Title": "Compliance in Poland & Germany",
+    "point4Desc": "We understand the regulatory specifics of both Polish and German markets. All works satisfy local and European standards.",
+    "projectsTitle": "Featured Projects",
+    "projectsDesc": "We have successfully completed power supply and cooling system upgrades for major telecom hubs in both Poland and Germany. We specialize in works at sites requiring maximum security and zero downtime. Our custom-prefabricated electrical distribution cabinets reliably power transmission systems, while our preventative container maintenance services eliminate unplanned downtime for our corporate clients.",
+    "realizationsTitle": "Featured Work & Projects",
+    "realizationsSubtitle": "Explore some of our professional engineering achievements on telecom sites.",
+    "specification": "SPECIFICATION",
+    "realization1Title": "Broadcasting Shelter Retrofit",
+    "realization1Desc": "Complete thermal insulation upgrade, rewiring, and external mechanical structure maintenance.",
+    "realization1Category": "TELECOM SHELTERS",
+    "realization1Stats": "SEP Certified • 24h Audit • Poland / Germany",
+    "realization2Title": "Precision Air Conditioning Setup",
+    "realization2Desc": "Installation of specialized Vertiv precision cooling units integrated with automatic alert systems.",
+    "realization2Category": "PRECISION COOLING",
+    "realization2Stats": "Vertiv • Precision HVAC • Continuous Control",
+    "realization3Title": "Critical UPS Backup Systems",
+    "realization3Desc": "Deployment of modular UPS blocks and Automatic Transfer Switch (ATS) systems for base stations.",
+    "realization3Category": "POWER & UPS",
+    "realization3Stats": "Modular UPS • ATS Systems • Emergency Generators",
+    "realization4Title": "Custom Electrical Distribution Cabinets",
+    "realization4Desc": "Design and assembly of custom electrical switchboards using certified components from Hager and Socomec.",
+    "realization4Category": "ELECTRICAL CABINETS",
+    "realization4Stats": "Hager • Socomec • CE Standard Prefabrication",
+    "realization5Title": "Professional Inspection Reports",
+    "realization5Desc": "We prepare detailed, professional inspection protocols for every technical review, including complete diagnosis, electrical measurements, and maintenance guidelines.",
+    "realization5Category": "INSPECTION PROTOCOLS",
+    "realization5Stats": "ISO Compliant • Full Technical Diagnostics • Electric Measurements"
+  },
+  "contact": {
+    "header": "CONTACT US",
+    "title": "Let's Discuss Your Next Project",
+    "subtitle": "Need a price estimation, scheduled servicing, or long-term cooperation? Write us or call directly. We will get back to you promptly.",
+    "formName": "Full name",
+    "formEmail": "Email address",
+    "formAddress": "Site Location / Address",
+    "formMessage": "Message details",
+    "formSubmit": "Send Message",
+    "formSubmitting": "Sending message...",
+    "formSuccess": "Your message has been successfully sent! Thank you. We will get in touch with you as soon as possible.",
+    "infoPhone": "Direct Phone",
+    "phonePrompt": "Call us to discuss details",
+    "infoEmail": "Email Address",
+    "emailPrompt": "We reply within a few hours",
+    "infoArea": "Operational Area",
+    "infoAreaDesc": "Poland & Germany (Fully mobile field crews)",
+    "areaPrompt": "Our mobile engineering team regularly executes audits and deployments throughout Poland and Germany.",
+    "infoCompanyDetails": "Company Info",
+    "infoWojtek": "Tomasz Miga — Owner",
+    "companyNameLabel": "Full name",
+    "companyAddressLabel": "Registered address",
+    "nip": "NIP",
+    "regon": "REGON",
+    "credentialLicensing": "Full SEP Operational Licensing",
+    "credentialPartners": "Authorized partner (Hager, Vertiv)",
+    "credentialSla": "Service Level Agreement (SLA) Guarantee",
+    "operationalScope": "PL / DE (Poland & Germany)"
+  },
+  "footer": {
+    "copyright": "Eminstall",
+    "rights": "All rights reserved."
+  }
+}

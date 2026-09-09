@@ -1,0 +1,279 @@
+{
+  "seo": {
+    "title": "Eminstall | Schaltschränke, Präzisionskühlung, Telekommunikationscontainer",
+    "description": "Professionelle Ingenieurdienstleistungen für die Telekommunikation in Polen und Deutschland. Schaltschrankbau, Vertiv Präzisionskühlung, USV-Anlagen, Container-Sanierung."
+  },
+  "accessibility": {
+    "skipToContent": "Zum Hauptinhalt springen",
+    "logoAria": "Eminstall - Startseite / Nach oben",
+    "prevRealization": "Vorherige Realisierung",
+    "nextRealization": "Nächste Realisierung",
+    "projectDetails": "Projektdetails",
+    "closeDetails": "Details schließen",
+    "details": "Details"
+  },
+  "nav": {
+    "about": "Über uns",
+    "services": "Leistungsumfang",
+    "whyUs": "Warum wir",
+    "realizations": "Referenzen",
+    "scopeAndRealizations": "Leistungsumfang & Referenzen",
+    "contact": "Kontakt"
+  },
+  "workScope": {
+    "header": "LEISTUNGSUMFANG & REFERENZEN",
+    "title": "Ganzheitliche Ingenieurdienstleistungen & Technische Umsetzung",
+    "subtitle": "Von der Schaltschrankplanung und Fertigung über unterbrechungsfreie Stromversorgungen und FreeCooling bis hin zur kontinuierlichen Instandhaltung kritischer Infrastrukturen.",
+    "viewDetails": "Leistungsumfang & Galerie ansehen",
+    "closeDetails": "Details schließen",
+    "galleryTitle": "Detaillierter technischer Leistungsumfang",
+    "galleryCount": "Projektfotos",
+    "noPhotosNotice": "Fotodokumentation in Vorbereitung",
+    "noPhotosDesc": "Fotos und Fallstudien zu diesen technischen Projekten werden in Kürze in unserem Portfolio veröffentlicht.",
+    "scopeListTitle": "Ausgeführte Leistungsschritte",
+    "specsTitle": "Technische Spezifikationen & Normen",
+    "sectorTitle": "Anwendungsbereich",
+    "contactPrompt": "Planen Sie ein Projekt in einem ähnlichen technischen Bereich?",
+    "contactBtn": "Projekt anfragen",
+    "prevCard": "Vorherige Position",
+    "nextCard": "Nächste Position",
+    "prevPhoto": "Vorheriges Foto",
+    "nextPhoto": "Nächstes Foto",
+    "items": {
+      "power-systems": {
+        "badge": "AC/DC-Strom & Batterien",
+        "title": "Unterbrechungsfreie Stromversorgungssysteme (AC & DC)",
+        "shortDesc": "Montage, wiederkehrende Prüfungen und Modernisierung industrieller Gleichstrom-Gleichrichteranlagen (DC) und USV-Systeme. Batteriekapazitätsprüfungen und Innenwiderstandsmessungen.",
+        "fullDesc": "Wir planen, installieren und warten professionelle unterbrechungsfreie Stromversorgungssysteme für kritische Telekommunikations- und Industrieinfrastrukturen. Unser technischer Support reicht vom Austausch von VRLA/AGM-Batteriebänken über Zustandskontrollen per Entladeprüfung bis hin zur Modernisierung bestehender Gleichrichteranlagen.",
+        "scopeList": [
+          "Montage und Inbetriebnahme industrieller DC-Stromversorgungen (-48V DC)",
+          "Umfassende Modernisierung bestehender Versorgungsstationen und Schaltanlagen",
+          "Austausch von Akkumulatoren in Schränken und auf Schwerlast-Batteriegestellen",
+          "Batteriezustandsdiagnose: kontrollierte Lastentladung und Innenwiderstandsmessungen",
+          "Regelmäßige technische Inspektionen und Wartung von USV- und Notstromanlagen"
+        ],
+        "specifications": "48V DC / 230V / 400V AC Systeme; VRLA AGM- und Gel-Technologie; Zertifizierte Prüfprotokolle",
+        "targetSector": "Mobilfunk-Basisstationen, Telekommunikationsknoten, Serverräume und Sendeanlagen"
+      },
+      "reactive-power": {
+        "badge": "Blindleistungskompensation",
+        "title": "Blindleistungskompensationsanlagen",
+        "shortDesc": "Auslegung, Montage und Modernisierung automatischer Kondensatorbatterien und verdrosselter Filterkreise. Vermeidung kostspieliger Strafgebühren für induktive und kapazitive Blindleistung.",
+        "fullDesc": "Wir bieten ganzheitliche Lösungen zur Senkung von Energiekosten durch Blindleistungskompensation. Wir analysieren Netzparameter, berechnen erforderliche Kompensationsstufen und fertigen maßgeschneiderte Schaltschränke mit automatischen Mikroprozessor-Reglern.",
+        "scopeList": [
+          "Montage und Anschluss von Kompensationsschränken",
+          "Installation von Kondensatormodulen und verdrosselten Filterkreisen",
+          "Parametrierung und Inbetriebnahme digitaler Blindleistungsregler",
+          "Netzqualitätsanalysen, Leistungsfaktor- (cos φ) und Oberschwingungsmessungen",
+          "Instandsetzung und Austausch verschlissener Schütze und Kondensatorstufen"
+        ],
+        "specifications": "Verdrosselte Kondensatorstufen; Integrierter Überstrom- und Übertemperaturschutz; Mikroprozessor-Regelung",
+        "targetSector": "Infrastrukturknoten, Sendestationen, Fertigungs- und Industrieanlagen"
+      },
+      "freecooling-hvac": {
+        "badge": "HVAC & FreeCooling",
+        "title": "FreeCooling-Lüftungssysteme & Präzisionsklimatisierung",
+        "shortDesc": "Energieeffiziente Direktluft-FreeCooling-Systeme und Präzisionsklimatisierung für Technikcontainer und Serverräume. Fachgerechte Montage, zertifizierter Service und F-Gase-Prüfungen.",
+        "fullDesc": "Wir realisieren hochmoderne Kühlsysteme für gleichbleibende thermische Bedingungen empfindlicher Elektronik. Die Kombination aus Präzisionsklimatisierung und automatischer FreeCooling-Lüftung senkt den Stromverbrauch signifikant durch gezielte Nutzung kühler Außenluft.",
+        "scopeList": [
+          "Montage und Inbetriebnahme modularer FreeCooling-Lüftungszentralen",
+          "Installation witterungsbeständiger Außenluftansaugungen an Containern und Fassaden",
+          "Fachgerechte Einbringung und Anschluss von Präzisionsklimageräten",
+          "Programmierung intelligenter Steuerungen für nahtlose Kühlmodus-Umschaltung",
+          "Zertifizierte Dichtheitsprüfungen und Kältekreislauf-Inspektionen (F-Gase-zertifiziert)"
+        ],
+        "specifications": "Präzisionsklimageräte; Drehzahlgeregelte EC-Ventilatoren; Kassettenfilterklassen F7 / G4",
+        "targetSector": "Technikcontainer, Serverräume, Glasfaserknoten und Rechenzentren"
+      },
+      "telecom-containers": {
+        "badge": "Container & Infrastruktur",
+        "title": "Technikcontainer & Modulare Doppelböden",
+        "shortDesc": "Kompletter technologischer Ausbau von POP-Telekommunikationscontainern. Errichtung von Doppelböden, Kabeltrassensystemen, Beleuchtung und 19\"-Racks.",
+        "fullDesc": "Wir rüsten Technikcontainer und modulare Serverstationen schlüsselfertig aus. Zu unseren Leistungen zählen hochbelastbare Systemböden für unterirdische Leitungsführung, 19\"-Serverschränke, Decken- und Unterflurkabeltrassen, Erdungssysteme sowie Umweltüberwachung.",
+        "scopeList": [
+          "Konstruktion und Montage schwerlastfähiger modulare Doppelböden und Podeste",
+          "Aufbau von 19\"-Schrankreihen sowie abgehängter Kabelrinnen und Gitterbahnen",
+          "Installationen für Notstromversorgung sowie technische LED- und Sicherheitsbeleuchtung",
+          "Potentialausgleich-Haupterdungsschiene (HES) und strukturierte Erdung",
+          "Zutrittskontrollsysteme, Brandmelde- und Umweltüberwachungssensoren"
+        ],
+        "specifications": "Hochbelastbare Bodenplatten; Verzinkte Stahlunterkonstruktion; Geprüfte Brandschutzklasse",
+        "targetSector": "POP-Hauptverteilerstationen, modulare Mobilfunkcontainer und Edge-Rechenzentren"
+      },
+      "switchboards": {
+        "badge": "Schaltanlagenbau & Prüfung",
+        "title": "Schaltanlagenbau & Zertifizierte Abnahmeprotokolle",
+        "shortDesc": "Planung und Bau von Niederspannungshauptverteilern, Steuerschränken und witterungsbeständigen Außenschaltschränken. Umfassende elektrische Prüfungen und Prüfberichte.",
+        "fullDesc": "Wir fertigen Niederspannungsschaltanlagen auf Basis europäischer Spitzenkomponenten. Jede Anlage wird vor Auslieferung einer vollständigen messtechnischen Prüfung unterzogen (Isolationswiderstand, Schleifenimpedanz, Schutzleiterdurchgängigkeit) und mit normgerechten Prüfprotokollen versehen.",
+        "scopeList": [
+          "Fertigung von Niederspannungshauptverteilungen (NSHV) und Steuerungsschränken",
+          "Bau von Standort-Unterverteilern und wetterfesten Outdoor-Schaltschränken",
+          "Automatische Netzumschaltungen (USV / Notstrom-ATS)",
+          "Elektrische Messungen nach geltenden Normen (Schleifenimpedanz, Isolation, RCD)",
+          "Erstellung lückenloser Revisionsdokumentationen und elektrotechnischer Prüfzertifikate"
+        ],
+        "specifications": "Schutzarten bis IP65; Modulare Marken-Schaltgeräte; Konformität mit DIN EN 61439",
+        "targetSector": "Sendeanlagen, Industrieautomationsschränke und Energieverteiler kritischer Infrastrukturen"
+      },
+      "facility-maintenance": {
+        "badge": "Facility Management",
+        "title": "Technisches Facility Management & 24/7 Betriebsservice",
+        "shortDesc": "Ganzheitliche technische Betreuung verteilter Infrastrukturanlagen: Notstrom, Klimatechnik, bauliche Inspektionen und Pflege des Betriebsgeländes.",
+        "fullDesc": "Wir stellen den störungsfreien Betrieb unbemannter technischer Liegenschaften sicher. Unser mobiles Ingenieurteam führt vorbeugende Wartungszyklen durch, überwacht Klima- und Stromsysteme und beseitigt Störungen nach klar definierten SLA-Vorgaben.",
+        "scopeList": [
+          "Wiederkehrende präventive Inspektion elektrischer und klimatechnischer Anlagen",
+          "Funktionsüberwachung und Probeläufe von Notstromaggregaten und USV-Anlagen",
+          "Bauliche und thermische Zustandsprüfungen von Technikgebäuden und Containern",
+          "Pflege von Außenflächen, Umzäunungen und Zufahrtswegen",
+          "Störungsbeseitigung mit erhöhter technischer Einsatzbereitschaft"
+        ],
+        "specifications": "Hohe Rufbereitschaft; Dedizierte SLA-Protokolle; Vollständige digitale Einsatzberichte",
+        "targetSector": "Mobilfunk-Basisstationen, Richtfunkstandorte und unbemannte Technikstützpunkte"
+      },
+      "industrial-lines": {
+        "badge": "Industrie & Automation",
+        "title": "Industrieinstallationen & Verlagerung von Produktionslinien",
+        "shortDesc": "Elektrotechnische Installationen, Maschinenverkabelung neuer Fertigungslinien sowie fachgerechte Demontage und Verlagerung von Maschinenparks.",
+        "fullDesc": "Wir bieten spezialisierte Installations- und Montagedienstleistungen für Fertigungs- und Industriebetriebe. Unser Leistungsumfang reicht von der maschinenseitigen Leitungsverlegung über Schwerlastkabeltrassen bis zur sicheren Demontage und Remontage industrieller Anlagen.",
+        "scopeList": [
+          "Leistungs- und Steuerungsverkabelung moderner automatisierter Fertigungslinien",
+          "Montage industrieller Schwerlastkabelbahnen, Kabelleitern und Tragkonstruktionen",
+          "Sichere elektrische Demontage, Kennzeichnung und Transportvorbereitung von Maschinen",
+          "Anschluss von Antrieben, Elektromotoren und industriellen Automationsschränken",
+          "Messungen nach DGUV V3 und technische Unterstützung während der Inbetriebnahme"
+        ],
+        "specifications": "Industriekabeltrassen; Maschinenanschluss bis 1000V; Konformität mit Maschinenrichtlinie",
+        "targetSector": "Produktionswerke, automatisierte Fabriken, Verarbeitungshallen und Schwerindustrie"
+      }
+    }
+  },
+  "hero": {
+    "badge": "FAMILIENGEFÜHRTES INGENIEURUNTERNEHMEN",
+    "title": "Telekommunikations-Infrastruktur auf höchstem Niveau",
+    "subtitle": "Umfassende Leistungen für Mobilfunk- und Telekommunikationsanlagen – von der professionellen Planung über den präzisen Bau bis zur zuverlässigen kritischen Wartung.",
+    "ctaPrimary": "Kontaktieren Sie uns",
+    "ctaSecondary": "Unsere Leistungen",
+    "status": "SYSTEMSTATUS: AKTIV",
+    "systemCode": "EMIN_INFRA_2026",
+    "features": {
+      "containersTitle": "TELEKOMUNIKATIONSCONTAINER",
+      "containersDesc": "Prüfungen & Ausführung",
+      "hvacTitle": "KLIMAANLAGEN",
+      "hvacDesc": "Präzisionsklimatisierung & Wartung",
+      "powerTitle": "STROM & SCHRÄNKE",
+      "powerDesc": "Montage von USV, Hager, Socomec & Vertiv"
+    }
+  },
+  "stats": {
+    "stat1Val": "100%",
+    "stat1Lbl": "Betriebszuverlässigkeit",
+    "stat2Val": "24/7",
+    "stat2Lbl": "Notfall-Support",
+    "stat3Val": "PL & DE",
+    "stat3Lbl": "Einsatzgebiet",
+    "stat4Val": "Hager & Vertiv",
+    "stat4Lbl": "Zertifizierte Marken"
+  },
+  "about": {
+    "header": "ÜBER UNS",
+    "title": "Ihr verlässlicher Partner für kritische Infrastruktur",
+    "p1": "Eminstall ist ein familiengeführtes Ingenieurunternehmen, entstanden aus echter Leidenschaft für moderne Technologien und hochpräzise Ausführung. Wir sind spezialisiert auf den technischen Service und den Ausbau anspruchsvoller Telekommunikationsinfrastruktur.",
+    "p2": "Für uns kommt es auf jedes Detail an. Wir wissen, wie entscheidend eine unterbrechungsfreie Netzverfügbarkeit für Mobilfunk-, Richtfunk- und Glasfasernetze ist. Deshalb verbinden wir fundiertes Ingenieurwissen mit extrem schnellen Reaktionszeiten und liefern Lösungen, auf die unter allen Bedingungen Verlass ist.",
+    "precision": "Ingenieurmäßige Präzision",
+    "precisionDesc": "Wir planen und montieren millimetergenau, um Fehlerquellen präventiv auszuschließen.",
+    "safety": "Sicherheit & Konformität",
+    "safetyDesc": "Wir arbeiten nach strengsten Arbeitsschutzbestimmungen und europäischen Industrienormen.",
+    "engineeringControl": "Zweistufige ingenieurtechnische Kontrolle über jedes Projekt."
+  },
+  "services": {
+    "header": "UNSERE LEISTUNGEN",
+    "title": "Ganzheitliche Engineering-Lösungen",
+    "subtitle": "Wir gewährleisten höchste Professionalität in jeder Phase des Lebenszyklus einer Telekommunikationsanlage.",
+    "categoryInfrastructure": "KATEGORIE: INFRASTRUKTUR",
+    "categoryCooling": "KATEGORIE: KÜHLSYSTEME",
+    "categoryPower": "KATEGORIE: ENERGIE",
+    "categoryPrefabrication": "KATEGORIE: VORFERTIGUNG",
+    "badgeMaintenance": "Komplette Wartung",
+    "badgeCooling": "Präzisionskühlung",
+    "badgePower": "USV & Generatoren",
+    "badgeComponents": "Zertifizierte Bauteile",
+    "serv1Title": "Telekom-Container",
+    "serv1Desc": "Komplettbau, Modernisierung, Sanierung und wiederkehrende technische Prüfungen von Technikcontainern. Nach jeder Prüfung erstellen wir ein professionelles, detailliertes Prüfprotokoll mit vollständiger technischer Diagnose und elektrischen Messungen.",
+    "serv2Title": "Klimatisierung (HVAC)",
+    "serv2Desc": "Montage, Service und Wartung komplexer Klimasysteme – einschließlich hocheffizienter Präzisionsklimatisierung. Wir sichern konstante Raumtemperaturen und Feuchtigkeitswerte zum Schutz kritischer Elektronik.",
+    "serv3Title": "Unterbrechungsfreie Stromversorgung",
+    "serv3Desc": "Installation, Inbetriebnahme und Wartung ausfallsicherer USV-Anlagen und Netzersatzanlagen (Stromaggregate). Wir schützen die Stationen vor unerwarteten Netzstörungen und Blackouts.",
+    "serv4Title": "Schaltschränke",
+    "serv4Desc": "Vorfertigung, Montage und fachgerechter Anschluss von Energieverteilern und Automatisierungsschränken. Wir verbauen ausschließlich zertifizierte Qualitätskomponenten führender Hersteller wie Hager, Socomec und Vertiv."
+  },
+  "whyUs": {
+    "header": "WARUM WIR",
+    "title": "Das Fundament für starkes Vertrauen",
+    "point1Title": "Familienwerte & volles Engagement",
+    "point1Desc": "Als Familienunternehmen übernehmen wir für jedes Projekt persönliche Verantwortung. Unser Name steht für absolute Handschlagqualität.",
+    "point2Title": "Ingenieurkompetenz & Zulassungen",
+    "point2Desc": "Unser Team verfügt über umfassende Fachzertifikate, spezialisierte Elektro-Zulassungen (SEP) und langjährige Branchenerfahrung.",
+    "point3Title": "Sehr kurze Reaktionszeit",
+    "point3Desc": "Wir verstehen, dass jede Minute Netzausfall gravierende Folgen hat. Wir sind personell und logistisch auf Soforteinsätze eingestellt.",
+    "point4Title": "Standard-Konformität in PL & DE",
+    "point4Desc": "Wir beherrschen die gesetzlichen und technischen Vorgaben in Polen und Deutschland. Alle Arbeiten erfolgen normgerecht.",
+    "projectsTitle": "Unsere Referenzen",
+    "projectsDesc": "Wir haben erfolgreich Stromversorgungs- und Klimatechnik-Upgrades für wichtige Mobilfunkknotenpunkte in Polen und Deutschland durchgeführt. Wir sind spezialisiert auf Arbeiten in Hochsicherheitsbereichen ohne Betriebsunterbrechung. Unsere maßgeschneiderten, vorgefertigten Schaltschränke versorgen Sendesysteme zuverlässig, während die regelmäßige Wartung der Telekommunikationscontainer unvorhergesehene Ausfälle für unsere Geschäftspartner verhindert.",
+    "realizationsTitle": "Beispielhafte Realisierungen",
+    "realizationsSubtitle": "Sehen Sie sich die Ergebnisse unserer professionellen Ingenieurarbeiten an Telekommunikationsanlagen an.",
+    "specification": "SPEZIFIKATION",
+    "realization1Title": "Sanierung von Funk-Containern",
+    "realization1Desc": "Vollständige Regeneration der thermischen Dichtungen, Kabelneuordnung und technische Wartung der Außenhülle.",
+    "realization1Category": "TELEKOM-CONTAINER",
+    "realization1Stats": "SEP Certified • 24h Audit • Poland / Germany",
+    "realization2Title": "Präzisions-Klimaanlagen Installation",
+    "realization2Desc": "Montage von Vertiv Präzisions-Kühlsystemen, voll integriert in das bestehende Alarm- und Steuerungssystem.",
+    "realization2Category": "PRÄZISIONSKÜHLUNG",
+    "realization2Stats": "Vertiv • Precision HVAC • Continuous Control",
+    "realization3Title": "Unterbrechungsfreie USV-Systeme",
+    "realization3Desc": "Implementierung modularer USV-Anlagen und automatischer Netzumschalter (ATS) für Mobilfunkstationen.",
+    "realization3Category": "USV-ANLAGEN",
+    "realization3Stats": "Modular UPS • ATS Systems • Emergency Generators",
+    "realization4Title": "Schaltschrankbau & Prefabrikation",
+    "realization4Desc": "Planung und präzise Montage von Energieverteilern basierend auf hochwertigen Komponenten von Hager und Socomec.",
+    "realization4Category": "SCHALTSCHRÄNKE",
+    "realization4Stats": "Hager • Socomec • CE Standard Prefabrication",
+    "realization5Title": "Professionelle Prüfprotokolle",
+    "realization5Desc": "Wir erstellen detaillierte, professionelle Prüfprotokolle für jede technische Überprüfung, einschließlich vollständiger Diagnose, elektrischer Messungen und Wartungsrichtlinien.",
+    "realization5Category": "PRÜFPROTOKOLLE",
+    "realization5Stats": "ISO Compliant • Full Technical Diagnostics • Electric Measurements"
+  },
+  "contact": {
+    "header": "KONTAKT",
+    "title": "Lassen Sie uns Ihr Projekt planen",
+    "subtitle": "Haben Sie Fragen, wünschen Sie ein Angebot oder planen Sie ein Service-Intervall? Schreiben Sie uns oder rufen Sie uns direkt an. Wir reagieren unverzüglich.",
+    "formName": "Vor- und Nachname",
+    "formEmail": "E-Mail-Adresse",
+    "formAddress": "Objektstandort / Adresse",
+    "formMessage": "Ihre Nachricht",
+    "formSubmit": "Nachricht senden",
+    "formSubmitting": "Nachricht wird gesendet...",
+    "formSuccess": "Ihre Nachricht wurde erfolgreich übermittelt! Vielen Dank für Ihr Vertrauen. Wir werden uns schnellstmöglich bei Ihnen melden.",
+    "infoPhone": "Direktrufnummer",
+    "phonePrompt": "Rufen Sie uns an, um Details zu besprechen",
+    "infoEmail": "E-Mail-Adresse",
+    "emailPrompt": "Wir antworten innerhalb weniger Stunden",
+    "infoArea": "Einsatzgebiet",
+    "infoAreaDesc": "Polen & Deutschland (Mobile Serviceteams im Dauereinsatz)",
+    "areaPrompt": "Unser mobiles Ingenieurteam führt regelmäßig Audits und Einsätze in ganz Polen und Deutschland durch.",
+    "infoCompanyDetails": "Unternehmensdaten",
+    "infoWojtek": "Tomasz Miga — Inhaber",
+    "companyNameLabel": "Vollständiger Name",
+    "companyAddressLabel": "Registrierte Adresse",
+    "nip": "NIP",
+    "regon": "REGON",
+    "credentialLicensing": "Vollständige SEP-Zulassungen",
+    "credentialPartners": "Autorisierter Partner (Hager, Vertiv)",
+    "credentialSla": "Systemverfügbarkeitsgarantie (SLA)",
+    "operationalScope": "PL / DE (Polen & Deutschland)"
+  },
+  "footer": {
+    "copyright": "Eminstall",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

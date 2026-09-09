@@ -1,0 +1,279 @@
+{
+  "seo": {
+    "title": "Eminstall | Szafy elektryczne, Klimatyzacja precyzyjna, Kontenery telekomunikacyjne",
+    "description": "Profesjonalne usługi inżynieryjne dla telekomunikacji w Polsce i Niemczech. Prefabrykacja szaf elektrycznych (Hager, Socomec), montaż klimatyzacji precyzyjnej Vertiv, zasilanie gwarantowane UPS, serwis kontenerów."
+  },
+  "accessibility": {
+    "skipToContent": "Przejdź do treści",
+    "logoAria": "Eminstall - Home / Powrót na górę",
+    "prevRealization": "Poprzednia realizacja",
+    "nextRealization": "Następna realizacja",
+    "projectDetails": "Szczegóły projektu",
+    "closeDetails": "Zamknij szczegóły",
+    "details": "Szczegóły"
+  },
+  "nav": {
+    "about": "O nas",
+    "services": "Zakres prac",
+    "whyUs": "Dlaczego my",
+    "realizations": "Realizacje",
+    "scopeAndRealizations": "Zakres prac i Realizacje",
+    "contact": "Kontakt"
+  },
+  "workScope": {
+    "header": "ZAKRES PRAC I REALIZACJE",
+    "title": "Kompleksowa Inżynieria i Realizacje Techniczne",
+    "subtitle": "Od projektowania i prefabrykacji rozdzielnic, przez zasilanie gwarantowane i wentylację FreeCooling, po stałe utrzymanie infrastruktury krytycznej.",
+    "viewDetails": "Szczegóły zakresu i galeria",
+    "closeDetails": "Zamknij szczegóły",
+    "galleryTitle": "Szczegółowy opis techniczny",
+    "galleryCount": "Zdjęcia z realizacji",
+    "noPhotosNotice": "Dokumentacja fotograficzna w przygotowaniu",
+    "noPhotosDesc": "Zdjęcia i dokumentacja techniczna z tych prac zostaną wkrótce opublikowane w naszym portfolio.",
+    "scopeListTitle": "Zakres zrealizowanych prac",
+    "specsTitle": "Specyfikacja techniczna i standardy",
+    "sectorTitle": "Sektor zastosowania",
+    "contactPrompt": "Planujesz realizację w podobnym zakresie technicznym?",
+    "contactBtn": "Skonsultuj projekt",
+    "prevCard": "Poprzednia pozycja",
+    "nextCard": "Następna pozycja",
+    "prevPhoto": "Poprzednie zdjęcie",
+    "nextPhoto": "Następne zdjęcie",
+    "items": {
+      "power-systems": {
+        "badge": "Zasilanie AC/DC & Baterie",
+        "title": "Systemy Zasilania Gwarantowanego AC i DC",
+        "shortDesc": "Montaż, przeglądy okresowe i kompleksowe modernizacje siłowni prądu stałego (DC) oraz systemów UPS. Testy pojemnościowe baterii i precyzyjne pomiary rezystancji wewnętrznej ogniw.",
+        "fullDesc": "Projektujemy, instalujemy i serwisujemy profesjonalne systemy zasilania bezprzerwowego dla obiektów infrastruktury krytycznej i telekomunikacyjnej. Zapewniamy pełne wsparcie techniczne – od wymiany bloków bateryjnych w technologii VRLA/AGM, przez audyty kondycji magazynów energii za pomocą kontrolowanego rozładowania, aż po modernizację istniejących siłowni telekomunikacyjnych.",
+        "scopeList": [
+          "Montaż i uruchomienia przemysłowych siłowni prądu stałego (DC 48V)",
+          "Kompleksowe modernizacje istniejących stacji i rozdzielnic zasilania",
+          "Wymiany baterii akumulatorowych w szafach i na stojakach modułowych",
+          "Diagnostyka kondycji baterii: kontrolowane rozładowanie i pomiary konduktancji/rezystancji",
+          "Okresowe przeglądy techniczne systemów zasilania awaryjnego i UPS"
+        ],
+        "specifications": "Systemy napięcia 48V DC / 230V / 400V AC; Baterie VRLA AGM / Żelowe; Certyfikowane protokoły pomiarowe",
+        "targetSector": "Stacje bazowe, węzły transmisyjne, serwerownie i obiekty nadawcze"
+      },
+      "reactive-power": {
+        "badge": "Kompensacja Mocy Biernej",
+        "title": "Kompensatory Mocy Biernej",
+        "shortDesc": "Dobór, montaż i modernizacja automatycznych baterii kondensatorów i dławików kompensacyjnych. Eliminacja kosztownych opłat za energię bierną indukcyjną i pojemnościową.",
+        "fullDesc": "Oferujemy kompleksowe rozwiązania w zakresie redukcji kosztów energii elektrycznej poprzez kompensację mocy biernej. Przeprowadzamy analizę parametrów sieci zasilającej, dobieramy stopnie kompensacji oraz prefabrykujemy i instalujemy szafy kompensacyjne wyposażone w automatyczne mikroprocesorowe regulatory.",
+        "scopeList": [
+          "Montaż i podłączenie szaf kompensatorów mocy biernej",
+          "Instalacja modułów kondensatorowych i dławików filtracyjnych",
+          "Regulacja i programowanie cyfrowych regulatorów mocy biernej",
+          "Pomiary parametrów sieci, współczynnika mocy cos φ oraz wyższych harmonicznych",
+          "Serwis i wymiana wyeksploatowanych członów kompensacyjnych"
+        ],
+        "specifications": "Baterie kondensatorów ze stopniami dławikowymi; Zabezpieczenia nadprądowe; Automatyczny regulator cyfrowy",
+        "targetSector": "Węzły infrastruktury technicznej, stacje transmisyjne, zakłady produkcyjne"
+      },
+      "freecooling-hvac": {
+        "badge": "HVAC & FreeCooling",
+        "title": "Wentylacja FreeCooling i Klimatyzacja Precyzyjna",
+        "shortDesc": "Energooszczędne systemy wentylacji swobodnej FreeCooling oraz klimatyzacja precyzyjna dla serwerowni i kontenerów technicznych. Montaż, certyfikowany serwis i przeglądy F-gazy.",
+        "fullDesc": "Wdrażamy zaawansowane systemy chłodzenia zapewniające optymalną temperaturę i wilgotność w warunkach ciągłej pracy urządzeń elektronicznych. Połączenie klimatyzacji precyzyjnej z systemami wentylacji FreeCooling pozwala na drastyczne obniżenie zużycia energii elektrycznej przez wykorzystanie chłodu powietrza zewnętrznego.",
+        "scopeList": [
+          "Instalacja central i modułów wentylacji swobodnej FreeCooling",
+          "Montaż czerpni powietrza na kontenerach technicznych oraz elewacjach budynków",
+          "Montaż i uruchomienie jednostek klimatyzacji precyzyjnej",
+          "Programowanie układów automatyki i płynnego przełączania trybów chłodzenia",
+          "Certyfikowane przeglądy szczelności i sprawności układów chłodniczych (F-gazy)"
+        ],
+        "specifications": "Klimatyzatory precyzyjne; Wentylatory EC o regulowanej prędkości; Zintegrowane filtry kasetowe F7/G4",
+        "targetSector": "Kontenery technologiczne, serwerownie, węzły światłowodowe, centra przetwarzania danych"
+      },
+      "telecom-containers": {
+        "badge": "Kontenery & Infrastruktura",
+        "title": "Kontenery Technologiczne i Podłogi Podniesione",
+        "shortDesc": "Kompleksowe wyposażenie technologiczne kontenerów telekomunikacyjnych węzłów POP. Montaż podłóg podniesionych, tras kablowych, oświetlenia i szaf rack.",
+        "fullDesc": "Realizujemy pełne uzbrojenie techniczne kontenerów telekomunikacyjnych oraz pomieszczeń serwerowych. Prace obejmują konstrukcję podłóg technicznych ułatwiających prowadzenie instalacji podpodłogowych, zabudowę szaf teletechnicznych, dedykowane trasy kablowe, uziemienie obiektowe oraz systemy dozoru technicznego.",
+        "scopeList": [
+          "Projektowanie i montaż modułowych podłóg technicznych i podestów",
+          "Montaż szaf teletechnicznych rack 19\" oraz koryt kablowych podstropowych i podpodłogowych",
+          "Instalacje zasilania gwarantowanego oraz oświetlenia podstawowego i awaryjnego",
+          "Główna szyna wyrównania potencjałów (GSW) i instalacje uziemiające",
+          "Systemy kontroli dostępu, sygnalizacji pożaru i monitoringu parametrów środowiskowych"
+        ],
+        "specifications": "Modułowe płyty podłogowe o wysokiej nośności; Stalowe konstrukcje wsporcze; Klasa ogniowa zgodnie z normami",
+        "targetSector": "Węzły dostępowe POP, telekomunikacyjne stacje kontenerowe, serwerownie modułowe"
+      },
+      "switchboards": {
+        "badge": "Prefabrykacja & SEP",
+        "title": "Prefabrykacja Rozdzielnic i Pomiary Odbiorcze",
+        "shortDesc": "Projektowanie i prefabrykacja szaf rozdzielczych nN, szaf automatyki i rozdzielnic terenowych. Kompleksowe pomiary elektryczne SEP i kompletne protokoły odbiorcze.",
+        "fullDesc": "Prefabrykujemy nowoczesne szafy rozdzielcze niskiego napięcia w oparciu o aparaturę czołowych europejskich producentów. Każda szafa przed wysyłką na obiekt przechodzi rygorystyczne badania laboratoryjne, pomiary izolacji, pętli zwarcia i testy funkcjonalne, zakończone wystawieniem protokołu odbiorczego SEP.",
+        "scopeList": [
+          "Prefabrykacja głównych rozdzielnic zasilających nN i szaf sterowniczych",
+          "Montaż rozdzielnic obiektowych oraz szaf terenowych odpornych na warunki atmosferyczne",
+          "Układy automatycznego załączania rezerwy (SZR / ATS)",
+          "Pomiary rezystancji izolacji, skuteczności zerowania i ciągłości przewodów ochronnych",
+          "Sporządzanie kompletnej dokumentacji powykonawczej i protokołów badań SEP"
+        ],
+        "specifications": "Stopień ochrony IP do IP65; Aparatura modułowa i kompaktowa renomowanych marek; Zgodność z PN-EN 61439",
+        "targetSector": "Obiekty nadawcze, przemysłowe szafy sterownicze, rozdzielnice zasilające infrastruktury technicznej"
+      },
+      "facility-maintenance": {
+        "badge": "Facility Management",
+        "title": "Utrzymanie Techniczne Obiektów i Serwis 24/7",
+        "shortDesc": "Kompleksowa opieka techniczna nad obiektami infrastruktury krytycznej: zasilanie gwarantowane, instalacje HVAC, przeglądy budowlane oraz stan terenu przyległego.",
+        "fullDesc": "Zapewniamy ciągłość operacyjną dla rozproszonych obiektów technicznych. Nasz zespół realizuje okresowe audyty stanu technicznego, konserwację urządzeń zasilania i chłodzenia oraz reaguje na awarie, gwarantując zgodność z rygorystycznymi umowami SLA.",
+        "scopeList": [
+          "Cykliczne przeglądy prewencyjne instalacji elektrycznych i klimatyzacyjnych",
+          "Nadzór nad sprawnością agregatów prądotwórczych i systemów UPS",
+          "Kontrola stanu budowlanego kontenerów i obiektów technicznych",
+          "Utrzymanie terenu przyległego, ogrodzeń i dróg dojazdowych do stacji",
+          "Usuwanie awarii w reżimie podwyższonej gotowości technicznej"
+        ],
+        "specifications": "Gotowość serwisowa; Dedykowane procedury SLA; Pełne raportowanie elektroniczne z każdego przeglądu",
+        "targetSector": "Rozproszone stacje bazowe, punkty retransmisyjne, obiekty bezobsługowe"
+      },
+      "industrial-lines": {
+        "badge": "Przemysł & Automatyka",
+        "title": "Instalacje Przemysłowe i Relokacje Linii Produkcyjnych",
+        "shortDesc": "Prace instalacyjne i okablowanie maszyn na nowych liniach technologicznych oraz profesjonalne demontaże i relokacje parków maszynowych.",
+        "fullDesc": "Świadczymy specjalistyczne usługi elektroinstalacyjne i mechaniczne dla zakładów produkcyjnych i przemysłowych. Wykonujemy podłączenia technologiczne nowych linii produkcyjnych, montaż tras kablowych o podwyższonej wytrzymałości mechanicznej oraz bezpieczne demontaże i relokacje maszyn przemysłowych.",
+        "scopeList": [
+          "Okablowanie zasilające i sterownicze nowych linii technologicznych",
+          "Montaż konstrukcji wsporczych, koryt ciężkich i drabinek kablowych",
+          "Bezpieczny demontaż, oznaczanie i przygotowanie maszyn do relokacji",
+          "Podłączenia zasilania maszyn, silników i szaf automatyki przemysłowej",
+          "Pomiary powykonawcze i asysta techniczna podczas rozruchu technologicznego"
+        ],
+        "specifications": "Trasy kablowe przemysłowe; Zasilanie maszyn do 1000V; Zgodność z dyrektywą maszynową",
+        "targetSector": "Zakłady produkcyjne, fabryki, hale przetwórcze i obiekty przemysłu ciężkiego"
+      }
+    }
+  },
+  "hero": {
+    "badge": "RODZINNA FIRMA INŻYNIERYJNA",
+    "title": "Infrastruktura telekomunikacyjna na najwyższym poziomie",
+    "subtitle": "Kompleksowe usługi dla obiektów telekomunikacyjnych – od profesjonalnego projektu, przez precyzyjne wykonawstwo, aż po niezawodne utrzymanie krytyczne.",
+    "ctaPrimary": "Skontaktuj się z nami",
+    "ctaSecondary": "Poznaj nasze usługi",
+    "status": "STATUS SYSTEMU: AKTYWNY",
+    "systemCode": "EMIN_INFRA_2026",
+    "features": {
+      "containersTitle": "KONTENERY TELEKOMUNIKACYJNE",
+      "containersDesc": "Przeglądy okresowe i wykonawstwo",
+      "hvacTitle": "SYSTEMY KLIMATYZACJI",
+      "hvacDesc": "Precyzyjna kontrola klimatu i serwis",
+      "powerTitle": "ZASILANIE I SZAFY",
+      "powerDesc": "Montaż UPS, Hager, Socomec i Vertiv"
+    }
+  },
+  "stats": {
+    "stat1Val": "100%",
+    "stat1Lbl": "Niezawodność działania",
+    "stat2Val": "24/7",
+    "stat2Lbl": "Wsparcie awaryjne",
+    "stat3Val": "PL & DE",
+    "stat3Lbl": "Obszar realizacji",
+    "stat4Val": "Hager & Vertiv",
+    "stat4Lbl": "Certyfikowane marki"
+  },
+  "about": {
+    "header": "KIM JESTEŚMY",
+    "title": "Niezawodny partner w świecie infrastruktury krytycznej",
+    "p1": "Eminstall to rodzinna firma inżynieryjna, która powstała z pasji do nowoczesnych technologii i precyzyjnego wykonawstwa. Specjalizujemy się w obsłudze technicznej oraz budowie zaawansowanej infrastruktury dla obiektów telekomunikacyjnych.",
+    "p2": "Dla nas liczy się każdy szczegół. Rozumiemy, jak kluczowe znaczenie ma ciągłość działania sieci komórkowych, radiowych oraz światłowodowych. Dlatego łączymy rzetelną wiedzę inżynieryjną z szybkim czasem reakcji, dostarczając rozwiązania, na których można polegać w każdych warunkach.",
+    "precision": "Inżynieryjna precyzja",
+    "precisionDesc": "Dbamy o każdy milimetr instalacji, eliminując ryzyko awarii zanim się pojawi.",
+    "safety": "Bezpieczeństwo i pewność",
+    "safetyDesc": "Działamy zgodnie z najwyższymi standardami BHP i normami technicznymi UE.",
+    "engineeringControl": "Dwuetapowa kontrola inżynieryjna nad każdym projektem."
+  },
+  "services": {
+    "header": "NASZA OFERTA",
+    "title": "Kompleksowe usługi inżynieryjne",
+    "subtitle": "Zapewniamy profesjonalizm na każdym etapie cyklu życia obiektu telekomunikacyjnego.",
+    "categoryInfrastructure": "KATEGORIA: INFRASTRUKTURA",
+    "categoryCooling": "KATEGORIA: SYSTEMY CHŁODZENIA",
+    "categoryPower": "KATEGORIA: ENERGETYKA",
+    "categoryPrefabrication": "KATEGORIA: PREFABRYKACJA",
+    "badgeMaintenance": "Pełna konserwacja",
+    "badgeCooling": "Klimatyzacja precyzyjna",
+    "badgePower": "Systemy UPS & Agregaty",
+    "badgeComponents": "Certyfikowane komponenty",
+    "serv1Title": "Kontenery telekomunikacyjne",
+    "serv1Desc": "Kompleksowe wykonawstwo, modernizacja, konserwacja oraz okresowe przeglądy techniczne kontenerów telekomunikacyjnych. Po każdym przeglądzie sporządzamy profesjonalny, szczegółowy protokół wykonania z kompletną diagnozą techniczną i pomiarami.",
+    "serv2Title": "Klimatyzacja (HVAC)",
+    "serv2Desc": "Montaż, serwis oraz drobiazgowe przeglądy systemów chłodzenia – w tym specjalistycznej klimatyzacji precyzyjnej. Gwarantujemy stałą temperaturę i wilgotność powietrza, chroniąc krytyczną elektronikę przed przegrzaniem.",
+    "serv3Title": "Zasilanie gwarantowane",
+    "serv3Desc": "Instalacja i konserwacja niezawodnych systemów UPS oraz układów zasilania awaryjnego (agregatów prądotwórczych). Zabezpieczamy obiekty przed niekontrolowanymi spadkami i zanikami napięcia w sieci.",
+    "serv4Title": "Szafy elektryczne",
+    "serv4Desc": "Prefabrykacja, montaż i podłączanie dedykowanych rozdzielnic elektrycznych oraz szaf automatyki. Pracujemy wyłącznie na sprawdzonych, certyfikowanych komponentach wiodących marek, takich jak Hager, Socomec oraz Vertiv."
+  },
+  "whyUs": {
+    "header": "DLACZEGO MY",
+    "title": "Fundament, na którym budujemy zaufanie",
+    "point1Title": "Rodzinne wartości i zaangażowanie",
+    "point1Desc": "Jako firma rodzinna bierzemy pełną osobistą odpowiedzialność za każdy projekt. Nasze nazwisko to gwarancja uczciwości.",
+    "point2Title": "Wiedza inżynieryjna i uprawnienia",
+    "point2Desc": "Nasz zespół posiada pełne certyfikacje, specjalistyczne uprawnienia SEP i wieloletnie doświadczenie w branży telekomunikacyjnej.",
+    "point3Title": "Ekspresowy czas reakcji",
+    "point3Desc": "Wiemy, że każda minuta przestoju infrastruktury generuje straty. Jesteśmy gotowi do szybkiego podjęcia działań.",
+    "point4Title": "Zgodność z normami PL & DE",
+    "point4Desc": "Znamy specyfikę rynków w Polsce i Niemczech. Wszystkie nasze prace spełniają restrykcyjne normy lokalne i europejskie.",
+    "projectsTitle": "Nasze Realizacje",
+    "projectsDesc": "Z sukcesem zrealizowaliśmy modernizacje systemów zasilania i chłodzenia dla kluczowych węzłów sieci komórkowych w Polsce oraz Niemczech. Specjalizujemy się w pracach na obiektach o najwyższym rygorze bezpieczeństwa i ciągłości pracy. Prefabrykowane przez nas szafy elektryczne oraz rozdzielnice niezawodnie zasilają infrastrukturę przesyłową, a regularna konserwacja kontenerów telekomunikacyjnych eliminuje ryzyko nieplanowanych przestojów dla naszych partnerów biznesowych.",
+    "realizationsTitle": "Przykładowe Realizacje",
+    "realizationsSubtitle": "Zobacz efekty naszych profesjonalnych prac inżynieryjnych na obiektach telekomunikacyjnych.",
+    "specification": "SPECYFIKACJA",
+    "realization1Title": "Modernizacja Kontenera Nadawczego",
+    "realization1Desc": "Pełna regeneracja uszczelnień termicznych, rekonfiguracja okablowania oraz serwis techniczny osłony zewnętrznej.",
+    "realization1Category": "KONTENERY TELEKOMUNIKACYJNE",
+    "realization1Stats": "SEP Certified • 24h Audit • Poland / Germany",
+    "realization2Title": "Instalacja Klimatyzacji Precyzyjnej",
+    "realization2Desc": "Montaż specjalistycznych układów chłodzenia precyzyjnego marki Vertiv zintegrowanych z systemem automatyki.",
+    "realization2Category": "KLIMATYZACJA HVAC",
+    "realization2Stats": "Vertiv • Precision HVAC • Continuous Control",
+    "realization3Title": "Systemy Zasilania Gwarantowanego UPS",
+    "realization3Desc": "Wdrożenie modułowych systemów UPS oraz układu przełączania zasilania awaryjnego (SZR) dla stacji bazowych.",
+    "realization3Category": "ZASILANIE KRYTYCZNE",
+    "realization3Stats": "Modular UPS • ATS Systems • Emergency Generators",
+    "realization4Title": "Prefabrykacja Szaf Rozdzielczych",
+    "realization4Desc": "Zaprojektowanie i montaż rozdzielnic elektrycznych opartych na niezawodnych komponentach Hager i Socomec.",
+    "realization4Category": "PREFABRYKACJA ROZDZIELNIC",
+    "realization4Stats": "Hager • Socomec • CE Standard Prefabrication",
+    "realization5Title": "Profesjonalne Protokoły Przeglądów",
+    "realization5Desc": "Sporządzamy szczegółowe, profesjonalne protokoły z każdego przeglądu technicznego, zawierające pełną diagnozę, pomiary elektryczne oraz wytyczne konserwacyjne.",
+    "realization5Category": "PROTOKOŁY PRZEGLĄDÓW",
+    "realization5Stats": "ISO Compliant • Full Technical Diagnostics • Electric Measurements"
+  },
+  "contact": {
+    "header": "KONTAKT",
+    "title": "Rozpocznijmy współpracę",
+    "subtitle": "Chcesz zapytać o ofertę, zlecić serwis lub nawiązać stałą współpracę? Napisz do nas lub zadzwoń. Odpowiemy niezwłocznie.",
+    "formName": "Imię i nazwisko",
+    "formEmail": "Adres e-mail",
+    "formAddress": "Lokalizacja obiektu / Adres",
+    "formMessage": "Treść wiadomości",
+    "formSubmit": "Wyślij wiadomość",
+    "formSubmitting": "Wysyłanie wiadomości...",
+    "formSuccess": "Wiadomość została wysłana! Dziękujemy za kontakt. Skontaktujemy się z Państwem najszybciej, jak to możliwe.",
+    "infoPhone": "Telefon bezpośredni",
+    "phonePrompt": "Zadzwoń do nas, aby omówić szczegóły",
+    "infoEmail": "Adres e-mail",
+    "emailPrompt": "Odpowiadamy w ciągu kilku godzin",
+    "infoArea": "Obszar działalności",
+    "infoAreaDesc": "Polska i Niemcy (Mobilne ekipy serwisowe)",
+    "areaPrompt": "Nasz mobilny zespół inżynieryjny regularnie realizuje przeglądy i wdrożenia na terenie całego kraju oraz w Niemczech.",
+    "infoCompanyDetails": "Dane firmy",
+    "infoWojtek": "Tomasz Miga — Właściciel",
+    "companyNameLabel": "Nazwa pełna",
+    "companyAddressLabel": "Adres rejestrowy",
+    "nip": "NIP",
+    "regon": "REGON",
+    "credentialLicensing": "Pełne uprawnienia eksploatacyjne SEP",
+    "credentialPartners": "Autoryzacja wiodących producentów (Hager, Vertiv)",
+    "credentialSla": "Gwarancja ciągłości pracy systemów (SLA)",
+    "operationalScope": "PL / DE (Polska & Deutschland)"
+  },
+  "footer": {
+    "copyright": "Eminstall",
+    "rights": "Wszelkie prawa zastrzeżone."
+  }
+}
