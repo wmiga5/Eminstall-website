@@ -291,12 +291,12 @@ export default function App() {
               </div>
             </motion.div>
 
-            {/* Right Schematic / Visual Display */}
+            {/* Right Schematic / Visual Display (Hidden on mobile) */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-5 relative"
+              className="hidden lg:block lg:col-span-5 relative"
               id="hero-right-visual"
             >
               <div className="relative mx-auto max-w-[420px] lg:max-w-none">
