@@ -26,7 +26,11 @@ import freecoolingCzerpniaBudynekImg from '../../assets/images/freecooling-czerp
 import kontenerPopImg from '../../assets/images/Kontener-Eminstall1.jpg';
 
 import rozdzielniaHagerImg from '../../assets/images/Rozdzielnia-Eminstall4.jpg';
-import protokolSepImg from '../../assets/images/Protokol-Eminstall5.png';
+
+// Protocol visualization imports
+import protokolBaterieImg from '../../assets/images/protokol-baterie-ups.jpg';
+import protokolPomiaryImg from '../../assets/images/protokol-pomiary-elektryczne.jpg';
+import protokolKlimatyzacjaImg from '../../assets/images/protokol-klimatyzacja-vertiv.jpg';
 
 export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
   {
@@ -36,6 +40,7 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     gallery: [
       silowniaDcImg,
       batteryRackImg,
+      protokolBaterieImg,
       wiezowaRozdzielnicaImg,
       wiezaImg
     ],
@@ -60,6 +65,7 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     gallery: [
       freecoolingCzerpniaZewnImg,
       klimatyzacjaKontenerImg,
+      protokolKlimatyzacjaImg,
       freecoolingBoxTelzasImg,
       freecoolingCzerpniaBudynekImg
     ],
@@ -82,7 +88,7 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     mainImage: rozdzielniaHagerImg,
     gallery: [
       rozdzielniaHagerImg,
-      protokolSepImg
+      protokolPomiaryImg
     ],
     icon: ShieldCheck,
     tags: ['Prefabrykacja rozdzielnic', 'Szafy zasilające', 'Pomiary SEP', 'Protokoły odbiorcze']
