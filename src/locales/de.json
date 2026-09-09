@@ -148,88 +148,33 @@
   },
   "hero": {
     "badge": "FAMILIENGEFÜHRTES INGENIEURUNTERNEHMEN",
-    "title": "Telekommunikations-Infrastruktur auf höchstem Niveau",
-    "subtitle": "Umfassende Leistungen für Mobilfunk- und Telekommunikationsanlagen – von der professionellen Planung über den präzisen Bau bis zur zuverlässigen kritischen Wartung.",
+    "title": "Fortschrittliche technische Infrastruktur und Elektroanlagen",
+    "subtitle": "Ganzheitliche Ingenieurdienstleistungen für Industrie und anspruchsvolle Anlagen – von Planung und Schaltschrankbau über Notstromversorgung und Kühlung bis zu Montage und Wartung.",
     "ctaPrimary": "Kontaktieren Sie uns",
     "ctaSecondary": "Unsere Leistungen",
     "status": "SYSTEMSTATUS: AKTIV",
     "systemCode": "EMIN_INFRA_2026",
     "features": {
-      "containersTitle": "TELEKOMUNIKATIONSCONTAINER",
-      "containersDesc": "Prüfungen & Ausführung",
-      "hvacTitle": "KLIMAANLAGEN",
-      "hvacDesc": "Präzisionsklimatisierung & Wartung",
-      "powerTitle": "STROM & SCHRÄNKE",
-      "powerDesc": "Montage von USV, Hager, Socomec & Vertiv"
-    },
-    "trustValues": [
-      "Solidität",
-      "Pünktlichkeit",
-      "Verantwortung",
-      "Kundenkommunikation",
-      "Erfahrung",
-      "Qualität",
-      "Effizienz"
-    ]
-  },
-  "credo": {
-    "badge": "UNSER INGENIEUR-CREDO",
-    "title": "Für uns gibt es keine unmöglichen Dinge.",
-    "subtitle": "Es gibt nur ingenieurtechnische Herausforderungen, die fundiertes Fachwissen, Entschlossenheit und kompromisslose Präzision erfordern.",
-    "description": "Unter hohem Zeitdruck, komplexer Logistik oder anspruchsvollen Bedingungen in kritischen Infrastrukturanlagen finden wir sichere und nachhaltige Lösungen, wo andere aufgeben.",
-    "tagline": "Zuverlässigkeit • Pünktlichkeit • Volle Verantwortung"
-  },
-  "stats": {
-    "stat1Val": "100%",
-    "stat1Lbl": "Betriebszuverlässigkeit",
-    "stat2Val": "24/7",
-    "stat2Lbl": "Notfall-Support",
-    "stat3Val": "PL & DE",
-    "stat3Lbl": "Einsatzgebiet",
-    "stat4Val": "Hager & Vertiv",
-    "stat4Lbl": "Zertifizierte Marken"
+      "containersTitle": "TECHNIKRÄUME & CONTAINER",
+      "containersDesc": "Ausführung, Modernisierung & Prüfungen",
+      "hvacTitle": "LÜFTUNG & KLIMATISIERUNG",
+      "hvacDesc": "FreeCooling, Präzisionsklima & F-Gase-Audits",
+      "powerTitle": "SCHALTSCHRÄNKE & AC/DC-STROM",
+      "powerDesc": "Energieverteiler, DC-Stromversorgungen & USV"
+    }
   },
   "about": {
     "header": "ÜBER UNS",
     "title": "Ihr verlässlicher Partner für kritische Infrastruktur",
-    "p1": "Eminstall ist ein familiengeführtes Ingenieurunternehmen, entstanden aus echter Leidenschaft für moderne Technologien und hochpräzise Ausführung. Wir sind spezialisiert auf den technischen Service und den Ausbau anspruchsvoller Telekommunikationsinfrastruktur.",
-    "p2": "Für uns kommt es auf jedes Detail an. Wir wissen, wie entscheidend eine unterbrechungsfreie Netzverfügbarkeit für Mobilfunk-, Richtfunk- und Glasfasernetze ist. Deshalb verbinden wir fundiertes Ingenieurwissen mit extrem schnellen Reaktionszeiten und liefern Lösungen, auf die unter allen Bedingungen Verlass ist.",
+    "credoQuote": "Für uns gibt es keine unmöglichen Dinge.",
+    "credoSub": "Es gibt nur ingenieurtechnische Herausforderungen, die Fachwissen, Entschlossenheit und kompromisslose Präzision erfordern.",
+    "p1": "Eminstall ist ein familiengeführtes Ingenieurunternehmen, gegründet auf solider Handwerkskunst, langjähriger Praxiserfahrung und kompromissloser Qualität. Wir sind spezialisiert auf anspruchsvolle Elektroinstallationen, Schaltschrank-Vorfertigung, unterbrechungsfreie AC/DC-Stromversorgung und Präzisionsklimatisierung für Industrie und Hochsicherheitsanlagen.",
+    "p2": "Unser Fundament sind Pünktlichkeit, Verantwortung und Effizienz – wir halten Zeitpläne strikt ein und übernehmen volle persönliche Verantwortung für jedes Projekt. Wir setzen auf direkte, transparente Kundenkommunikation in jeder Projektphase, abgeschlossen durch vollständige und rechtssichere Messprotokolle.",
     "precision": "Ingenieurmäßige Präzision",
     "precisionDesc": "Wir planen und montieren millimetergenau, um Fehlerquellen präventiv auszuschließen.",
     "safety": "Sicherheit & Konformität",
     "safetyDesc": "Wir arbeiten nach strengsten Arbeitsschutzbestimmungen und europäischen Industrienormen.",
-    "engineeringControl": "Zweistufige ingenieurtechnische Kontrolle über jedes Projekt.",
-    "pillarsTitle": "Ingenieur-Fundamente",
-    "pillars": [
-      {
-        "id": "approach",
-        "index": "01",
-        "badge": "HERANGEHENSWEISE",
-        "title": "Nichts ist unmöglich",
-        "desc": "Wir stellen uns den anspruchsvollsten technischen Aufgaben. Ungewöhnliche Bedingungen, Termindruck oder komplexe Integrationen – wir führen jedes Projekt zur vollen Einsatzbereitschaft."
-      },
-      {
-        "id": "quality",
-        "index": "02",
-        "badge": "QUALITÄT",
-        "title": "Kompromisslose Solidität",
-        "desc": "Zertifizierte Komponenten (Hager, Vertiv, Socomec), strenge DIN-EN-Normen und akribische Prüfung jeder Verbindung und jedes Messprotokolls."
-      },
-      {
-        "id": "relationship",
-        "index": "03",
-        "badge": "BEZIEHUNG",
-        "title": "Verantwortung & Kommunikation",
-        "desc": "Direkter Kontakt mit dem verantwortlichen Projektingenieur. Vollständige Transparenz in jeder Phase, lückenloses Reporting und persönliche Verantwortung."
-      },
-      {
-        "id": "punctuality",
-        "index": "04",
-        "badge": "UMSETZUNG",
-        "title": "Pünktlichkeit & Erfahrung",
-        "desc": "Langjährige Praxiserfahrung auf Anlagen in Polen und Deutschland. Wir halten Zeitpläne strikt ein und arbeiten präzise in vorgegebenen Wartungsfenstern."
-      }
-    ]
+    "engineeringControl": "Zweistufige ingenieurtechnische Kontrolle über jedes Projekt."
   },
   "services": {
     "header": "UNSERE LEISTUNGEN",

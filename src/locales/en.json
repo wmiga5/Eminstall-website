@@ -148,88 +148,33 @@
   },
   "hero": {
     "badge": "FAMILY-OWNED ENGINEERING COMPANY",
-    "title": "Telecommunication Infrastructure at its Finest",
-    "subtitle": "Comprehensive services for telecom facilities – from professional design and precise construction to reliable critical maintenance.",
+    "title": "Advanced Technical Infrastructure & Electrical Systems",
+    "subtitle": "Comprehensive engineering services for industry and critical facilities – from design and switchboard prefabrication to uninterruptible power, precision cooling, and certified maintenance.",
     "ctaPrimary": "Get in Touch",
     "ctaSecondary": "Our Services",
     "status": "SYSTEM STATUS: ACTIVE",
     "systemCode": "EMIN_INFRA_2026",
     "features": {
-      "containersTitle": "TELECOM CONTAINERS",
-      "containersDesc": "Execution & periodic structure reviews",
-      "hvacTitle": "HVAC SYSTEMS",
-      "hvacDesc": "Precision climate control & maintenance",
-      "powerTitle": "POWER & CABINETS",
-      "powerDesc": "UPS, Hager, Socomec & Vertiv assembly"
-    },
-    "trustValues": [
-      "Solidity",
-      "Punctuality",
-      "Accountability",
-      "Direct Communication",
-      "Experience",
-      "Quality",
-      "Efficiency"
-    ]
-  },
-  "credo": {
-    "badge": "OUR ENGINEERING CREDO",
-    "title": "For us, nothing is impossible.",
-    "subtitle": "There are only engineering challenges that require the right knowledge, determination, and uncompromising precision.",
-    "description": "When time constraints, demanding logistics, or non-standard conditions at critical infrastructure facilities arise – we deliver safe and durable solutions where others step back.",
-    "tagline": "Reliability • Punctuality • Full Accountability"
-  },
-  "stats": {
-    "stat1Val": "100%",
-    "stat1Lbl": "Operational Reliability",
-    "stat2Val": "24/7",
-    "stat2Lbl": "Emergency Support",
-    "stat3Val": "PL & DE",
-    "stat3Lbl": "Area of Operation",
-    "stat4Val": "Hager & Vertiv",
-    "stat4Lbl": "Certified Equipment"
+      "containersTitle": "TECHNICAL FACILITIES & SHELTERS",
+      "containersDesc": "Assembly, retrofits & structural reviews",
+      "hvacTitle": "VENTILATION & CLIMATE CONTROL",
+      "hvacDesc": "FreeCooling, precision HVAC & F-gas audits",
+      "powerTitle": "DISTRIBUTION & AC/DC POWER",
+      "powerDesc": "Control cabinets, DC power plants & UPS systems"
+    }
   },
   "about": {
     "header": "WHO WE ARE",
     "title": "A Reliable Partner in Critical Infrastructure",
-    "p1": "Eminstall is a family-owned engineering business born from a genuine passion for modern technologies and high-precision execution. We specialize in the technical maintenance and development of advanced infrastructure for telecommunications facilities.",
-    "p2": "For us, every single detail counts. We deeply understand how crucial network continuity is for mobile, radio, and fiber-optic operations. That is why we combine sound engineering expertise with fast response times, delivering solutions you can completely rely on under any circumstances.",
+    "credoQuote": "For us, nothing is impossible.",
+    "credoSub": "There are only engineering challenges that require knowledge, determination, and uncompromising precision.",
+    "p1": "Eminstall is a family-owned engineering company rooted in solid craftsmanship, extensive field experience, and uncompromising quality. We specialize in advanced electrical installations, custom switchboard prefabrication, AC/DC uninterruptible power systems, and precision cooling for industrial and high-reliability facilities.",
+    "p2": "Our foundation is punctuality, accountability, and efficiency – we strictly adhere to schedules and take full personal ownership of every task. We emphasize transparent, direct client communication throughout every stage, backed by thorough, certified measurement and inspection protocols.",
     "precision": "Engineering Precision",
     "precisionDesc": "We take care of every millimeter of the installation, eliminating faults before they even occur.",
     "safety": "Safety & Certitude",
     "safetyDesc": "We operate in strict accordance with the highest HSE standards and EU technical regulations.",
-    "engineeringControl": "Two-stage engineering control over every single project.",
-    "pillarsTitle": "Engineering Pillars",
-    "pillars": [
-      {
-        "id": "approach",
-        "index": "01",
-        "badge": "APPROACH",
-        "title": "Nothing is Impossible",
-        "desc": "We tackle the most challenging technical tasks. Non-standard conditions, urgent deadlines, or complex system integrations – we always lead projects to peak performance."
-      },
-      {
-        "id": "quality",
-        "index": "02",
-        "badge": "QUALITY",
-        "title": "Uncompromising Solidity",
-        "desc": "Certified components (Hager, Vertiv, Socomec), strict PN-EN/EU standards, and meticulous validation of every terminal connection and measurement protocol."
-      },
-      {
-        "id": "relationship",
-        "index": "03",
-        "badge": "RELATIONSHIP",
-        "title": "Accountability & Communication",
-        "desc": "Direct contact with the lead engineer. Full transparency at every stage, active progress reporting, and personal responsibility for your critical site."
-      },
-      {
-        "id": "punctuality",
-        "index": "04",
-        "badge": "EXECUTION",
-        "title": "Punctuality & Experience",
-        "desc": "Years of hands-on expertise across telecom and industrial facilities in Poland and Germany. We strictly honor schedules and execute within tight service windows."
-      }
-    ]
+    "engineeringControl": "Two-stage engineering control over every single project."
   },
   "services": {
     "header": "OUR SERVICES",
