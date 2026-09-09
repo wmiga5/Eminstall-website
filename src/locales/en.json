@@ -174,7 +174,9 @@
     "precisionDesc": "We take care of every millimeter of the installation, eliminating faults before they even occur.",
     "safety": "Safety & Certitude",
     "safetyDesc": "We operate in strict accordance with the highest HSE standards and EU technical regulations.",
-    "engineeringControl": "Two-stage engineering control over every single project."
+    "engineeringControl": "Two-stage engineering control over every single project.",
+    "certBadge": "Certification & Standards",
+    "certTitle": "Polish & European Standards"
   },
   "services": {
     "header": "OUR SERVICES",

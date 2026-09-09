@@ -174,7 +174,9 @@
     "precisionDesc": "Wir planen und montieren millimetergenau, um Fehlerquellen präventiv auszuschließen.",
     "safety": "Sicherheit & Konformität",
     "safetyDesc": "Wir arbeiten nach strengsten Arbeitsschutzbestimmungen und europäischen Industrienormen.",
-    "engineeringControl": "Zweistufige ingenieurtechnische Kontrolle über jedes Projekt."
+    "engineeringControl": "Zweistufige ingenieurtechnische Kontrolle über jedes Projekt.",
+    "certBadge": "Zertifizierung & Standards",
+    "certTitle": "Polnische & europäische Normen"
   },
   "services": {
     "header": "UNSERE LEISTUNGEN",

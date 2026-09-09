@@ -83,8 +83,7 @@ export default function App() {
         {t.accessibility.skipToContent}
       </a>
 
-      {/* Background patterns */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f080_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f080_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+      {/* Background glow effects */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-sky-500/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-[140px] pointer-events-none" />
 
@@ -386,8 +385,8 @@ export default function App() {
                         <Shield className="h-6 w-6" />
                       </div>
                       <div>
-                        <span className="text-xs font-mono uppercase text-slate-400 tracking-wider">Certyfikacja & Standardy</span>
-                        <h3 className="font-bold text-slate-900 text-base">Polskie i Europejskie Normy</h3>
+                        <span className="text-xs font-mono uppercase text-slate-400 tracking-wider">{t.about.certBadge}</span>
+                        <h3 className="font-bold text-slate-900 text-base">{t.about.certTitle}</h3>
                       </div>
                     </div>
 

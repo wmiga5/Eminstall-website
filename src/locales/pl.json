@@ -174,7 +174,9 @@
     "precisionDesc": "Dbamy o każdy milimetr instalacji, eliminując ryzyko awarii zanim się pojawi.",
     "safety": "Bezpieczeństwo i pewność",
     "safetyDesc": "Działamy zgodnie z najwyższymi standardami BHP i normami technicznymi UE.",
-    "engineeringControl": "Dwuetapowa kontrola inżynieryjna nad każdym projektem."
+    "engineeringControl": "Dwuetapowa kontrola inżynieryjna nad każdym projektem.",
+    "certBadge": "Certyfikacja & Standardy",
+    "certTitle": "Polskie i Europejskie Normy"
   },
   "services": {
     "header": "NASZA OFERTA",
