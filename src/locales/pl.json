@@ -44,7 +44,7 @@
         "badge": "Zasilanie AC/DC & Baterie",
         "title": "Systemy Zasilania Gwarantowanego AC i DC",
         "shortDesc": "Montaż, przeglądy okresowe i kompleksowe modernizacje siłowni prądu stałego (DC) oraz systemów UPS. Testy pojemnościowe baterii i precyzyjne pomiary rezystancji wewnętrznej ogniw.",
-        "fullDesc": "Projektujemy, instalujemy i serwisujemy profesjonalne systemy zasilania bezprzerwowego dla obiektów infrastruktury krytycznej i telekomunikacyjnej. Zapewniamy pełne wsparcie techniczne – od wymiany bloków bateryjnych w technologii VRLA/AGM, przez audyty kondycji magazynów energii za pomocą kontrolowanego rozładowania, aż po modernizację istniejących siłowni telekomunikacyjnych.",
+        "fullDesc": "Projektujemy, instalujemy i serwisujemy profesjonalne systemy zasilania bezprzerwowego dla obiektów infrastruktury krytycznej i telekomunikacyjnej. Zapewniamy pełne wsparcie techniczne – od wymiany bloków bateryjnych, przez audyty kondycji magazynów energii za pomocą kontrolowanego rozładowania, aż po modernizację istniejących siłowni telekomunikacyjnych.",
         "scopeList": [
           "Montaż i uruchomienia przemysłowych siłowni prądu stałego (DC 48V)",
           "Kompleksowe modernizacje istniejących stacji i rozdzielnic zasilania",
@@ -52,7 +52,7 @@
           "Diagnostyka kondycji baterii: kontrolowane rozładowanie i pomiary konduktancji/rezystancji",
           "Okresowe przeglądy techniczne systemów zasilania awaryjnego i UPS"
         ],
-        "specifications": "Systemy napięcia 48V DC / 230V / 400V AC; Baterie VRLA AGM / Żelowe; Certyfikowane protokoły pomiarowe",
+        "specifications": "Systemy napięcia 48V DC / 230V / 400V AC; Profesjonalne protokoły pomiarowe",
         "targetSector": "Stacje bazowe, węzły transmisyjne, serwerownie i obiekty nadawcze"
       },
       "reactive-power": {
@@ -79,7 +79,6 @@
           "Instalacja central i modułów wentylacji swobodnej FreeCooling",
           "Montaż czerpni powietrza na kontenerach technicznych oraz elewacjach budynków",
           "Montaż i uruchomienie jednostek klimatyzacji precyzyjnej",
-          "Programowanie układów automatyki i płynnego przełączania trybów chłodzenia",
           "Certyfikowane przeglądy szczelności i sprawności układów chłodniczych (F-gazy)"
         ],
         "specifications": "Klimatyzatory precyzyjne; Wentylatory EC o regulowanej prędkości; Zintegrowane filtry kasetowe F7/G4",
@@ -87,8 +86,8 @@
       },
       "telecom-containers": {
         "badge": "Kontenery & Infrastruktura",
-        "title": "Kontenery Technologiczne i Podłogi Podniesione",
-        "shortDesc": "Kompleksowe wyposażenie technologiczne kontenerów telekomunikacyjnych węzłów POP. Montaż podłóg podniesionych, tras kablowych, oświetlenia i szaf rack.",
+        "title": "Kontenery Technologiczne i Podłogi Techniczne",
+        "shortDesc": "Kompleksowe wyposażenie technologiczne kontenerów telekomunikacyjnych węzłów POP. Montaż podłóg technicznych, tras kablowych, oświetlenia i szaf rack.",
         "fullDesc": "Realizujemy pełne uzbrojenie techniczne kontenerów telekomunikacyjnych oraz pomieszczeń serwerowych. Prace obejmują konstrukcję podłóg technicznych ułatwiających prowadzenie instalacji podpodłogowych, zabudowę szaf teletechnicznych, dedykowane trasy kablowe, uziemienie obiektowe oraz systemy dozoru technicznego.",
         "scopeList": [
           "Projektowanie i montaż modułowych podłóg technicznych i podestów",
@@ -97,8 +96,8 @@
           "Główna szyna wyrównania potencjałów (GSW) i instalacje uziemiające",
           "Systemy kontroli dostępu, sygnalizacji pożaru i monitoringu parametrów środowiskowych"
         ],
-        "specifications": "Modułowe płyty podłogowe o wysokiej nośności; Stalowe konstrukcje wsporcze; Klasa ogniowa zgodnie z normami",
-        "targetSector": "Węzły dostępowe POP, telekomunikacyjne stacje kontenerowe, serwerownie modułowe"
+        "specifications": "Modułowe płyty podłogowe o wysokiej nośności; Stalowe konstrukcje wsporcze;",
+        "targetSector": "Węzły dostępowe, telekomunikacyjne stacje kontenerowe, serwerownie modułowe"
       },
       "switchboards": {
         "badge": "Prefabrykacja & SEP",
