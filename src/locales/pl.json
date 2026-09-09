@@ -28,6 +28,7 @@
     "closeDetails": "Zamknij szczegóły",
     "galleryTitle": "Szczegółowy opis techniczny",
     "galleryCount": "Zdjęcia z realizacji",
+    "galleryLabel": "Galeria",
     "noPhotosNotice": "Dokumentacja fotograficzna w przygotowaniu",
     "noPhotosDesc": "Zdjęcia i dokumentacja techniczna z tych prac zostaną wkrótce opublikowane w naszym portfolio.",
     "scopeListTitle": "Zakres zrealizowanych prac",
@@ -55,7 +56,8 @@
           "Okresowe przeglądy techniczne systemów zasilania awaryjnego i UPS"
         ],
         "specifications": "Systemy napięcia 48V DC / 230V / 400V AC; Profesjonalne protokoły pomiarowe",
-        "targetSector": "Stacje bazowe, węzły transmisyjne, serwerownie i obiekty nadawcze"
+        "targetSector": "Stacje bazowe, węzły transmisyjne, serwerownie i obiekty nadawcze",
+        "tags": ["Siłownie DC 48V", "Baterie VRLA/AGM", "UPS AC", "Pomiary rezystancji"]
       },
       "reactive-power": {
         "badge": "Kompensacja Mocy Biernej",
@@ -70,7 +72,8 @@
           "Serwis i wymiana wyeksploatowanych członów kompensacyjnych"
         ],
         "specifications": "Baterie kondensatorów ze stopniami dławikowymi; Zabezpieczenia nadprądowe; Automatyczny regulator cyfrowy",
-        "targetSector": "Węzły infrastruktury technicznej, stacje transmisyjne, zakłady produkcyjne"
+        "targetSector": "Węzły infrastruktury technicznej, stacje transmisyjne, zakłady produkcyjne",
+        "tags": ["Moc bierna", "Automatyczna kompensacja", "Dławiki & Filtry", "Efektywność"]
       },
       "freecooling-hvac": {
         "badge": "HVAC & FreeCooling",
@@ -84,7 +87,8 @@
           "Certyfikowane przeglądy szczelności i sprawności układów chłodniczych (F-gazy)"
         ],
         "specifications": "Klimatyzatory precyzyjne; Wentylatory EC o regulowanej prędkości; Zintegrowane filtry kasetowe F7/G4",
-        "targetSector": "Kontenery technologiczne, serwerownie, węzły światłowodowe, centra przetwarzania danych"
+        "targetSector": "Kontenery technologiczne, serwerownie, węzły światłowodowe, centra przetwarzania danych",
+        "tags": ["FreeCooling", "Klimatyzacja precyzyjna", "F-gazy", "Wentylacja"]
       },
       "telecom-containers": {
         "badge": "Kontenery & Infrastruktura",
@@ -99,7 +103,8 @@
           "Systemy kontroli dostępu, sygnalizacji pożaru i monitoringu parametrów środowiskowych"
         ],
         "specifications": "Modułowe płyty podłogowe o wysokiej nośności; Stalowe konstrukcje wsporcze;",
-        "targetSector": "Węzły dostępowe, telekomunikacyjne stacje kontenerowe, serwerownie modułowe"
+        "targetSector": "Węzły dostępowe, telekomunikacyjne stacje kontenerowe, serwerownie modułowe",
+        "tags": ["Węzły POP", "Kontenery techniczne", "Podłogi podniesione", "Korytowanie"]
       },
       "switchboards": {
         "badge": "Prefabrykacja & SEP",
@@ -114,7 +119,8 @@
           "Sporządzanie kompletnej dokumentacji powykonawczej, protokołów badań i pomiarów odbiorczych oraz Deklaracji Zgodności CE"
         ],
         "specifications": "Stopień ochrony IP do IP65; Aparatura modułowa i kompaktowa renomowanych marek; Zgodność z PN-EN 61439",
-        "targetSector": "Obiekty nadawcze, przemysłowe szafy sterownicze, rozdzielnice zasilające infrastruktury technicznej"
+        "targetSector": "Obiekty nadawcze, przemysłowe szafy sterownicze, rozdzielnice zasilające infrastruktury technicznej",
+        "tags": ["Prefabrykacja rozdzielnic", "Szafy zasilające", "Pomiary SEP", "Protokoły odbiorcze"]
       },
       "facility-maintenance": {
         "badge": "Facility Management",
@@ -129,7 +135,8 @@
           "Reagowanie na awarie w trybie pilnym"
         ],
         "specifications": "Gotowość serwisowa; Dedykowane procedury SLA; Pełne raportowanie elektroniczne z każdego przeglądu",
-        "targetSector": "Rozproszone stacje bazowe, punkty retransmisyjne, obiekty bezobsługowe"
+        "targetSector": "Rozproszone stacje bazowe, punkty retransmisyjne, obiekty bezobsługowe",
+        "tags": ["Facility Management", "Przeglądy okresowe", "Utrzymanie 24/7", "Infrastruktura krytyczna"]
       },
       "industrial-lines": {
         "badge": "Przemysł & Automatyka",
@@ -144,7 +151,8 @@
           "Pomiary powykonawcze i asysta techniczna podczas rozruchu technologicznego"
         ],
         "specifications": "Trasy kablowe przemysłowe; Zasilanie maszyn do 1000V; Zgodność z dyrektywą maszynową",
-        "targetSector": "Zakłady produkcyjne, fabryki, hale przetwórcze i obiekty przemysłu ciężkiego"
+        "targetSector": "Zakłady produkcyjne, fabryki, hale przetwórcze i obiekty przemysłu ciężkiego",
+        "tags": ["Instalacje przemysłowe", "Montaż linii technologicznych", "Okablowanie maszyn", "Relokacje"]
       }
     }
   },

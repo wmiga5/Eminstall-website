@@ -17,6 +17,7 @@ export interface WorkScopeItemTranslation {
   scopeList: string[];
   specifications?: string;
   targetSector?: string;
+  tags?: string[];
 }
 
 export interface WorkScopeSectionTranslation {
@@ -27,6 +28,7 @@ export interface WorkScopeSectionTranslation {
   closeDetails: string;
   galleryTitle: string;
   galleryCount: string;
+  galleryLabel?: string;
   noPhotosNotice: string;
   noPhotosDesc: string;
   scopeListTitle: string;

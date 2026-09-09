@@ -28,6 +28,7 @@
     "closeDetails": "Details schließen",
     "galleryTitle": "Detaillierter technischer Leistungsumfang",
     "galleryCount": "Projektfotos",
+    "galleryLabel": "Galerie",
     "noPhotosNotice": "Fotodokumentation in Vorbereitung",
     "noPhotosDesc": "Fotos und Fallstudien zu diesen technischen Projekten werden in Kürze in unserem Portfolio veröffentlicht.",
     "scopeListTitle": "Ausgeführte Leistungsschritte",
@@ -55,7 +56,8 @@
           "Regelmäßige technische Inspektionen und Wartung von USV- und Notstromanlagen"
         ],
         "specifications": "48V DC / 230V / 400V AC Systeme; Professionelle Prüfprotokolle",
-        "targetSector": "Mobilfunk-Basisstationen, Telekommunikationsknoten, Serverräume und Sendeanlagen"
+        "targetSector": "Mobilfunk-Basisstationen, Telekommunikationsknoten, Serverräume und Sendeanlagen",
+        "tags": ["48V DC-Stromversorgungen", "VRLA/AGM-Batterien", "AC-USV", "Widerstandsmessung"]
       },
       "reactive-power": {
         "badge": "Blindleistungskompensation",
@@ -70,7 +72,8 @@
           "Instandsetzung und Austausch verschlissener Schütze und Kondensatorstufen"
         ],
         "specifications": "Verdrosselte Kondensatorstufen; Integrierter Überstrom- und Übertemperaturschutz; Mikroprozessor-Regelung",
-        "targetSector": "Infrastrukturknoten, Sendestationen, Fertigungs- und Industrieanlagen"
+        "targetSector": "Infrastrukturknoten, Sendestationen, Fertigungs- und Industrieanlagen",
+        "tags": ["Blindleistung", "Automatische Kompensation", "Drosseln & Filter", "Energieeffizienz"]
       },
       "freecooling-hvac": {
         "badge": "HVAC & FreeCooling",
@@ -84,7 +87,8 @@
           "Zertifizierte Dichtheitsprüfungen und Kältekreislauf-Inspektionen (F-Gase-zertifiziert)"
         ],
         "specifications": "Präzisionsklimageräte; Drehzahlgeregelte EC-Ventilatoren; Kassettenfilterklassen F7 / G4",
-        "targetSector": "Technikcontainer, Serverräume, Glasfaserknoten und Rechenzentren"
+        "targetSector": "Technikcontainer, Serverräume, Glasfaserknoten und Rechenzentren",
+        "tags": ["FreeCooling", "Präzisionsklimatisierung", "F-Gase zertifiziert", "Lüftung"]
       },
       "telecom-containers": {
         "badge": "Container & Infrastruktur",
@@ -99,7 +103,8 @@
           "Zutrittskontrollsysteme, Brandmelde- und Umweltüberwachungssensoren"
         ],
         "specifications": "Hochbelastbare modulare Bodenplatten; Stahlunterkonstruktionen;",
-        "targetSector": "Netzknoten, modulare Mobilfunkcontainer, modulare Serverräume"
+        "targetSector": "Netzknoten, modulare Mobilfunkcontainer, modulare Serverräume",
+        "tags": ["POP-Knoten", "Technikcontainer", "Doppelböden", "Kabeltrassen"]
       },
       "switchboards": {
         "badge": "Schaltanlagenbau & Prüfung",
@@ -114,7 +119,8 @@
           "Erstellung vollständiger Revisionsdokumentationen, Prüf- und Abnahmeprotokolle sowie der CE-Konformitätserklärung"
         ],
         "specifications": "Schutzarten bis IP65; Modulare Marken-Schaltgeräte; Konformität mit DIN EN 61439",
-        "targetSector": "Sendeanlagen, Industrieautomationsschränke und Energieverteiler kritischer Infrastrukturen"
+        "targetSector": "Sendeanlagen, Industrieautomationsschränke und Energieverteiler kritischer Infrastrukturen",
+        "tags": ["Schaltschrankbau", "Stromverteilung", "SEP-Messungen", "Abnahmeprotokolle"]
       },
       "facility-maintenance": {
         "badge": "Facility Management",
@@ -129,7 +135,8 @@
           "Dringliche Störungsbeseitigung im Havariefall"
         ],
         "specifications": "Hohe Rufbereitschaft; Dedizierte SLA-Protokolle; Vollständige digitale Einsatzberichte",
-        "targetSector": "Mobilfunk-Basisstationen, Richtfunkstandorte und unbemannte Technikstützpunkte"
+        "targetSector": "Mobilfunk-Basisstationen, Richtfunkstandorte und unbemannte Technikstützpunkte",
+        "tags": ["Facility Management", "Wiederkehrende Prüfungen", "24/7-Wartung", "Kritische Infrastruktur"]
       },
       "industrial-lines": {
         "badge": "Industrie & Automation",
@@ -144,7 +151,8 @@
           "Messungen nach DGUV V3 und technische Unterstützung während der Inbetriebnahme"
         ],
         "specifications": "Industriekabeltrassen; Maschinenanschluss bis 1000V; Konformität mit Maschinenrichtlinie",
-        "targetSector": "Produktionswerke, automatisierte Fabriken, Verarbeitungshallen und Schwerindustrie"
+        "targetSector": "Produktionswerke, automatisierte Fabriken, Verarbeitungshallen und Schwerindustrie",
+        "tags": ["Industrieinstallationen", "Montage von Fertigungslinien", "Maschinenverkabelung", "Verlagerungen"]
       }
     }
   },

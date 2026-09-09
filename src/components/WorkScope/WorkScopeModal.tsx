@@ -251,7 +251,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
               {/* Technology tags */}
               <div className="pt-2">
                 <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag, i) => (
+                  {(translation.tags || item.tags).map((tag, i) => (
                     <span
                       key={i}
                       className="px-3 py-1 rounded-lg text-xs font-mono font-medium bg-slate-100 text-slate-700 border border-slate-200/80"
