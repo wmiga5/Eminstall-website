@@ -104,10 +104,10 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
         exit={{ scale: 0.95, opacity: 0, y: 15 }}
         transition={{ duration: 0.25 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-5xl max-h-[92vh] flex flex-col rounded-3xl bg-white shadow-2xl overflow-hidden border border-slate-200"
+        className="relative w-full max-w-5xl h-[92vh] max-h-[860px] flex flex-col rounded-3xl bg-white shadow-2xl overflow-hidden border border-slate-200"
       >
         {/* Sticky Modal Header / Close bar */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-white/95 backdrop-blur-xs z-10">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-white/95 backdrop-blur-xs z-10 shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center">
               <item.icon className="w-5 h-5" />
@@ -131,12 +131,12 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
           </button>
         </div>
 
-        {/* Scrollable Content Body */}
-        <div className="overflow-y-auto p-5 sm:p-7 md:p-9 space-y-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* Modal Body: on mobile whole body scrolls; on desktop right side scrolls independently */}
+        <div className="flex-1 min-h-0 overflow-y-auto lg:overflow-hidden custom-scrollbar">
+          <div className="grid grid-cols-1 lg:grid-cols-12 lg:h-full lg:min-h-0">
             
             {/* Gallery Column (Left - 7 cols on lg) */}
-            <div className="lg:col-span-7 flex flex-col space-y-4">
+            <div className="lg:col-span-7 flex flex-col space-y-4 p-5 sm:p-7 md:p-8 lg:overflow-y-auto custom-scrollbar">
               <div 
                 className={`relative aspect-4/3 w-full rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-md flex items-center justify-center ${
                   hasPhotos ? 'cursor-pointer group' : ''
@@ -264,7 +264,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
             </div>
 
             {/* Extended Details Column (Right - 5 cols on lg) */}
-            <div className="lg:col-span-5 flex flex-col space-y-6">
+            <div className="lg:col-span-5 flex flex-col space-y-6 p-5 sm:p-7 md:p-8 border-t lg:border-t-0 lg:border-l border-slate-100 lg:overflow-y-auto lg:h-full custom-scrollbar">
               {/* Extended Description */}
               <div className="space-y-3">
                 <h4 className="text-xs font-mono uppercase tracking-widest text-slate-500 font-bold flex items-center gap-2">

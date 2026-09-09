@@ -507,9 +507,8 @@ export default function App() {
                 
                 <div className="space-y-4">
                   <span className="block text-xs font-mono text-slate-500 font-semibold uppercase tracking-widest">{t.contact.infoCompanyDetails}</span>
-                  <div className="space-y-1">
+                  <div>
                     <span className="block text-lg font-bold text-slate-900">{COMPANY_DATA.name}</span>
-                    <span className="block text-sm font-semibold text-orange-600">{COMPANY_DATA.owner.name} — {COMPANY_DATA.owner.role[lang]}</span>
                   </div>
 
                   {/* Registered Company Details */}
