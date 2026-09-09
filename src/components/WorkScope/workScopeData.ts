@@ -48,15 +48,12 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     tags: ['Siłownie DC 48V', 'Baterie VRLA/AGM', 'UPS AC', 'Pomiary rezystancji']
   },
   {
-    id: 'reactive-power',
-    categoryKey: 'compensation',
-    mainImage: kompensatorSzafaImg,
-    gallery: [
-      kompensatorSzafaImg,
-      kompensatorModulyImg
-    ],
-    icon: Layers,
-    tags: ['Moc bierna', 'Automatyczna kompensacja', 'Dławiki & Filtry', 'Efektywność']
+    id: 'facility-maintenance',
+    categoryKey: 'maintenance',
+    mainImage: null, // Placeholder - awaiting photos
+    gallery: [],
+    icon: Wrench,
+    tags: ['Facility Management', 'Przeglądy okresowe', 'Utrzymanie 24/7', 'Infrastruktura krytyczna']
   },
   {
     id: 'freecooling-hvac',
@@ -94,19 +91,22 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     tags: ['Prefabrykacja rozdzielnic', 'Szafy zasilające', 'Pomiary SEP', 'Protokoły odbiorcze']
   },
   {
-    id: 'facility-maintenance',
-    categoryKey: 'maintenance',
-    mainImage: null, // Placeholder - awaiting photos
-    gallery: [],
-    icon: Wrench,
-    tags: ['Facility Management', 'Przeglądy okresowe', 'Utrzymanie 24/7', 'Infrastruktura krytyczna']
-  },
-  {
     id: 'industrial-lines',
     categoryKey: 'industrial',
     mainImage: null, // Placeholder - awaiting photos
     gallery: [],
     icon: Factory,
     tags: ['Instalacje przemysłowe', 'Montaż linii technologicznych', 'Okablowanie maszyn', 'Relokacje']
+  },
+  {
+    id: 'reactive-power',
+    categoryKey: 'compensation',
+    mainImage: kompensatorSzafaImg,
+    gallery: [
+      kompensatorSzafaImg,
+      kompensatorModulyImg
+    ],
+    icon: Layers,
+    tags: ['Moc bierna', 'Automatyczna kompensacja', 'Dławiki & Filtry', 'Efektywność']
   }
 ];
