@@ -131,19 +131,19 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
   return (
     <section 
       id="zakres-prac" 
-      className="relative py-16 sm:py-24 md:py-32 bg-slate-900 text-white border-t border-slate-800 overflow-hidden"
+      className="relative py-12 sm:py-16 md:py-20 bg-slate-900 text-white border-t border-slate-800 overflow-hidden"
     >
       {/* Compatibility anchors for existing links */}
       <span id="uslugi" className="absolute -top-24 pointer-events-none" />
       <span id="realizacje" className="absolute -top-24 pointer-events-none" />
 
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-3 mb-10 sm:mb-12 md:mb-16">
+        <div className="max-w-3xl space-y-3 mb-8 sm:mb-10 md:mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-[11px] sm:text-xs font-mono uppercase tracking-widest font-bold">
             <Sparkles className="w-3.5 h-3.5 text-orange-400" />
             <span>{translation.header}</span>

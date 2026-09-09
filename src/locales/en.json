@@ -73,10 +73,10 @@
       "freecooling-hvac": {
         "badge": "HVAC & FreeCooling",
         "title": "FreeCooling Ventilation & Precision Air Conditioning",
-        "shortDesc": "Energy-efficient FreeCooling systems and precision climate control. Assembly, maintenance, and F-gas compliance in Szczecinek, West Pomerania, Pomerania, and Germany.",
-        "fullDesc": "We deploy specialized thermal management systems maintaining optimal temperature and humidity for mission-critical hardware. Based in Szczecinek, we serve commercial and industrial clients across West Pomerania, nationwide, and in Germany.",
+        "shortDesc": "Energy-efficient FreeCooling systems and precision climate control. Assembly, maintenance, and F-gas compliance across Poland and Germany.",
+        "fullDesc": "We deploy specialized thermal management systems maintaining optimal temperature and humidity for mission-critical hardware. We serve commercial and industrial clients across Poland and Germany.",
         "scopeList": [
-          "Installation and commissioning of precision climate control cooling units (Szczecinek & regional)",
+          "Installation and commissioning of precision climate control cooling units",
           "Installation of FreeCooling modular ventilation systems and control units",
           "Mounting of weather-resistant air intake louvers on technical containers and facades",
           "Certified refrigerant leak detection and system performance audits (F-gas compliant)"
@@ -168,7 +168,7 @@
     "title": "A Reliable Partner in Critical Infrastructure",
     "credoQuote": "For us, nothing is impossible.",
     "credoSub": "There are only engineering challenges that require knowledge, determination, and uncompromising precision.",
-    "p1": "Eminstall (based in Szczecinek, West Pomeranian Voivodeship) is a family-owned engineering company rooted in solid craftsmanship, extensive field experience, and uncompromising quality. We specialize in advanced electrical installations, custom switchboard prefabrication, AC/DC uninterruptible power systems, and precision cooling for industrial and high-reliability facilities.",
+    "p1": "Eminstall is a family-owned engineering company rooted in solid craftsmanship, extensive field experience, and uncompromising quality. We specialize in advanced electrical installations, custom switchboard prefabrication, AC/DC uninterruptible power systems, and precision cooling for industrial and high-reliability facilities.",
     "p2": "Our foundation is punctuality, accountability, and efficiency – we strictly adhere to schedules and take full personal ownership of every task. We emphasize transparent, direct client communication throughout every stage, backed by thorough, certified measurement and inspection protocols.",
     "precision": "Engineering Precision",
     "precisionDesc": "We take care of every millimeter of the installation, eliminating faults before they even occur.",
@@ -253,8 +253,8 @@
     "infoEmail": "Email Address",
     "emailPrompt": "We reply within a few hours",
     "infoArea": "Operational Area",
-    "infoAreaDesc": "Szczecinek, West Pomerania, Pomerania | Poland & Germany",
-    "areaPrompt": "Headquartered in Szczecinek (West Pomeranian Voivodeship). Our mobile engineering teams operate across Pomerania, nationwide in Poland, and throughout Germany.",
+    "infoAreaDesc": "Poland & Germany (PL & DE)",
+    "areaPrompt": "Our mobile engineering team regularly executes deployments, installations, and servicing throughout Poland and Germany.",
     "infoCompanyDetails": "Company Info",
     "infoWojtek": "Tomasz Miga — Owner",
     "companyNameLabel": "Full name",

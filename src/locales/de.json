@@ -73,10 +73,10 @@
       "freecooling-hvac": {
         "badge": "HVAC & FreeCooling",
         "title": "FreeCooling-Lüftungssysteme & Präzisionsklimatisierung",
-        "shortDesc": "Energieeffiziente Direktluft-FreeCooling-Systeme und Präzisionsklimatisierung. Montage und Service in Szczecinek, Westpommern, Pommern und Deutschland. F-Gase zertifiziert.",
-        "fullDesc": "Wir realisieren hochmoderne Kühlsysteme für gleichbleibende thermische Bedingungen empfindlicher Elektronik. Mit Sitz in Szczecinek betreuen wir Projekte in Westpommern, ganz Polen und Deutschland. Die Kombination aus Präzisionsklimatisierung und automatischer FreeCooling-Lüftung senkt den Energieverbrauch signifikant.",
+        "shortDesc": "Energieeffiziente Direktluft-FreeCooling-Systeme und Präzisionsklimatisierung. Montage und Service in ganz Polen und Deutschland. F-Gase zertifiziert.",
+        "fullDesc": "Wir realisieren hochmoderne Kühlsysteme für gleichbleibende thermische Bedingungen empfindlicher Elektronik. Wir betreuen Projekte in ganz Polen und Deutschland. Die Kombination aus Präzisionsklimatisierung und automatischer FreeCooling-Lüftung senkt den Energieverbrauch signifikant.",
         "scopeList": [
-          "Montage und Inbetriebnahme von Präzisions- und Gewerbeklimageräten (Szczecinek & regional)",
+          "Montage und Inbetriebnahme von Präzisions- und Gewerbeklimageräten",
           "Montage und Inbetriebnahme modularer FreeCooling-Lüftungszentralen",
           "Installation witterungsbeständiger Außenluftansaugungen an Containern und Fassaden",
           "Zertifizierte Dichtheitsprüfungen und Kältekreislauf-Inspektionen (F-Gase-zertifiziert)"
@@ -168,7 +168,7 @@
     "title": "Ihr verlässlicher Partner für kritische Infrastruktur",
     "credoQuote": "Für uns gibt es keine unmöglichen Dinge.",
     "credoSub": "Es gibt nur ingenieurtechnische Herausforderungen, die Fachwissen, Entschlossenheit und kompromisslose Präzision erfordern.",
-    "p1": "Eminstall (mit Sitz in Szczecinek, Woiwodschaft Westpommern) ist ein familiengeführtes Ingenieurunternehmen, gegründet auf solider Handwerkskunst, langjähriger Praxiserfahrung und kompromissloser Qualität. Wir sind spezialisiert auf anspruchsvolle Elektroinstallationen, Schaltschrank-Vorfertigung, unterbrechungsfreie AC/DC-Stromversorgung und Präzisionsklimatisierung für Industrie und Hochsicherheitsanlagen.",
+    "p1": "Eminstall ist ein familiengeführtes Ingenieurunternehmen, gegründet auf solider Handwerkskunst, langjähriger Praxiserfahrung und kompromissloser Qualität. Wir sind spezialisiert auf anspruchsvolle Elektroinstallationen, Schaltschrank-Vorfertigung, unterbrechungsfreie AC/DC-Stromversorgung und Präzisionsklimatisierung für Industrie und Hochsicherheitsanlagen.",
     "p2": "Unser Fundament sind Pünktlichkeit, Verantwortung und Effizienz – wir halten Zeitpläne strikt ein und übernehmen volle persönliche Verantwortung für jedes Projekt. Wir setzen auf direkte, transparente Kundenkommunikation in jeder Projektphase, abgeschlossen durch vollständige und rechtssichere Messprotokolle.",
     "precision": "Ingenieurmäßige Präzision",
     "precisionDesc": "Wir planen und montieren millimetergenau, um Fehlerquellen präventiv auszuschließen.",
@@ -253,8 +253,8 @@
     "infoEmail": "E-Mail-Adresse",
     "emailPrompt": "Wir antworten innerhalb weniger Stunden",
     "infoArea": "Einsatzgebiet",
-    "infoAreaDesc": "Szczecinek, Westpommern, Pommern | Polen & Deutschland",
-    "areaPrompt": "Firmensitz in Szczecinek (Woiwodschaft Westpommern). Unsere mobilen Ingenieurteams realisieren Klimamontagen, Schaltschrankbau und Wartungen in ganz Polen und Deutschland.",
+    "infoAreaDesc": "Polen & Deutschland (PL & DE)",
+    "areaPrompt": "Unser mobiles Ingenieurteam führt regelmäßig Montagen, Inbetriebnahmen und Serviceeinsätze in ganz Polen und Deutschland durch.",
     "infoCompanyDetails": "Unternehmensdaten",
     "infoWojtek": "Tomasz Miga — Inhaber",
     "companyNameLabel": "Vollständiger Name",

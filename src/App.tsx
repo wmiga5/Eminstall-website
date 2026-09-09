@@ -6,7 +6,6 @@ import {
   Wind,
   Layers,
   Globe,
-  HardHat,
   Phone,
   Mail,
   MapPin,
@@ -245,7 +244,7 @@ export default function App() {
       <main id="main-content" className="outline-hidden" tabIndex={-1}>
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-linear-to-b from-white to-slate-50">
+      <section className="relative overflow-hidden pt-8 pb-10 md:pt-14 md:pb-14 bg-linear-to-b from-white to-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content */}
@@ -379,96 +378,45 @@ export default function App() {
       </section>
 
       {/* O NAS (ABOUT US) SECTION */}
-      <section id="o-nas" className="py-20 md:py-28 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left Side: Technical Badge Box */}
-            <div className="lg:col-span-5 order-2 lg:order-1" id="about-left-box">
-              <div className="relative">
-                <div className="rounded-2xl border-2 border-slate-100 bg-white p-6 md:p-8 shadow-sm">
-                  {/* Clean Technical Emblem */}
-                  <div className="flex flex-col space-y-6">
-                    <div className="flex items-center space-x-4 border-b border-slate-100 pb-5">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-500/10 text-orange-600">
-                        <Shield className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <span className="text-xs font-mono uppercase text-slate-500 font-semibold tracking-wider">{t.about.certBadge}</span>
-                        <h3 className="font-bold text-slate-900 text-base">{t.about.certTitle}</h3>
-                      </div>
-                    </div>
-
-                    <div className="space-y-4 text-xs text-slate-600 leading-relaxed">
-                      <div className="flex items-start space-x-3">
-                        <div className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/10 text-orange-600 shrink-0">
-                          <Check className="h-3 w-3" />
-                        </div>
-                        <p><strong className="text-slate-900">{t.about.precision}:</strong> {t.about.precisionDesc}</p>
-                      </div>
-
-                      <div className="flex items-start space-x-3">
-                        <div className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/10 text-orange-600 shrink-0">
-                          <Check className="h-3 w-3" />
-                        </div>
-                        <p><strong className="text-slate-900">{t.about.safety}:</strong> {t.about.safetyDesc}</p>
-                      </div>
-                    </div>
-
-                    {/* Family credentials badge */}
-                    <div className="mt-6 flex items-center space-x-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200/60 shadow-xs">
-                      <HardHat className="text-orange-600 h-5 w-5 shrink-0" />
-                      <span className="text-xs text-slate-500 leading-normal">
-                        {t.about.engineeringControl}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Outer offset frame */}
-                <div className="absolute -bottom-3 -right-3 h-full w-full rounded-2xl border border-slate-200 -z-10" />
-              </div>
+      <section id="o-nas" className="py-10 md:py-14 bg-white border-t border-slate-100">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="space-y-6" id="about-text-content">
+            <div className="space-y-2 text-center">
+              <span className="text-xs font-bold tracking-widest text-orange-600 uppercase font-mono">{t.about.header}</span>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">{t.about.title}</h2>
             </div>
 
-            {/* Right Side: Text Context */}
-            <div className="lg:col-span-7 space-y-6 order-1 lg:order-2" id="about-text-content">
-              <div className="space-y-2">
-                <span className="text-xs font-bold tracking-widest text-orange-600 uppercase font-mono">{t.about.header}</span>
-                <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">{t.about.title}</h2>
-              </div>
+            {/* Engineering Credo Quote */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-orange-500/5 border-l-4 border-orange-500 space-y-1.5 shadow-2xs">
+              <span className="block font-display font-bold text-lg sm:text-xl text-slate-900">
+                „{t.about.credoQuote}”
+              </span>
+              <span className="block text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                {t.about.credoSub}
+              </span>
+            </div>
 
-              {/* Engineering Credo Quote */}
-              <div className="p-5 rounded-2xl bg-orange-500/5 border-l-4 border-orange-500 space-y-1.5 shadow-2xs">
-                <span className="block font-display font-bold text-lg sm:text-xl text-slate-900">
-                  „{t.about.credoQuote}”
-                </span>
-                <span className="block text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
-                  {t.about.credoSub}
-                </span>
-              </div>
+            <div className="space-y-4 text-slate-600 font-light leading-relaxed text-base">
+              <p>{t.about.p1}</p>
+              <p>{t.about.p2}</p>
+            </div>
 
-              <div className="space-y-4 text-slate-600 font-light leading-relaxed text-base">
-                <p>{t.about.p1}</p>
-                <p>{t.about.p2}</p>
-              </div>
-
-              {/* Core Values Highlight */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
-                <div className="p-4 rounded-2xl bg-white border-2 border-slate-100 shadow-sm">
-                  <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-600 mb-2.5">
-                    <Shield className="h-4 w-4" />
-                  </div>
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">{t.about.precision}</h4>
-                  <p className="text-xs text-slate-500 leading-normal">{t.about.precisionDesc}</p>
+            {/* Core Values Highlight */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 shadow-2xs">
+                <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-600 mb-2.5">
+                  <Shield className="h-4 w-4" />
                 </div>
+                <h4 className="font-bold text-slate-900 text-sm mb-1">{t.about.precision}</h4>
+                <p className="text-xs text-slate-500 leading-normal">{t.about.precisionDesc}</p>
+              </div>
 
-                <div className="p-4 rounded-2xl bg-white border-2 border-slate-100 shadow-sm">
-                  <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-600 mb-2.5">
-                    <Globe className="h-4 w-4" />
-                  </div>
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">{t.about.safety}</h4>
-                  <p className="text-xs text-slate-500 leading-normal">{t.about.safetyDesc}</p>
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 shadow-2xs">
+                <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-600 mb-2.5">
+                  <Globe className="h-4 w-4" />
                 </div>
+                <h4 className="font-bold text-slate-900 text-sm mb-1">{t.about.safety}</h4>
+                <p className="text-xs text-slate-500 leading-normal">{t.about.safetyDesc}</p>
               </div>
             </div>
           </div>
@@ -482,9 +430,9 @@ export default function App() {
       />
 
       {/* KONTAKT & DIRECT DETAILS SECTION */}
-      <section id="kontakt" className="relative py-20 md:py-28 border-t border-slate-200 bg-white">
+      <section id="kontakt" className="relative py-10 md:py-14 border-t border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto space-y-3 mb-16" id="contact-header">
+          <div className="text-center max-w-3xl mx-auto space-y-3 mb-8 sm:mb-10" id="contact-header">
             <span className="text-xs font-bold tracking-widest text-orange-600 uppercase font-mono">{t.contact.header}</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">{t.contact.title}</h2>
             <div className="h-0.5 w-12 bg-orange-500 mx-auto my-4" />
@@ -622,7 +570,7 @@ export default function App() {
       </main>
 
       {/* MINIMAL HIGH-CONTRAST FOOTER */}
-      <footer className="border-t border-slate-800 bg-slate-900 py-8 md:py-12 text-slate-400">
+      <footer className="border-t border-slate-800 bg-slate-900 py-6 md:py-8 text-slate-400">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             
