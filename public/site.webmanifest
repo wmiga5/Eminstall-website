@@ -1,0 +1,16 @@
+{
+  "name": "EMINSTALL Tomasz Miga",
+  "short_name": "Eminstall",
+  "description": "Profesjonalne usługi inżynieryjne: klimatyzacja, rozdzielnice elektryczne, pomiary SEP, zasilanie UPS.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#F97316",
+  "background_color": "#F8FAFC"
+}

@@ -1,1 +1,6 @@
-/*    /index.html   200
+# Netlify Redirects Configuration
+# Physical static files in dist/ (index.html, sitemap.xml, robots.txt, 404.html, /uslugi/*)
+# are automatically served by Netlify with 200 status without triggering redirects.
+
+# Any unmatched request returns the custom 404.html with real HTTP 404 status
+/*    /404.html   404

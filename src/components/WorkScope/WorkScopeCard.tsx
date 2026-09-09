@@ -8,6 +8,7 @@ interface WorkScopeCardProps {
   item: WorkScopeItemData;
   translation: WorkScopeItemTranslation;
   sectionTranslation: WorkScopeSectionTranslation;
+  href?: string;
   onClick: () => void;
 }
 
@@ -15,27 +16,34 @@ export const WorkScopeCard: React.FC<WorkScopeCardProps> = ({
   item,
   translation,
   sectionTranslation,
+  href,
   onClick
 }) => {
   const Icon = item.icon;
   const photoCount = item.gallery.length;
   const hasPhotos = item.mainImage !== null;
 
+  const handleClick = (e: React.MouseEvent) => {
+    if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
   return (
-    <motion.div
+    <motion.a
+      href={href || '#'}
       whileHover={{ y: -6 }}
       transition={{ duration: 0.3 }}
-      onClick={onClick}
+      onClick={handleClick}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           onClick();
         }
       }}
-      role="button"
-      tabIndex={0}
       aria-label={`${sectionTranslation.viewDetails}: ${translation.title}`}
-      className="group cursor-pointer flex flex-col h-full rounded-2xl sm:rounded-3xl border-2 border-slate-200/90 bg-white shadow-lg hover:shadow-2xl hover:border-orange-500 transition-all duration-300 overflow-hidden focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 select-none"
+      className="group cursor-pointer flex flex-col h-full rounded-2xl sm:rounded-3xl border-2 border-slate-200/90 bg-white shadow-lg hover:shadow-2xl hover:border-orange-500 transition-all duration-300 overflow-hidden focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 select-none no-underline text-inherit"
     >
       {/* Featured Visual Banner (Proportionate on mobile, spacious on desktop) */}
       <div className="relative h-48 sm:h-64 md:h-72 lg:h-[320px] w-full overflow-hidden bg-slate-950">
@@ -139,6 +147,6 @@ export const WorkScopeCard: React.FC<WorkScopeCardProps> = ({
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.a>
   );
 };

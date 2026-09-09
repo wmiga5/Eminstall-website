@@ -5,17 +5,46 @@ import { WORK_SCOPE_ITEMS } from './workScopeData';
 import { WorkScopeCard } from './WorkScopeCard';
 import { WorkScopeModal } from './WorkScopeModal';
 import { WorkScopeSectionTranslation } from './types';
+import { getServiceUrl } from '../../routes';
+import { Language } from '../../data';
 
 interface WorkScopeSectionProps {
   translation: WorkScopeSectionTranslation;
   onContactClick: () => void;
+  lang?: Language;
+  selectedItemId?: string | null;
+  onSelectItem?: (id: string) => void;
+  onCloseModal?: () => void;
 }
 
 export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
   translation,
-  onContactClick
+  onContactClick,
+  lang = 'PL',
+  selectedItemId: controlledSelectedItemId,
+  onSelectItem,
+  onCloseModal
 }) => {
-  const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
+  const currentLang: Language = (lang as Language) || 'PL';
+  const [internalSelectedItemId, setInternalSelectedItemId] = useState<string | null>(null);
+  const selectedItemId = controlledSelectedItemId !== undefined ? controlledSelectedItemId : internalSelectedItemId;
+
+  const handleSelect = (id: string) => {
+    if (onSelectItem) {
+      onSelectItem(id);
+    } else {
+      setInternalSelectedItemId(id);
+    }
+  };
+
+  const handleClose = () => {
+    if (onCloseModal) {
+      onCloseModal();
+    } else {
+      setInternalSelectedItemId(null);
+    }
+  };
+
   const [currentPosition, setCurrentPosition] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -182,7 +211,8 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
                   item={item}
                   translation={itemTrans}
                   sectionTranslation={translation}
-                  onClick={() => setSelectedItemId(item.id)}
+                  href={getServiceUrl(item.id, currentLang)}
+                  onClick={() => handleSelect(item.id)}
                 />
               </div>
             );
@@ -233,7 +263,7 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
             item={selectedItem}
             translation={selectedTranslation}
             sectionTranslation={translation}
-            onClose={() => setSelectedItemId(null)}
+            onClose={handleClose}
             onContactClick={onContactClick}
           />
         )}

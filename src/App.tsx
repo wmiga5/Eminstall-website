@@ -21,29 +21,78 @@ import {
 } from 'lucide-react';
 import { TRANSLATIONS, COMPANY_DATA, Language } from './data';
 import { WorkScopeSection } from './components/WorkScope';
+import { parsePath, getHomeUrl, getServiceUrl, getRouteSeo } from './routes';
 
 import logoSvg from './assets/Logo/eminstall-logo.svg';
 import logoWhiteSvg from './assets/Logo/eminstall-logo-white.svg';
 
-export default function App() {
-  const [lang, setLang] = useState<Language>(() => {
-    if (typeof window !== 'undefined' && navigator) {
-      const browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || '').toLowerCase();
-      if (browserLang.startsWith('pl')) return 'PL';
-      if (browserLang.startsWith('de')) return 'DE';
-    }
-    return 'EN';
+export interface AppProps {
+  initialUrl?: string;
+}
+
+export default function App({ initialUrl }: AppProps = {}) {
+  const [currentUrl, setCurrentUrl] = useState<string>(() => {
+    if (initialUrl) return initialUrl;
+    if (typeof window !== 'undefined') return window.location.pathname;
+    return '/';
   });
+
+  const parsedInitial = parsePath(currentUrl);
+  const [lang, setLang] = useState<Language>(parsedInitial.lang);
+  const [selectedItemId, setSelectedItemId] = useState<string | null>(parsedInitial.serviceId);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const t = TRANSLATIONS[lang];
 
+  // Synchronize on browser history popstate (back / forward)
+  useEffect(() => {
+    const handlePopState = () => {
+      const parsed = parsePath(window.location.pathname);
+      setCurrentUrl(window.location.pathname);
+      setLang(parsed.lang);
+      setSelectedItemId(parsed.serviceId);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const handleOpenService = (serviceId: string) => {
+    setSelectedItemId(serviceId);
+    const targetUrl = getServiceUrl(serviceId, lang);
+    setCurrentUrl(targetUrl);
+    if (typeof window !== 'undefined') {
+      window.history.pushState({ modalOpen: true, serviceId }, '', targetUrl);
+    }
+  };
+
+  const handleCloseService = () => {
+    setSelectedItemId(null);
+    const homeUrl = getHomeUrl(lang);
+    setCurrentUrl(homeUrl);
+    if (typeof window !== 'undefined') {
+      window.history.pushState({ modalOpen: false, serviceId: null }, '', homeUrl);
+    }
+  };
+
+  const handleSwitchLang = (newLang: Language) => {
+    setLang(newLang);
+    const targetUrl = selectedItemId
+      ? getServiceUrl(selectedItemId, newLang)
+      : getHomeUrl(newLang);
+    setCurrentUrl(targetUrl);
+    if (typeof window !== 'undefined') {
+      window.history.pushState({ modalOpen: !!selectedItemId, serviceId: selectedItemId }, '', targetUrl);
+    }
+  };
+
   // Dynamic SEO & Accessibility Language Synchronization
   useEffect(() => {
-    // Synchronize HTML lang attribute
-    document.documentElement.lang = lang.toLowerCase();
+    const activePath = selectedItemId ? getServiceUrl(selectedItemId, lang) : getHomeUrl(lang);
+    const seo = getRouteSeo(activePath);
 
-    // Synchronize Dynamic Document Title based on selected locale
-    document.title = t.seo.title;
+    // Synchronize HTML lang attribute & document title
+    document.documentElement.lang = seo.htmlLang;
+    document.title = seo.title;
 
     // Helper to update or create meta tags
     const setMetaTag = (selector: string, attr: string, key: string, content: string) => {
@@ -56,16 +105,42 @@ export default function App() {
       meta.setAttribute('content', content);
     };
 
-    setMetaTag('meta[name="description"]', 'name', 'description', t.seo.description);
-    setMetaTag('meta[property="og:title"]', 'property', 'og:title', t.seo.title);
-    setMetaTag('meta[property="og:description"]', 'property', 'og:description', t.seo.description);
-    setMetaTag('meta[property="og:locale"]', 'property', 'og:locale', lang === 'PL' ? 'pl_PL' : lang === 'DE' ? 'de_DE' : 'en_US');
-    setMetaTag('meta[property="twitter:title"]', 'property', 'twitter:title', t.seo.title);
-    setMetaTag('meta[property="twitter:description"]', 'property', 'twitter:description', t.seo.description);
-  }, [lang, t]);
+    // Helper to update or create link tags
+    const setLinkTag = (selector: string, rel: string, href: string, extraAttr?: { name: string; val: string }) => {
+      let link = document.querySelector(selector) as HTMLLinkElement | null;
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', rel);
+        if (extraAttr) {
+          link.setAttribute(extraAttr.name, extraAttr.val);
+        }
+        document.head.appendChild(link);
+      }
+      link.setAttribute('href', href);
+    };
+
+    setMetaTag('meta[name="description"]', 'name', 'description', seo.description);
+    setMetaTag('meta[name="keywords"]', 'name', 'keywords', seo.keywords);
+    setMetaTag('meta[property="og:title"]', 'property', 'og:title', seo.title);
+    setMetaTag('meta[property="og:description"]', 'property', 'og:description', seo.description);
+    setMetaTag('meta[property="og:url"]', 'property', 'og:url', seo.canonical);
+    setMetaTag('meta[property="og:locale"]', 'property', 'og:locale', seo.ogLocale);
+    setMetaTag('meta[property="twitter:title"]', 'property', 'twitter:title', seo.title);
+    setMetaTag('meta[property="twitter:description"]', 'property', 'twitter:description', seo.description);
+    setMetaTag('meta[property="twitter:url"]', 'property', 'twitter:url', seo.canonical);
+
+    setLinkTag('link[rel="canonical"]', 'canonical', seo.canonical);
+    setLinkTag('link[rel="alternate"][hreflang="pl"]', 'alternate', seo.hreflangs.pl, { name: 'hreflang', val: 'pl' });
+    setLinkTag('link[rel="alternate"][hreflang="en"]', 'alternate', seo.hreflangs.en, { name: 'hreflang', val: 'en' });
+    setLinkTag('link[rel="alternate"][hreflang="de"]', 'alternate', seo.hreflangs.de, { name: 'hreflang', val: 'de' });
+    setLinkTag('link[rel="alternate"][hreflang="x-default"]', 'alternate', seo.hreflangs['x-default'], { name: 'hreflang', val: 'x-default' });
+  }, [lang, selectedItemId]);
 
   const handleScrollTo = (id: string) => {
     setIsMobileMenuOpen(false);
+    if (selectedItemId) {
+      handleCloseService();
+    }
     const element = document.getElementById(id);
     if (element) {
       const offset = window.innerWidth >= 640 ? 96 : 80; // height of sticky navbar
@@ -99,8 +174,15 @@ export default function App() {
       <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-xs transition-all duration-300">
         <div className="mx-auto flex h-20 sm:h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          <a 
+            href={getHomeUrl(lang)}
+            onClick={(e) => {
+              e.preventDefault();
+              if (selectedItemId) {
+                handleCloseService();
+              }
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="flex items-center text-left focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg p-1 cursor-pointer group"
             id="logo-container"
             aria-label={t.accessibility.logoAria}
@@ -110,7 +192,7 @@ export default function App() {
               alt="Eminstall - Engineering Group" 
               className="h-12 sm:h-15 lg:h-16 w-auto object-contain transition-transform group-hover:scale-[1.02]" 
             />
-          </button>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -141,20 +223,30 @@ export default function App() {
           <div className="hidden lg:flex items-center space-x-6">
             {/* Language Selector */}
             <div className="flex items-center space-x-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
-              {(['PL', 'EN', 'DE'] as Language[]).map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-all cursor-pointer ${
-                    lang === l
-                      ? 'bg-orange-500 text-white shadow-xs'
-                      : 'text-slate-500 hover:text-slate-900 hover:bg-slate-200/50'
-                  }`}
-                  id={`lang-btn-${l}`}
-                >
-                  {l}
-                </button>
-              ))}
+              {(['PL', 'EN', 'DE'] as Language[]).map((l) => {
+                const targetUrl = selectedItemId ? getServiceUrl(selectedItemId, l) : getHomeUrl(l);
+                return (
+                  <a
+                    key={l}
+                    href={targetUrl}
+                    onClick={(e) => {
+                      if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                        e.preventDefault();
+                        handleSwitchLang(l);
+                      }
+                    }}
+                    className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-all cursor-pointer no-underline ${
+                      lang === l
+                        ? 'bg-orange-500 text-white shadow-xs'
+                        : 'text-slate-500 hover:text-slate-900 hover:bg-slate-200/50'
+                    }`}
+                    id={`lang-btn-${l}`}
+                    aria-label={`Zmień język na ${l}`}
+                  >
+                    {l}
+                  </a>
+                );
+              })}
             </div>
 
             {/* Quick Contact phone header */}
@@ -172,20 +264,30 @@ export default function App() {
           <div className="flex items-center space-x-3 lg:hidden">
             {/* Quick Language Toggle */}
             <div className="flex items-center space-x-1 bg-slate-100 p-0.5 rounded-lg border border-slate-200">
-              {(['PL', 'EN', 'DE'] as Language[]).map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`px-1.5 py-0.5 text-[10px] font-bold rounded-sm cursor-pointer ${
-                    lang === l
-                      ? 'bg-orange-500 text-white'
-                      : 'text-slate-500'
-                  }`}
-                  id={`lang-btn-mob-${l}`}
-                >
-                  {l}
-                </button>
-              ))}
+              {(['PL', 'EN', 'DE'] as Language[]).map((l) => {
+                const targetUrl = selectedItemId ? getServiceUrl(selectedItemId, l) : getHomeUrl(l);
+                return (
+                  <a
+                    key={l}
+                    href={targetUrl}
+                    onClick={(e) => {
+                      if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                        e.preventDefault();
+                        handleSwitchLang(l);
+                      }
+                    }}
+                    className={`px-1.5 py-0.5 text-[10px] font-bold rounded-sm cursor-pointer no-underline ${
+                      lang === l
+                        ? 'bg-orange-500 text-white'
+                        : 'text-slate-500'
+                    }`}
+                    id={`lang-btn-mob-${l}`}
+                    aria-label={`Zmień język na ${l}`}
+                  >
+                    {l}
+                  </a>
+                );
+              })}
             </div>
 
             <button
@@ -427,6 +529,10 @@ export default function App() {
       <WorkScopeSection
         translation={t.workScope}
         onContactClick={() => handleScrollTo('kontakt')}
+        lang={lang}
+        selectedItemId={selectedItemId}
+        onSelectItem={handleOpenService}
+        onCloseModal={handleCloseService}
       />
 
       {/* KONTAKT & DIRECT DETAILS SECTION */}
@@ -574,8 +680,15 @@ export default function App() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             
             {/* Branding */}
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            <a
+              href={getHomeUrl(lang)}
+              onClick={(e) => {
+                e.preventDefault();
+                if (selectedItemId) {
+                  handleCloseService();
+                }
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
               className="flex items-center text-left focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg cursor-pointer group"
               aria-label={t.accessibility.logoAria}
             >
@@ -584,14 +697,14 @@ export default function App() {
                 alt="Eminstall - Engineering Group" 
                 className="h-11 sm:h-13 lg:h-14 w-auto object-contain transition-transform group-hover:scale-[1.02]" 
               />
-            </button>
+            </a>
 
             {/* Quick Links */}
             <div className="flex flex-wrap justify-center gap-6 text-xs text-slate-300">
-              <button onClick={() => handleScrollTo('o-nas')} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.about}</button>
-              <button onClick={() => handleScrollTo('uslugi')} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.services}</button>
-              <button onClick={() => handleScrollTo('realizacje')} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.realizations}</button>
-              <button onClick={() => handleScrollTo('kontakt')} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.contact}</button>
+              <a href="#o-nas" onClick={(e) => { e.preventDefault(); handleScrollTo('o-nas'); }} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.about}</a>
+              <a href="#zakres-prac" onClick={(e) => { e.preventDefault(); handleScrollTo('zakres-prac'); }} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.services}</a>
+              <a href="#zakres-prac" onClick={(e) => { e.preventDefault(); handleScrollTo('zakres-prac'); }} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.realizations}</a>
+              <a href="#kontakt" onClick={(e) => { e.preventDefault(); handleScrollTo('kontakt'); }} className="hover:text-orange-400 transition-colors cursor-pointer">{t.nav.contact}</a>
             </div>
 
             {/* Copyright */}
