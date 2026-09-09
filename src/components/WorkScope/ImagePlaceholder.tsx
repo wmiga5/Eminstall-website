@@ -53,7 +53,7 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
             {noticeText}
           </p>
           {!compact && (
-            <p className="text-slate-400 text-[10px] sm:text-xs font-light leading-relaxed hidden sm:block">
+            <p className="text-slate-300 text-[10px] sm:text-xs font-light leading-relaxed hidden sm:block">
               {subText}
             </p>
           )}

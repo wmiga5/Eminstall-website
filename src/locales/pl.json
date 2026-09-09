@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Eminstall | Szafy elektryczne, Klimatyzacja precyzyjna, Kontenery telekomunikacyjne",
-    "description": "Profesjonalne usługi inżynieryjne dla telekomunikacji w Polsce i Niemczech. Prefabrykacja szaf elektrycznych (Hager, Socomec), montaż klimatyzacji precyzyjnej Vertiv, zasilanie gwarantowane UPS, serwis kontenerów."
+    "title": "Eminstall | Klimatyzacja Szczecinek, Rozdzielnice Elektryczne, Pomiary SEP | Zachodniopomorskie",
+    "description": "Profesjonalny montaż i serwis klimatyzacji, wentylacja FreeCooling, prefabrykacja szaf rozdzielczych nN oraz pomiary elektryczne SEP. Szczecinek, woj. zachodniopomorskie, pomorskie, cała Polska i Niemcy."
   },
   "accessibility": {
     "skipToContent": "Przejdź do treści",
@@ -73,12 +73,12 @@
       "freecooling-hvac": {
         "badge": "HVAC & FreeCooling",
         "title": "Wentylacja FreeCooling i Klimatyzacja Precyzyjna",
-        "shortDesc": "Energooszczędne systemy wentylacji swobodnej FreeCooling oraz klimatyzacja precyzyjna dla serwerowni i kontenerów technicznych. Montaż, certyfikowany serwis i przeglądy F-gazy.",
-        "fullDesc": "Wdrażamy zaawansowane systemy chłodzenia zapewniające optymalną temperaturę i wilgotność w warunkach ciągłej pracy urządzeń elektronicznych. Połączenie klimatyzacji precyzyjnej z systemami wentylacji FreeCooling pozwala na drastyczne obniżenie zużycia energii elektrycznej przez wykorzystanie chłodu powietrza zewnętrznego.",
+        "shortDesc": "Montaż, serwis i przeglądy klimatyzacji precyzyjnej oraz wentylacji swobodnej FreeCooling. Obsługujemy Szczecinek, województwo zachodniopomorskie, pomorskie oraz realizacje w Niemczech. Certyfikat F-gazy.",
+        "fullDesc": "Wdrażamy zaawansowane systemy chłodzenia zapewniające optymalną temperaturę i wilgotność w warunkach ciągłej pracy urządzeń elektronicznych. Świadczymy usługi montażu i serwisu klimatyzacji w Szczecinku oraz na terenie całego województwa zachodniopomorskiego i pomorskiego. Połączenie klimatyzacji precyzyjnej z systemami wentylacji FreeCooling pozwala na drastyczne obniżenie zużycia energii elektrycznej przez wykorzystanie chłodu powietrza zewnętrznego.",
         "scopeList": [
+          "Montaż i uruchomienie jednostek klimatyzacji precyzyjnej i komfortu (Szczecinek i region)",
           "Instalacja central i modułów wentylacji swobodnej FreeCooling",
           "Montaż czerpni powietrza na kontenerach technicznych oraz elewacjach budynków",
-          "Montaż i uruchomienie jednostek klimatyzacji precyzyjnej",
           "Certyfikowane przeglądy szczelności i sprawności układów chłodniczych (F-gazy)"
         ],
         "specifications": "Klimatyzatory precyzyjne; Wentylatory EC o regulowanej prędkości; Zintegrowane filtry kasetowe F7/G4",
@@ -102,7 +102,7 @@
       "switchboards": {
         "badge": "Prefabrykacja & SEP",
         "title": "Prefabrykacja Rozdzielnic i Pomiary Odbiorcze",
-        "shortDesc": "Projektowanie i prefabrykacja szaf rozdzielczych nN, szaf automatyki i rozdzielnic terenowych. Kompleksowe pomiary elektryczne SEP i kompletne protokoły odbiorcze.",
+        "shortDesc": "Projektowanie i prefabrykacja szaf rozdzielczych nN, szaf automatyki i rozdzielnic terenowych. Pomiary elektryczne SEP w Szczecinku, woj. zachodniopomorskim, pomorskim i w Niemczech.",
         "fullDesc": "Prefabrykujemy nowoczesne szafy rozdzielcze niskiego napięcia w oparciu o aparaturę czołowych europejskich producentów. Każda szafa przed wysyłką przechodzi rygorystyczne testy funkcjonalne, weryfikację właściwości dielektrycznych oraz pomiary parametrów elektrycznych, zakończone wystawieniem protokołu badań wyrobu zgodnie z normą PN-EN 61439 oraz Deklaracji Zgodności CE.",
         "scopeList": [
           "Prefabrykacja głównych rozdzielnic zasilających nN i szaf sterowniczych",
@@ -168,7 +168,7 @@
     "title": "Niezawodny partner w świecie infrastruktury technicznej",
     "credoQuote": "Dla nas nie ma rzeczy niemożliwych.",
     "credoSub": "Są tylko wyzwania inżynieryjne, które wymagają wiedzy, determinacji i bezkompromisowej precyzji.",
-    "p1": "Eminstall to rodzinna firma inżynieryjna oparta na solidnym rzemiośle, wieloletnim doświadczeniu i bezkompromisowej jakości. Specjalizujemy się w zaawansowanych instalacjach elektrycznych, prefabrykacji szaf rozdzielczych nN, zasilaniu gwarantowanym AC/DC oraz wentylacji i klimatyzacji precyzyjnej dla przemysłu i obiektów o krytycznym znaczeniu operacyjnym.",
+    "p1": "Eminstall (z siedzibą w Szczecinku, woj. zachodniopomorskie) to rodzinna firma inżynieryjna oparta na solidnym rzemiośle, wieloletnim doświadczeniu i bezkompromisowej jakości. Specjalizujemy się w zaawansowanych instalacjach elektrycznych, prefabrykacji szaf rozdzielczych nN, zasilaniu gwarantowanym AC/DC oraz wentylacji i klimatyzacji precyzyjnej dla przemysłu i obiektów o krytycznym znaczeniu operacyjnym.",
     "p2": "Naszym fundamentem jest punktualność, odpowiedzialność i skuteczność – rygorystycznie dotrzymujemy harmonogramów i bierzemy pełną osobistą odpowiedzialność za powierzone obiekty. Stawiamy na bezpośrednią komunikację z klientem na każdym etapie prac, zapewniając stały nadzór inżyniera prowadzącego oraz kompletne, certyfikowane protokoły pomiarowe i odbiorcze.",
     "precision": "Inżynieryjna precyzja",
     "precisionDesc": "Dbamy o każdy milimetr instalacji, eliminując ryzyko awarii zanim się pojawi.",
@@ -253,8 +253,8 @@
     "infoEmail": "Adres e-mail",
     "emailPrompt": "Odpowiadamy w ciągu kilku godzin",
     "infoArea": "Obszar działalności",
-    "infoAreaDesc": "Polska i Niemcy (Mobilne ekipy serwisowe)",
-    "areaPrompt": "Nasz mobilny zespół inżynieryjny regularnie realizuje przeglądy i wdrożenia na terenie całego kraju oraz w Niemczech.",
+    "infoAreaDesc": "Szczecinek, woj. zachodniopomorskie i pomorskie | PL & DE",
+    "areaPrompt": "Siedziba w Szczecinku. Nasz mobilny zespół inżynieryjny regularnie realizuje montaże klimatyzacji, prefabrykację rozdzielnic oraz przeglądy na terenie Pomorza, całej Polski oraz w Niemczech.",
     "infoCompanyDetails": "Dane firmy",
     "infoWojtek": "Tomasz Miga — Właściciel",
     "companyNameLabel": "Nazwa pełna",

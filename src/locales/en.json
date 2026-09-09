@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Eminstall | Electrical Cabinets, Precision Cooling, Telecom Containers",
-    "description": "Professional engineering services for telecommunications in Poland and Germany. Prefabrication of electrical cabinets, installation of Vertiv precision cooling, UPS power systems, shelter retrofits."
+    "title": "Eminstall | Air Conditioning Szczecinek, Electrical Switchboards, Power Systems | Poland & Germany",
+    "description": "Professional air conditioning, FreeCooling systems, electrical switchboard prefabrication and UPS power systems based in Szczecinek (West Pomerania, Poland), serving Poland and Germany."
   },
   "accessibility": {
     "skipToContent": "Skip to content",
@@ -73,12 +73,12 @@
       "freecooling-hvac": {
         "badge": "HVAC & FreeCooling",
         "title": "FreeCooling Ventilation & Precision Air Conditioning",
-        "shortDesc": "Energy-efficient FreeCooling direct air systems and precision climate control for technical shelters and server rooms. Installation, certified servicing, and F-gas compliance.",
-        "fullDesc": "We deploy specialized thermal management systems maintaining optimal temperature and humidity for mission-critical IT and telecom hardware. Combining precision air conditioning with automated FreeCooling dampers dramatically slashes operational energy consumption by harnessing cold outside air.",
+        "shortDesc": "Energy-efficient FreeCooling systems and precision climate control. Assembly, maintenance, and F-gas compliance in Szczecinek, West Pomerania, Pomerania, and Germany.",
+        "fullDesc": "We deploy specialized thermal management systems maintaining optimal temperature and humidity for mission-critical hardware. Based in Szczecinek, we serve commercial and industrial clients across West Pomerania, nationwide, and in Germany.",
         "scopeList": [
+          "Installation and commissioning of precision climate control cooling units (Szczecinek & regional)",
           "Installation of FreeCooling modular ventilation systems and control units",
           "Mounting of weather-resistant air intake louvers on technical containers and facades",
-          "Installation and commissioning of precision climate control cooling units",
           "Certified refrigerant leak detection and system performance audits (F-gas compliant)"
         ],
         "specifications": "Precision cooling units; Variable speed EC electronically commutated fans; Integrated F7/G4 cassette filtration",
@@ -168,7 +168,7 @@
     "title": "A Reliable Partner in Critical Infrastructure",
     "credoQuote": "For us, nothing is impossible.",
     "credoSub": "There are only engineering challenges that require knowledge, determination, and uncompromising precision.",
-    "p1": "Eminstall is a family-owned engineering company rooted in solid craftsmanship, extensive field experience, and uncompromising quality. We specialize in advanced electrical installations, custom switchboard prefabrication, AC/DC uninterruptible power systems, and precision cooling for industrial and high-reliability facilities.",
+    "p1": "Eminstall (based in Szczecinek, West Pomeranian Voivodeship) is a family-owned engineering company rooted in solid craftsmanship, extensive field experience, and uncompromising quality. We specialize in advanced electrical installations, custom switchboard prefabrication, AC/DC uninterruptible power systems, and precision cooling for industrial and high-reliability facilities.",
     "p2": "Our foundation is punctuality, accountability, and efficiency – we strictly adhere to schedules and take full personal ownership of every task. We emphasize transparent, direct client communication throughout every stage, backed by thorough, certified measurement and inspection protocols.",
     "precision": "Engineering Precision",
     "precisionDesc": "We take care of every millimeter of the installation, eliminating faults before they even occur.",
@@ -253,8 +253,8 @@
     "infoEmail": "Email Address",
     "emailPrompt": "We reply within a few hours",
     "infoArea": "Operational Area",
-    "infoAreaDesc": "Poland & Germany (Fully mobile field crews)",
-    "areaPrompt": "Our mobile engineering team regularly executes audits and deployments throughout Poland and Germany.",
+    "infoAreaDesc": "Szczecinek, West Pomerania, Pomerania | Poland & Germany",
+    "areaPrompt": "Headquartered in Szczecinek (West Pomeranian Voivodeship). Our mobile engineering teams operate across Pomerania, nationwide in Poland, and throughout Germany.",
     "infoCompanyDetails": "Company Info",
     "infoWojtek": "Tomasz Miga — Owner",
     "companyNameLabel": "Full name",

@@ -229,7 +229,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
             <div className="lg:col-span-5 flex flex-col space-y-6">
               {/* Extended Description */}
               <div className="space-y-3">
-                <h4 className="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold flex items-center gap-2">
+                <h4 className="text-xs font-mono uppercase tracking-widest text-slate-500 font-bold flex items-center gap-2">
                   <Layers className="w-4 h-4 text-orange-500" />
                   {sectionTranslation.galleryTitle}
                 </h4>
@@ -270,7 +270,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
               {/* Target Sector */}
               {translation.targetSector && (
                 <div className="space-y-1.5 pt-4 border-t border-slate-100">
-                  <h4 className="text-[10px] font-mono uppercase tracking-widest text-slate-400 font-bold">
+                  <h4 className="text-[10px] font-mono uppercase tracking-widest text-slate-500 font-bold">
                     {sectionTranslation.sectorTitle}
                   </h4>
                   <p className="text-xs font-semibold text-slate-800">

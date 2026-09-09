@@ -46,14 +46,23 @@ export default function App() {
     // Synchronize Dynamic Document Title based on selected locale
     document.title = t.seo.title;
 
-    // Update dynamic SEO Meta Description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement('meta');
-      metaDesc.setAttribute('name', 'description');
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute('content', t.seo.description);
+    // Helper to update or create meta tags
+    const setMetaTag = (selector: string, attr: string, key: string, content: string) => {
+      let meta = document.querySelector(selector);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute(attr, key);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    setMetaTag('meta[name="description"]', 'name', 'description', t.seo.description);
+    setMetaTag('meta[property="og:title"]', 'property', 'og:title', t.seo.title);
+    setMetaTag('meta[property="og:description"]', 'property', 'og:description', t.seo.description);
+    setMetaTag('meta[property="og:locale"]', 'property', 'og:locale', lang === 'PL' ? 'pl_PL' : lang === 'DE' ? 'de_DE' : 'en_US');
+    setMetaTag('meta[property="twitter:title"]', 'property', 'twitter:title', t.seo.title);
+    setMetaTag('meta[property="twitter:description"]', 'property', 'twitter:description', t.seo.description);
   }, [lang, t]);
 
   const handleScrollTo = (id: string) => {
@@ -303,7 +312,7 @@ export default function App() {
                         {t.hero.status}
                       </span>
                     </div>
-                    <span className="font-mono text-[10px] text-slate-400">{t.hero.systemCode}</span>
+                    <span className="font-mono text-[10px] text-slate-500">{t.hero.systemCode}</span>
                   </div>
 
                   {/* Visual Blueprint Flow */}
@@ -362,7 +371,7 @@ export default function App() {
                 </div>
 
                 {/* Background glow beneath schematic */}
-                <div className="absolute -inset-2 bg-gradient-to-r from-orange-500/5 to-sky-500/5 rounded-2xl blur-lg -z-10" />
+                <div className="absolute -inset-2 bg-gradient-to-r from-orange-500/5 to-slate-200/40 rounded-2xl blur-lg -z-10" />
               </div>
             </motion.div>
           </div>
@@ -385,7 +394,7 @@ export default function App() {
                         <Shield className="h-6 w-6" />
                       </div>
                       <div>
-                        <span className="text-xs font-mono uppercase text-slate-400 tracking-wider">{t.about.certBadge}</span>
+                        <span className="text-xs font-mono uppercase text-slate-500 font-semibold tracking-wider">{t.about.certBadge}</span>
                         <h3 className="font-bold text-slate-900 text-base">{t.about.certTitle}</h3>
                       </div>
                     </div>
@@ -503,7 +512,7 @@ export default function App() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <span className="block text-xs text-slate-400 font-mono uppercase tracking-wider">{t.contact.infoPhone}</span>
+                  <span className="block text-xs text-slate-500 font-medium font-mono uppercase tracking-wider">{t.contact.infoPhone}</span>
                   <span className="block text-xl font-bold text-slate-900 mt-1 group-hover:text-orange-600 transition-colors">{COMPANY_DATA.contact.phone.display}</span>
                   <p className="text-xs text-slate-500 mt-2 font-light">
                     {t.contact.phonePrompt}
@@ -521,7 +530,7 @@ export default function App() {
                   <Mail className="h-5 w-5" />
                 </div>
                 <div className="overflow-hidden">
-                  <span className="block text-xs text-slate-400 font-mono uppercase tracking-wider">{t.contact.infoEmail}</span>
+                  <span className="block text-xs text-slate-500 font-medium font-mono uppercase tracking-wider">{t.contact.infoEmail}</span>
                   <span className="block text-base sm:text-lg font-bold text-slate-900 mt-1 group-hover:text-orange-600 transition-colors truncate">{COMPANY_DATA.contact.email}</span>
                   <p className="text-xs text-slate-500 mt-2 font-light">
                     {t.contact.emailPrompt}
@@ -535,7 +544,7 @@ export default function App() {
                   <Globe className="h-5 w-5" />
                 </div>
                 <div>
-                  <span className="block text-xs text-slate-400 font-mono uppercase tracking-wider">{t.contact.infoArea}</span>
+                  <span className="block text-xs text-slate-500 font-medium font-mono uppercase tracking-wider">{t.contact.infoArea}</span>
                   <span className="block text-base font-bold text-slate-900 mt-0.5">{t.contact.infoAreaDesc}</span>
                   <p className="text-xs text-slate-500 mt-1.5 font-light leading-relaxed">
                     {t.contact.areaPrompt}
@@ -549,7 +558,7 @@ export default function App() {
               <div className="h-full p-6 md:p-8 rounded-2xl border-2 border-slate-100 bg-white flex flex-col justify-between space-y-6 shadow-sm">
                 
                 <div className="space-y-4">
-                  <span className="block text-xs font-mono text-slate-400 uppercase tracking-widest">{t.contact.infoCompanyDetails}</span>
+                  <span className="block text-xs font-mono text-slate-500 font-semibold uppercase tracking-widest">{t.contact.infoCompanyDetails}</span>
                   <div className="space-y-1">
                     <span className="block text-lg font-bold text-slate-900">{COMPANY_DATA.name}</span>
                     <span className="block text-sm font-semibold text-orange-600">{COMPANY_DATA.owner.name} — {COMPANY_DATA.owner.role[lang]}</span>
@@ -558,13 +567,13 @@ export default function App() {
                   {/* Registered Company Details */}
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/60 space-y-3.5 text-xs text-slate-700 shadow-2xs">
                     <div>
-                      <span className="block text-[10px] font-mono uppercase text-slate-400 tracking-wider">
+                      <span className="block text-[10px] font-mono uppercase text-slate-500 font-medium tracking-wider">
                         {t.contact.companyNameLabel}
                       </span>
                       <span className="font-semibold text-slate-900 text-sm">{COMPANY_DATA.name}</span>
                     </div>
                     <div>
-                      <span className="block text-[10px] font-mono uppercase text-slate-400 tracking-wider">
+                      <span className="block text-[10px] font-mono uppercase text-slate-500 font-medium tracking-wider">
                         {t.contact.companyAddressLabel}
                       </span>
                       <span className="font-semibold text-slate-900 leading-normal">
@@ -574,11 +583,11 @@ export default function App() {
                     </div>
                     <div className="grid grid-cols-2 gap-4 pt-1">
                       <div>
-                        <span className="block text-[10px] font-mono uppercase text-slate-400 tracking-wider">{t.contact.nip}</span>
+                        <span className="block text-[10px] font-mono uppercase text-slate-500 font-medium tracking-wider">{t.contact.nip}</span>
                         <span className="font-mono font-semibold text-slate-900">{COMPANY_DATA.legal.nip}</span>
                       </div>
                       <div>
-                        <span className="block text-[10px] font-mono uppercase text-slate-400 tracking-wider">{t.contact.regon}</span>
+                        <span className="block text-[10px] font-mono uppercase text-slate-500 font-medium tracking-wider">{t.contact.regon}</span>
                         <span className="font-mono font-semibold text-slate-900">{COMPANY_DATA.legal.regon}</span>
                       </div>
                     </div>
