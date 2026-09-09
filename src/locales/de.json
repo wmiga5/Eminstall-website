@@ -39,6 +39,10 @@
     "nextCard": "Nächste Position",
     "prevPhoto": "Vorheriges Foto",
     "nextPhoto": "Nächstes Foto",
+    "zoomPhoto": "Foto vergrößern",
+    "closeZoom": "Vorschau schließen",
+    "zoomIn": "Vergrößern",
+    "zoomOut": "An Bildschirm anpassen",
     "items": {
       "power-systems": {
         "badge": "AC/DC-Strom & Batterien",

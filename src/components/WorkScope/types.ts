@@ -38,5 +38,9 @@ export interface WorkScopeSectionTranslation {
   nextCard: string;
   prevPhoto: string;
   nextPhoto: string;
+  zoomPhoto?: string;
+  closeZoom?: string;
+  zoomIn?: string;
+  zoomOut?: string;
   items: Record<string, WorkScopeItemTranslation>;
 }

@@ -39,6 +39,10 @@
     "nextCard": "Next item",
     "prevPhoto": "Previous photo",
     "nextPhoto": "Next photo",
+    "zoomPhoto": "Enlarge photo",
+    "closeZoom": "Close preview",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Fit to screen",
     "items": {
       "power-systems": {
         "badge": "AC/DC Power & Batteries",
