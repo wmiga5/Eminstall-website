@@ -18,7 +18,10 @@ import {
   ChevronDown,
   Server,
   Check,
-  Sparkles
+  Sparkles,
+  MessageSquare,
+  Clock,
+  ShieldCheck
 } from 'lucide-react';
 import { TRANSLATIONS, COMPANY_DATA, Language } from './data';
 import { WorkScopeSection } from './components/WorkScope';
@@ -399,6 +402,21 @@ export default function App() {
               <span className="block mt-1.5 font-mono text-xs uppercase tracking-wider text-slate-500">{t.stats.stat4Lbl}</span>
             </motion.div>
           </div>
+
+          {/* Trust Values Minimal Bar */}
+          <div className="mt-8 pt-6 border-t border-slate-200/70 flex flex-wrap items-center justify-center gap-y-2.5 gap-x-5 text-xs font-mono uppercase tracking-wider text-slate-600">
+            {t.hero.trustValues.map((val, idx) => (
+              <React.Fragment key={val}>
+                <span className="inline-flex items-center text-slate-800 font-semibold">
+                  <span className="h-1.5 w-1.5 rounded-full bg-orange-500 mr-2 shrink-0" />
+                  {val}
+                </span>
+                {idx < t.hero.trustValues.length - 1 && (
+                  <span className="hidden sm:inline text-slate-300 select-none">•</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -486,6 +504,87 @@ export default function App() {
               </div>
             </div>
           </div>
+
+          {/* 4 Pillars of Excellence */}
+          <div className="mt-14 pt-12 border-t border-slate-100" id="about-pillars">
+            <div className="text-center md:text-left mb-6">
+              <span className="text-xs font-mono font-bold uppercase text-orange-600 tracking-wider">
+                {t.about.pillarsTitle}
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {t.about.pillars.map((pillar) => {
+                const IconComponent =
+                  pillar.id === 'approach' ? Sparkles :
+                  pillar.id === 'quality' ? Shield :
+                  pillar.id === 'relationship' ? MessageSquare :
+                  Clock;
+                return (
+                  <motion.div
+                    key={pillar.id}
+                    whileHover={{ y: -3 }}
+                    className="p-5 md:p-6 rounded-2xl bg-white border-2 border-slate-100 shadow-xs flex flex-col justify-between space-y-4 hover:border-orange-500/40 hover:shadow-md transition-all group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-3.5">
+                        <span className="font-mono text-[11px] font-bold text-orange-600 tracking-wider">
+                          {pillar.badge}
+                        </span>
+                        <div className="h-8 w-8 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                          <IconComponent className="h-4 w-4" />
+                        </div>
+                      </div>
+                      <h4 className="font-bold text-slate-900 text-sm md:text-base mb-2 group-hover:text-orange-600 transition-colors">
+                        {pillar.title}
+                      </h4>
+                      <p className="text-xs text-slate-500 leading-relaxed font-light">
+                        {pillar.desc}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CREDO / STATEMENT SECTION */}
+      <section className="relative py-16 sm:py-20 md:py-24 bg-slate-900 text-white overflow-hidden" id="credo-section">
+        {/* Subtle geometric engineering grid background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#33415525_1px,transparent_1px),linear-gradient(to_bottom,#33415525_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none opacity-40" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-orange-500/10 rounded-full blur-[140px] pointer-events-none" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            {/* Minimal badge */}
+            <div className="inline-flex items-center space-x-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-xs font-mono font-semibold tracking-widest text-orange-400 uppercase">
+              <span className="flex h-2 w-2 rounded-full bg-orange-400 animate-pulse" />
+              <span>{t.credo.badge}</span>
+            </div>
+
+            {/* Standout Main Headline */}
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+              „{t.credo.title}”
+            </h2>
+
+            {/* Subtitle / Philosophy */}
+            <p className="text-base sm:text-xl font-light text-slate-300 leading-relaxed max-w-3xl mx-auto">
+              {t.credo.subtitle}
+            </p>
+
+            {/* Detail explanation */}
+            <p className="text-xs sm:text-sm text-slate-400 max-w-2xl mx-auto leading-relaxed">
+              {t.credo.description}
+            </p>
+
+            {/* Technical Tagline Bar */}
+            <div className="pt-2 flex items-center justify-center">
+              <span className="font-mono text-xs uppercase tracking-widest text-orange-400/90 border-t border-slate-800 pt-4 px-6">
+                {t.credo.tagline}
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -503,6 +602,12 @@ export default function App() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">{t.contact.title}</h2>
             <div className="h-0.5 w-12 bg-orange-500 mx-auto my-4" />
             <p className="text-slate-600 text-sm md:text-base font-light">{t.contact.subtitle}</p>
+            <div className="pt-2">
+              <span className="inline-flex items-center text-xs sm:text-sm text-orange-700 font-medium bg-orange-500/10 py-1.5 px-4 rounded-full border border-orange-500/20 shadow-2xs">
+                <ShieldCheck className="h-3.5 w-3.5 mr-2 text-orange-600 shrink-0" />
+                {t.contact.assurance}
+              </span>
+            </div>
           </div>
 
           {/* Clean wide high-trust grid displaying direct contact methods & engineering credentials */}

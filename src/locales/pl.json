@@ -161,7 +161,23 @@
       "hvacDesc": "Precyzyjna kontrola klimatu i serwis",
       "powerTitle": "ZASILANIE I SZAFY",
       "powerDesc": "Montaż UPS, Hager, Socomec i Vertiv"
-    }
+    },
+    "trustValues": [
+      "Solidność",
+      "Punktualność",
+      "Odpowiedzialność",
+      "Komunikacja z klientem",
+      "Doświadczenie",
+      "Jakość",
+      "Skuteczność"
+    ]
+  },
+  "credo": {
+    "badge": "NASZE CREDO INŻYNIERYJNE",
+    "title": "Dla nas nie ma rzeczy niemożliwych.",
+    "subtitle": "Są tylko wyzwania inżynieryjne, które wymagają odpowiedniej wiedzy, determinacji i bezkompromisowej precyzji.",
+    "description": "Gdy w grę wchodzi presja czasu, trudna logistyka czy nietypowe warunki w obiektach infrastruktury krytycznej – znajdujemy bezpieczne i trwałe rozwiązania tam, gdzie inni rezygnują.",
+    "tagline": "Rzetelność • Punktualność • Pełna odpowiedzialność"
   },
   "stats": {
     "stat1Val": "100%",
@@ -182,7 +198,38 @@
     "precisionDesc": "Dbamy o każdy milimetr instalacji, eliminując ryzyko awarii zanim się pojawi.",
     "safety": "Bezpieczeństwo i pewność",
     "safetyDesc": "Działamy zgodnie z najwyższymi standardami BHP i normami technicznymi UE.",
-    "engineeringControl": "Dwuetapowa kontrola inżynieryjna nad każdym projektem."
+    "engineeringControl": "Dwuetapowa kontrola inżynieryjna nad każdym projektem.",
+    "pillarsTitle": "Fundamenty Inżynierskie",
+    "pillars": [
+      {
+        "id": "approach",
+        "index": "01",
+        "badge": "PODEJŚCIE",
+        "title": "Nie ma rzeczy niemożliwych",
+        "desc": "Podejmujemy się najtrudniejszych zadań technicznych. Nietypowe warunki, presja czasu czy skomplikowana integracja – doprowadzamy każdy projekt do pełnej sprawności."
+      },
+      {
+        "id": "quality",
+        "index": "02",
+        "badge": "JAKOŚĆ",
+        "title": "Solidność bez kompromisów",
+        "desc": "Certyfikowane komponenty (Hager, Vertiv, Socomec), rygorystyczne normy PN-EN i drobiazgowa kontrola każdego połączenia oraz protokołu pomiarowego."
+      },
+      {
+        "id": "relationship",
+        "index": "03",
+        "badge": "RELACJA",
+        "title": "Odpowiedzialność i komunikacja",
+        "desc": "Bezpośredni kontakt z inżynierem prowadzącym. Pełna przejrzystość na każdym etapie, bieżące raportowanie i osobista odpowiedzialność za powierzony obiekt."
+      },
+      {
+        "id": "punctuality",
+        "index": "04",
+        "badge": "REALIZACJA",
+        "title": "Punktualność i doświadczenie",
+        "desc": "Wieloletnia praktyka w obiektach telekomunikacyjnych w Polsce i Niemczech. Szanujemy harmonogramy i działamy sprawnie w wyznaczonych oknach serwisowych."
+      }
+    ]
   },
   "services": {
     "header": "NASZA OFERTA",
@@ -246,6 +293,7 @@
     "header": "KONTAKT",
     "title": "Rozpocznijmy współpracę",
     "subtitle": "Chcesz zapytać o ofertę, zlecić serwis lub nawiązać stałą współpracę? Napisz do nas lub zadzwoń. Odpowiemy niezwłocznie.",
+    "assurance": "Gwarantujemy terminowość, stały kontakt z inżynierem oraz rzetelne protokoły odbiorcze z każdego zrealizowanego zadania.",
     "formName": "Imię i nazwisko",
     "formEmail": "Adres e-mail",
     "formAddress": "Lokalizacja obiektu / Adres",

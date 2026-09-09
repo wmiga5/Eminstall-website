@@ -161,7 +161,23 @@
       "hvacDesc": "Präzisionsklimatisierung & Wartung",
       "powerTitle": "STROM & SCHRÄNKE",
       "powerDesc": "Montage von USV, Hager, Socomec & Vertiv"
-    }
+    },
+    "trustValues": [
+      "Solidität",
+      "Pünktlichkeit",
+      "Verantwortung",
+      "Kundenkommunikation",
+      "Erfahrung",
+      "Qualität",
+      "Effizienz"
+    ]
+  },
+  "credo": {
+    "badge": "UNSER INGENIEUR-CREDO",
+    "title": "Für uns gibt es keine unmöglichen Dinge.",
+    "subtitle": "Es gibt nur ingenieurtechnische Herausforderungen, die fundiertes Fachwissen, Entschlossenheit und kompromisslose Präzision erfordern.",
+    "description": "Unter hohem Zeitdruck, komplexer Logistik oder anspruchsvollen Bedingungen in kritischen Infrastrukturanlagen finden wir sichere und nachhaltige Lösungen, wo andere aufgeben.",
+    "tagline": "Zuverlässigkeit • Pünktlichkeit • Volle Verantwortung"
   },
   "stats": {
     "stat1Val": "100%",
@@ -182,7 +198,38 @@
     "precisionDesc": "Wir planen und montieren millimetergenau, um Fehlerquellen präventiv auszuschließen.",
     "safety": "Sicherheit & Konformität",
     "safetyDesc": "Wir arbeiten nach strengsten Arbeitsschutzbestimmungen und europäischen Industrienormen.",
-    "engineeringControl": "Zweistufige ingenieurtechnische Kontrolle über jedes Projekt."
+    "engineeringControl": "Zweistufige ingenieurtechnische Kontrolle über jedes Projekt.",
+    "pillarsTitle": "Ingenieur-Fundamente",
+    "pillars": [
+      {
+        "id": "approach",
+        "index": "01",
+        "badge": "HERANGEHENSWEISE",
+        "title": "Nichts ist unmöglich",
+        "desc": "Wir stellen uns den anspruchsvollsten technischen Aufgaben. Ungewöhnliche Bedingungen, Termindruck oder komplexe Integrationen – wir führen jedes Projekt zur vollen Einsatzbereitschaft."
+      },
+      {
+        "id": "quality",
+        "index": "02",
+        "badge": "QUALITÄT",
+        "title": "Kompromisslose Solidität",
+        "desc": "Zertifizierte Komponenten (Hager, Vertiv, Socomec), strenge DIN-EN-Normen und akribische Prüfung jeder Verbindung und jedes Messprotokolls."
+      },
+      {
+        "id": "relationship",
+        "index": "03",
+        "badge": "BEZIEHUNG",
+        "title": "Verantwortung & Kommunikation",
+        "desc": "Direkter Kontakt mit dem verantwortlichen Projektingenieur. Vollständige Transparenz in jeder Phase, lückenloses Reporting und persönliche Verantwortung."
+      },
+      {
+        "id": "punctuality",
+        "index": "04",
+        "badge": "UMSETZUNG",
+        "title": "Pünktlichkeit & Erfahrung",
+        "desc": "Langjährige Praxiserfahrung auf Anlagen in Polen und Deutschland. Wir halten Zeitpläne strikt ein und arbeiten präzise in vorgegebenen Wartungsfenstern."
+      }
+    ]
   },
   "services": {
     "header": "UNSERE LEISTUNGEN",
@@ -246,6 +293,7 @@
     "header": "KONTAKT",
     "title": "Lassen Sie uns Ihr Projekt planen",
     "subtitle": "Haben Sie Fragen, wünschen Sie ein Angebot oder planen Sie ein Service-Intervall? Schreiben Sie uns oder rufen Sie uns direkt an. Wir reagieren unverzüglich.",
+    "assurance": "Wir garantieren Termintreue, direkte Kommunikation mit dem Ingenieur und vollständige Prüfprotokolle für jeden ausgeführten Auftrag.",
     "formName": "Vor- und Nachname",
     "formEmail": "E-Mail-Adresse",
     "formAddress": "Objektstandort / Adresse",
