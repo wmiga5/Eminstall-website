@@ -103,13 +103,13 @@
         "badge": "Prefabrykacja & SEP",
         "title": "Prefabrykacja Rozdzielnic i Pomiary Odbiorcze",
         "shortDesc": "Projektowanie i prefabrykacja szaf rozdzielczych nN, szaf automatyki i rozdzielnic terenowych. Kompleksowe pomiary elektryczne SEP i kompletne protokoły odbiorcze.",
-        "fullDesc": "Prefabrykujemy nowoczesne szafy rozdzielcze niskiego napięcia w oparciu o aparaturę czołowych europejskich producentów. Każda szafa przed wysyłką na obiekt przechodzi rygorystyczne badania laboratoryjne, pomiary izolacji, pętli zwarcia i testy funkcjonalne, zakończone wystawieniem protokołu odbiorczego SEP.",
+        "fullDesc": "Prefabrykujemy nowoczesne szafy rozdzielcze niskiego napięcia w oparciu o aparaturę czołowych europejskich producentów. Każda szafa przed wysyłką przechodzi rygorystyczne testy funkcjonalne, weryfikację właściwości dielektrycznych oraz pomiary parametrów elektrycznych, zakończone wystawieniem protokołu badań wyrobu zgodnie z normą PN-EN 61439 oraz Deklaracji Zgodności CE.",
         "scopeList": [
           "Prefabrykacja głównych rozdzielnic zasilających nN i szaf sterowniczych",
           "Montaż rozdzielnic obiektowych oraz szaf terenowych odpornych na warunki atmosferyczne",
           "Układy automatycznego załączania rezerwy (SZR / ATS)",
           "Pomiary rezystancji izolacji, skuteczności zerowania i ciągłości przewodów ochronnych",
-          "Sporządzanie kompletnej dokumentacji powykonawczej i protokołów badań SEP"
+          "Sporządzanie kompletnej dokumentacji powykonawczej, protokołów badań i pomiarów odbiorczych oraz Deklaracji Zgodności CE"
         ],
         "specifications": "Stopień ochrony IP do IP65; Aparatura modułowa i kompaktowa renomowanych marek; Zgodność z PN-EN 61439",
         "targetSector": "Obiekty nadawcze, przemysłowe szafy sterownicze, rozdzielnice zasilające infrastruktury technicznej"
@@ -123,7 +123,7 @@
           "Cykliczne przeglądy prewencyjne instalacji elektrycznych i klimatyzacyjnych",
           "Nadzór nad sprawnością agregatów prądotwórczych i systemów UPS",
           "Kontrola stanu budowlanego kontenerów i obiektów technicznych",
-          "Utrzymanie terenu przyległego, ogrodzeń i dróg dojazdowych do stacji",
+          "Utrzymanie terenu przyległego, ogrodzeń czy zieleni",
           "Usuwanie awarii w reżimie podwyższonej gotowości technicznej"
         ],
         "specifications": "Gotowość serwisowa; Dedykowane procedury SLA; Pełne raportowanie elektroniczne z każdego przeglądu",

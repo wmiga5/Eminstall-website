@@ -35,8 +35,8 @@ html {
 
 @media (min-width: 1024px) {
   .work-scope-track {
-    padding-left: calc((100% - 500px) / 2);
-    padding-right: calc((100% - 500px) / 2);
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

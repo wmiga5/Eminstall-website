@@ -27,16 +27,32 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
     activeDotRef.current = activeDot;
   }, [activeDot]);
 
-  // Sync scroll position with pagination dots by finding the card nearest to the container's horizontal center
+  // Compute activeDot based on container scroll position
   const handleScroll = useCallback(() => {
     if (isProgrammaticScrollRef.current) return;
     if (!sliderRef.current) return;
+
     const container = sliderRef.current;
     const cards = container.querySelectorAll<HTMLElement>('.work-scope-card-wrapper');
     if (!cards.length) return;
 
-    const containerCenter = container.getBoundingClientRect().left + container.clientWidth / 2;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    const currentScroll = container.scrollLeft;
 
+    // Edge check: at start or at end
+    if (currentScroll <= 15) {
+      setActiveDot(0);
+      activeDotRef.current = 0;
+      return;
+    }
+    if (maxScroll > 0 && currentScroll >= maxScroll - 15) {
+      setActiveDot(WORK_SCOPE_ITEMS.length - 1);
+      activeDotRef.current = WORK_SCOPE_ITEMS.length - 1;
+      return;
+    }
+
+    // Find card closest to horizontal center
+    const containerCenter = container.getBoundingClientRect().left + container.clientWidth / 2;
     let closestIndex = 0;
     let minDistance = Infinity;
 
@@ -54,6 +70,31 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
     activeDotRef.current = closestIndex;
   }, []);
 
+  const scrollToPosition = useCallback((targetScrollLeft: number, explicitDotIndex?: number) => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+
+    isProgrammaticScrollRef.current = true;
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+
+    if (explicitDotIndex !== undefined) {
+      setActiveDot(explicitDotIndex);
+      activeDotRef.current = explicitDotIndex;
+    }
+
+    container.scrollTo({
+      left: Math.max(0, targetScrollLeft),
+      behavior: 'smooth'
+    });
+
+    scrollTimeoutRef.current = setTimeout(() => {
+      isProgrammaticScrollRef.current = false;
+      handleScroll();
+    }, 550);
+  }, [handleScroll]);
+
   const scrollToCard = useCallback((index: number) => {
     if (!sliderRef.current) return;
     const container = sliderRef.current;
@@ -61,54 +102,66 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
     const targetCard = cards[index];
     if (!targetCard) return;
 
-    // Lock programmatic scroll to prevent intermediate handleScroll events from flipping activeDot
-    isProgrammaticScrollRef.current = true;
-    if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current);
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+    let targetScrollLeft = 0;
+    if (index === 0) {
+      targetScrollLeft = 0;
+    } else if (index === WORK_SCOPE_ITEMS.length - 1) {
+      targetScrollLeft = maxScrollLeft;
+    } else {
+      targetScrollLeft = targetCard.offsetLeft - (container.clientWidth - targetCard.clientWidth) / 2;
+      targetScrollLeft = Math.max(0, Math.min(maxScrollLeft, targetScrollLeft));
     }
-    setActiveDot(index);
-    activeDotRef.current = index;
 
-    // Precisely center the card in the viewport
-    const targetScrollLeft = targetCard.offsetLeft - (container.clientWidth - targetCard.clientWidth) / 2;
-
-    container.scrollTo({
-      left: Math.max(0, targetScrollLeft),
-      behavior: 'smooth'
-    });
-
-    // Re-enable scroll listener once the smooth transition completes
-    scrollTimeoutRef.current = setTimeout(() => {
-      isProgrammaticScrollRef.current = false;
-    }, 550);
-  }, []);
-
-  const handlePrev = () => {
-    const current = activeDotRef.current;
-    const newIndex = current > 0 ? current - 1 : WORK_SCOPE_ITEMS.length - 1;
-    scrollToCard(newIndex);
-  };
+    scrollToPosition(targetScrollLeft, index);
+  }, [scrollToPosition]);
 
   const handleNext = () => {
-    const current = activeDotRef.current;
-    const newIndex = current < WORK_SCOPE_ITEMS.length - 1 ? current + 1 : 0;
-    scrollToCard(newIndex);
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const cards = container.querySelectorAll<HTMLElement>('.work-scope-card-wrapper');
+    if (!cards.length) return;
+
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    // If at the end, wrap smoothly to start
+    if (container.scrollLeft >= maxScrollLeft - 15) {
+      scrollToPosition(0, 0);
+      return;
+    }
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = cards.length > 1 ? cards[1].offsetLeft - (cards[0].offsetLeft + cardWidth) : 24;
+    const step = cardWidth + gap;
+    const nextScroll = Math.min(maxScrollLeft, container.scrollLeft + step);
+    scrollToPosition(nextScroll);
   };
 
-  // Re-center active card on resize and unmount cleanup
+  const handlePrev = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const cards = container.querySelectorAll<HTMLElement>('.work-scope-card-wrapper');
+    if (!cards.length) return;
+
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    // If at start, wrap smoothly to end
+    if (container.scrollLeft <= 15) {
+      scrollToPosition(maxScrollLeft, WORK_SCOPE_ITEMS.length - 1);
+      return;
+    }
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = cards.length > 1 ? cards[1].offsetLeft - (cards[0].offsetLeft + cardWidth) : 24;
+    const step = cardWidth + gap;
+    const prevScroll = Math.max(0, container.scrollLeft - step);
+    scrollToPosition(prevScroll);
+  };
+
+  // Re-sync on window resize
   useEffect(() => {
     const handleResize = () => {
       if (!sliderRef.current) return;
-      const container = sliderRef.current;
-      const cards = container.querySelectorAll<HTMLElement>('.work-scope-card-wrapper');
-      const targetCard = cards[activeDotRef.current];
-      if (!targetCard) return;
-
-      const targetScrollLeft = targetCard.offsetLeft - (container.clientWidth - targetCard.clientWidth) / 2;
-      container.scrollTo({
-        left: Math.max(0, targetScrollLeft),
-        behavior: 'auto'
-      });
+      handleScroll();
     };
 
     window.addEventListener('resize', handleResize);
@@ -118,7 +171,7 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
         clearTimeout(scrollTimeoutRef.current);
       }
     };
-  }, []);
+  }, [handleScroll]);
 
   const selectedItem = WORK_SCOPE_ITEMS.find((item) => item.id === selectedItemId);
   const selectedTranslation = selectedItemId && translation.items[selectedItemId]
@@ -156,11 +209,11 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
           </p>
         </div>
 
-        {/* Real Horizontal Carousel Slider Track (Responsive centering on mobile, tablet and desktop) */}
+        {/* Real Horizontal Carousel Slider Track (3 cards side-by-side on desktop, 1 centered on mobile) */}
         <div 
           ref={sliderRef}
           onScroll={handleScroll}
-          className="work-scope-track flex gap-4 sm:gap-6 lg:gap-8 overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth pb-6 pt-2 -mx-4 sm:-mx-6 lg:mx-0"
+          className="work-scope-track flex gap-4 sm:gap-6 lg:gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth pb-6 pt-2 -mx-4 sm:-mx-6 lg:mx-0"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {WORK_SCOPE_ITEMS.map((item) => {
@@ -175,7 +228,7 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
             return (
               <div 
                 key={item.id} 
-                className="work-scope-card-wrapper w-[86vw] max-w-[360px] sm:w-[460px] lg:w-[500px] flex-shrink-0 snap-center"
+                className="work-scope-card-wrapper w-[86vw] max-w-[360px] sm:w-[460px] lg:w-[calc((100%-3rem)/3)] flex-shrink-0 snap-center sm:snap-center"
               >
                 <WorkScopeCard
                   item={item}
