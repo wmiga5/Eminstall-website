@@ -39,10 +39,8 @@
     "nextCard": "Następna pozycja",
     "prevPhoto": "Poprzednie zdjęcie",
     "nextPhoto": "Następne zdjęcie",
-    "zoomPhoto": "Powiększ zdjęcie",
-    "closeZoom": "Zamknij podgląd",
-    "zoomIn": "Przybliż",
-    "zoomOut": "Dopasuj do ekranu",
+    "zoomPhoto": "Pełny ekran",
+    "closeZoom": "Zamknij",
     "items": {
       "power-systems": {
         "badge": "Zasilanie AC/DC & Baterie",

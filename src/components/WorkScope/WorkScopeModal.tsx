@@ -9,8 +9,7 @@ import {
   Layers,
   ArrowRight,
   Sparkles,
-  ZoomIn,
-  ZoomOut
+  Maximize2
 } from 'lucide-react';
 import { WorkScopeItemData, WorkScopeItemTranslation, WorkScopeSectionTranslation } from './types';
 import { ImagePlaceholder } from './ImagePlaceholder';
@@ -48,27 +47,23 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const [isZoomed, setIsZoomed] = useState(false);
 
   const photos = item.gallery.length > 0 ? item.gallery : (item.mainImage ? [item.mainImage] : []);
   const hasPhotos = photos.length > 0;
 
   const handlePrev = useCallback(() => {
     if (!hasPhotos) return;
-    setIsZoomed(false);
     setSlideDirection(-1);
     setActivePhotoIndex((prev) => (prev === 0 ? photos.length - 1 : prev - 1));
   }, [hasPhotos, photos.length]);
 
   const handleNext = useCallback(() => {
     if (!hasPhotos) return;
-    setIsZoomed(false);
     setSlideDirection(1);
     setActivePhotoIndex((prev) => (prev === photos.length - 1 ? 0 : prev + 1));
   }, [hasPhotos, photos.length]);
 
   const handleSelectThumbnail = (index: number) => {
-    setIsZoomed(false);
     setSlideDirection(index > activePhotoIndex ? 1 : -1);
     setActivePhotoIndex(index);
   };
@@ -79,7 +74,6 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
       if (e.key === 'Escape') {
         if (isLightboxOpen) {
           setIsLightboxOpen(false);
-          setIsZoomed(false);
         } else {
           onClose();
         }
@@ -145,30 +139,28 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
             <div className="lg:col-span-7 flex flex-col space-y-4">
               <div 
                 className={`relative aspect-4/3 w-full rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-md flex items-center justify-center ${
-                  hasPhotos ? 'cursor-zoom-in group' : ''
+                  hasPhotos ? 'cursor-pointer group' : ''
                 }`}
                 onClick={() => {
                   if (hasPhotos) {
                     setIsLightboxOpen(true);
-                    setIsZoomed(false);
                   }
                 }}
               >
                 {hasPhotos ? (
                   <>
-                    {/* Zoom trigger button */}
+                    {/* Fullscreen trigger badge */}
                     <button
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
                         setIsLightboxOpen(true);
-                        setIsZoomed(false);
                       }}
                       className="absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/80 hover:bg-orange-500 text-white text-xs font-mono font-medium backdrop-blur-md border border-white/15 shadow-md transition-all cursor-pointer group/btn"
-                      title={sectionTranslation.zoomPhoto || 'Powiększ zdjęcie'}
+                      title={sectionTranslation.zoomPhoto || 'Pełny ekran'}
                     >
-                      <ZoomIn className="w-3.5 h-3.5 text-orange-400 group-hover/btn:text-white transition-colors" />
-                      <span className="hidden sm:inline">{sectionTranslation.zoomPhoto || 'Powiększ'}</span>
+                      <Maximize2 className="w-3.5 h-3.5 text-orange-400 group-hover/btn:text-white transition-colors" />
+                      <span className="hidden sm:inline">{sectionTranslation.zoomPhoto || 'Pełny ekran'}</span>
                     </button>
 
                     <AnimatePresence initial={false} custom={slideDirection} mode="wait">
@@ -182,7 +174,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                         exit="exit"
                         transition={{ duration: 0.22, ease: 'easeInOut' }}
                         alt={`${translation.title} - ${activePhotoIndex + 1}`}
-                        title={sectionTranslation.zoomPhoto || 'Kliknij, aby powiększyć'}
+                        title={sectionTranslation.zoomPhoto || 'Kliknij, aby otworzyć pełny ekran'}
                         className="w-full h-full object-contain bg-slate-950"
                       />
                     </AnimatePresence>
@@ -355,7 +347,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
         </div>
       </motion.div>
 
-      {/* Fullscreen Lightbox & Photo Zoom Overlay */}
+      {/* Clean Fullscreen Photo Lightbox */}
       <AnimatePresence>
         {isLightboxOpen && hasPhotos && (
           <motion.div
@@ -367,107 +359,75 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
             onClick={(e) => {
               e.stopPropagation();
               setIsLightboxOpen(false);
-              setIsZoomed(false);
             }}
-            className="fixed inset-0 z-[100] flex flex-col bg-slate-950/95 backdrop-blur-xl select-none"
+            className="fixed inset-0 z-[100] flex flex-col justify-between bg-slate-950/95 backdrop-blur-xl select-none"
             role="dialog"
             aria-modal="true"
-            aria-label={sectionTranslation.zoomPhoto || 'Powiększone zdjęcie'}
+            aria-label={sectionTranslation.zoomPhoto || 'Pełny ekran'}
           >
-            {/* Top Toolbar */}
+            {/* Top Bar / Header */}
             <div
               onClick={(e) => e.stopPropagation()}
-              className="flex items-center justify-between px-4 sm:px-6 py-3 bg-slate-900/90 border-b border-white/10 z-20 gap-3"
+              className="flex items-center justify-between px-4 sm:px-8 py-3.5 bg-slate-950/70 border-b border-white/10 z-20"
             >
               <div className="flex items-center gap-3 min-w-0">
-                <div className="w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-4 h-4" />
+                <div className="w-9 h-9 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
                   <span className="text-[10px] font-mono uppercase tracking-widest text-orange-400 font-bold block truncate">
                     {translation.badge}
                   </span>
-                  <h4 className="text-white text-xs sm:text-sm font-semibold truncate">
+                  <h4 className="text-white text-sm sm:text-base font-semibold truncate">
                     {translation.title}
                   </h4>
                 </div>
                 {photos.length > 1 && (
-                  <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 text-white text-xs font-mono border border-white/10 ml-2 flex-shrink-0">
-                    <Sparkles className="w-3 h-3 text-orange-400" />
+                  <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-mono border border-white/10 ml-3 flex-shrink-0">
+                    <Sparkles className="w-3.5 h-3.5 text-orange-400" />
                     <span>{activePhotoIndex + 1} / {photos.length}</span>
                   </div>
                 )}
               </div>
 
-              <div className="flex items-center gap-2 flex-shrink-0">
-                {/* Zoom Toggle Button */}
-                <button
-                  type="button"
-                  onClick={() => setIsZoomed((prev) => !prev)}
-                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/10 hover:bg-orange-500 text-white text-xs font-mono font-medium border border-white/15 transition-all cursor-pointer shadow-sm active:scale-95"
-                  title={isZoomed ? (sectionTranslation.zoomOut || 'Dopasuj do ekranu') : (sectionTranslation.zoomIn || 'Przybliż (2x)')}
-                >
-                  {isZoomed ? (
-                    <>
-                      <ZoomOut className="w-4 h-4 text-orange-400" />
-                      <span className="hidden sm:inline">{sectionTranslation.zoomOut || 'Dopasuj'}</span>
-                    </>
-                  ) : (
-                    <>
-                      <ZoomIn className="w-4 h-4 text-orange-400" />
-                      <span className="hidden sm:inline">{sectionTranslation.zoomIn || 'Przybliż'}</span>
-                    </>
-                  )}
-                </button>
-
-                {/* Close Lightbox Button */}
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsLightboxOpen(false);
-                    setIsZoomed(false);
-                  }}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 hover:bg-orange-500 text-white transition-all cursor-pointer border border-white/15 shadow-sm active:scale-95"
-                  aria-label={sectionTranslation.closeZoom || 'Zamknij podgląd'}
-                  title={sectionTranslation.closeZoom || 'Zamknij podgląd (Esc)'}
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
+              {/* Close Button */}
+              <button
+                type="button"
+                onClick={() => setIsLightboxOpen(false)}
+                className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 hover:bg-orange-500 text-white transition-all cursor-pointer border border-white/15 shadow-md active:scale-95 flex-shrink-0"
+                aria-label={sectionTranslation.closeZoom || 'Zamknij'}
+                title={sectionTranslation.closeZoom || 'Zamknij (Esc)'}
+              >
+                <X className="h-5 w-5 sm:h-6 sm:w-6" />
+              </button>
             </div>
 
-            {/* Main Stage / Image Viewer */}
+            {/* Center Stage / Image Display */}
             <div
-              className={`relative flex-1 w-full flex items-center justify-center overflow-auto p-3 sm:p-6 ${
-                isZoomed ? 'cursor-grab active:cursor-grabbing' : 'cursor-pointer'
-              }`}
-              onClick={() => {
-                if (isZoomed) {
-                  setIsZoomed(false);
-                } else {
-                  setIsLightboxOpen(false);
-                  setIsZoomed(false);
-                }
-              }}
+              className="relative flex-1 w-full flex items-center justify-center px-4 py-2 sm:px-12 sm:py-4 overflow-hidden cursor-pointer"
+              onClick={() => setIsLightboxOpen(false)}
             >
               <div
-                className="relative flex items-center justify-center"
+                className="relative max-h-full max-w-full flex items-center justify-center cursor-default"
                 onClick={(e) => e.stopPropagation()}
               >
-                <img
-                  src={photos[activePhotoIndex]}
-                  alt={`${translation.title} - ${activePhotoIndex + 1}`}
-                  onClick={() => setIsZoomed((prev) => !prev)}
-                  title={isZoomed ? (sectionTranslation.zoomOut || 'Kliknij, aby dopasować') : (sectionTranslation.zoomIn || 'Kliknij, aby powiększyć')}
-                  className={`rounded-xl shadow-2xl transition-all duration-200 select-none ${
-                    isZoomed
-                      ? 'min-w-[1200px] md:min-w-[1600px] lg:min-w-[2000px] max-w-none cursor-zoom-out'
-                      : 'max-h-[calc(100vh-170px)] max-w-[95vw] w-auto h-auto object-contain cursor-zoom-in'
-                  }`}
-                />
+                <AnimatePresence initial={false} custom={slideDirection} mode="wait">
+                  <motion.img
+                    key={activePhotoIndex}
+                    src={photos[activePhotoIndex]}
+                    custom={slideDirection}
+                    variants={slideVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ duration: 0.2, ease: 'easeInOut' }}
+                    alt={`${translation.title} - ${activePhotoIndex + 1}`}
+                    className="max-h-[72vh] sm:max-h-[76vh] max-w-[92vw] w-auto h-auto object-contain rounded-2xl shadow-2xl border border-white/10 bg-slate-950 select-none"
+                  />
+                </AnimatePresence>
               </div>
 
-              {/* Prev / Next Navigation Arrows */}
+              {/* Side Navigation Chevrons */}
               {photos.length > 1 && (
                 <>
                   <button
@@ -476,10 +436,10 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                       e.stopPropagation();
                       handlePrev();
                     }}
-                    className="fixed left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-slate-900/80 hover:bg-orange-500 text-white transition-all backdrop-blur-md border border-white/15 shadow-2xl cursor-pointer active:scale-95"
+                    className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-slate-900/80 hover:bg-orange-500 text-white transition-all backdrop-blur-md border border-white/15 shadow-2xl cursor-pointer active:scale-95"
                     aria-label={sectionTranslation.prevPhoto}
                   >
-                    <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+                    <ChevronLeft className="h-6 w-6 sm:h-7 sm:w-7" />
                   </button>
                   <button
                     type="button"
@@ -487,30 +447,30 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                       e.stopPropagation();
                       handleNext();
                     }}
-                    className="fixed right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-slate-900/80 hover:bg-orange-500 text-white transition-all backdrop-blur-md border border-white/15 shadow-2xl cursor-pointer active:scale-95"
+                    className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-slate-900/80 hover:bg-orange-500 text-white transition-all backdrop-blur-md border border-white/15 shadow-2xl cursor-pointer active:scale-95"
                     aria-label={sectionTranslation.nextPhoto}
                   >
-                    <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+                    <ChevronRight className="h-6 w-6 sm:h-7 sm:w-7" />
                   </button>
                 </>
               )}
             </div>
 
-            {/* Bottom Bar: Thumbnails & Keyboard Guide */}
+            {/* Bottom Bar: Pasek do przechodzenia między zdjęciami */}
             <div
               onClick={(e) => e.stopPropagation()}
-              className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-slate-900/90 border-t border-white/10 z-20 gap-4"
+              className="flex items-center justify-between px-4 sm:px-8 py-3 bg-slate-950/80 border-t border-white/10 z-20 gap-4"
             >
-              <div className="flex items-center gap-2 overflow-x-auto max-w-full scrollbar-thin py-1">
+              <div className="flex items-center gap-2.5 overflow-x-auto max-w-full scrollbar-thin py-1">
                 {photos.length > 1 && photos.map((imgUrl, idx) => (
                   <button
                     key={idx}
                     type="button"
                     onClick={() => handleSelectThumbnail(idx)}
-                    className={`relative w-14 h-10 sm:w-16 sm:h-11 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 cursor-pointer ${
+                    className={`relative w-16 h-11 sm:w-20 sm:h-13 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 cursor-pointer ${
                       activePhotoIndex === idx
-                        ? 'border-orange-500 ring-2 ring-orange-500/40 scale-105 opacity-100 shadow-md'
-                        : 'border-white/20 opacity-50 hover:opacity-90'
+                        ? 'border-orange-500 ring-2 ring-orange-500/50 scale-105 opacity-100 shadow-lg'
+                        : 'border-white/20 opacity-50 hover:opacity-90 hover:border-white/40'
                     }`}
                   >
                     <img
@@ -522,12 +482,9 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                 ))}
               </div>
 
-              <div className="text-[11px] font-mono text-slate-400 flex-shrink-0 hidden md:flex items-center gap-2">
-                <span>Esc: {sectionTranslation.closeZoom || 'zamknij'}</span>
-                <span>•</span>
-                <span>← → : {sectionTranslation.galleryCount || 'zdjęcia'}</span>
-                <span>•</span>
-                <span>{isZoomed ? (sectionTranslation.zoomOut || 'kliknij aby dopasować') : (sectionTranslation.zoomIn || 'kliknij aby przybliżyć')}</span>
+              <div className="text-xs font-mono text-slate-400 flex-shrink-0 hidden md:flex items-center gap-3">
+                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10">Esc: {sectionTranslation.closeZoom || 'zamknij'}</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10">← → : {sectionTranslation.galleryCount || 'zdjęcia'}</span>
               </div>
             </div>
           </motion.div>
