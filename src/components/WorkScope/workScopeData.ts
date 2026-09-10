@@ -32,6 +32,8 @@ import klimatyzacjaWewnTelecomThumb from '../../assets/images/klimatyzacja-wewne
 import czyszczenieWentylatoraImg from '../../assets/images/czyszczenie-wentylatora-bebnowego-klimatyzacja.webp';
 import serwisChlodniczyProzniowanieImg from '../../assets/images/serwis-chlodniczy-prozniowanie-klimatyzacja.webp';
 import montazKlimatyzatoraLgImg from '../../assets/images/montaz-klimatyzatora-lg-agregat-na-elewacji.webp';
+import szafaKlimatyzacjiPrecyzyjnejImg from '../../assets/images/budowa-kontenera-szafa-klimatyzacji-precyzyjnej-agregat-sprezarkowy.webp';
+import szafaKlimatyzacjiPrecyzyjnejThumb from '../../assets/images/budowa-kontenera-szafa-klimatyzacji-precyzyjnej-agregat-sprezarkowy-thumb.webp';
 
 import kontenerPopImg from '../../assets/images/Kontener-Eminstall1.webp';
 import kontenerPopThumb from '../../assets/images/Kontener-Eminstall1-thumb.webp';
@@ -101,10 +103,11 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
   {
     id: 'freecooling-hvac',
     categoryKey: 'cooling',
-    mainImage: klimatyzacjaWewnTelecomImg,
-    thumbnail: klimatyzacjaWewnTelecomThumb,
-    imagePosition: 'object-center',
+    mainImage: szafaKlimatyzacjiPrecyzyjnejImg,
+    thumbnail: szafaKlimatyzacjiPrecyzyjnejThumb,
+    imagePosition: 'object-[center_35%]',
     gallery: [
+      szafaKlimatyzacjiPrecyzyjnejImg,
       klimatyzacjaWewnTelecomImg,
       montazKlimatyzatoraLgImg,
       freecoolingCzerpniaZewnImg,
