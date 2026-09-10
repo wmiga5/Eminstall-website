@@ -173,7 +173,7 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-3 mb-8 sm:mb-10 md:mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-[11px] sm:text-xs font-mono uppercase tracking-widest font-bold">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-xs font-mono uppercase tracking-widest font-bold">
             <Sparkles className="w-3.5 h-3.5 text-orange-400" />
             <span>{translation.header}</span>
           </div>

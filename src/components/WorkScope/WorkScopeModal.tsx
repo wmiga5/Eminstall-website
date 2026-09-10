@@ -113,7 +113,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
               <item.icon className="w-5 h-5" />
             </div>
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-orange-700 font-bold block">
+              <span className="text-xs font-mono uppercase tracking-widest text-orange-700 font-bold block">
                 {translation.badge}
               </span>
               <h3 id="workscope-modal-title" className="font-display font-bold text-slate-900 text-base sm:text-lg line-clamp-1">
@@ -175,6 +175,9 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                         transition={{ duration: 0.22, ease: 'easeInOut' }}
                         alt={`${translation.title} - ${activePhotoIndex + 1}`}
                         title={sectionTranslation.zoomPhoto || 'Kliknij, aby otworzyć pełny ekran'}
+                        width={1200}
+                        height={900}
+                        decoding="async"
                         className="w-full h-full object-contain bg-slate-950"
                       />
                     </AnimatePresence>
@@ -241,6 +244,9 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                       <img
                         src={imgUrl}
                         alt={`Miniatura ${idx + 1}`}
+                        width={80}
+                        height={64}
+                        decoding="async"
                         className="w-full h-full object-cover"
                       />
                     </button>
@@ -308,7 +314,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
               {/* Target Sector */}
               {translation.targetSector && (
                 <div className="space-y-1.5 pt-4 border-t border-slate-100">
-                  <h4 className="text-[10px] font-mono uppercase tracking-widest text-slate-500 font-bold">
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-slate-500 font-bold">
                     {sectionTranslation.sectorTitle}
                   </h4>
                   <p className="text-xs font-semibold text-slate-800">
@@ -324,7 +330,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                     <span className="block text-xs font-bold text-slate-900">
                       {sectionTranslation.contactPrompt}
                     </span>
-                    <span className="block text-[11px] text-slate-600 mt-0.5">
+                    <span className="block text-xs text-slate-600 mt-0.5">
                       {translation.title}
                     </span>
                   </div>
@@ -375,7 +381,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                   <item.icon className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-orange-400 font-bold block truncate">
+                  <span className="text-xs font-mono uppercase tracking-widest text-orange-400 font-bold block truncate">
                     {translation.badge}
                   </span>
                   <h4 className="text-white text-sm sm:text-base font-semibold truncate">
@@ -422,6 +428,9 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                     exit="exit"
                     transition={{ duration: 0.2, ease: 'easeInOut' }}
                     alt={`${translation.title} - ${activePhotoIndex + 1}`}
+                    width={1600}
+                    height={1200}
+                    decoding="async"
                     className="max-h-[72vh] sm:max-h-[76vh] max-w-[92vw] w-auto h-auto object-contain rounded-2xl shadow-2xl border border-white/10 bg-slate-950 select-none"
                   />
                 </AnimatePresence>
@@ -476,6 +485,9 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                     <img
                       src={imgUrl}
                       alt={`Miniatura ${idx + 1}`}
+                      width={80}
+                      height={52}
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </button>

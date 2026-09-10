@@ -39,7 +39,7 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center max-w-xs space-y-2.5">
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-400 text-[9px] sm:text-[10px] font-mono uppercase tracking-wider font-semibold">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-400 text-xs font-mono uppercase tracking-wider font-semibold">
           <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
           {badge}
         </div>
@@ -53,7 +53,7 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
             {noticeText}
           </p>
           {!compact && (
-            <p className="text-slate-300 text-[10px] sm:text-xs font-light leading-relaxed hidden sm:block">
+            <p className="text-slate-300 text-xs font-light leading-relaxed hidden sm:block">
               {subText}
             </p>
           )}

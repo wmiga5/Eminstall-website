@@ -190,6 +190,9 @@ export default function App({ initialUrl }: AppProps = {}) {
             <img 
               src={logoSvg} 
               alt="Eminstall - Engineering Group" 
+              width="420"
+              height="100"
+              decoding="async"
               className="h-12 sm:h-15 lg:h-16 w-auto object-contain transition-transform group-hover:scale-[1.02]" 
             />
           </a>
@@ -439,7 +442,7 @@ export default function App({ initialUrl }: AppProps = {}) {
                         {t.hero.status}
                       </span>
                     </div>
-                    <span className="font-mono text-[10px] text-slate-500">{t.hero.systemCode}</span>
+                    <span className="font-mono text-xs text-slate-500">{t.hero.systemCode}</span>
                   </div>
 
                   {/* Visual Blueprint Flow */}
@@ -453,7 +456,7 @@ export default function App({ initialUrl }: AppProps = {}) {
                         <p className="text-xs font-bold tracking-wide uppercase text-slate-900">
                           {t.hero.features.containersTitle}
                         </p>
-                        <p className="text-[11px] text-slate-500 mt-0.5">
+                        <p className="text-xs text-slate-600 mt-0.5">
                           {t.hero.features.containersDesc}
                         </p>
                       </div>
@@ -471,7 +474,7 @@ export default function App({ initialUrl }: AppProps = {}) {
                         <p className="text-xs font-bold tracking-wide uppercase text-slate-900">
                           {t.hero.features.hvacTitle}
                         </p>
-                        <p className="text-[11px] text-slate-500 mt-0.5">
+                        <p className="text-xs text-slate-600 mt-0.5">
                           {t.hero.features.hvacDesc}
                         </p>
                       </div>
@@ -489,7 +492,7 @@ export default function App({ initialUrl }: AppProps = {}) {
                         <p className="text-xs font-bold tracking-wide uppercase text-slate-900">
                           {t.hero.features.powerTitle}
                         </p>
-                        <p className="text-[11px] text-slate-500 mt-0.5">
+                        <p className="text-xs text-slate-600 mt-0.5">
                           {t.hero.features.powerDesc}
                         </p>
                       </div>
@@ -646,13 +649,13 @@ export default function App({ initialUrl }: AppProps = {}) {
                   {/* Registered Company Details */}
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/60 space-y-3.5 text-xs text-slate-700 shadow-2xs">
                     <div>
-                      <span className="block text-[10px] font-mono uppercase text-slate-500 font-medium tracking-wider">
+                      <span className="block text-xs font-mono uppercase text-slate-500 font-medium tracking-wider">
                         {t.contact.companyNameLabel}
                       </span>
                       <span className="font-semibold text-slate-900 text-sm">{COMPANY_DATA.name}</span>
                     </div>
                     <div>
-                      <span className="block text-[10px] font-mono uppercase text-slate-500 font-medium tracking-wider">
+                      <span className="block text-xs font-mono uppercase text-slate-500 font-medium tracking-wider">
                         {t.contact.companyAddressLabel}
                       </span>
                       <span className="font-semibold text-slate-900 leading-normal">
@@ -662,11 +665,11 @@ export default function App({ initialUrl }: AppProps = {}) {
                     </div>
                     <div className="grid grid-cols-2 gap-4 pt-1">
                       <div>
-                        <span className="block text-[10px] font-mono uppercase text-slate-500 font-medium tracking-wider">{t.contact.nip}</span>
+                        <span className="block text-xs font-mono uppercase text-slate-500 font-medium tracking-wider">{t.contact.nip}</span>
                         <span className="font-mono font-semibold text-slate-900">{COMPANY_DATA.legal.nip}</span>
                       </div>
                       <div>
-                        <span className="block text-[10px] font-mono uppercase text-slate-500 font-medium tracking-wider">{t.contact.regon}</span>
+                        <span className="block text-xs font-mono uppercase text-slate-500 font-medium tracking-wider">{t.contact.regon}</span>
                         <span className="font-mono font-semibold text-slate-900">{COMPANY_DATA.legal.regon}</span>
                       </div>
                     </div>
@@ -721,6 +724,9 @@ export default function App({ initialUrl }: AppProps = {}) {
               <img 
                 src={logoWhiteSvg} 
                 alt="Eminstall - Engineering Group" 
+                width="420"
+                height="100"
+                decoding="async"
                 className="h-11 sm:h-13 lg:h-14 w-auto object-contain transition-transform group-hover:scale-[1.02]" 
               />
             </a>

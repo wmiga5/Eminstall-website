@@ -40,3 +40,16 @@ html {
   scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
 }
 
+/* Accessibility: Respect user's motion preferences (WCAG 2.1 / 2.2) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
