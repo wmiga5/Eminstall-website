@@ -4,6 +4,8 @@ export interface WorkScopeItemData {
   id: string;
   categoryKey: string;
   mainImage: string | null;
+  thumbnail?: string | null;
+  imagePosition?: string;
   gallery: string[];
   icon: LucideIcon;
   tags: string[];

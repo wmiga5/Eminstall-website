@@ -49,15 +49,18 @@ export const WorkScopeCard: React.FC<WorkScopeCardProps> = ({
       <div className="relative h-48 sm:h-64 md:h-72 lg:h-[320px] w-full overflow-hidden bg-slate-950">
         {hasPhotos ? (
           <>
-            <img
-              src={item.mainImage!}
-              alt={translation.title}
-              width={800}
-              height={600}
-              decoding="async"
-              className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-106"
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet={item.thumbnail || item.mainImage!} type="image/webp" />
+              <img
+                src={item.thumbnail || item.mainImage!}
+                alt={translation.title}
+                width={640}
+                height={480}
+                decoding="async"
+                className={`h-full w-full object-cover ${item.imagePosition || 'object-center'} transition-transform duration-700 ease-out group-hover:scale-106`}
+                loading="lazy"
+              />
+            </picture>
             {/* Subtle gradient vignette */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent pointer-events-none" />
 

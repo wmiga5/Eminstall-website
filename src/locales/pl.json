@@ -109,9 +109,9 @@
         "tags": ["Węzły POP", "Kontenery techniczne", "Podłogi podniesione", "Korytowanie"]
       },
       "switchboards": {
-        "badge": "Prefabrykacja & SEP",
+        "badge": "Prefabrykacja & PN-HD 60364-6",
         "title": "Prefabrykacja Rozdzielnic i Pomiary Odbiorcze",
-        "shortDesc": "Projektowanie i prefabrykacja szaf rozdzielczych nN, szaf automatyki i rozdzielnic terenowych. Pomiary elektryczne SEP i kompletne protokoły odbiorcze w Polsce i Niemczech.",
+        "shortDesc": "Projektowanie i prefabrykacja szaf rozdzielczych nN, szaf automatyki i rozdzielnic terenowych. Pomiary elektryczne wg PN-HD 60364-6 i kompletne protokoły odbiorcze w Polsce i Niemczech.",
         "fullDesc": "Prefabrykujemy nowoczesne szafy rozdzielcze niskiego napięcia w oparciu o aparaturę czołowych europejskich producentów. Każda szafa przed wysyłką przechodzi rygorystyczne testy funkcjonalne, weryfikację właściwości dielektrycznych oraz pomiary parametrów elektrycznych, zakończone wystawieniem protokołu badań wyrobu zgodnie z normą PN-EN 61439 oraz Deklaracji Zgodności CE.",
         "scopeList": [
           "Prefabrykacja głównych rozdzielnic zasilających nN i szaf sterowniczych",
@@ -122,7 +122,7 @@
         ],
         "specifications": "Stopień ochrony IP do IP65; Aparatura modułowa i kompaktowa renomowanych marek; Zgodność z PN-EN 61439",
         "targetSector": "Obiekty nadawcze, przemysłowe szafy sterownicze, rozdzielnice zasilające infrastruktury technicznej",
-        "tags": ["Prefabrykacja rozdzielnic", "Szafy zasilające", "Pomiary SEP", "Protokoły odbiorcze"]
+        "tags": ["Prefabrykacja rozdzielnic", "Szafy zasilające", "Pomiary PN-HD 60364-6", "Protokoły odbiorcze"]
       },
       "facility-maintenance": {
         "badge": "Facility Management",

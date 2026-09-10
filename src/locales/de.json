@@ -109,7 +109,7 @@
         "tags": ["POP-Knoten", "Technikcontainer", "Doppelböden", "Kabeltrassen"]
       },
       "switchboards": {
-        "badge": "Schaltanlagenbau & Prüfung",
+        "badge": "Schaltanlagenbau & HD 60364-6",
         "title": "Schaltanlagenbau & Zertifizierte Abnahmeprotokolle",
         "shortDesc": "Planung und Bau von Niederspannungshauptverteilern, Steuerschränken und witterungsbeständigen Außenschaltschränken. Umfassende elektrische Prüfungen und Prüfberichte.",
         "fullDesc": "Wir fertigen moderne Niederspannungsschaltanlagen auf Basis europäischer Spitzenkomponenten. Jede Anlage durchläuft vor der Auslieferung strenge Funktionstests, Prüfungen der dielektrischen Eigenschaften sowie elektrische Messungen, abgeschlossen mit einem Stücknachweis nach DIN EN 61439 und einer CE-Konformitätserklärung.",
@@ -122,7 +122,7 @@
         ],
         "specifications": "Schutzarten bis IP65; Modulare Marken-Schaltgeräte; Konformität mit DIN EN 61439",
         "targetSector": "Sendeanlagen, Industrieautomationsschränke und Energieverteiler kritischer Infrastrukturen",
-        "tags": ["Schaltschrankbau", "Stromverteilung", "SEP-Messungen", "Abnahmeprotokolle"]
+        "tags": ["Schaltschrankbau", "Stromverteilung", "Prüfungen nach HD 60364-6", "Abnahmeprotokolle"]
       },
       "facility-maintenance": {
         "badge": "Facility Management",

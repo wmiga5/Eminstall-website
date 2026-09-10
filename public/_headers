@@ -1,0 +1,45 @@
+# ==============================================================================
+# EMINSTALL - HTTP Response Headers (Cloudflare Pages / Workers Assets)
+# Addresses:
+#   PERF-02: 1-year immutable cache for fingerprinted /assets/* and /fonts/*
+#   PERF-03: Enterprise security headers (HSTS, CSP, X-Frame, Nosniff, Referrer)
+# ==============================================================================
+
+# Global rules for all HTML pages and default endpoints
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://lh3.googleusercontent.com; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Immutable 1-year cache for fingerprinted JS, CSS, and images
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# Immutable 1-year cache for self-hosted local fonts (PERF-04)
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+  Access-Control-Allow-Origin: *
+
+# Standard cache for icons, manifests, and sitemaps
+/favicon.*
+  Cache-Control: public, max-age=86400
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json; charset=utf-8
+
+/manifest.json
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600

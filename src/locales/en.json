@@ -109,7 +109,7 @@
         "tags": ["POP Nodes", "Technical Containers", "Raised Floors", "Cable Pathways"]
       },
       "switchboards": {
-        "badge": "Prefabrication & Testing",
+        "badge": "Prefabrication & HD 60364-6",
         "title": "Switchboard Prefabrication & Certified Inspection Protocols",
         "shortDesc": "Custom engineering and prefabrication of LV distribution boards, ATS cabinets, and outdoor weather-rated switchgear. Complete electrical verification and test reports.",
         "fullDesc": "We prefabricate modern low-voltage switchboards based on components from leading European manufacturers. Prior to dispatch, each enclosure undergoes rigorous functional testing, dielectric property verification, and electrical parameter measurements, concluded with a routine test report in accordance with EN 61439 and a CE Declaration of Conformity.",
@@ -122,7 +122,7 @@
         ],
         "specifications": "Ingress protection up to IP65; Certified modular & compact switchgear; Compliance with IEC/EN 61439",
         "targetSector": "Transmission sites, industrial automation cabinets, and infrastructure power distribution",
-        "tags": ["Switchboard Prefabrication", "Power Distribution", "SEP Electrical Tests", "Commissioning Protocols"]
+        "tags": ["Switchboard Prefabrication", "Power Distribution", "HD 60364-6 Testing", "Commissioning Protocols"]
       },
       "facility-maintenance": {
         "badge": "Facility Management",
