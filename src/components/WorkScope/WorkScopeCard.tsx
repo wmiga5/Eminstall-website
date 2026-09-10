@@ -108,12 +108,12 @@ export const WorkScopeCard: React.FC<WorkScopeCardProps> = ({
       <div className="flex flex-col flex-grow p-4 sm:p-6 lg:p-7 justify-between space-y-4 sm:space-y-5">
         <div className="space-y-2 sm:space-y-3">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-orange-600 font-bold">
+            <span className="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-orange-700 font-bold">
               {translation.badge}
             </span>
           </div>
 
-          <h3 className="font-display text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors duration-200 leading-snug line-clamp-2">
+          <h3 className="font-display text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 group-hover:text-orange-700 transition-colors duration-200 leading-snug line-clamp-2">
             {translation.title}
           </h3>
 
@@ -136,7 +136,7 @@ export const WorkScopeCard: React.FC<WorkScopeCardProps> = ({
           </div>
 
           {/* High-visibility Action Button */}
-          <div className="w-full py-2.5 px-4 sm:py-3.5 sm:px-5 rounded-xl sm:rounded-2xl bg-slate-900 text-white font-bold text-xs sm:text-sm flex items-center justify-between group-hover:bg-orange-600 group-hover:shadow-lg transition-all duration-300">
+          <div className="w-full py-2.5 px-4 sm:py-3.5 sm:px-5 rounded-xl sm:rounded-2xl bg-slate-900 text-white font-bold text-xs sm:text-sm flex items-center justify-between group-hover:bg-orange-700 group-hover:shadow-lg transition-all duration-300">
             <span>{sectionTranslation.viewDetails}</span>
             <div className="flex items-center gap-1">
               <span className="text-[11px] sm:text-xs font-mono opacity-80 group-hover:opacity-100">

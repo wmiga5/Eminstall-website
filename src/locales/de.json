@@ -18,7 +18,9 @@
     "whyUs": "Warum wir",
     "realizations": "Referenzen",
     "scopeAndRealizations": "Leistungsumfang & Referenzen",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "openMenu": "Navigationsmenü öffnen",
+    "closeMenu": "Navigationsmenü schließen"
   },
   "workScope": {
     "header": "LEISTUNGSUMFANG & REFERENZEN",

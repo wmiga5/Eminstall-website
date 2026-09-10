@@ -18,7 +18,9 @@
     "whyUs": "Why Us",
     "realizations": "Projects",
     "scopeAndRealizations": "Scope of Work & Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
   },
   "workScope": {
     "header": "SCOPE OF WORK & PROJECTS",

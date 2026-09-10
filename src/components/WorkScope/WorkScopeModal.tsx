@@ -109,11 +109,11 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
         {/* Sticky Modal Header / Close bar */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-white/95 backdrop-blur-xs z-10 shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center">
+            <div className="w-9 h-9 rounded-xl bg-orange-500/10 text-orange-700 flex items-center justify-center">
               <item.icon className="w-5 h-5" />
             </div>
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-orange-600 font-bold block">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-orange-700 font-bold block">
                 {translation.badge}
               </span>
               <h3 id="workscope-modal-title" className="font-display font-bold text-slate-900 text-base sm:text-lg line-clamp-1">
@@ -124,7 +124,7 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
 
           <button
             onClick={onClose}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-orange-500 hover:text-white transition-all cursor-pointer shadow-xs focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-orange-700 hover:text-white transition-all cursor-pointer shadow-xs focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
             aria-label={sectionTranslation.closeDetails}
           >
             <X className="h-5 w-5" />

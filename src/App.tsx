@@ -195,28 +195,40 @@ export default function App({ initialUrl }: AppProps = {}) {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <button
-              onClick={() => handleScrollTo('o-nas')}
-              className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors cursor-pointer"
+          <nav className="hidden lg:flex items-center space-x-8" aria-label="Nawigacja główna">
+            <a
+              href="#o-nas"
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollTo('o-nas');
+              }}
+              className="text-sm font-medium text-slate-600 hover:text-orange-700 transition-colors cursor-pointer no-underline"
               id="nav-link-about"
             >
               {t.nav.about}
-            </button>
-            <button
-              onClick={() => handleScrollTo('zakres-prac')}
-              className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors cursor-pointer"
+            </a>
+            <a
+              href="#zakres-prac"
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollTo('zakres-prac');
+              }}
+              className="text-sm font-medium text-slate-600 hover:text-orange-700 transition-colors cursor-pointer no-underline"
               id="nav-link-scope"
             >
               {t.nav.scopeAndRealizations}
-            </button>
-            <button
-              onClick={() => handleScrollTo('kontakt')}
-              className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors cursor-pointer"
+            </a>
+            <a
+              href="#kontakt"
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollTo('kontakt');
+              }}
+              className="text-sm font-medium text-slate-600 hover:text-orange-700 transition-colors cursor-pointer no-underline"
               id="nav-link-contact"
             >
               {t.nav.contact}
-            </button>
+            </a>
           </nav>
 
           {/* Language Switcher & Call To Action */}
@@ -235,10 +247,10 @@ export default function App({ initialUrl }: AppProps = {}) {
                         handleSwitchLang(l);
                       }
                     }}
-                    className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-all cursor-pointer no-underline ${
+                    className={`min-h-[36px] min-w-[36px] px-3 py-1.5 flex items-center justify-center text-xs font-semibold rounded-md transition-all cursor-pointer no-underline ${
                       lang === l
-                        ? 'bg-orange-500 text-white shadow-xs'
-                        : 'text-slate-500 hover:text-slate-900 hover:bg-slate-200/50'
+                        ? 'bg-orange-700 text-white shadow-xs'
+                        : 'text-slate-700 hover:text-slate-900 hover:bg-slate-200/60'
                     }`}
                     id={`lang-btn-${l}`}
                     aria-label={`Zmień język na ${l}`}
@@ -252,7 +264,7 @@ export default function App({ initialUrl }: AppProps = {}) {
             {/* Quick Contact phone header */}
             <a
               href={`tel:${COMPANY_DATA.contact.phone.raw}`}
-              className="inline-flex items-center justify-center rounded-lg bg-slate-900 hover:bg-orange-600 px-4 py-2 text-sm font-semibold text-white transition-all cursor-pointer shadow-xs"
+              className="inline-flex items-center justify-center rounded-lg bg-slate-900 hover:bg-orange-700 px-4 py-2 text-sm font-semibold text-white transition-all cursor-pointer shadow-xs"
               id="header-phone-cta"
             >
               <Phone className="mr-2 h-3.5 w-3.5" />
@@ -276,10 +288,10 @@ export default function App({ initialUrl }: AppProps = {}) {
                         handleSwitchLang(l);
                       }
                     }}
-                    className={`px-1.5 py-0.5 text-[10px] font-bold rounded-sm cursor-pointer no-underline ${
+                    className={`min-h-[32px] min-w-[32px] px-2.5 py-1.5 flex items-center justify-center text-xs font-bold rounded-sm cursor-pointer no-underline ${
                       lang === l
-                        ? 'bg-orange-500 text-white'
-                        : 'text-slate-500'
+                        ? 'bg-orange-700 text-white'
+                        : 'text-slate-700 hover:text-slate-900'
                     }`}
                     id={`lang-btn-mob-${l}`}
                     aria-label={`Zmień język na ${l}`}
@@ -292,9 +304,11 @@ export default function App({ initialUrl }: AppProps = {}) {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="rounded-lg p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 transition-all cursor-pointer"
+              className="rounded-lg p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-700 transition-all cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center"
               id="mobile-menu-toggle"
-              aria-label="Toggle Navigation Menu"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={isMobileMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -305,33 +319,45 @@ export default function App({ initialUrl }: AppProps = {}) {
         {isMobileMenuOpen && (
           <div className="lg:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-6 space-y-3 shadow-lg animate-in slide-in-from-top duration-200" id="mobile-menu">
             <div className="flex flex-col space-y-1">
-              <button
-                onClick={() => handleScrollTo('o-nas')}
-                className="flex w-full items-center py-2.5 px-3 text-base font-semibold rounded-lg text-slate-700 hover:bg-slate-50 hover:text-orange-600 transition-all cursor-pointer"
+              <a
+                href="#o-nas"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollTo('o-nas');
+                }}
+                className="flex w-full items-center py-2.5 px-3 text-base font-semibold rounded-lg text-slate-700 hover:bg-slate-50 hover:text-orange-700 transition-all cursor-pointer no-underline"
                 id="mobile-link-about"
               >
                 {t.nav.about}
-              </button>
-              <button
-                onClick={() => handleScrollTo('zakres-prac')}
-                className="flex w-full items-center py-2.5 px-3 text-base font-semibold rounded-lg text-slate-700 hover:bg-slate-50 hover:text-orange-600 transition-all cursor-pointer"
+              </a>
+              <a
+                href="#zakres-prac"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollTo('zakres-prac');
+                }}
+                className="flex w-full items-center py-2.5 px-3 text-base font-semibold rounded-lg text-slate-700 hover:bg-slate-50 hover:text-orange-700 transition-all cursor-pointer no-underline"
                 id="mobile-link-scope"
               >
                 {t.nav.scopeAndRealizations}
-              </button>
-              <button
-                onClick={() => handleScrollTo('kontakt')}
-                className="flex w-full items-center py-2.5 px-3 text-base font-semibold rounded-lg text-slate-700 hover:bg-slate-50 hover:text-orange-600 transition-all cursor-pointer"
+              </a>
+              <a
+                href="#kontakt"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollTo('kontakt');
+                }}
+                className="flex w-full items-center py-2.5 px-3 text-base font-semibold rounded-lg text-slate-700 hover:bg-slate-50 hover:text-orange-700 transition-all cursor-pointer no-underline"
                 id="mobile-link-contact"
               >
                 {t.nav.contact}
-              </button>
+              </a>
             </div>
 
             <div className="pt-4 border-t border-slate-100">
               <a
                 href={`tel:${COMPANY_DATA.contact.phone.raw}`}
-                className="flex items-center justify-center w-full rounded-lg bg-orange-500 py-3 text-center text-sm font-bold text-white shadow-xs hover:bg-orange-600 transition-all"
+                className="flex items-center justify-center w-full rounded-lg bg-orange-700 py-3 text-center text-sm font-bold text-white shadow-xs hover:bg-orange-800 transition-all no-underline"
                 id="mobile-phone-cta"
               >
                 <Phone className="mr-2 h-4 w-4" />
@@ -377,7 +403,7 @@ export default function App({ initialUrl }: AppProps = {}) {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <button
                   onClick={() => handleScrollTo('kontakt')}
-                  className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg bg-orange-500 px-7 py-3.5 text-base font-bold text-white shadow-md hover:bg-orange-600 hover:shadow-lg hover:scale-[1.02] transition-all cursor-pointer"
+                  className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg bg-orange-700 px-7 py-3.5 text-base font-bold text-white shadow-md hover:bg-orange-800 hover:shadow-lg hover:scale-[1.02] transition-all cursor-pointer"
                   id="hero-primary-cta"
                 >
                   {t.hero.ctaPrimary}
@@ -424,9 +450,9 @@ export default function App({ initialUrl }: AppProps = {}) {
                         <Layers className="h-5 w-5" />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold tracking-wide uppercase text-slate-900">
+                        <p className="text-xs font-bold tracking-wide uppercase text-slate-900">
                           {t.hero.features.containersTitle}
-                        </h4>
+                        </p>
                         <p className="text-[11px] text-slate-500 mt-0.5">
                           {t.hero.features.containersDesc}
                         </p>
@@ -442,9 +468,9 @@ export default function App({ initialUrl }: AppProps = {}) {
                         <Wind className="h-5 w-5" />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold tracking-wide uppercase text-slate-900">
+                        <p className="text-xs font-bold tracking-wide uppercase text-slate-900">
                           {t.hero.features.hvacTitle}
-                        </h4>
+                        </p>
                         <p className="text-[11px] text-slate-500 mt-0.5">
                           {t.hero.features.hvacDesc}
                         </p>
@@ -460,9 +486,9 @@ export default function App({ initialUrl }: AppProps = {}) {
                         <Zap className="h-5 w-5" />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold tracking-wide uppercase text-slate-900">
+                        <p className="text-xs font-bold tracking-wide uppercase text-slate-900">
                           {t.hero.features.powerTitle}
-                        </h4>
+                        </p>
                         <p className="text-[11px] text-slate-500 mt-0.5">
                           {t.hero.features.powerDesc}
                         </p>
@@ -484,7 +510,7 @@ export default function App({ initialUrl }: AppProps = {}) {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-6" id="about-text-content">
             <div className="space-y-2 text-center">
-              <span className="text-xs font-bold tracking-widest text-orange-600 uppercase font-mono">{t.about.header}</span>
+              <span className="text-xs font-bold tracking-widest text-orange-700 uppercase font-mono">{t.about.header}</span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">{t.about.title}</h2>
             </div>
 
@@ -506,18 +532,18 @@ export default function App({ initialUrl }: AppProps = {}) {
             {/* Core Values Highlight */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 shadow-2xs">
-                <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-600 mb-2.5">
+                <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-700 mb-2.5">
                   <Shield className="h-4 w-4" />
                 </div>
-                <h4 className="font-bold text-slate-900 text-sm mb-1">{t.about.precision}</h4>
+                <h3 className="font-bold text-slate-900 text-sm mb-1">{t.about.precision}</h3>
                 <p className="text-xs text-slate-500 leading-normal">{t.about.precisionDesc}</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 shadow-2xs">
-                <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-600 mb-2.5">
+                <div className="h-8 w-8 rounded bg-orange-500/10 flex items-center justify-center text-orange-700 mb-2.5">
                   <Globe className="h-4 w-4" />
                 </div>
-                <h4 className="font-bold text-slate-900 text-sm mb-1">{t.about.safety}</h4>
+                <h3 className="font-bold text-slate-900 text-sm mb-1">{t.about.safety}</h3>
                 <p className="text-xs text-slate-500 leading-normal">{t.about.safetyDesc}</p>
               </div>
             </div>
@@ -539,13 +565,13 @@ export default function App({ initialUrl }: AppProps = {}) {
       <section id="kontakt" className="relative py-10 md:py-14 border-t border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-8 sm:mb-10" id="contact-header">
-            <span className="text-xs font-bold tracking-widest text-orange-600 uppercase font-mono">{t.contact.header}</span>
+            <span className="text-xs font-bold tracking-widest text-orange-700 uppercase font-mono">{t.contact.header}</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">{t.contact.title}</h2>
             <div className="h-0.5 w-12 bg-orange-500 mx-auto my-4" />
             <p className="text-slate-600 text-sm md:text-base font-light">{t.contact.subtitle}</p>
             <div className="pt-2">
               <span className="inline-flex items-center text-xs sm:text-sm text-orange-700 font-medium bg-orange-500/10 py-1.5 px-4 rounded-full border border-orange-500/20 shadow-2xs">
-                <ShieldCheck className="h-3.5 w-3.5 mr-2 text-orange-600 shrink-0" />
+                <ShieldCheck className="h-3.5 w-3.5 mr-2 text-orange-700 shrink-0" />
                 {t.contact.assurance}
               </span>
             </div>
@@ -562,12 +588,12 @@ export default function App({ initialUrl }: AppProps = {}) {
                 href={`tel:${COMPANY_DATA.contact.phone.raw}`} 
                 className="flex flex-col justify-between p-6 rounded-2xl border-2 border-slate-100 bg-white hover:border-orange-500/60 hover:shadow-md transition-all group shadow-sm"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500/10 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all mb-4">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500/10 text-orange-700 group-hover:bg-orange-500 group-hover:text-white transition-all mb-4">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
                   <span className="block text-xs text-slate-500 font-medium font-mono uppercase tracking-wider">{t.contact.infoPhone}</span>
-                  <span className="block text-xl font-bold text-slate-900 mt-1 group-hover:text-orange-600 transition-colors">{COMPANY_DATA.contact.phone.display}</span>
+                  <span className="block text-xl font-bold text-slate-900 mt-1 group-hover:text-orange-700 transition-colors">{COMPANY_DATA.contact.phone.display}</span>
                   <p className="text-xs text-slate-500 mt-2 font-light">
                     {t.contact.phonePrompt}
                   </p>
@@ -580,12 +606,12 @@ export default function App({ initialUrl }: AppProps = {}) {
                 href={`mailto:${COMPANY_DATA.contact.email}`} 
                 className="flex flex-col justify-between p-6 rounded-2xl border-2 border-slate-100 bg-white hover:border-orange-500/60 hover:shadow-md transition-all group shadow-sm"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500/10 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all mb-4">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500/10 text-orange-700 group-hover:bg-orange-500 group-hover:text-white transition-all mb-4">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div className="overflow-hidden">
                   <span className="block text-xs text-slate-500 font-medium font-mono uppercase tracking-wider">{t.contact.infoEmail}</span>
-                  <span className="block text-base sm:text-lg font-bold text-slate-900 mt-1 group-hover:text-orange-600 transition-colors truncate">{COMPANY_DATA.contact.email}</span>
+                  <span className="block text-base sm:text-lg font-bold text-slate-900 mt-1 group-hover:text-orange-700 transition-colors truncate">{COMPANY_DATA.contact.email}</span>
                   <p className="text-xs text-slate-500 mt-2 font-light">
                     {t.contact.emailPrompt}
                   </p>
@@ -708,7 +734,7 @@ export default function App({ initialUrl }: AppProps = {}) {
             </div>
 
             {/* Copyright */}
-            <div className="text-xs text-slate-500 text-center md:text-right">
+            <div className="text-xs text-slate-400 text-center md:text-right">
               &copy; {new Date().getFullYear()} {COMPANY_DATA.shortName}. {t.footer.rights}
             </div>
           </div>

@@ -18,7 +18,9 @@
     "whyUs": "Dlaczego my",
     "realizations": "Realizacje",
     "scopeAndRealizations": "Zakres prac i Realizacje",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "openMenu": "Otwórz menu nawigacji",
+    "closeMenu": "Zamknij menu nawigacji"
   },
   "workScope": {
     "header": "ZAKRES PRAC I REALIZACJE",

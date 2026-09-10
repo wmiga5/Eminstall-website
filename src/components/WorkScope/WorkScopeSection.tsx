@@ -230,18 +230,22 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
           </button>
 
           {/* Indicators Capsule: Dokładnie tyle kropek, ile jest realnych pozycji */}
-          <div className="flex items-center gap-1.5 sm:gap-2.5 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-md backdrop-blur-xs">
+          <div className="flex items-center gap-0.5 sm:gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-md backdrop-blur-xs">
             {Array.from({ length: totalPositions }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToPosition(index)}
-                className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  currentPosition === index
-                    ? 'w-7 sm:w-9 bg-orange-500 shadow-md shadow-orange-500/50'
-                    : 'w-2 sm:w-2.5 bg-slate-600 hover:bg-slate-400'
-                }`}
-                aria-label={`Pozycja ${index + 1}`}
-              />
+                className="flex items-center justify-center p-2 sm:p-2.5 min-w-[28px] min-h-[28px] rounded-full cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
+                aria-label={`Pozycja ${index + 1} z ${totalPositions}`}
+              >
+                <span
+                  className={`block h-2 sm:h-2.5 rounded-full transition-all duration-300 pointer-events-none ${
+                    currentPosition === index
+                      ? 'w-7 sm:w-9 bg-orange-500 shadow-md shadow-orange-500/50'
+                      : 'w-2 sm:w-2.5 bg-slate-600 hover:bg-slate-400'
+                  }`}
+                />
+              </button>
             ))}
           </div>
 
