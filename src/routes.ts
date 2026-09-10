@@ -8,6 +8,19 @@ export interface ServiceRouteConfig {
 
 export const SERVICE_ROUTES: ServiceRouteConfig[] = [
   {
+    id: 'battery-diagnostics',
+    slugs: {
+      PL: 'rozladowania-i-diagnostyka-baterii',
+      EN: 'battery-discharge-testing-diagnostics',
+      DE: 'batterie-kapazitaetstests-diagnostik',
+    },
+    seoKeywords: {
+      PL: 'rozładowania baterii akumulatorów, diagnostyka baterii vrla agm, próby pojemnościowe rezystorem, pomiary rezystancji wewnętrznej baterii, testy obciążeniowe ups, siłownie dc, szczecinek',
+      EN: 'battery discharge testing, vrla agm battery diagnostics, load bank capacity tests, internal resistance testing, ups battery load test, dc power plants, poland',
+      DE: 'batterie entladetest, kapazitaetspruefung lastwiderstand, vrla agm batteriediagnose, innenwiderstandsmessung batterien, usv batterietest, polen',
+    },
+  },
+  {
     id: 'power-systems',
     slugs: {
       PL: 'systemy-zasilania-ups-dc',
@@ -28,9 +41,22 @@ export const SERVICE_ROUTES: ServiceRouteConfig[] = [
       DE: 'klimatisierung-freecooling',
     },
     seoKeywords: {
-      PL: 'klimatyzacja precyzyjna szczecinek, freecooling, wentylacja swobodna, f-gazy szczecinek, montaż klimatyzacji vertiv, chłodzenie serwerowni, zachodniopomorskie',
-      EN: 'precision air conditioning, freecooling systems, f-gas certification, vertiv hvac installation, server room cooling, data centers',
-      DE: 'präzisionsklimaanlagen, freie kühlung freecooling, f-gase zertifizierung, vertiv klimageräte, serverraum kühlung, telekom container kühlung',
+      PL: 'klimatyzacja precyzyjna szczecinek, freecooling, wentylacja swobodna, f-gazy szczecinek, szafy klimatyzacji vertiv liebert, chłodzenie serwerowni, data center, zachodniopomorskie',
+      EN: 'precision air conditioning, freecooling systems, f-gas certification, vertiv liebert hvac, server room cooling, data centers',
+      DE: 'präzisionsklimaanlagen, freie kühlung freecooling, f-gase zertifizierung, vertiv liebert klimaschränke, serverraum kühlung, rz kühlung',
+    },
+  },
+  {
+    id: 'residential-ac',
+    slugs: {
+      PL: 'klimatyzacja-do-mieszkan-montaz-i-serwis',
+      EN: 'residential-air-conditioning-installation-service',
+      DE: 'klimaanlagen-wohnungen-montage-wartung',
+    },
+    seoKeywords: {
+      PL: 'klimatyzacja do mieszkań szczecinek, montaż klimatyzacji domowej, serwis klimatyzacji mieszkanie, split multisplit szczecinek, odgrzybianie klimatyzacji, f-gazy szczecinek, testo pomiary, zachodniopomorskie',
+      EN: 'residential air conditioning poland, home ac installation, split system servicing, ac chemical cleaning disinfection, f-gas certification, testo diagnostics, szczecinek',
+      DE: 'klimaanlagen wohnung montage, split klimaanlage installation, klimaanlage wartung desinfektion, wohnraumklimatisierung, f-gase zertifikat, polen',
     },
   },
   {
@@ -44,19 +70,6 @@ export const SERVICE_ROUTES: ServiceRouteConfig[] = [
       PL: 'prefabrykacja rozdzielnic szczecinek, pomiary elektryczne sep szczecinek, szafy sterownicze nn, protokoły odbiorcze, hager, zachodniopomorskie',
       EN: 'switchboard prefabrication, electrical measurements, distribution boards, testing protocols, hager panels, ce conformity',
       DE: 'schaltschrankbau niederspannung, elektroprüfungen dguv v3, verteilerbau, prüfprotokolle, hager, ce konformität',
-    },
-  },
-  {
-    id: 'reactive-power',
-    slugs: {
-      PL: 'kompensatory-mocy-biernej',
-      EN: 'reactive-power-compensation',
-      DE: 'blindleistungskompensation',
-    },
-    seoKeywords: {
-      PL: 'kompensatory mocy biernej, redukcja opłat za energię, baterie kondensatorów, dławiki kompensacyjne, szczecinek, pomorskie',
-      EN: 'reactive power compensation, capacitor banks, harmonic detuning reactors, power factor correction, energy efficiency',
-      DE: 'blindleistungskompensation, kondensatorbatterien, verdrosselte filterkreise, blindstromreduzierung, netzqualität',
     },
   },
   {
@@ -86,16 +99,16 @@ export const SERVICE_ROUTES: ServiceRouteConfig[] = [
     },
   },
   {
-    id: 'industrial-lines',
+    id: 'other-assembly-works',
     slugs: {
-      PL: 'instalacje-przemyslowe-relokacje',
-      EN: 'industrial-installations-relocation',
-      DE: 'industrieanlagen-maschinenumzug',
+      PL: 'inne-prace-montazowe',
+      EN: 'other-assembly-works',
+      DE: 'weitere-montagearbeiten',
     },
     seoKeywords: {
-      PL: 'instalacje przemysłowe, okablowanie maszyn, relokacja linii produkcyjnych, montaż tras kablowych, przemysł, szczecinek',
-      EN: 'industrial electrical installations, machine cabling, production line relocation, cable containment, factory machinery',
-      DE: 'industrieinstallationen, maschinenverkabelung, produktionslinien umzug, kabeltragsysteme, industrieanlagen montage',
+      PL: 'inne prace montażowe, instalacje przemysłowe, kompensatory mocy biernej, okablowanie maszyn, relokacja linii produkcyjnych, montaż tras kablowych, szczecinek',
+      EN: 'other assembly works, industrial electrical installations, reactive power compensation, machine cabling, production line relocation, cable containment, poland',
+      DE: 'weitere montagearbeiten, industrieinstallationen, blindleistungskompensation, maschinenverkabelung, produktionslinien umzug, kabeltragsysteme, polen',
     },
   },
 ];
@@ -153,6 +166,10 @@ export function parsePath(rawPathname: string): ParsedRoute {
     if (service) {
       return { lang: 'PL', serviceId: service.id, isValid: true };
     }
+    // Legacy redirect support
+    if (slug === 'kompensatory-mocy-biernej' || slug === 'instalacje-przemyslowe-relokacje') {
+      return { lang: 'PL', serviceId: 'other-assembly-works', isValid: true };
+    }
   }
 
   // Check EN service paths
@@ -162,6 +179,10 @@ export function parsePath(rawPathname: string): ParsedRoute {
     if (service) {
       return { lang: 'EN', serviceId: service.id, isValid: true };
     }
+    // Legacy redirect support
+    if (slug === 'reactive-power-compensation' || slug === 'industrial-installations-relocation') {
+      return { lang: 'EN', serviceId: 'other-assembly-works', isValid: true };
+    }
   }
 
   // Check DE service paths
@@ -170,6 +191,10 @@ export function parsePath(rawPathname: string): ParsedRoute {
     const service = SERVICE_ROUTES.find((s) => s.slugs.DE === slug);
     if (service) {
       return { lang: 'DE', serviceId: service.id, isValid: true };
+    }
+    // Legacy redirect support
+    if (slug === 'blindleistungskompensation' || slug === 'industrieanlagen-maschinenumzug') {
+      return { lang: 'DE', serviceId: 'other-assembly-works', isValid: true };
     }
   }
 

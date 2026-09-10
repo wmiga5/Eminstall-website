@@ -1,3 +1,10 @@
 # Redirects Configuration
 # Physical static files and 404.html are automatically served by Cloudflare and Netlify.
 
+# 301 Redirects for consolidated services (other-assembly-works)
+/uslugi/kompensatory-mocy-biernej                /uslugi/inne-prace-montazowe                301
+/uslugi/instalacje-przemyslowe-relokacje         /uslugi/inne-prace-montazowe                301
+/en/services/reactive-power-compensation         /en/services/other-assembly-works           301
+/en/services/industrial-installations-relocation /en/services/other-assembly-works           301
+/de/leistungen/blindleistungskompensation        /de/leistungen/weitere-montagearbeiten      301
+/de/leistungen/industrieanlagen-maschinenumzug   /de/leistungen/weitere-montagearbeiten      301

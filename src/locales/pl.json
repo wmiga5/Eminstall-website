@@ -45,52 +45,70 @@
     "zoomPhoto": "Pełny ekran",
     "closeZoom": "Zamknij",
     "items": {
+      "battery-diagnostics": {
+        "badge": "Diagnostyka & Testy Pojemnościowe",
+        "title": "Rozładowania, Pomiary i Diagnostyka Baterii Akumulatorów",
+        "shortDesc": "Specjalistyczne próby pojemnościowe metodą kontrolowanego rozładowania zewnętrznym rezystorem obciążeniowym, pomiary rezystancji wewnętrznej oraz dedykowany system zbierania i analizy danych o kondycji baterii.",
+        "fullDesc": "Specjalizujemy się w zaawansowanej diagnostyce i testach pojemnościowych stacyjnych baterii akumulatorów dla systemów zasilania gwarantowanego (siłownie DC 48V, systemy UPS, rozdzielnie energetyczne). Dysponujemy własnym systemem do zbierania i zaawansowanej analizy danych pomiarowych, umożliwiającym porównywanie trendów starzenia baterii na przestrzeni lat, analizę krzywych rozładowania poszczególnych monobloków oraz wczesne wykrywanie słabych ogniw. Wykonujemy próby pełnego kontrolowanego rozładowania zewnętrznym rezystorem obciążeniowym z ciągłą rejestracją parametrów w czasie rzeczywistym, pomiary rezystancji wewnętrznej, weryfikację połączeń międzyogniwowych oraz opracowujemy protokół kondycji baterii.",
+        "scopeList": [
+          "Kontrolowane próby rozładowania zewnętrznym rezystorem obciążeniowym (testy rzeczywistej pojemności baterii)",
+          "Cyfrowa rejestracja i zaawansowana analiza parametrów w dedykowanym systemie (porównanie krzywych rozładowania z kolejnych lat i wykrywanie anomalii monobloków)",
+          "Precyzyjne pomiary rezystancji wewnętrznej i konduktancji poszczególnych ogniw i bloków",
+          "Monitoring termowizyjny oraz ciągła kontrola temperatury biegunów i mostków podczas obciążenia",
+          "Weryfikacja momentów dokręcenia połączeń śrubowych oraz rezystancji przejścia mostków",
+          "Opracowanie szczegółowych protokołów pomiarowych z charakterystykami rozładowania i rekomendacjami technicznymi"
+        ],
+        "specifications": "Próby rozładowania prądami obciążeniowymi; Rezystor z rejestracją mikroprocesorową; Dedykowany system telemetryczny i analityczny; Pomiary rezystancji wewnętrznej; Baterie VRLA / AGM / Żel / Ni-Cd / Litowe",
+        "targetSector": "Stacje bazowe telekomunikacji, obiekty Data Center, serwerownie, energetyka zawodowa, szpitale i zakłady przemysłowe",
+        "tags": ["Próby pojemnościowe", "Rozładowania baterii", "Analiza danych & Trendy", "Pomiary rezystancji"]
+      },
       "power-systems": {
-        "badge": "Zasilanie AC/DC & Baterie",
+        "badge": "Zasilanie AC/DC & UPS",
         "title": "Systemy Zasilania Gwarantowanego AC i DC",
-        "shortDesc": "Montaż, przeglądy okresowe i kompleksowe modernizacje siłowni prądu stałego (DC) oraz systemów UPS. Testy pojemnościowe baterii i precyzyjne pomiary rezystancji wewnętrznej ogniw.",
-        "fullDesc": "Projektujemy, instalujemy i serwisujemy profesjonalne systemy zasilania bezprzerwowego dla obiektów infrastruktury krytycznej i telekomunikacyjnej. Zapewniamy pełne wsparcie techniczne – od wymiany bloków bateryjnych, przez audyty kondycji magazynów energii za pomocą kontrolowanego rozładowania, aż po modernizację istniejących siłowni telekomunikacyjnych.",
+        "shortDesc": "Montaż, przeglądy okresowe i kompleksowe modernizacje siłowni prądu stałego (DC) oraz systemów UPS. Kompleksowe podłączenia rozdzielnic, siłowni i zasilania obiektów krytycznych.",
+        "fullDesc": "Projektujemy, instalujemy i serwisujemy profesjonalne systemy zasilania bezprzerwowego dla obiektów infrastruktury krytycznej i telekomunikacyjnej. Zapewniamy pełne wsparcie techniczne – od wymiany bloków bateryjnych na stojakach modułowych, przez modernizację istniejących siłowni telekomunikacyjnych, po instalację i serwis zasilaczy UPS.",
         "scopeList": [
           "Montaż i uruchomienia przemysłowych siłowni prądu stałego (DC 48V)",
           "Kompleksowe modernizacje istniejących stacji i rozdzielnic zasilania",
-          "Wymiany baterii akumulatorowych w szafach i na stojakach modułowych",
-          "Diagnostyka kondycji baterii: kontrolowane rozładowanie i pomiary konduktancji/rezystancji",
+          "Wymiany i montaż baterii akumulatorowych w szafach i na stojakach modułowych",
+          "Podłączenia technologiczne rozdzielnic zasilania gwarantowanego AC/DC",
           "Okresowe przeglądy techniczne systemów zasilania awaryjnego i UPS"
         ],
-        "specifications": "Systemy napięcia 48V DC / 230V / 400V AC; Profesjonalne protokoły pomiarowe",
+        "specifications": "Systemy napięcia 48V DC / 230V / 400V AC; Profesjonalne protokoły pomiarowe; Uprawnienia SEP (E+D)",
         "targetSector": "Stacje bazowe, węzły transmisyjne, serwerownie i obiekty nadawcze",
-        "tags": ["Siłownie DC 48V", "Baterie VRLA/AGM", "UPS AC", "Pomiary rezystancji"]
-      },
-      "reactive-power": {
-        "badge": "Kompensacja Mocy Biernej",
-        "title": "Kompensatory Mocy Biernej",
-        "shortDesc": "Dobór, montaż i modernizacja automatycznych baterii kondensatorów i dławików kompensacyjnych. Eliminacja kosztownych opłat za energię bierną indukcyjną i pojemnościową.",
-        "fullDesc": "Oferujemy kompleksowe rozwiązania w zakresie redukcji kosztów energii elektrycznej poprzez kompensację mocy biernej. Przeprowadzamy analizę parametrów sieci zasilającej, dobieramy stopnie kompensacji oraz prefabrykujemy i instalujemy szafy kompensacyjne wyposażone w automatyczne mikroprocesorowe regulatory.",
-        "scopeList": [
-          "Montaż i podłączenie szaf kompensatorów mocy biernej",
-          "Instalacja modułów kondensatorowych i dławików filtracyjnych",
-          "Regulacja i programowanie cyfrowych regulatorów mocy biernej",
-          "Pomiary parametrów sieci, współczynnika mocy cos φ oraz wyższych harmonicznych",
-          "Serwis i wymiana wyeksploatowanych członów kompensacyjnych"
-        ],
-        "specifications": "Baterie kondensatorów ze stopniami dławikowymi; Zabezpieczenia nadprądowe; Automatyczny regulator cyfrowy",
-        "targetSector": "Węzły infrastruktury technicznej, stacje transmisyjne, zakłady produkcyjne",
-        "tags": ["Moc bierna", "Automatyczna kompensacja", "Dławiki & Filtry", "Efektywność"]
+        "tags": ["Siłownie DC 48V", "Zasilanie UPS", "Baterie VRLA/AGM", "Zasilanie awaryjne"]
       },
       "freecooling-hvac": {
         "badge": "HVAC & FreeCooling",
         "title": "Wentylacja FreeCooling i Klimatyzacja Precyzyjna",
-        "shortDesc": "Montaż, serwis i przeglądy klimatyzacji precyzyjnej oraz wentylacji swobodnej FreeCooling. Realizacje w Polsce i Niemczech. Certyfikat F-gazy.",
-        "fullDesc": "Wdrażamy zaawansowane systemy chłodzenia zapewniające optymalną temperaturę i wilgotność w warunkach ciągłej pracy urządzeń elektronicznych. Świadczymy usługi montażu i serwisu klimatyzacji dla przemysłu i obiektów technicznych. Połączenie klimatyzacji precyzyjnej z systemami wentylacji FreeCooling pozwala na drastyczne obniżenie zużycia energii elektrycznej przez wykorzystanie chłodu powietrza zewnętrznego.",
+        "shortDesc": "Montaż, serwis i przeglądy klimatyzacji precyzyjnej oraz wentylacji swobodnej FreeCooling dla Data Center i obiektów technicznych. Realizacje w Polsce i Niemczech. Certyfikat F-gazy.",
+        "fullDesc": "Wdrażamy zaawansowane systemy chłodzenia zapewniające rygorystyczne utrzymanie zadanej temperatury i wilgotności w warunkach ciągłej pracy krytycznych urządzeń teleinformatycznych i serwerowni. Połączenie szaf klimatyzacji precyzyjnej z systemami wentylacji FreeCooling (m.in. Telzas, Vertiv) pozwala na drastyczne obniżenie zużycia energii elektrycznej poprzez bezpośrednie wykorzystanie chłodu powietrza zewnętrznego.",
         "scopeList": [
-          "Montaż i uruchomienie jednostek klimatyzacji precyzyjnej i komfortu",
-          "Instalacja central i modułów wentylacji swobodnej FreeCooling",
-          "Montaż czerpni powietrza na kontenerach technicznych oraz elewacjach budynków",
-          "Certyfikowane przeglądy szczelności i sprawności układów chłodniczych (F-gazy)"
+          "Montaż, podłączenie i uruchomienie szaf klimatyzacji precyzyjnej z nawiewem podpodłogowym lub bezpośrednim",
+          "Wdrażanie dedykowanych systemów wentylacji bezpośredniej FreeCooling z automatycznymi przepustnicami",
+          "Montaż czerpni i wyrzutni powietrza na kontenerach technicznych oraz elewacjach budynków Data Center",
+          "Okresowe audyty, czyszczenie filtrów kasetowych oraz certyfikowane próby szczelności układów chłodniczych (F-gazy)"
         ],
-        "specifications": "Klimatyzatory precyzyjne; Wentylatory EC o regulowanej prędkości; Zintegrowane filtry kasetowe F7/G4",
-        "targetSector": "Kontenery technologiczne, serwerownie, węzły światłowodowe, centra przetwarzania danych",
+        "specifications": "Szafy klimatyzacji precyzyjnej (Vertiv, Liebert itp.); Wentylatory EC o płynnej regulacji; Filtry kasetowe F7/G4; Automatyka PLC z redundancją",
+        "targetSector": "Centra danych (Data Center), serwerownie, węzły światłowodowe (POP), stacje bazowe i kontenery technologiczne",
         "tags": ["FreeCooling", "Klimatyzacja precyzyjna", "F-gazy", "Wentylacja"]
+      },
+      "residential-ac": {
+        "badge": "Klimatyzacja do mieszkań & domów",
+        "title": "Montaż i Okresowe Przeglądy Klimatyzacji w Mieszkaniach",
+        "shortDesc": "Profesjonalny dobór, czysty montaż oraz okresowy serwis i odgrzybianie klimatyzacji typu Split i Multi-Split w mieszkaniach, domach oraz biurach. Certyfikat F-gazy i cyfrowa diagnostyka Testo.",
+        "fullDesc": "Oferujemy kompleksowe usługi montażu oraz regularnych przeglądów technicznych klimatyzacji w budynkach mieszkalnych i lokalach użytkowych. Zapewniamy fachowy dobór mocy chłodniczej, estetyczne i czyste prowadzenie instalacji chłodniczych oraz odprowadzenia skroplin. Każdy montaż i przegląd realizujemy w oparciu o precyzyjną diagnostykę cyfrową (bezprzewodowe sondy ciśnienia i temperatury Testo, anemometry, pomiary przegrzania i dochłodzenia czynnika), próżniowanie układu oraz atestowane środki biobójcze do czyszczenia parowników i wentylatorów bębnowych. Posiadamy pełne uprawnienia F-gazowe oraz SEP.",
+        "scopeList": [
+          "Dobór mocy urządzeń, doradztwo techniczne i optymalne rozmieszczenie jednostek Split i Multi-Split",
+          "Czysty montaż instalacji freonowej, zasilającej i grawitacyjnego lub pompowego odprowadzenia skroplin",
+          "Próżniowanie układu pompą dwustopniową, próba ciśnieniowa szczelności azotem i uruchomienie",
+          "Okresowe przeglądy techniczne: czyszczenie, dezynfekcja i odgrzybianie parowników, filtrów oraz wentylatorów bębnowych atestowaną chemią",
+          "Diagnostyka parametrów pracy: pomiar ciśnień manometrami cyfrowymi, kontrola przegrzania i dochłodzenia czynnika chłodniczego",
+          "Pomiary temperatury oraz prędkości przepływu powietrza nawiewanego anemometrem cyfrowym i protokół serwisowy"
+        ],
+        "specifications": "Klimatyzatory Split i Multi-Split; Cyfrowe manometry i sondy bezprzewodowe; Cyfrowe anemometry; Atestowane środki biobójcze PZH; Uprawnienia F-gazy i SEP",
+        "targetSector": "Mieszkania, domy jednorodzinne, apartamenty, biura oraz lokale usługowe",
+        "tags": ["Montaż Split / Multi-Split", "Okresowe przeglądy", "Odgrzybianie i czyszczenie", "Certyfikat F-gazy"]
       },
       "telecom-containers": {
         "badge": "Kontenery & Infrastruktura",
@@ -140,21 +158,21 @@
         "targetSector": "Rozproszone stacje bazowe, punkty retransmisyjne, obiekty bezobsługowe",
         "tags": ["Facility Management", "Przeglądy okresowe", "Utrzymanie 24/7", "Infrastruktura krytyczna"]
       },
-      "industrial-lines": {
-        "badge": "Przemysł & Automatyka",
-        "title": "Instalacje Przemysłowe i Relokacje Linii Produkcyjnych",
-        "shortDesc": "Prace instalacyjne i okablowanie maszyn na nowych liniach technologicznych oraz profesjonalne demontaże i relokacje parków maszynowych.",
-        "fullDesc": "Świadczymy specjalistyczne usługi elektroinstalacyjne i mechaniczne dla zakładów produkcyjnych i przemysłowych. Wykonujemy podłączenia technologiczne nowych linii produkcyjnych, montaż tras kablowych o podwyższonej wytrzymałości mechanicznej oraz bezpieczne demontaże i relokacje maszyn przemysłowych.",
+      "other-assembly-works": {
+        "badge": "Prace Specjalistyczne & Przemysł",
+        "title": "Inne Prace Montażowe i Instalacje Przemysłowe",
+        "shortDesc": "Specjalistyczne montaże technologiczne: dobór i montaż kompensatorów mocy biernej, okablowanie linii produkcyjnych, trasy kablowe oraz relokacje parków maszynowych.",
+        "fullDesc": "Świadczymy specjalistyczne usługi elektroinstalacyjne i mechaniczne dla zakładów produkcyjnych oraz obiektów technicznych. Posiadamy praktyczne doświadczenie w realizacji projektów kompensacji mocy biernej (eliminacja opłat za energię bierną), podłączeń technologicznych i zasilających maszyn, budowy przemysłowych tras kablowych oraz bezpiecznych demontaży i relokacji urządzeń.",
         "scopeList": [
-          "Okablowanie zasilające i sterownicze nowych linii technologicznych",
-          "Montaż konstrukcji wsporczych, koryt ciężkich i drabinek kablowych",
-          "Bezpieczny demontaż, oznaczanie i przygotowanie maszyn do relokacji",
-          "Podłączenia zasilania maszyn, silników i szaf automatyki przemysłowej",
-          "Pomiary powykonawcze i asysta techniczna podczas rozruchu technologicznego"
+          "Dobór, montaż i uruchomienie automatycznych baterii kondensatorów i dławików kompensacyjnych (eliminacja opłat za moc bierną)",
+          "Okablowanie zasilające i sterownicze maszyn oraz nowych linii technologicznych",
+          "Montaż przemysłowych tras kablowych (koryta ciężkie, drabinki kablowe, konstrukcje wsporcze)",
+          "Bezpieczny demontaż, oznaczanie i przygotowanie parków maszynowych do relokacji",
+          "Podłączenia technologiczne urządzeń i asysta techniczna podczas rozruchu maszyn"
         ],
-        "specifications": "Trasy kablowe przemysłowe; Zasilanie maszyn do 1000V; Zgodność z dyrektywą maszynową",
-        "targetSector": "Zakłady produkcyjne, fabryki, hale przetwórcze i obiekty przemysłu ciężkiego",
-        "tags": ["Instalacje przemysłowe", "Montaż linii technologicznych", "Okablowanie maszyn", "Relokacje"]
+        "specifications": "Baterie kondensatorów ze stopniami dławikowymi; Zasilanie maszyn do 1000V; Trasy kablowe ciężkie; Uprawnienia kwalifikacyjne SEP (E+D)",
+        "targetSector": "Zakłady produkcyjne, fabryki, hale przetwórcze i obiekty przemysłowe",
+        "tags": ["Kompensacja mocy biernej", "Instalacje przemysłowe", "Okablowanie maszyn", "Relokacje"]
       }
     }
   },

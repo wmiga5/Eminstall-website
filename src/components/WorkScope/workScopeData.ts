@@ -5,7 +5,9 @@ import {
   Server,
   ShieldCheck,
   Wrench,
-  Factory
+  Factory,
+  BatteryCharging,
+  Snowflake
 } from 'lucide-react';
 import { WorkScopeItemData } from './types';
 
@@ -17,7 +19,6 @@ import wiezaImg from '../../assets/images/zasilanie-stacja-bazowa-wieza.webp';
 import wiezowaRozdzielnicaImg from '../../assets/images/zasilanie-wiezowe-rozdzielnica-terenowa.webp';
 
 import kompensatorSzafaImg from '../../assets/images/kompensator-mocy-biernej-szafa.webp';
-import kompensatorSzafaThumb from '../../assets/images/kompensator-mocy-biernej-szafa-thumb.webp';
 import kompensatorModulyImg from '../../assets/images/kompensator-mocy-biernej-moduly.webp';
 import bateriaKondensatorowRbkImg from '../../assets/images/automatyczna-bateria-kondensatorow-rbk.webp';
 import bateriaKondensatorowStopnieImg from '../../assets/images/bateria-kondensatorow-stopnie.webp';
@@ -28,15 +29,19 @@ import freecoolingBoxTelzasImg from '../../assets/images/freecooling-box-telzas-
 import freecoolingCzerpniaBudynekImg from '../../assets/images/freecooling-czerpnia-budynek.webp';
 import kontenerKlimatyzacjaFujitsuImg from '../../assets/images/kontener-telekomunikacyjny-klimatyzacja-fujitsu.webp';
 import klimatyzacjaWewnTelecomImg from '../../assets/images/klimatyzacja-wewnetrzna-kontener-telecom.webp';
-import klimatyzacjaWewnTelecomThumb from '../../assets/images/klimatyzacja-wewnetrzna-kontener-telecom-thumb.webp';
-import czyszczenieWentylatoraImg from '../../assets/images/czyszczenie-wentylatora-bebnowego-klimatyzacja.webp';
 import serwisChlodniczyProzniowanieImg from '../../assets/images/serwis-chlodniczy-prozniowanie-klimatyzacja.webp';
 import montazKlimatyzatoraLgImg from '../../assets/images/montaz-klimatyzatora-lg-agregat-na-elewacji.webp';
+import montazKlimatyzatoraLgThumb from '../../assets/images/montaz-klimatyzatora-lg-agregat-na-elewacji-thumb.webp';
+import agregatHaierTarasImg from '../../assets/images/agregat-zewnetrzny-haier-na-podstawach-antywibracyjnych-taras.webp';
+import montazAgregatuHaierBalkonImg from '../../assets/images/montaz-agregatu-haier-na-balkonie-maskownica-instalacji.webp';
+import instalacjaKlimatyzatoraSciennegoImg from '../../assets/images/instalacja-klimatyzatora-sciennego-split-w-pomieszczeniu.webp';
+import montazJednostkiWewnBielImg from '../../assets/images/montaz-jednostki-wewnetrznej-split-sciana-biel.webp';
+import pomiarTemperaturyNawiewuImg from '../../assets/images/pomiar-temperatury-nawiewu-klimatyzacji-anemometr-testo-410.webp';
 import szafaKlimatyzacjiPrecyzyjnejImg from '../../assets/images/budowa-kontenera-szafa-klimatyzacji-precyzyjnej-agregat-sprezarkowy.webp';
 import szafaKlimatyzacjiPrecyzyjnejThumb from '../../assets/images/budowa-kontenera-szafa-klimatyzacji-precyzyjnej-agregat-sprezarkowy-thumb.webp';
 
-import kontenerPopImg from '../../assets/images/Kontener-Eminstall1.webp';
-import kontenerPopThumb from '../../assets/images/Kontener-Eminstall1-thumb.webp';
+import prefabrykowanyKontenerImg from '../../assets/images/budowa-kontenera-seria-prefabrykowanych-kontenerow-telekomunikacyjnych.webp';
+import prefabrykowanyKontenerThumb from '../../assets/images/budowa-kontenera-seria-prefabrykowanych-kontenerow-telekomunikacyjnych-thumb.webp';
 import kontenerPodlogaKorytaImg from '../../assets/images/budowa-kontenera-konstrukcja-podlogi-podniesionej-koryta-kablowe.webp';
 import kontenerKorytaSwiatlowodoweImg from '../../assets/images/budowa-kontenera-podwieszane-koryta-swiatlowodowe-szafy-rack.webp';
 import kontenerWiertnicaFundamentImg from '../../assets/images/budowa-kontenera-wiertnica-koronowa-przepusty-kablowe-fundament.webp';
@@ -53,6 +58,9 @@ import przegladSzafyMccbImg from '../../assets/images/przeglad-szafy-rozdzielcze
 import przegladRozdzielnicyFalownikiImg from '../../assets/images/przeglad-rozdzielnicy-falowniki.webp';
 import przegladKlimatyzacjiAgregatImg from '../../assets/images/przeglad-klimatyzacji-serwis-agregatu.webp';
 import diagnostykaAgregatuKlimatyzacjiImg from '../../assets/images/diagnostyka-i-serwis-agregatu-klimatyzacji.webp';
+import pomiarUziemieniaSonelImg from '../../assets/images/pomiar-rezystancji-uziemienia-miernik-sonel-mpi-540.webp';
+import pomiarPrzeplywuTestoImg from '../../assets/images/pomiar-przeplywu-powietrza-i-temperatury-anemometr-testo.webp';
+import serwisRozdzielnicyHagerImg from '../../assets/images/serwis-rozdzielnicy-elektrycznej-hager-przez-technika.webp';
 
 import montazLiniiTartacznejImg from '../../assets/images/montaz-nowej-linii-produkcyjnej-tartacznej.webp';
 import montazLiniiTartacznejThumb from '../../assets/images/montaz-nowej-linii-produkcyjnej-tartacznej-thumb.webp';
@@ -67,7 +75,30 @@ import protokolBaterieImg from '../../assets/images/protokol-baterie-ups.webp';
 import protokolPomiaryImg from '../../assets/images/protokol-pomiary-elektryczne.webp';
 import protokolKlimatyzacjaImg from '../../assets/images/protokol-klimatyzacja-vertiv.webp';
 
+// Battery testing & discharge images
+import kontrolaBateriiPowersafeImg from '../../assets/images/kontrola-baterii-powersafe-12v101f-ft-czujnik-temperatury.webp';
+import rezystorRozladowczyImg from '../../assets/images/rezystor-rozladowczy-do-prob-pojemnosci-baterii-stacyjnych.webp';
+import testObciazeniowyBateriiImg from '../../assets/images/test-obciazeniowy-baterii-akumulatorow-ups-fiamm-12fit180.webp';
+import testObciazeniowyBateriiThumb from '../../assets/images/test-obciazeniowy-baterii-akumulatorow-ups-fiamm-12fit180-thumb.webp';
+import systemAnalizyBateriiImg from '../../assets/images/system-analizy-i-diagnostyki-baterii-wykresy-rozladowania.webp';
+
 export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
+  {
+    id: 'battery-diagnostics',
+    categoryKey: 'battery-testing',
+    mainImage: testObciazeniowyBateriiImg,
+    thumbnail: testObciazeniowyBateriiThumb,
+    imagePosition: 'object-[center_25%]',
+    gallery: [
+      testObciazeniowyBateriiImg,
+      rezystorRozladowczyImg,
+      systemAnalizyBateriiImg,
+      kontrolaBateriiPowersafeImg,
+      protokolBaterieImg
+    ],
+    icon: BatteryCharging,
+    tags: ['Próby pojemnościowe', 'Rozładowania baterii', 'Analiza danych & Trendy', 'Pomiary rezystancji']
+  },
   {
     id: 'power-systems',
     categoryKey: 'power',
@@ -92,7 +123,10 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     imagePosition: 'object-[center_20%]',
     gallery: [
       kompleksowyPrzegladRozdzielnicyImg,
+      serwisRozdzielnicyHagerImg,
       przegladSzafyMccbImg,
+      pomiarUziemieniaSonelImg,
+      pomiarPrzeplywuTestoImg,
       przegladRozdzielnicyFalownikiImg,
       przegladKlimatyzacjiAgregatImg,
       diagnostykaAgregatuKlimatyzacjiImg
@@ -109,10 +143,8 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     gallery: [
       szafaKlimatyzacjiPrecyzyjnejImg,
       klimatyzacjaWewnTelecomImg,
-      montazKlimatyzatoraLgImg,
       freecoolingCzerpniaZewnImg,
       klimatyzacjaKontenerImg,
-      czyszczenieWentylatoraImg,
       serwisChlodniczyProzniowanieImg,
       protokolKlimatyzacjaImg,
       freecoolingBoxTelzasImg,
@@ -122,13 +154,31 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     tags: ['FreeCooling', 'Klimatyzacja precyzyjna', 'F-gazy', 'Wentylacja']
   },
   {
+    id: 'residential-ac',
+    categoryKey: 'residential-ac',
+    mainImage: montazKlimatyzatoraLgImg,
+    thumbnail: montazKlimatyzatoraLgThumb,
+    imagePosition: 'object-[center_20%]',
+    gallery: [
+      montazKlimatyzatoraLgImg,
+      agregatHaierTarasImg,
+      montazAgregatuHaierBalkonImg,
+      instalacjaKlimatyzatoraSciennegoImg,
+      montazJednostkiWewnBielImg,
+      pomiarTemperaturyNawiewuImg,
+      protokolKlimatyzacjaImg
+    ],
+    icon: Snowflake,
+    tags: ['Montaż Split / Multi-Split', 'Okresowe przeglądy', 'Odgrzybianie i czyszczenie', 'Certyfikat F-gazy']
+  },
+  {
     id: 'telecom-containers',
     categoryKey: 'infrastructure',
-    mainImage: kontenerPopImg,
-    thumbnail: kontenerPopThumb,
+    mainImage: prefabrykowanyKontenerImg,
+    thumbnail: prefabrykowanyKontenerThumb,
     imagePosition: 'object-[center_30%]',
     gallery: [
-      kontenerPopImg,
+      prefabrykowanyKontenerImg,
       kontenerPodlogaKorytaImg,
       kontenerKorytaSwiatlowodoweImg,
       kontenerWiertnicaFundamentImg,
@@ -154,35 +204,24 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     tags: ['Prefabrykacja rozdzielnic', 'Szafy zasilające', 'Pomiary PN-HD 60364-6', 'Protokoły odbiorcze']
   },
   {
-    id: 'industrial-lines',
-    categoryKey: 'industrial',
+    id: 'other-assembly-works',
+    categoryKey: 'other-assembly',
     mainImage: montazLiniiTartacznejImg,
     thumbnail: montazLiniiTartacznejThumb,
     imagePosition: 'object-center',
     gallery: [
       montazLiniiTartacznejImg,
+      kompensatorSzafaImg,
       instalacjaRozdzielnicyRgImg,
+      bateriaKondensatorowRbkImg,
       montazLiniiTrasyKabloweImg,
+      bateriaKondensatorowStopnieImg,
+      kompensatorModulyImg,
       demontazLiniiWysokoscImg,
       demontazLiniiTartacznejImg,
       halaDemontazLiniiImg
     ],
     icon: Factory,
-    tags: ['Instalacje przemysłowe', 'Montaż linii technologicznych', 'Okablowanie maszyn', 'Relokacje']
-  },
-  {
-    id: 'reactive-power',
-    categoryKey: 'compensation',
-    mainImage: kompensatorSzafaImg,
-    thumbnail: kompensatorSzafaThumb,
-    imagePosition: 'object-center',
-    gallery: [
-      kompensatorSzafaImg,
-      bateriaKondensatorowRbkImg,
-      bateriaKondensatorowStopnieImg,
-      kompensatorModulyImg
-    ],
-    icon: Layers,
-    tags: ['Moc bierna', 'Automatyczna kompensacja', 'Dławiki & Filtry', 'Efektywność']
+    tags: ['Kompensacja mocy biernej', 'Instalacje przemysłowe', 'Okablowanie maszyn', 'Relokacje']
   }
 ];

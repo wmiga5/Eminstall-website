@@ -45,52 +45,70 @@
     "zoomPhoto": "Full screen",
     "closeZoom": "Close",
     "items": {
+      "battery-diagnostics": {
+        "badge": "Diagnostics & Capacity Testing",
+        "title": "Battery Discharge Testing, Measurements & Diagnostics",
+        "shortDesc": "Specialized capacity tests via controlled load bank discharge, precision cell resistance testing, and a dedicated digital platform for battery data collection and multi-year trend analytics.",
+        "fullDesc": "We specialize in advanced diagnostics and capacity verification of stationary battery banks for uninterruptible power systems (48V DC plants, UPS units, substations). We operate a dedicated system for telemetry collection and in-depth data analytics, enabling multi-year degradation tracking, individual monoblock discharge curve comparisons, and early detection of deteriorating cells. We perform controlled load bank discharge testing with real-time parameter logging, internal resistance measurements, inter-cell connection torque checks, and issue a detailed battery condition report.",
+        "scopeList": [
+          "Controlled load bank discharge testing (actual capacity verification in accordance with technical standards)",
+          "Digital parameter logging and in-depth analytics in a dedicated system (multi-year discharge curve comparisons and monoblock anomaly detection)",
+          "High-precision internal cell resistance and conductance measurements",
+          "Thermal imaging and continuous terminal temperature monitoring under full load",
+          "Inspection and torque verification of inter-cell connector resistance",
+          "Comprehensive diagnostic test reports with discharge curves and maintenance recommendations"
+        ],
+        "specifications": "High-current controlled discharge testing; Microprocessor load bank; Dedicated telemetry & data analytics software; Internal resistance analyzers; VRLA / AGM / GEL / Ni-Cd / Lithium batteries",
+        "targetSector": "Telecom base stations, data centers, server facilities, power utility substations, hospitals, and critical industry",
+        "tags": ["Capacity Testing", "Battery Discharge", "Data Analytics & Trends", "Resistance Measurements"]
+      },
       "power-systems": {
-        "badge": "AC/DC Power & Batteries",
+        "badge": "AC/DC Power & UPS",
         "title": "Uninterruptible Power Supply Systems (AC & DC)",
-        "shortDesc": "Assembly, routine maintenance, and complete retrofits of industrial DC power systems and UPS units. Battery capacity testing and cell conductance/resistance analysis.",
-        "fullDesc": "We engineer, deploy, and service professional uninterruptible power systems for critical telecommunications and infrastructure facilities. Our comprehensive lifecycle support covers battery bank replacements, controlled discharge capacity testing, and complete modernizations of legacy telecom power plants.",
+        "shortDesc": "Assembly, routine maintenance, and complete retrofits of industrial DC power systems and UPS units. Comprehensive power switchgear and critical infrastructure hookups.",
+        "fullDesc": "We engineer, deploy, and service professional uninterruptible power systems for critical telecommunications and infrastructure facilities. Our comprehensive lifecycle support covers modular rack battery installations, power cabinet integrations, and complete modernizations of telecom power plants and UPS units.",
         "scopeList": [
           "Deployment and commissioning of industrial DC power plants (-48V DC)",
           "Comprehensive retrofits of existing power cabinets and switchgear",
-          "Battery bank replacements in modular cabinets and heavy-duty racks",
-          "Advanced battery health diagnostics: controlled load discharge and internal resistance tests",
+          "Battery bank installation and replacements in modular cabinets and heavy-duty racks",
+          "Technological hookups of AC/DC backup power distribution boards",
           "Periodic technical inspections and preventive maintenance for critical UPS systems"
         ],
-        "specifications": "48V DC / 230V / 400V AC systems; Professional measurement test reports",
+        "specifications": "48V DC / 230V / 400V AC systems; Professional measurement test reports; Certified SEP qualifications (E+D)",
         "targetSector": "Cellular base stations, telecom transmission nodes, server rooms, and broadcast facilities",
-        "tags": ["48V DC Power Plants", "VRLA/AGM Batteries", "AC UPS", "Resistance Testing"]
-      },
-      "reactive-power": {
-        "badge": "Power Factor Correction",
-        "title": "Reactive Power Compensation Systems",
-        "shortDesc": "Engineering, assembly, and modernization of automatic capacitor banks and detuned reactor cabinets. Elimination of penalties for inductive and capacitive reactive energy.",
-        "fullDesc": "We deliver end-to-end solutions to minimize industrial electricity costs through power factor correction. We perform power network quality audits, engineer detuned capacitor steps, and prefabricate automated compensation cabinets with microprocessor controllers.",
-        "scopeList": [
-          "Assembly and installation of reactive power compensation cabinets",
-          "Installation of heavy-duty capacitor banks and detuned harmonic filters",
-          "Programming and commissioning of digital automatic reactive power controllers",
-          "Power quality audits, power factor (cos φ) measurements, and harmonic distortion analysis",
-          "Routine servicing and replacement of aged capacitor switching contactors"
-        ],
-        "specifications": "Capacitor banks with detuned filter reactors; Overcurrent & thermal protection; Automatic microprocessor controller",
-        "targetSector": "Technical infrastructure nodes, transmission stations, and industrial manufacturing plants",
-        "tags": ["Reactive Power", "Automatic Compensation", "Chokes & Filters", "Energy Efficiency"]
+        "tags": ["48V DC Power Plants", "UPS Systems", "VRLA/AGM Batteries", "Emergency Backup"]
       },
       "freecooling-hvac": {
         "badge": "HVAC & FreeCooling",
         "title": "FreeCooling Ventilation & Precision Air Conditioning",
-        "shortDesc": "Energy-efficient FreeCooling systems and precision climate control. Assembly, maintenance, and F-gas compliance across Poland and Germany.",
-        "fullDesc": "We deploy specialized thermal management systems maintaining optimal temperature and humidity for mission-critical hardware. We serve commercial and industrial clients across Poland and Germany.",
+        "shortDesc": "Assembly, maintenance, and F-gas compliance of precision cooling and energy-efficient direct FreeCooling systems for Data Centers and technical facilities across Poland and Germany.",
+        "fullDesc": "We deploy specialized thermal management systems maintaining strict temperature and humidity parameters for mission-critical hardware and data centers. Combining precision air conditioning units with direct FreeCooling ventilation (e.g., Telzas, Vertiv) drastically cuts electrical consumption by leveraging cold outside ambient air.",
         "scopeList": [
-          "Installation and commissioning of precision climate control cooling units",
-          "Installation of FreeCooling modular ventilation systems and control units",
-          "Mounting of weather-resistant air intake louvers on technical containers and facades",
-          "Certified refrigerant leak detection and system performance audits (F-gas compliant)"
+          "Installation, piping, and commissioning of precision climate control cooling units (in-row and perimeter)",
+          "Installation and calibration of direct FreeCooling modular ventilation units with motorized damper actuators",
+          "Mounting of weather-resistant intake and exhaust louvers on technical containers and building envelopes",
+          "Periodic technical audits, cassette filter replacement, and certified refrigerant leak inspections (F-gas compliant)"
         ],
-        "specifications": "Precision cooling units; Variable speed EC electronically commutated fans; Integrated F7/G4 cassette filtration",
-        "targetSector": "Telecommunication containers, server rooms, optical fiber nodes, and data centers",
+        "specifications": "Precision cooling units (Vertiv, Liebert, etc.); Variable speed EC fans; F7/G4 cassette filtration; Redundant PLC automation",
+        "targetSector": "Data Centers, server rooms, optical fiber nodes (POP), cellular base stations, and technical containers",
         "tags": ["FreeCooling", "Precision Cooling", "F-gas Certified", "Ventilation"]
+      },
+      "residential-ac": {
+        "badge": "Residential AC & Homes",
+        "title": "Residential Air Conditioning Installation & Maintenance",
+        "shortDesc": "Professional sizing, clean installation, and periodic maintenance of Split and Multi-Split air conditioners for apartments, homes, and offices. F-gas certified, Testo digital diagnostics.",
+        "fullDesc": "We provide comprehensive installation, commissioning, and seasonal maintenance services for residential air conditioning systems. We guarantee tailored cooling capacity calculations, clean routing of refrigerant piping and condensate lines, and dust-free mounting. Every installation and inspection is executed using professional digital instrumentation (Testo wireless pressure/temperature Smart Probes, digital anemometers, superheat/subcooling checks), deep two-stage vacuuming, and certified biocidal agents for evaporator and blower fan disinfection. Fully F-gas and electrical SEP certified.",
+        "scopeList": [
+          "Cooling capacity calculation, technical consulting, and optimal placement of Split & Multi-Split units",
+          "Clean installation of refrigerant lines, electrical connections, and gravity or pump condensate drainage",
+          "Deep vacuuming with two-stage vacuum pumps, nitrogen pressure leak testing, and system commissioning",
+          "Seasonal maintenance: chemical cleaning, antibacterial disinfection, and fungal eradication of coils and blower wheels",
+          "Operating parameter diagnostics: digital gauge pressure testing, superheat and subcooling verification",
+          "Indoor air supply temperature and airflow velocity measurement using digital anemometers, with service reports"
+        ],
+        "specifications": "Split & Multi-Split AC systems; Wireless Smart Probes & digital manifold gauges; Digital anemometers; Certified PZH biocides; F-gas and SEP qualifications",
+        "targetSector": "Apartments, single-family houses, residential flats, private offices, and commercial premises",
+        "tags": ["Split / Multi-Split AC", "Periodic Servicing", "Coil Disinfection", "F-Gas Certified"]
       },
       "telecom-containers": {
         "badge": "Containers & Infrastructure",
@@ -140,21 +158,21 @@
         "targetSector": "Distributed cellular towers, broadcast retransmission sites, and unstaffed technical nodes",
         "tags": ["Facility Management", "Periodic Audits", "24/7 Maintenance", "Critical Infrastructure"]
       },
-      "industrial-lines": {
-        "badge": "Industrial & Automation",
-        "title": "Industrial Installations & Production Line Relocation",
-        "shortDesc": "Electrical installation, machinery cabling for automated manufacturing lines, and professional decommissioning, transport, and equipment relocation.",
-        "fullDesc": "We provide specialized electromechanical installation services for industrial and manufacturing plants. Our scope includes machine cabling, high-capacity cable containment, control cabinet hookups, and precise relocation of production lines.",
+      "other-assembly-works": {
+        "badge": "Specialist Works & Industry",
+        "title": "Other Assembly Works & Industrial Installations",
+        "shortDesc": "Specialized electromechanical installations: reactive power compensation systems, machinery cabling, heavy-duty cable containment, and industrial relocations.",
+        "fullDesc": "We provide specialized electromechanical installation services for industrial facilities and technical sites. We have practical experience with projects in reactive power compensation systems (eliminating reactive energy surcharges), power and control cabling for production lines, high-capacity cable containment, and secure machinery relocations.",
         "scopeList": [
+          "Selection, installation, and commissioning of automatic capacitor banks and detuned filter reactors",
           "Power and signal cabling for automated machinery and manufacturing lines",
           "Erection of heavy-duty industrial cable containment, ladders, and support channels",
-          "Safe electrical decommissioning, labeling, and preparation of machinery for transport",
-          "Connection of industrial motors, drives, sensors, and automation panels",
-          "Post-assembly electrical verification and technical support during line commissioning"
+          "Safe electrical decommissioning, labeling, and preparation of machinery for transport and relocation",
+          "Technological hookups of equipment and on-site technical support during machinery commissioning"
         ],
-        "specifications": "Heavy-duty industrial cable containment; Machine power supply up to 1000V; Compliance with Machinery Directive",
-        "targetSector": "Manufacturing plants, automated factories, processing halls, and industrial facilities",
-        "tags": ["Industrial Installations", "Production Line Assembly", "Machine Wiring", "Relocations"]
+        "specifications": "Capacitor banks with detuned reactors; Machine power up to 1000V; Heavy-duty cable containment; Certified SEP qualifications (E+D)",
+        "targetSector": "Manufacturing plants, automated factories, processing facilities, and industrial warehouses",
+        "tags": ["Reactive Power Compensation", "Industrial Installations", "Machine Cabling", "Relocations"]
       }
     }
   },

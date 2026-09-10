@@ -45,52 +45,70 @@
     "zoomPhoto": "Vollbild",
     "closeZoom": "Schließen",
     "items": {
+      "battery-diagnostics": {
+        "badge": "Diagnostik & Kapazitätstests",
+        "title": "Batterieentladungen, Messungen & Akkudiagnostik",
+        "shortDesc": "Spezialisierte Kapazitätstests mittels kontrollierter Entladung, präzise Innenwiderstandsmessungen sowie ein eigenes System zur Erfassung und digitalen Datenanalyse des Batteriezustands.",
+        "fullDesc": "Wir sind spezialisiert auf die fortgeschrittene Diagnostik und Kapazitätsprüfung stationärer Batterieanlagen für gesicherte Stromversorgungen (48V DC-Anlagen, USV-Systeme, Umspannwerke). Wir verfügen über ein eigenes System zur Datenerfassung und fundierten Analyse, das mehrjährige Alterungstrends vergleicht, Entladekurven einzelner Monoblöcke analysiert und geschwächte Zellen frühzeitig identifiziert. Wir führen kontrollierte Entladeprüfungen mit externen Lastwiderständen in Echtzeit durch, messen Innenwiderstände, prüfen Zellverbinder und erstellen ein detailliertes Protokoll zum Batteriezustand.",
+        "scopeList": [
+          "Kontrollierte Entladeprüfungen mit externem Lastwiderstand (Ermittlung der tatsächlichen Batteriekapazität)",
+          "Digitale Messwerterfassung und Analyse im dedizierten System (mehrjähriger Vergleich der Entladekennlinien und Erkennung von Monoblock-Anomalien)",
+          "Präzise Messung des Innenwiderstands und Leitwerts einzelner Zellen und Batterieblöcke",
+          "Thermografische Überwachung und kontinuierliche Temperaturkontrolle der Pole und Verbinder unter Last",
+          "Überprüfung der Anzugsmomente und Übergangswiderstände der Zellverbinder",
+          "Detaillierte Prüfprotokolle mit Entladekennlinien, Auswertungen und Handlungsempfehlungen"
+        ],
+        "specifications": "Prüfentladungen mit hohen Entladeströmen; Mikroprozessorgesteuerte Lastwiderstände; Eigenes Telemetrie- und Datenanalysesystem; Innenwiderstandsmessgeräte; VRLA / AGM / Gel / Ni-Cd / Lithium-Batterien",
+        "targetSector": "Mobilfunk-Basisstationen, Rechenzentren, Serverräume, Energieversorger, Krankenhäuser und Industrie",
+        "tags": ["Kapazitätstests", "Batterieentladung", "Datenanalyse & Trends", "Widerstandsmessung"]
+      },
       "power-systems": {
-        "badge": "AC/DC-Strom & Batterien",
+        "badge": "AC/DC-Strom & USV",
         "title": "Unterbrechungsfreie Stromversorgungssysteme (AC & DC)",
-        "shortDesc": "Montage, wiederkehrende Prüfungen und Modernisierung industrieller Gleichstrom-Gleichrichteranlagen (DC) und USV-Systeme. Batteriekapazitätsprüfungen und Innenwiderstandsmessungen.",
-        "fullDesc": "Wir planen, installieren und warten professionelle unterbrechungsfreie Stromversorgungssysteme für kritische Telekommunikations- und Industrieinfrastrukturen. Unser technischer Support reicht vom Austausch von Batteriebänken über Zustandskontrollen per Entladeprüfung bis hin zur Modernisierung bestehender Gleichrichteranlagen.",
+        "shortDesc": "Montage, wiederkehrende Prüfungen und Modernisierung industrieller Gleichstrom-Gleichrichteranlagen (DC) und USV-Systeme. Umfassende Schaltanlagen- und Infrastrukturanschlüsse.",
+        "fullDesc": "Wir planen, installieren und warten professionelle unterbrechungsfreie Stromversorgungssysteme für kritische Telekommunikations- und Industrieinfrastrukturen. Unser technischer Support reicht von der Gestellmontage über Schaltschrankintegrationen bis hin zur Komplettmodernisierung von Gleichrichter- und USV-Systemen.",
         "scopeList": [
           "Montage und Inbetriebnahme industrieller DC-Stromversorgungen (-48V DC)",
           "Umfassende Modernisierung bestehender Versorgungsstationen und Schaltanlagen",
-          "Austausch von Akkumulatoren in Schränken und auf Schwerlast-Batteriegestellen",
-          "Batteriezustandsdiagnose: kontrollierte Lastentladung und Innenwiderstandsmessungen",
+          "Montage und Austausch von Akkumulatoren in Schränken und auf Schwerlast-Batteriegestellen",
+          "Technologischer Anschluss gesicherter AC/DC-Verteileranlagen",
           "Regelmäßige technische Inspektionen und Wartung von USV- und Notstromanlagen"
         ],
-        "specifications": "48V DC / 230V / 400V AC Systeme; Professionelle Prüfprotokolle",
+        "specifications": "48V DC / 230V / 400V AC Systeme; Professionelle Prüfprotokolle; SEP-Qualifikationsnachweise (E+D)",
         "targetSector": "Mobilfunk-Basisstationen, Telekommunikationsknoten, Serverräume und Sendeanlagen",
-        "tags": ["48V DC-Stromversorgungen", "VRLA/AGM-Batterien", "AC-USV", "Widerstandsmessung"]
-      },
-      "reactive-power": {
-        "badge": "Blindleistungskompensation",
-        "title": "Blindleistungskompensationsanlagen",
-        "shortDesc": "Auslegung, Montage und Modernisierung automatischer Kondensatorbatterien und verdrosselter Filterkreise. Vermeidung kostspieliger Strafgebühren für induktive und kapazitive Blindleistung.",
-        "fullDesc": "Wir bieten ganzheitliche Lösungen zur Senkung von Energiekosten durch Blindleistungskompensation. Wir analysieren Netzparameter, berechnen erforderliche Kompensationsstufen und fertigen maßgeschneiderte Schaltschränke mit automatischen Mikroprozessor-Reglern.",
-        "scopeList": [
-          "Montage und Anschluss von Kompensationsschränken",
-          "Installation von Kondensatormodulen und verdrosselten Filterkreisen",
-          "Parametrierung und Inbetriebnahme digitaler Blindleistungsregler",
-          "Netzqualitätsanalysen, Leistungsfaktor- (cos φ) und Oberschwingungsmessungen",
-          "Instandsetzung und Austausch verschlissener Schütze und Kondensatorstufen"
-        ],
-        "specifications": "Verdrosselte Kondensatorstufen; Integrierter Überstrom- und Übertemperaturschutz; Mikroprozessor-Regelung",
-        "targetSector": "Infrastrukturknoten, Sendestationen, Fertigungs- und Industrieanlagen",
-        "tags": ["Blindleistung", "Automatische Kompensation", "Drosseln & Filter", "Energieeffizienz"]
+        "tags": ["48V DC-Stromversorgungen", "USV-Systeme", "VRLA/AGM-Batterien", "Notstromtechnik"]
       },
       "freecooling-hvac": {
         "badge": "HVAC & FreeCooling",
         "title": "FreeCooling-Lüftungssysteme & Präzisionsklimatisierung",
-        "shortDesc": "Energieeffiziente Direktluft-FreeCooling-Systeme und Präzisionsklimatisierung. Montage und Service in ganz Polen und Deutschland. F-Gase zertifiziert.",
-        "fullDesc": "Wir realisieren hochmoderne Kühlsysteme für gleichbleibende thermische Bedingungen empfindlicher Elektronik. Wir betreuen Projekte in ganz Polen und Deutschland. Die Kombination aus Präzisionsklimatisierung und automatischer FreeCooling-Lüftung senkt den Energieverbrauch signifikant.",
+        "shortDesc": "Energieeffiziente Direktluft-FreeCooling-Systeme und Präzisionsklimatisierung für Rechenzentren und technische Liegenschaften in ganz Polen und Deutschland. F-Gase zertifiziert.",
+        "fullDesc": "Wir realisieren hochmoderne Präzisionskühlsysteme für gleichbleibende thermische Bedingungen empfindlicher Elektronik und Serverräume. Die Kombination aus Präzisionsklimageräten mit automatischer Direkt-FreeCooling-Lüftung (u. a. Telzas, Vertiv) senkt den Energieverbrauch drastisch durch Nutzung der Außenkälte.",
         "scopeList": [
-          "Montage und Inbetriebnahme von Präzisions- und Gewerbeklimageräten",
-          "Montage und Inbetriebnahme modularer FreeCooling-Lüftungszentralen",
-          "Installation witterungsbeständiger Außenluftansaugungen an Containern und Fassaden",
-          "Zertifizierte Dichtheitsprüfungen und Kältekreislauf-Inspektionen (F-Gase-zertifiziert)"
+          "Montage, Kältemittelverrohrung und Inbetriebnahme von Präzisionsklimaschränken (Unterflur-/Direktblassysteme)",
+          "Montage und Einregulierung modularer FreeCooling-Lüftungszentralen mit motorischen Klappen",
+          "Installation witterungsbeständiger Außenluftansaugungen und Fortluftgitter an Containern und Fassaden",
+          "Regelmäßige Audits, Kassettenfilterwechsel und zertifizierte Dichtheitsprüfungen nach F-Gase-Verordnung"
         ],
-        "specifications": "Präzisionsklimageräte; Drehzahlgeregelte EC-Ventilatoren; Kassettenfilterklassen F7 / G4",
-        "targetSector": "Technikcontainer, Serverräume, Glasfaserknoten und Rechenzentren",
+        "specifications": "Präzisionsklimaschränke (Vertiv, Liebert usw.); Drehzahlgeregelte EC-Ventilatoren; Kassettenfilter F7/G4; Redundante SPS-Steuerung",
+        "targetSector": "Rechenzentren (Data Center), Serverräume, Glasfaserknoten (POP) und Technikcontainer",
         "tags": ["FreeCooling", "Präzisionsklimatisierung", "F-Gase zertifiziert", "Lüftung"]
+      },
+      "residential-ac": {
+        "badge": "Klimaanlagen für Wohnungen",
+        "title": "Montage & Wartung von Klimaanlagen in Wohnungen und Häusern",
+        "shortDesc": "Fachgerechte Auslegung, saubere Montage und periodische Wartung von Split- und Multi-Split-Klimaanlagen für Wohnungen, Wohnhäuser und Büros. F-Gase-zertifiziert mit Testo-Digitaldiagnostik.",
+        "fullDesc": "Wir bieten umfassende Montagen und regelmäßige technische Inspektionen von Klimaanlagen für Wohnräume und Gewerbeeinheiten. Wir gewährleisten die präzise Berechnung der erforderlichen Kühlleistung, eine saubere und ästhetische Leitungsverlegung sowie staubarme Montagearbeiten. Jede Montage und Wartung wird mit digitaler Messtechnik (drahtlose Testo Smart Probes Druck- und Temperatursonden, digitale Flügelrad-Anemometer, Überhitzungs- und Unterkühlungsmessung), tiefer Evakuierung und zugelassenen Desinfektionsmitteln für Verdampfer und Lüfterwalzen durchgeführt. Mit vollständiger F-Gase-Zertifizierung und elektrotechnischen Qualifikationen.",
+        "scopeList": [
+          "Kühllastberechnung, Fachberatung und optimale Positionierung von Split- und Multi-Split-Innengeräten",
+          "Saubere Installation von Kältemittelleitungen, Elektroanschlüssen und Kondensatabläufen (Schwerkraft/Pumpe)",
+          "Evakuierung mit zweistufiger Vakuumpumpe, Stickstoff-Dichtheitsprüfung und Inbetriebnahme",
+          "Regelmäßige Inspektion und Wartung: chemische Reinigung und antibakterielle Desinfektion von Verdampferlamellen, Filtern und Lüfterrädern",
+          "Messung und Diagnose der Betriebsparameter: Kältemitteldruck, Überhitzung und Unterkühlung",
+          "Luftstrom- und Ausblastemperaturmessung mit digitalem Anemometer sowie Ausstellung eines Serviceberichts"
+        ],
+        "specifications": "Split- & Multi-Split-Klimageräte; Digitale Monteurhilfen und Funk-Drucksonden; Digitale Anemometer; Geprüfte Desinfektionsmittel; F-Gase- und SEP-Zertifizierung",
+        "targetSector": "Wohnungen, Einfamilienhäuser, Ferienwohnungen, Büros und Gewerberäume",
+        "tags": ["Split- & Multi-Split-Montage", "Periodische Wartung", "Desinfektion & Reinigung", "F-Gase zertifiziert"]
       },
       "telecom-containers": {
         "badge": "Container & Infrastruktur",
@@ -140,21 +158,21 @@
         "targetSector": "Mobilfunk-Basisstationen, Richtfunkstandorte und unbemannte Technikstützpunkte",
         "tags": ["Facility Management", "Wiederkehrende Prüfungen", "24/7-Wartung", "Kritische Infrastruktur"]
       },
-      "industrial-lines": {
-        "badge": "Industrie & Automation",
-        "title": "Industrieinstallationen & Verlagerung von Produktionslinien",
-        "shortDesc": "Elektrotechnische Installationen, Maschinenverkabelung neuer Fertigungslinien sowie fachgerechte Demontage und Verlagerung von Maschinenparks.",
-        "fullDesc": "Wir bieten spezialisierte Installations- und Montagedienstleistungen für Fertigungs- und Industriebetriebe. Unser Leistungsumfang reicht von der maschinenseitigen Leitungsverlegung über Schwerlastkabeltrassen bis zur sicheren Demontage und Remontage industrieller Anlagen.",
+      "other-assembly-works": {
+        "badge": "Spezialarbeiten & Industrie",
+        "title": "Weitere Montagearbeiten & Industrieinstallationen",
+        "shortDesc": "Spezialisierte elektromechanische Montagen: Auslegung und Montage von Blindleistungskompensatoren, Maschinenverkabelung, Kabeltrassen und Maschinenverlagerungen.",
+        "fullDesc": "Wir bieten qualifizierte Elektro- und Montagearbeiten für Produktionsbetriebe und technische Infrastrukturanlagen. Wir verfügen über fundierte Praxiserfahrung mit Projekten zur Blindleistungskompensation (Vermeidung von Blindstromkosten), dem technologischen Maschinenanschluss, industriellen Kabeltragsystemen sowie sicheren Demontagen und Verlagerungen von Anlagen.",
         "scopeList": [
-          "Leistungs- und Steuerungsverkabelung moderner automatisierter Fertigungslinien",
+          "Auslegung, Montage und Inbetriebnahme automatischer Kondensatorbatterien und verdrosselter Filterkreise (Beseitigung von Blindstromkosten)",
+          "Leistungs- und Steuerungsverkabelung moderner automatisierter Maschinen und Fertigungslinien",
           "Montage industrieller Schwerlastkabelbahnen, Kabelleitern und Tragkonstruktionen",
-          "Sichere elektrische Demontage, Kennzeichnung und Transportvorbereitung von Maschinen",
-          "Anschluss von Antrieben, Elektromotoren und industriellen Automationsschränken",
-          "Messungen nach DGUV V3 und technische Unterstützung während der Inbetriebnahme"
+          "Sichere Demontage, Kennzeichnung und Vorbereitung von Maschinenparks für die Verlagerung",
+          "Technologischer Geräteanschluss und technische Begleitung während der Maschineninbetriebnahme"
         ],
-        "specifications": "Industriekabeltrassen; Maschinenanschluss bis 1000V; Konformität mit Maschinenrichtlinie",
-        "targetSector": "Produktionswerke, automatisierte Fabriken, Verarbeitungshallen und Schwerindustrie",
-        "tags": ["Industrieinstallationen", "Montage von Fertigungslinien", "Maschinenverkabelung", "Verlagerungen"]
+        "specifications": "Verdrosselte Kondensatorbatterien; Maschinenanschluss bis 1000V; Schwerlastkabelbahnen; SEP-Qualifikationsnachweise (E+D)",
+        "targetSector": "Produktionswerke, automatisierte Fabriken, Verarbeitungshallen und Industrieobjekte",
+        "tags": ["Blindleistungskompensation", "Industrieinstallationen", "Maschinenverkabelung", "Verlagerungen"]
       }
     }
   },

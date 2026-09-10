@@ -32,6 +32,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/" />
   </url>
   <url>
+    <loc>https://eminstall.pl/uslugi/rozladowania-i-diagnostyka-baterii</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/rozladowania-i-diagnostyka-baterii" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/battery-discharge-testing-diagnostics" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/batterie-kapazitaetstests-diagnostik" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/rozladowania-i-diagnostyka-baterii" />
+  </url>
+  <url>
+    <loc>https://eminstall.pl/en/services/battery-discharge-testing-diagnostics</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/rozladowania-i-diagnostyka-baterii" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/battery-discharge-testing-diagnostics" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/batterie-kapazitaetstests-diagnostik" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/rozladowania-i-diagnostyka-baterii" />
+  </url>
+  <url>
+    <loc>https://eminstall.pl/de/leistungen/batterie-kapazitaetstests-diagnostik</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/rozladowania-i-diagnostyka-baterii" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/battery-discharge-testing-diagnostics" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/batterie-kapazitaetstests-diagnostik" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/rozladowania-i-diagnostyka-baterii" />
+  </url>
+  <url>
     <loc>https://eminstall.pl/uslugi/systemy-zasilania-ups-dc</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -92,6 +122,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/klimatyzacja-precyzyjna-freecooling" />
   </url>
   <url>
+    <loc>https://eminstall.pl/uslugi/klimatyzacja-do-mieszkan-montaz-i-serwis</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/klimatyzacja-do-mieszkan-montaz-i-serwis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/residential-air-conditioning-installation-service" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/klimaanlagen-wohnungen-montage-wartung" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/klimatyzacja-do-mieszkan-montaz-i-serwis" />
+  </url>
+  <url>
+    <loc>https://eminstall.pl/en/services/residential-air-conditioning-installation-service</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/klimatyzacja-do-mieszkan-montaz-i-serwis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/residential-air-conditioning-installation-service" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/klimaanlagen-wohnungen-montage-wartung" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/klimatyzacja-do-mieszkan-montaz-i-serwis" />
+  </url>
+  <url>
+    <loc>https://eminstall.pl/de/leistungen/klimaanlagen-wohnungen-montage-wartung</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/klimatyzacja-do-mieszkan-montaz-i-serwis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/residential-air-conditioning-installation-service" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/klimaanlagen-wohnungen-montage-wartung" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/klimatyzacja-do-mieszkan-montaz-i-serwis" />
+  </url>
+  <url>
     <loc>https://eminstall.pl/uslugi/prefabrykacja-rozdzielnic-pomiary-sep</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -120,36 +180,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/switchboards-sep-measurements" />
     <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/schaltschrankbau-pruefungen" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/prefabrykacja-rozdzielnic-pomiary-sep" />
-  </url>
-  <url>
-    <loc>https://eminstall.pl/uslugi/kompensatory-mocy-biernej</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/kompensatory-mocy-biernej" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/reactive-power-compensation" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/blindleistungskompensation" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/kompensatory-mocy-biernej" />
-  </url>
-  <url>
-    <loc>https://eminstall.pl/en/services/reactive-power-compensation</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/kompensatory-mocy-biernej" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/reactive-power-compensation" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/blindleistungskompensation" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/kompensatory-mocy-biernej" />
-  </url>
-  <url>
-    <loc>https://eminstall.pl/de/leistungen/blindleistungskompensation</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/kompensatory-mocy-biernej" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/reactive-power-compensation" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/blindleistungskompensation" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/kompensatory-mocy-biernej" />
   </url>
   <url>
     <loc>https://eminstall.pl/uslugi/kontenery-technologiczne-pop</loc>
@@ -212,33 +242,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/utrzymanie-obiektow-facility-management" />
   </url>
   <url>
-    <loc>https://eminstall.pl/uslugi/instalacje-przemyslowe-relokacje</loc>
+    <loc>https://eminstall.pl/uslugi/inne-prace-montazowe</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/instalacje-przemyslowe-relokacje" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/industrial-installations-relocation" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/industrieanlagen-maschinenumzug" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/instalacje-przemyslowe-relokacje" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/inne-prace-montazowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/other-assembly-works" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/weitere-montagearbeiten" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/inne-prace-montazowe" />
   </url>
   <url>
-    <loc>https://eminstall.pl/en/services/industrial-installations-relocation</loc>
+    <loc>https://eminstall.pl/en/services/other-assembly-works</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/instalacje-przemyslowe-relokacje" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/industrial-installations-relocation" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/industrieanlagen-maschinenumzug" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/instalacje-przemyslowe-relokacje" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/inne-prace-montazowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/other-assembly-works" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/weitere-montagearbeiten" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/inne-prace-montazowe" />
   </url>
   <url>
-    <loc>https://eminstall.pl/de/leistungen/industrieanlagen-maschinenumzug</loc>
+    <loc>https://eminstall.pl/de/leistungen/weitere-montagearbeiten</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/instalacje-przemyslowe-relokacje" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/industrial-installations-relocation" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/industrieanlagen-maschinenumzug" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/instalacje-przemyslowe-relokacje" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://eminstall.pl/uslugi/inne-prace-montazowe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://eminstall.pl/en/services/other-assembly-works" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://eminstall.pl/de/leistungen/weitere-montagearbeiten" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eminstall.pl/uslugi/inne-prace-montazowe" />
   </url>
 </urlset>
