@@ -35,6 +35,10 @@ import montazKlimatyzatoraLgImg from '../../assets/images/montaz-klimatyzatora-l
 
 import kontenerPopImg from '../../assets/images/Kontener-Eminstall1.webp';
 import kontenerPopThumb from '../../assets/images/Kontener-Eminstall1-thumb.webp';
+import kontenerPodlogaKorytaImg from '../../assets/images/budowa-kontenera-konstrukcja-podlogi-podniesionej-koryta-kablowe.webp';
+import kontenerKorytaSwiatlowodoweImg from '../../assets/images/budowa-kontenera-podwieszane-koryta-swiatlowodowe-szafy-rack.webp';
+import kontenerWiertnicaFundamentImg from '../../assets/images/budowa-kontenera-wiertnica-koronowa-przepusty-kablowe-fundament.webp';
+import kontenerPvDachImg from '../../assets/images/budowa-kontenera-konstrukcja-wsporcza-paneli-pv-na-dachu.webp';
 
 import rozdzielniaHagerImg from '../../assets/images/Rozdzielnia-Eminstall4.webp';
 import rozdzielniaHagerThumb from '../../assets/images/Rozdzielnia-Eminstall4-thumb.webp';
@@ -122,6 +126,10 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     imagePosition: 'object-[center_30%]',
     gallery: [
       kontenerPopImg,
+      kontenerPodlogaKorytaImg,
+      kontenerKorytaSwiatlowodoweImg,
+      kontenerWiertnicaFundamentImg,
+      kontenerPvDachImg,
       kontenerKlimatyzacjaFujitsuImg
     ],
     icon: Server,
