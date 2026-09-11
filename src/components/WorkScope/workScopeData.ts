@@ -46,6 +46,12 @@ import kontenerPodlogaKorytaImg from '../../assets/images/budowa-kontenera-konst
 import kontenerKorytaSwiatlowodoweImg from '../../assets/images/budowa-kontenera-podwieszane-koryta-swiatlowodowe-szafy-rack.webp';
 import kontenerWiertnicaFundamentImg from '../../assets/images/budowa-kontenera-wiertnica-koronowa-przepusty-kablowe-fundament.webp';
 import kontenerPvDachImg from '../../assets/images/budowa-kontenera-konstrukcja-wsporcza-paneli-pv-na-dachu.webp';
+import kontenerRozladunekDzwigImg from '../../assets/images/budowa-kontenera-rozladunek-montaz-dzwigiem.webp';
+import kontenerKorytaCzujkaImg from '../../assets/images/budowa-kontenera-koryta-kablowe-czujka-pozarowa.webp';
+import kontenerRzadSzafRackImg from '../../assets/images/budowa-kontenera-rzad-szaf-rack-podloga-techniczna.webp';
+import kontenerSzkieletEltekImg from '../../assets/images/budowa-kontenera-szkielet-szafy-eltek-instalacja.webp';
+import kontenerWnetrzeFujitsuImg from '../../assets/images/budowa-kontenera-wnetrze-klimatyzacja-fujitsu-szafy-rack.webp';
+import kontenerMontazRamEltekImg from '../../assets/images/budowa-kontenera-montaz-ram-szaf-teletechnicznych-eltek.webp';
 
 import rozdzielniaHagerImg from '../../assets/images/Rozdzielnia-Eminstall4.webp';
 import rozdzielniaHagerThumb from '../../assets/images/Rozdzielnia-Eminstall4-thumb.webp';
@@ -179,6 +185,12 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     imagePosition: 'object-[center_30%]',
     gallery: [
       prefabrykowanyKontenerImg,
+      kontenerRozladunekDzwigImg,
+      kontenerKorytaCzujkaImg,
+      kontenerRzadSzafRackImg,
+      kontenerSzkieletEltekImg,
+      kontenerWnetrzeFujitsuImg,
+      kontenerMontazRamEltekImg,
       kontenerPodlogaKorytaImg,
       kontenerKorytaSwiatlowodoweImg,
       kontenerWiertnicaFundamentImg,

@@ -54,7 +54,6 @@
           "Controlled load bank discharge testing (actual capacity verification in accordance with technical standards)",
           "Digital parameter logging and in-depth analytics in a dedicated system (multi-year discharge curve comparisons and monoblock anomaly detection)",
           "High-precision internal cell resistance and conductance measurements",
-          "Thermal imaging and continuous terminal temperature monitoring under full load",
           "Inspection and torque verification of inter-cell connector resistance",
           "Comprehensive diagnostic test reports with discharge curves and maintenance recommendations"
         ],
@@ -82,14 +81,14 @@
         "badge": "HVAC & FreeCooling",
         "title": "FreeCooling Ventilation & Precision Air Conditioning",
         "shortDesc": "Assembly, maintenance, and F-gas compliance of precision cooling and energy-efficient direct FreeCooling systems for Data Centers and technical facilities across Poland and Germany.",
-        "fullDesc": "We deploy specialized thermal management systems maintaining strict temperature and humidity parameters for mission-critical hardware and data centers. Combining precision air conditioning units with direct FreeCooling ventilation (e.g., Telzas, Vertiv) drastically cuts electrical consumption by leveraging cold outside ambient air.",
+        "fullDesc": "We deploy specialized thermal management systems maintaining strict temperature and humidity parameters for mission-critical hardware and data centers. Combining precision air conditioning units with direct FreeCooling ventilation drastically cuts electrical consumption by leveraging cold outside ambient air.",
         "scopeList": [
           "Installation, piping, and commissioning of precision climate control cooling units (in-row and perimeter)",
           "Installation and calibration of direct FreeCooling modular ventilation units with motorized damper actuators",
           "Mounting of weather-resistant intake and exhaust louvers on technical containers and building envelopes",
           "Periodic technical audits, cassette filter replacement, and certified refrigerant leak inspections (F-gas compliant)"
         ],
-        "specifications": "Precision cooling units (Vertiv, Liebert, etc.); Variable speed EC fans; F7/G4 cassette filtration; Redundant PLC automation",
+        "specifications": "Vertiv precision cooling units; FreeCooling systems; Underfloor & direct airflow; Precision temperature & humidity control; F-Gas certification",
         "targetSector": "Data Centers, server rooms, optical fiber nodes (POP), cellular base stations, and technical containers",
         "tags": ["FreeCooling", "Precision Cooling", "F-gas Certified", "Ventilation"]
       },
@@ -122,7 +121,7 @@
           "Equipotential bonding grounding bar (GSW) and earthing network connectivity",
           "Access control, environmental telemetry sensors, and automated fire detection systems"
         ],
-        "specifications": "Heavy-load modular floor panels; Structural galvanized steel support frames;",
+        "specifications": "Heavy-load modular floor panels; Structural galvanized steel support frames",
         "targetSector": "Access nodes, containerized telecom stations, modular server rooms",
         "tags": ["POP Nodes", "Technical Containers", "Raised Floors", "Cable Pathways"]
       },
@@ -183,7 +182,6 @@
     "ctaPrimary": "Get in Touch",
     "ctaSecondary": "Our Services",
     "status": "SYSTEM STATUS: ACTIVE",
-    "systemCode": "EMIN_INFRA_2026",
     "features": {
       "containersTitle": "TECHNICAL FACILITIES & SHELTERS",
       "containersDesc": "Assembly, retrofits & structural reviews",
@@ -199,7 +197,7 @@
     "credoQuote": "For us, nothing is impossible.",
     "credoSub": "There are only engineering challenges that require knowledge, determination, and uncompromising precision.",
     "p1": "Eminstall is a family-owned engineering company rooted in solid craftsmanship, extensive field experience, and uncompromising quality. We specialize in advanced electrical installations, custom switchboard prefabrication, AC/DC uninterruptible power systems, and precision cooling for industrial and high-reliability facilities.",
-    "p2": "Our foundation is punctuality, accountability, and efficiency – we strictly adhere to schedules and take full personal ownership of every task. We emphasize transparent, direct client communication throughout every stage, backed by thorough, certified measurement and inspection protocols.",
+    "p2": "Our foundation is punctuality, accountability, and efficiency – we strictly adhere to schedules and take full personal ownership of every task. We emphasize transparent, direct client communication throughout every stage, backed by thorough measurement and inspection protocols.",
     "precision": "Engineering Precision",
     "precisionDesc": "We take care of every millimeter of the installation, eliminating faults before they even occur.",
     "safety": "Safety & Certitude",
@@ -290,8 +288,8 @@
     "companyAddressLabel": "Registered address",
     "nip": "NIP",
     "regon": "REGON",
-    "credentialLicensing": "Full SEP Operational Licensing",
-    "credentialPartners": "Authorized partner (Hager, Vertiv)",
+    "credentialLicensing": "Full SEP & F-Gas certification",
+    "credentialPartners": "Service & support for leading manufacturers (Hager, Vertiv, Delta, Eltek, Fujitsu, Mitsubishi Heavy Industries, Toshiba)",
     "credentialSla": "Service Level Agreement (SLA) Guarantee",
     "operationalScope": "PL / DE (Poland & Germany)"
   },

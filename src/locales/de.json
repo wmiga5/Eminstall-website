@@ -54,7 +54,6 @@
           "Kontrollierte Entladeprüfungen mit externem Lastwiderstand (Ermittlung der tatsächlichen Batteriekapazität)",
           "Digitale Messwerterfassung und Analyse im dedizierten System (mehrjähriger Vergleich der Entladekennlinien und Erkennung von Monoblock-Anomalien)",
           "Präzise Messung des Innenwiderstands und Leitwerts einzelner Zellen und Batterieblöcke",
-          "Thermografische Überwachung und kontinuierliche Temperaturkontrolle der Pole und Verbinder unter Last",
           "Überprüfung der Anzugsmomente und Übergangswiderstände der Zellverbinder",
           "Detaillierte Prüfprotokolle mit Entladekennlinien, Auswertungen und Handlungsempfehlungen"
         ],
@@ -82,14 +81,14 @@
         "badge": "HVAC & FreeCooling",
         "title": "FreeCooling-Lüftungssysteme & Präzisionsklimatisierung",
         "shortDesc": "Energieeffiziente Direktluft-FreeCooling-Systeme und Präzisionsklimatisierung für Rechenzentren und technische Liegenschaften in ganz Polen und Deutschland. F-Gase zertifiziert.",
-        "fullDesc": "Wir realisieren hochmoderne Präzisionskühlsysteme für gleichbleibende thermische Bedingungen empfindlicher Elektronik und Serverräume. Die Kombination aus Präzisionsklimageräten mit automatischer Direkt-FreeCooling-Lüftung (u. a. Telzas, Vertiv) senkt den Energieverbrauch drastisch durch Nutzung der Außenkälte.",
+        "fullDesc": "Wir realisieren hochmoderne Präzisionskühlsysteme für gleichbleibende thermische Bedingungen empfindlicher Elektronik und Serverräume. Die Kombination aus Präzisionsklimageräten mit automatischer Direkt-FreeCooling-Lüftung senkt den Energieverbrauch drastisch durch Nutzung der Außenkälte.",
         "scopeList": [
           "Montage, Kältemittelverrohrung und Inbetriebnahme von Präzisionsklimaschränken (Unterflur-/Direktblassysteme)",
           "Montage und Einregulierung modularer FreeCooling-Lüftungszentralen mit motorischen Klappen",
           "Installation witterungsbeständiger Außenluftansaugungen und Fortluftgitter an Containern und Fassaden",
           "Regelmäßige Audits, Kassettenfilterwechsel und zertifizierte Dichtheitsprüfungen nach F-Gase-Verordnung"
         ],
-        "specifications": "Präzisionsklimaschränke (Vertiv, Liebert usw.); Drehzahlgeregelte EC-Ventilatoren; Kassettenfilter F7/G4; Redundante SPS-Steuerung",
+        "specifications": "Vertiv Präzisionsklimaschränke; FreeCooling-Systeme; Unterflur- und Direktbelüftung; Präzise Temperatur- und Feuchtigkeitsregelung; F-Gase-Zertifizierung",
         "targetSector": "Rechenzentren (Data Center), Serverräume, Glasfaserknoten (POP) und Technikcontainer",
         "tags": ["FreeCooling", "Präzisionsklimatisierung", "F-Gase zertifiziert", "Lüftung"]
       },
@@ -122,7 +121,7 @@
           "Potentialausgleich-Haupterdungsschiene (HES) und strukturierte Erdung",
           "Zutrittskontrollsysteme, Brandmelde- und Umweltüberwachungssensoren"
         ],
-        "specifications": "Hochbelastbare modulare Bodenplatten; Stahlunterkonstruktionen;",
+        "specifications": "Hochbelastbare modulare Bodenplatten; Stahlunterkonstruktionen",
         "targetSector": "Netzknoten, modulare Mobilfunkcontainer, modulare Serverräume",
         "tags": ["POP-Knoten", "Technikcontainer", "Doppelböden", "Kabeltrassen"]
       },
@@ -183,7 +182,6 @@
     "ctaPrimary": "Kontaktieren Sie uns",
     "ctaSecondary": "Unsere Leistungen",
     "status": "SYSTEMSTATUS: AKTIV",
-    "systemCode": "EMIN_INFRA_2026",
     "features": {
       "containersTitle": "TECHNIKRÄUME & CONTAINER",
       "containersDesc": "Ausführung, Modernisierung & Prüfungen",
@@ -290,8 +288,8 @@
     "companyAddressLabel": "Registrierte Adresse",
     "nip": "NIP",
     "regon": "REGON",
-    "credentialLicensing": "Vollständige SEP-Zulassungen",
-    "credentialPartners": "Autorisierter Partner (Hager, Vertiv)",
+    "credentialLicensing": "Vollständige SEP- und F-Gase-Zertifizierung",
+    "credentialPartners": "Service führender Hersteller (Hager, Vertiv, Delta, Eltek, Fujitsu, Mitsubishi Heavy Industries, Toshiba)",
     "credentialSla": "Systemverfügbarkeitsgarantie (SLA)",
     "operationalScope": "PL / DE (Polen & Deutschland)"
   },

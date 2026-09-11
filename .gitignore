@@ -40,5 +40,6 @@ yarn-error.log*
 *.7z
 Strona*/
 notatki.txt
+drive-download-*/
 dist-ssr/
 scripts/process_*.py

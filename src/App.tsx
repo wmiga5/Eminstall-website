@@ -442,7 +442,6 @@ export default function App({ initialUrl }: AppProps = {}) {
                         {t.hero.status}
                       </span>
                     </div>
-                    <span className="font-mono text-xs text-slate-500">{t.hero.systemCode}</span>
                   </div>
 
                   {/* Visual Blueprint Flow */}

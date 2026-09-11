@@ -54,7 +54,6 @@
           "Kontrolowane próby rozładowania zewnętrznym rezystorem obciążeniowym (testy rzeczywistej pojemności baterii)",
           "Cyfrowa rejestracja i zaawansowana analiza parametrów w dedykowanym systemie (porównanie krzywych rozładowania z kolejnych lat i wykrywanie anomalii monobloków)",
           "Precyzyjne pomiary rezystancji wewnętrznej i konduktancji poszczególnych ogniw i bloków",
-          "Monitoring termowizyjny oraz ciągła kontrola temperatury biegunów i mostków podczas obciążenia",
           "Weryfikacja momentów dokręcenia połączeń śrubowych oraz rezystancji przejścia mostków",
           "Opracowanie szczegółowych protokołów pomiarowych z charakterystykami rozładowania i rekomendacjami technicznymi"
         ],
@@ -82,20 +81,20 @@
         "badge": "HVAC & FreeCooling",
         "title": "Wentylacja FreeCooling i Klimatyzacja Precyzyjna",
         "shortDesc": "Montaż, serwis i przeglądy klimatyzacji precyzyjnej oraz wentylacji swobodnej FreeCooling dla Data Center i obiektów technicznych. Realizacje w Polsce i Niemczech. Certyfikat F-gazy.",
-        "fullDesc": "Wdrażamy zaawansowane systemy chłodzenia zapewniające rygorystyczne utrzymanie zadanej temperatury i wilgotności w warunkach ciągłej pracy krytycznych urządzeń teleinformatycznych i serwerowni. Połączenie szaf klimatyzacji precyzyjnej z systemami wentylacji FreeCooling (m.in. Telzas, Vertiv) pozwala na drastyczne obniżenie zużycia energii elektrycznej poprzez bezpośrednie wykorzystanie chłodu powietrza zewnętrznego.",
+        "fullDesc": "Wdrażamy zaawansowane systemy chłodzenia zapewniające rygorystyczne utrzymanie zadanej temperatury i wilgotności w warunkach ciągłej pracy krytycznych urządzeń teleinformatycznych i serwerowni. Połączenie szaf klimatyzacji precyzyjnej z systemami wentylacji FreeCooling pozwala na drastyczne obniżenie zużycia energii elektrycznej poprzez bezpośrednie wykorzystanie chłodu powietrza zewnętrznego.",
         "scopeList": [
           "Montaż, podłączenie i uruchomienie szaf klimatyzacji precyzyjnej z nawiewem podpodłogowym lub bezpośrednim",
           "Wdrażanie dedykowanych systemów wentylacji bezpośredniej FreeCooling z automatycznymi przepustnicami",
           "Montaż czerpni i wyrzutni powietrza na kontenerach technicznych oraz elewacjach budynków Data Center",
           "Okresowe audyty, czyszczenie filtrów kasetowych oraz certyfikowane próby szczelności układów chłodniczych (F-gazy)"
         ],
-        "specifications": "Szafy klimatyzacji precyzyjnej (Vertiv, Liebert itp.); Wentylatory EC o płynnej regulacji; Filtry kasetowe F7/G4; Automatyka PLC z redundancją",
+        "specifications": "Szafy klimatyzacji precyzyjnej Vertiv; Systemy FreeCooling; Nawiew podpodłogowy i bezpośredni; Precyzyjna kontrola temperatury i wilgotności; Certyfikat F-Gaz",
         "targetSector": "Centra danych (Data Center), serwerownie, węzły światłowodowe (POP), stacje bazowe i kontenery technologiczne",
         "tags": ["FreeCooling", "Klimatyzacja precyzyjna", "F-gazy", "Wentylacja"]
       },
       "residential-ac": {
         "badge": "Klimatyzacja do mieszkań & domów",
-        "title": "Montaż i Okresowe Przeglądy Klimatyzacji w Mieszkaniach",
+        "title": "Montaż i Okresowe Przeglądy Klimatyzacji dla Domu",
         "shortDesc": "Profesjonalny dobór, czysty montaż oraz okresowy serwis i odgrzybianie klimatyzacji typu Split i Multi-Split w mieszkaniach, domach oraz biurach. Certyfikat F-gazy i cyfrowa diagnostyka Testo.",
         "fullDesc": "Oferujemy kompleksowe usługi montażu oraz regularnych przeglądów technicznych klimatyzacji w budynkach mieszkalnych i lokalach użytkowych. Zapewniamy fachowy dobór mocy chłodniczej, estetyczne i czyste prowadzenie instalacji chłodniczych oraz odprowadzenia skroplin. Każdy montaż i przegląd realizujemy w oparciu o precyzyjną diagnostykę cyfrową (bezprzewodowe sondy ciśnienia i temperatury Testo, anemometry, pomiary przegrzania i dochłodzenia czynnika), próżniowanie układu oraz atestowane środki biobójcze do czyszczenia parowników i wentylatorów bębnowych. Posiadamy pełne uprawnienia F-gazowe oraz SEP.",
         "scopeList": [
@@ -122,7 +121,7 @@
           "Główna szyna wyrównania potencjałów (GSW) i instalacje uziemiające",
           "Systemy kontroli dostępu, sygnalizacji pożaru i monitoringu parametrów środowiskowych"
         ],
-        "specifications": "Modułowe płyty podłogowe o wysokiej nośności; Stalowe konstrukcje wsporcze;",
+        "specifications": "Modułowe płyty podłogowe o wysokiej nośności; Stalowe konstrukcje wsporcze",
         "targetSector": "Węzły dostępowe, telekomunikacyjne stacje kontenerowe, serwerownie modułowe",
         "tags": ["Węzły POP", "Kontenery techniczne", "Podłogi podniesione", "Korytowanie"]
       },
@@ -183,7 +182,6 @@
     "ctaPrimary": "Skontaktuj się z nami",
     "ctaSecondary": "Poznaj nasze usługi",
     "status": "STATUS SYSTEMU: AKTYWNY",
-    "systemCode": "EMIN_INFRA_2026",
     "features": {
       "containersTitle": "OBIEKTY I KONTENERY TECHNOLOGICZNE",
       "containersDesc": "Wykonawstwo, adaptacje i okresowe przeglądy",
@@ -199,7 +197,7 @@
     "credoQuote": "Dla nas nie ma rzeczy niemożliwych.",
     "credoSub": "Są tylko wyzwania inżynieryjne, które wymagają wiedzy, determinacji i bezkompromisowej precyzji.",
     "p1": "Eminstall to rodzinna firma inżynieryjna oparta na solidnym rzemiośle, wieloletnim doświadczeniu i bezkompromisowej jakości. Specjalizujemy się w zaawansowanych instalacjach elektrycznych, prefabrykacji szaf rozdzielczych nN, zasilaniu gwarantowanym AC/DC oraz wentylacji i klimatyzacji precyzyjnej dla przemysłu i obiektów o krytycznym znaczeniu operacyjnym.",
-    "p2": "Naszym fundamentem jest punktualność, odpowiedzialność i skuteczność – rygorystycznie dotrzymujemy harmonogramów i bierzemy pełną osobistą odpowiedzialność za powierzone obiekty. Stawiamy na bezpośrednią komunikację z klientem na każdym etapie prac, zapewniając stały nadzór inżyniera prowadzącego oraz kompletne, certyfikowane protokoły pomiarowe i odbiorcze.",
+    "p2": "Naszym fundamentem jest punktualność, odpowiedzialność i skuteczność – rygorystycznie dotrzymujemy harmonogramów i bierzemy pełną osobistą odpowiedzialność za powierzone obiekty. Stawiamy na bezpośrednią komunikację z klientem na każdym etapie prac, zapewniając stały nadzór inżyniera prowadzącego oraz kompletne protokoły pomiarowe i odbiorcze.",
     "precision": "Inżynieryjna precyzja",
     "precisionDesc": "Dbamy o każdy milimetr instalacji, eliminując ryzyko awarii zanim się pojawi.",
     "safety": "Bezpieczeństwo i pewność",
@@ -290,8 +288,8 @@
     "companyAddressLabel": "Adres rejestrowy",
     "nip": "NIP",
     "regon": "REGON",
-    "credentialLicensing": "Pełne uprawnienia eksploatacyjne SEP",
-    "credentialPartners": "Autoryzacja wiodących producentów (Hager, Vertiv)",
+    "credentialLicensing": "Pełne uprawnienia SEP i F-Gaz",
+    "credentialPartners": "Obsługa wiodących producentów (Hager, Vertiv, Delta, Eltek, Fujitsu, Mitsubishi Heavy Industries, Toshiba)",
     "credentialSla": "Gwarancja ciągłości pracy systemów (SLA)",
     "operationalScope": "PL / DE (Polska & Deutschland)"
   },
