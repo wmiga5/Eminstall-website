@@ -41,5 +41,6 @@ yarn-error.log*
 Strona*/
 notatki.txt
 drive-download-*/
+Systemy-zasilania-gwarantowanego/
 dist-ssr/
 scripts/process_*.py

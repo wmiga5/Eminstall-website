@@ -14,6 +14,10 @@ import { WorkScopeItemData } from './types';
 // WebP Image imports (full resolution for modal & lightbox)
 import silowniaDcImg from '../../assets/images/silownia-dc-baterie-marathon.webp';
 import silowniaDcThumb from '../../assets/images/silownia-dc-baterie-marathon-thumb.webp';
+import silowniaDcEltekImg from '../../assets/images/silownia-dc-eltek-baterie-fiamm-12fit.webp';
+import przemyslowaSilowniaTelzasImg from '../../assets/images/przemyslowa-silownia-dc-telzas-prostowniki-rozdzielnica.webp';
+import szafaTerenowaTelzasImg from '../../assets/images/szafa-terenowa-zasilania-dc-telzas-baterie-marathon.webp';
+import rozdzielnicaDcBezpiecznikiImg from '../../assets/images/rozdzielnica-pradu-stalego-dc-rozlaczniki-bezpiecznikowe.webp';
 import batteryRackImg from '../../assets/images/battery_rack_1783491532019.webp';
 import wiezaImg from '../../assets/images/zasilanie-stacja-bazowa-wieza.webp';
 import wiezowaRozdzielnicaImg from '../../assets/images/zasilanie-wiezowe-rozdzielnica-terenowa.webp';
@@ -113,6 +117,10 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     imagePosition: 'object-center',
     gallery: [
       silowniaDcImg,
+      silowniaDcEltekImg,
+      przemyslowaSilowniaTelzasImg,
+      rozdzielnicaDcBezpiecznikiImg,
+      szafaTerenowaTelzasImg,
       batteryRackImg,
       protokolBaterieImg,
       wiezowaRozdzielnicaImg,
@@ -208,7 +216,6 @@ export const WORK_SCOPE_ITEMS: WorkScopeItemData[] = [
     imagePosition: 'object-[center_20%]',
     gallery: [
       rozdzielniaHagerImg,
-      przegladSzafyMccbImg,
       prefabrykacjaSzafyKasetaImg,
       protokolPomiaryImg
     ],
