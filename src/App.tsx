@@ -19,7 +19,7 @@ import {
   Check,
   ShieldCheck
 } from 'lucide-react';
-import { TRANSLATIONS, COMPANY_DATA, Language } from './data';
+import { TRANSLATIONS, COMPANY_DATA, Language, getCompanyPhone } from './data';
 import { WorkScopeSection } from './components/WorkScope';
 import { parsePath, getHomeUrl, getServiceUrl, getRouteSeo } from './routes';
 
@@ -42,6 +42,7 @@ export default function App({ initialUrl }: AppProps = {}) {
   const [selectedItemId, setSelectedItemId] = useState<string | null>(parsedInitial.serviceId);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const t = TRANSLATIONS[lang];
+  const phone = getCompanyPhone(lang);
 
   // Synchronize on browser history popstate (back / forward)
   useEffect(() => {
@@ -266,12 +267,12 @@ export default function App({ initialUrl }: AppProps = {}) {
 
             {/* Quick Contact phone header */}
             <a
-              href={`tel:${COMPANY_DATA.contact.phone.raw}`}
+              href={`tel:${phone.raw}`}
               className="inline-flex items-center justify-center rounded-lg bg-slate-900 hover:bg-orange-700 px-4 py-2 text-sm font-semibold text-white transition-all cursor-pointer shadow-xs"
               id="header-phone-cta"
             >
               <Phone className="mr-2 h-3.5 w-3.5" />
-              {COMPANY_DATA.contact.phone.display}
+              {phone.display}
             </a>
           </div>
 
@@ -359,12 +360,12 @@ export default function App({ initialUrl }: AppProps = {}) {
 
             <div className="pt-4 border-t border-slate-100">
               <a
-                href={`tel:${COMPANY_DATA.contact.phone.raw}`}
+                href={`tel:${phone.raw}`}
                 className="flex items-center justify-center w-full rounded-lg bg-orange-700 py-3 text-center text-sm font-bold text-white shadow-xs hover:bg-orange-800 transition-all no-underline"
                 id="mobile-phone-cta"
               >
                 <Phone className="mr-2 h-4 w-4" />
-                {COMPANY_DATA.contact.phone.display}
+                {phone.display}
               </a>
             </div>
           </div>
@@ -587,7 +588,7 @@ export default function App({ initialUrl }: AppProps = {}) {
               {/* Channel: Phone */}
               <motion.a 
                 whileHover={{ scale: 1.01 }}
-                href={`tel:${COMPANY_DATA.contact.phone.raw}`} 
+                href={`tel:${phone.raw}`} 
                 className="flex flex-col justify-between p-6 rounded-2xl border-2 border-slate-100 bg-white hover:border-orange-500/60 hover:shadow-md transition-all group shadow-sm"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-orange-500/10 text-orange-700 group-hover:bg-orange-500 group-hover:text-white transition-all mb-4">
@@ -595,7 +596,7 @@ export default function App({ initialUrl }: AppProps = {}) {
                 </div>
                 <div>
                   <span className="block text-xs text-slate-500 font-medium font-mono uppercase tracking-wider">{t.contact.infoPhone}</span>
-                  <span className="block text-xl font-bold text-slate-900 mt-1 group-hover:text-orange-700 transition-colors">{COMPANY_DATA.contact.phone.display}</span>
+                  <span className="block text-xl font-bold text-slate-900 mt-1 group-hover:text-orange-700 transition-colors">{phone.display}</span>
                   <p className="text-xs text-slate-500 mt-2 font-light">
                     {t.contact.phonePrompt}
                   </p>

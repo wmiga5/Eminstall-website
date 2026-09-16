@@ -38,6 +38,8 @@ yarn-error.log*
 *.zip
 *.rar
 *.7z
+*.exe
+*.pdf
 Strona*/
 notatki.txt
 drive-download-*/

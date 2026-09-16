@@ -47,6 +47,7 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
 
   const [currentPosition, setCurrentPosition] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
+  const [hoverSide, setHoverSide] = useState<'left' | 'right' | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
   const isScrollingRef = useRef(false);
   const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -186,47 +187,108 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
           </p>
         </div>
 
-        {/* Horizontal Carousel Slider Track (Phone: 1 centered card, Tablet: 2 cards, Desktop: 3 cards) */}
+        {/* Horizontal Carousel Container with Edge-Hover Navigation (Desktop/Tablet) */}
         <div 
-          ref={sliderRef}
-          onScroll={handleScroll}
-          className="flex gap-4 sm:gap-6 lg:gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth pb-6 pt-2 px-[7vw] sm:px-6 lg:px-0 -mx-4 sm:-mx-6 lg:mx-0"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          className="relative group/carousel"
+          onMouseMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const width = rect.width;
+            const threshold = Math.min(220, width * 0.22);
+            if (x <= threshold) {
+              setHoverSide('left');
+            } else if (x >= width - threshold) {
+              setHoverSide('right');
+            } else {
+              setHoverSide(null);
+            }
+          }}
+          onMouseLeave={() => setHoverSide(null)}
         >
-          {WORK_SCOPE_ITEMS.map((item) => {
-            const itemTrans = translation.items[item.id] || {
-              badge: 'Inżynieria',
-              title: item.id,
-              shortDesc: '',
-              fullDesc: '',
-              scopeList: []
-            };
+          {/* Subtle edge gradient cues (pointer-events-none, purely visual depth) */}
+          <div 
+            className={`hidden sm:block pointer-events-none absolute left-0 top-0 bottom-6 w-28 bg-gradient-to-r from-slate-950/45 to-transparent z-10 transition-opacity duration-300 ${
+              hoverSide === 'left' ? 'opacity-100' : 'opacity-0'
+            }`} 
+          />
+          <div 
+            className={`hidden sm:block pointer-events-none absolute right-0 top-0 bottom-6 w-28 bg-gradient-to-l from-slate-950/45 to-transparent z-10 transition-opacity duration-300 ${
+              hoverSide === 'right' ? 'opacity-100' : 'opacity-0'
+            }`} 
+          />
 
-            return (
-              <div 
-                key={item.id} 
-                className="work-scope-card-wrapper w-[86vw] max-w-[360px] sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] flex-shrink-0 snap-center sm:snap-start"
-              >
-                <WorkScopeCard
-                  item={item}
-                  translation={itemTrans}
-                  sectionTranslation={translation}
-                  href={getServiceUrl(item.id, currentLang)}
-                  onClick={() => handleSelect(item.id)}
-                />
-              </div>
-            );
-          })}
+          {/* Edge Floating Prev Arrow (Desktop & Tablet) */}
+          <div className="hidden sm:flex absolute left-2 sm:left-4 lg:left-5 top-1/2 -translate-y-1/2 z-20">
+            <button
+              type="button"
+              onClick={handlePrev}
+              onMouseEnter={() => setHoverSide('left')}
+              className={`flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border-2 border-slate-600/80 bg-slate-900/90 hover:bg-orange-500 hover:border-orange-500 text-white shadow-2xl shadow-black/60 backdrop-blur-md transition-all duration-300 cursor-pointer active:scale-95 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:opacity-100 focus-visible:pointer-events-auto group/btn ${
+                hoverSide === 'left' ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none'
+              }`}
+              aria-label={translation.prevCard}
+            >
+              <ChevronLeft className="h-6 w-6 sm:h-7 sm:w-7 transition-transform group-hover/btn:-translate-x-0.5" />
+            </button>
+          </div>
+
+          {/* Horizontal Carousel Slider Track (Phone: 1 centered card, Tablet: 2 cards, Desktop: 3 cards) */}
+          <div 
+            ref={sliderRef}
+            onScroll={handleScroll}
+            className="flex gap-4 sm:gap-6 lg:gap-6 overflow-x-auto scrollbar-none snap-x snap-mandatory scroll-smooth pb-6 pt-2 px-[7vw] sm:px-6 lg:px-0 -mx-4 sm:-mx-6 lg:mx-0"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {WORK_SCOPE_ITEMS.map((item) => {
+              const itemTrans = translation.items[item.id] || {
+                badge: 'Inżynieria',
+                title: item.id,
+                shortDesc: '',
+                fullDesc: '',
+                scopeList: []
+              };
+
+              return (
+                <div 
+                  key={item.id} 
+                  className="work-scope-card-wrapper w-[86vw] max-w-[360px] sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] flex-shrink-0 snap-center sm:snap-start"
+                >
+                  <WorkScopeCard
+                    item={item}
+                    translation={itemTrans}
+                    sectionTranslation={translation}
+                    href={getServiceUrl(item.id, currentLang)}
+                    onClick={() => handleSelect(item.id)}
+                  />
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Edge Floating Next Arrow (Desktop & Tablet) */}
+          <div className="hidden sm:flex absolute right-2 sm:right-4 lg:right-5 top-1/2 -translate-y-1/2 z-20">
+            <button
+              type="button"
+              onClick={handleNext}
+              onMouseEnter={() => setHoverSide('right')}
+              className={`flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border-2 border-slate-600/80 bg-slate-900/90 hover:bg-orange-500 hover:border-orange-500 text-white shadow-2xl shadow-black/60 backdrop-blur-md transition-all duration-300 cursor-pointer active:scale-95 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:opacity-100 focus-visible:pointer-events-auto group/btn ${
+                hoverSide === 'right' ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none'
+              }`}
+              aria-label={translation.nextCard}
+            >
+              <ChevronRight className="h-6 w-6 sm:h-7 sm:w-7 transition-transform group-hover/btn:translate-x-0.5" />
+            </button>
+          </div>
         </div>
 
-        {/* Bottom Interactive Navigation: [Prev Button] [Pill Indicators] [Next Button] */}
-        <div className="flex items-center justify-center gap-3 sm:gap-5 mt-8 sm:mt-10">
+        {/* Bottom Interactive Navigation: [Prev Button (phone only)] [Pill Indicators] [Next Button (phone only)] */}
+        <div className="flex items-center justify-center gap-3 sm:gap-5 mt-6 sm:mt-8">
           <button
             onClick={handlePrev}
-            className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-2xl border-2 border-slate-700 bg-slate-800 text-white shadow-lg transition-all hover:bg-orange-500 hover:border-orange-500 active:scale-95 cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
+            className="flex sm:hidden h-11 w-11 items-center justify-center rounded-2xl border-2 border-slate-700 bg-slate-800 text-white shadow-lg transition-all hover:bg-orange-500 hover:border-orange-500 active:scale-95 cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
             aria-label={translation.prevCard}
           >
-            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+            <ChevronLeft className="h-5 w-5" />
           </button>
 
           {/* Indicators Capsule: Dokładnie tyle kropek, ile jest realnych pozycji */}
@@ -251,10 +313,10 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
 
           <button
             onClick={handleNext}
-            className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-2xl border-2 border-slate-700 bg-slate-800 text-white shadow-lg transition-all hover:bg-orange-500 hover:border-orange-500 active:scale-95 cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
+            className="flex sm:hidden h-11 w-11 items-center justify-center rounded-2xl border-2 border-slate-700 bg-slate-800 text-white shadow-lg transition-all hover:bg-orange-500 hover:border-orange-500 active:scale-95 cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
             aria-label={translation.nextCard}
           >
-            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+            <ChevronRight className="h-5 w-5" />
           </button>
         </div>
 

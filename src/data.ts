@@ -15,3 +15,15 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
 
 export type CompanyData = typeof company;
 export const COMPANY_DATA: CompanyData = company;
+
+export interface PhoneContact {
+  display: string;
+  raw: string;
+}
+
+export const getCompanyPhone = (lang: Language = 'PL'): PhoneContact => {
+  if (lang === 'EN' || lang === 'DE') {
+    return COMPANY_DATA.contact.phoneIntl;
+  }
+  return COMPANY_DATA.contact.phone;
+};

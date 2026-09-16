@@ -1,4 +1,4 @@
-import { Language, TRANSLATIONS, COMPANY_DATA } from './data';
+import { Language, TRANSLATIONS, COMPANY_DATA, getCompanyPhone } from './data';
 
 export interface ServiceRouteConfig {
   id: string;
@@ -254,7 +254,7 @@ export function getRouteSeo(pathname: string): RouteSeoMetadata {
       alternateName: 'Eminstall',
       image: 'https://lh3.googleusercontent.com/pw/AP1GczNjDSsoC8JYlTw_s0i_cSsTsDtu6LNoIkz2gkXShhi8MdvZ8Jv6fRImOQxF0g7l3b3GOmxKcf6jV7lqXUNs57x9FPfbFvOuLpvyDx-kVvemFaLCr0k=w1000',
       url: canonical,
-      telephone: COMPANY_DATA.contact.phone.raw,
+      telephone: getCompanyPhone(lang).raw,
       priceRange: '$$',
       email: COMPANY_DATA.contact.email,
       address: {
@@ -336,7 +336,7 @@ export function getRouteSeo(pathname: string): RouteSeoMetadata {
     provider: {
       '@type': ['LocalBusiness', 'ProfessionalService'],
       name: COMPANY_DATA.name,
-      telephone: COMPANY_DATA.contact.phone.raw,
+      telephone: getCompanyPhone(lang).raw,
       url: BASE_URL,
     },
     areaServed: [
