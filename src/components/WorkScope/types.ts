@@ -46,5 +46,6 @@ export interface WorkScopeSectionTranslation {
   closeZoom?: string;
   zoomIn?: string;
   zoomOut?: string;
+  otherServicesTitle?: string;
   items: Record<string, WorkScopeItemTranslation>;
 }

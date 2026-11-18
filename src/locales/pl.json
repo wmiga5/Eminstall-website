@@ -44,6 +44,7 @@
     "nextPhoto": "Następne zdjęcie",
     "zoomPhoto": "Pełny ekran",
     "closeZoom": "Zamknij",
+    "otherServicesTitle": "Pozostałe usługi i realizacje",
     "items": {
       "battery-diagnostics": {
         "badge": "Diagnostyka & Testy Pojemnościowe",
@@ -295,6 +296,8 @@
   },
   "footer": {
     "copyright": "Eminstall",
-    "rights": "Wszelkie prawa zastrzeżone."
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "servicesHeading": "Zakres usług",
+    "languagesHeading": "Wersje językowe"
   }
 }

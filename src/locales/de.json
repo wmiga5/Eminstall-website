@@ -44,6 +44,7 @@
     "nextPhoto": "Nächstes Foto",
     "zoomPhoto": "Vollbild",
     "closeZoom": "Schließen",
+    "otherServicesTitle": "Weitere Leistungen & Referenzen",
     "items": {
       "battery-diagnostics": {
         "badge": "Diagnostik & Kapazitätstests",
@@ -295,6 +296,8 @@
   },
   "footer": {
     "copyright": "Eminstall",
-    "rights": "Alle Rechte vorbehalten."
+    "rights": "Alle Rechte vorbehalten.",
+    "servicesHeading": "Leistungen",
+    "languagesHeading": "Sprachen"
   }
 }

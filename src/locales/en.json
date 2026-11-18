@@ -44,6 +44,7 @@
     "nextPhoto": "Next photo",
     "zoomPhoto": "Full screen",
     "closeZoom": "Close",
+    "otherServicesTitle": "Other services & projects",
     "items": {
       "battery-diagnostics": {
         "badge": "Diagnostics & Capacity Testing",
@@ -295,6 +296,8 @@
   },
   "footer": {
     "copyright": "Eminstall",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "servicesHeading": "Services",
+    "languagesHeading": "Languages"
   }
 }

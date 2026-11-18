@@ -20,7 +20,7 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import { TRANSLATIONS, COMPANY_DATA, Language, getCompanyPhone } from './data';
-import { WorkScopeSection } from './components/WorkScope';
+import { WorkScopeSection, WORK_SCOPE_ITEMS } from './components/WorkScope';
 import { parsePath, getHomeUrl, getServiceUrl, getRouteSeo } from './routes';
 
 import logoSvg from './assets/Logo/eminstall-logo.svg';
@@ -381,7 +381,7 @@ export default function App({ initialUrl }: AppProps = {}) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content */}
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="lg:col-span-7 space-y-6 md:space-y-8 text-center lg:text-left"
@@ -393,10 +393,16 @@ export default function App({ initialUrl }: AppProps = {}) {
                 <span>{t.hero.badge}</span>
               </div>
 
-              {/* Title */}
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1]">
-                {t.hero.title}
-              </h1>
+              {/* Title (demote to h2 when a dedicated service page modal provides the primary h1) */}
+              {selectedItemId ? (
+                <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1]">
+                  {t.hero.title}
+                </h2>
+              ) : (
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1]">
+                  {t.hero.title}
+                </h1>
+              )}
 
               {/* Subtitle */}
               <p className="mx-auto lg:mx-0 max-w-2xl text-lg text-slate-600 font-light leading-relaxed">
@@ -425,7 +431,7 @@ export default function App({ initialUrl }: AppProps = {}) {
 
             {/* Right Schematic / Visual Display (Hidden on mobile) */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={false}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="hidden lg:block lg:col-span-5 relative"
@@ -704,19 +710,21 @@ export default function App({ initialUrl }: AppProps = {}) {
       </main>
 
       {/* MINIMAL HIGH-CONTRAST FOOTER */}
-      <footer className="border-t border-slate-800 bg-slate-900 py-6 md:py-8 text-slate-400">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <footer className="border-t border-slate-800 bg-slate-900 py-8 md:py-10 text-slate-400">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             
             {/* Branding */}
             <a
               href={getHomeUrl(lang)}
               onClick={(e) => {
-                e.preventDefault();
-                if (selectedItemId) {
-                  handleCloseService();
+                if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                  e.preventDefault();
+                  if (selectedItemId) {
+                    handleCloseService();
+                  }
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
-                window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="flex items-center text-left focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg cursor-pointer group"
               aria-label={t.accessibility.logoAria}
@@ -743,6 +751,63 @@ export default function App({ initialUrl }: AppProps = {}) {
             <div className="text-xs text-slate-400 text-center md:text-right">
               &copy; {new Date().getFullYear()} {COMPANY_DATA.shortName}. {t.footer.rights}
             </div>
+          </div>
+
+          {/* Direct HTML Service & Language Links for Crawlability and Quick Access */}
+          <div className="pt-6 border-t border-slate-800/80 flex flex-col lg:flex-row lg:items-start justify-between gap-6 text-xs">
+            <nav aria-label={t.footer.servicesHeading} className="space-y-2.5">
+              <span className="block font-mono uppercase tracking-widest text-slate-500 font-semibold">
+                {t.footer.servicesHeading}
+              </span>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-2">
+                {WORK_SCOPE_ITEMS.map((service) => {
+                  const serviceTrans = t.workScope.items[service.id as keyof typeof t.workScope.items];
+                  if (!serviceTrans) return null;
+                  return (
+                    <li key={service.id}>
+                      <a
+                        href={getServiceUrl(service.id, lang)}
+                        onClick={(e) => {
+                          if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                            e.preventDefault();
+                            handleOpenService(service.id);
+                          }
+                        }}
+                        className="text-slate-300 hover:text-orange-400 transition-colors no-underline"
+                      >
+                        {serviceTrans.title}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+
+            <nav aria-label={t.footer.languagesHeading} className="space-y-2.5 shrink-0">
+              <span className="block font-mono uppercase tracking-widest text-slate-500 font-semibold">
+                {t.footer.languagesHeading}
+              </span>
+              <ul className="flex items-center gap-4">
+                {(['PL', 'EN', 'DE'] as Language[]).map((l) => (
+                  <li key={l}>
+                    <a
+                      href={selectedItemId ? getServiceUrl(selectedItemId, l) : getHomeUrl(l)}
+                      onClick={(e) => {
+                        if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                          e.preventDefault();
+                          handleSwitchLang(l);
+                        }
+                      }}
+                      className={`transition-colors no-underline ${
+                        lang === l ? 'text-orange-400 font-semibold' : 'text-slate-300 hover:text-orange-400'
+                      }`}
+                    >
+                      {l === 'PL' ? 'Polski' : l === 'EN' ? 'English' : 'Deutsch'}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </div>
       </footer>

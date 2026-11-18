@@ -13,11 +13,16 @@ import {
 } from 'lucide-react';
 import { WorkScopeItemData, WorkScopeItemTranslation, WorkScopeSectionTranslation } from './types';
 import { ImagePlaceholder } from './ImagePlaceholder';
+import { WORK_SCOPE_ITEMS } from './workScopeData';
+import { getHomeUrl, getServiceUrl } from '../../routes';
+import { Language } from '../../data';
 
 interface WorkScopeModalProps {
   item: WorkScopeItemData;
   translation: WorkScopeItemTranslation;
   sectionTranslation: WorkScopeSectionTranslation;
+  lang?: Language;
+  onSelectItem?: (id: string) => void;
   onClose: () => void;
   onContactClick: () => void;
 }
@@ -41,12 +46,20 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
   item,
   translation,
   sectionTranslation,
+  lang = 'PL' as Language,
+  onSelectItem,
   onClose,
   onContactClick
 }) => {
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+  useEffect(() => {
+    setActivePhotoIndex(0);
+    setSlideDirection(0);
+    setIsLightboxOpen(false);
+  }, [item.id]);
 
   const photos = item.gallery.length > 0 ? item.gallery : (item.mainImage ? [item.mainImage] : []);
   const hasPhotos = photos.length > 0;
@@ -116,19 +129,25 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
               <span className="text-xs font-mono uppercase tracking-widest text-orange-700 font-bold block">
                 {translation.badge}
               </span>
-              <h3 id="workscope-modal-title" className="font-display font-bold text-slate-900 text-base sm:text-lg line-clamp-1">
+              <h1 id="workscope-modal-title" className="font-display font-bold text-slate-900 text-base sm:text-lg line-clamp-1">
                 {translation.title}
-              </h3>
+              </h1>
             </div>
           </div>
 
-          <button
-            onClick={onClose}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-orange-700 hover:text-white transition-all cursor-pointer shadow-xs focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500"
+          <a
+            href={getHomeUrl(lang)}
+            onClick={(e) => {
+              if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                e.preventDefault();
+                onClose();
+              }
+            }}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-orange-700 hover:text-white transition-all cursor-pointer shadow-xs focus:outline-hidden focus-visible:ring-2 focus-visible:ring-orange-500 no-underline"
             aria-label={sectionTranslation.closeDetails}
           >
             <X className="h-5 w-5" />
-          </button>
+          </a>
         </div>
 
         {/* Modal Body: on mobile whole body scrolls; on desktop right side scrolls independently */}
@@ -346,6 +365,38 @@ export const WorkScopeModal: React.FC<WorkScopeModalProps> = ({
                   </button>
                 </div>
               </div>
+
+              {/* Internal cross-links to other services */}
+              <nav
+                aria-label={sectionTranslation.otherServicesTitle || 'Pozostałe usługi'}
+                className="pt-4 border-t border-slate-100 space-y-2.5"
+              >
+                <h4 className="text-xs font-mono uppercase tracking-widest text-slate-500 font-bold">
+                  {sectionTranslation.otherServicesTitle || 'Pozostałe usługi i realizacje'}
+                </h4>
+                <ul className="flex flex-wrap gap-2">
+                  {WORK_SCOPE_ITEMS.filter((other) => other.id !== item.id).map((other) => {
+                    const otherTrans = sectionTranslation.items[other.id];
+                    if (!otherTrans) return null;
+                    return (
+                      <li key={other.id}>
+                        <a
+                          href={getServiceUrl(other.id, lang)}
+                          onClick={(e) => {
+                            if (onSelectItem && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                              e.preventDefault();
+                              onSelectItem(other.id);
+                            }
+                          }}
+                          className="inline-flex items-center px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-50 text-slate-700 hover:bg-orange-50 hover:text-orange-700 border border-slate-200/80 hover:border-orange-200 transition-colors no-underline"
+                        >
+                          {otherTrans.title}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
 
             </div>
 

@@ -323,12 +323,15 @@ export const WorkScopeSection: React.FC<WorkScopeSectionProps> = ({
       </div>
 
       {/* Expanded Modal View */}
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {selectedItem && selectedTranslation && (
           <WorkScopeModal
+            key={selectedItem.id}
             item={selectedItem}
             translation={selectedTranslation}
             sectionTranslation={translation}
+            lang={currentLang}
+            onSelectItem={handleSelect}
             onClose={handleClose}
             onContactClick={onContactClick}
           />

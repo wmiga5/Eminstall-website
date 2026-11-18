@@ -127,6 +127,12 @@ export const HOME_PATHS: Record<Language, string> = {
 
 export const BASE_URL = 'https://eminstall.pl';
 
+export const HOME_SEO_KEYWORDS: Record<Language, string> = {
+  PL: 'klimatyzacja szczecinek, klimatyzacje zachodniopomorskie, pomiary elektryczne sep, montaż klimatyzacji szczecinek, prefabrykacja rozdzielnic, szafy elektryczne, zasilanie gwarantowane ups, siłownie dc, rozładowania baterii, freecooling, eminstall tomasz miga',
+  EN: 'precision air conditioning poland, freecooling systems, electrical switchboard prefabrication, electrical measurements sep, ups backup power systems, 48v dc power plants, battery capacity testing, facility maintenance poland germany, eminstall',
+  DE: 'präzisionsklimaanlagen polen deutschland, freecooling lüftungssysteme, schaltschrankbau niederspannung, elektroprüfungen, usv notstromtechnik, dc stromversorgungsanlagen 48v, batterie entladetest kapazitätsprüfung, facility management, eminstall',
+};
+
 export function getHomeUrl(lang: Language): string {
   return HOME_PATHS[lang];
 }
@@ -144,10 +150,13 @@ export interface ParsedRoute {
 }
 
 export function parsePath(rawPathname: string): ParsedRoute {
-  // Normalize pathname (remove trailing slashes except root)
-  const pathname = rawPathname.length > 1 && rawPathname.endsWith('/')
-    ? rawPathname.slice(0, -1)
+  // Normalize pathname (strip optional .html suffix and trailing slashes except root)
+  let pathname = rawPathname.endsWith('.html')
+    ? rawPathname.slice(0, -5)
     : rawPathname;
+  pathname = pathname.length > 1 && pathname.endsWith('/')
+    ? pathname.slice(0, -1)
+    : pathname;
 
   if (pathname === '' || pathname === '/') {
     return { lang: 'PL', serviceId: null, isValid: true };
@@ -284,7 +293,7 @@ export function getRouteSeo(pathname: string): RouteSeoMetadata {
     return {
       title: t.seo.title,
       description: t.seo.description,
-      keywords: 'klimatyzacja szczecinek, klimatyzacje zachodniopomorskie, pomiary elektryczne sep, montaż klimatyzacji szczecinek, prefabrykacja rozdzielnic, szafy elektryczne, zasilanie gwarantowane ups, siłownie dc, eminstall tomasz miga',
+      keywords: HOME_SEO_KEYWORDS[lang],
       canonical,
       hreflangs,
       lang,
@@ -337,7 +346,7 @@ export function getRouteSeo(pathname: string): RouteSeoMetadata {
       '@type': ['LocalBusiness', 'ProfessionalService'],
       name: COMPANY_DATA.name,
       telephone: getCompanyPhone(lang).raw,
-      url: BASE_URL,
+      url: `${BASE_URL}${getHomeUrl(lang)}`,
     },
     areaServed: [
       { '@type': 'Country', name: 'Polska' },

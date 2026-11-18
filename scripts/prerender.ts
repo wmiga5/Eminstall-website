@@ -85,17 +85,22 @@ async function prerender() {
     // Inject rendered HTML into root container
     pageHtml = pageHtml.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
 
-    // Determine output file path
+    // Determine output file path:
+    // - Directory routes ending with '/' (e.g. '/', '/en/', '/de/') map to .../index.html
+    // - Extensionless service routes (e.g. '/uslugi/slug') map to .../slug.html
+    //   so Cloudflare Static Assets (auto-trailing-slash) serves them with HTTP 200 directly without a 307 redirect.
     let outputPath: string;
     if (route === '/' || route === '') {
       outputPath = path.resolve(distDir, 'index.html');
+    } else if (route.endsWith('/')) {
+      const cleanPath = route.slice(1, -1);
+      const targetSubdir = path.resolve(distDir, cleanPath);
+      fs.mkdirSync(targetSubdir, { recursive: true });
+      outputPath = path.resolve(targetSubdir, 'index.html');
     } else {
       const cleanPath = route.startsWith('/') ? route.slice(1) : route;
-      const targetSubdir = path.resolve(distDir, cleanPath);
-      if (!fs.existsSync(targetSubdir)) {
-        fs.mkdirSync(targetSubdir, { recursive: true });
-      }
-      outputPath = path.resolve(targetSubdir, 'index.html');
+      outputPath = path.resolve(distDir, `${cleanPath}.html`);
+      fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     }
 
     fs.writeFileSync(outputPath, pageHtml, 'utf-8');
@@ -136,7 +141,7 @@ async function prerender() {
   console.log('  ✓ Generated dist/sitemap.xml with', routes.length, 'URLs');
 
   // Copy static root files to dist if not already there
-  const filesToCopy = ['robots.txt', '404.html', '_redirects', 'favicon.svg', 'favicon.ico', 'site.webmanifest', 'manifest.json'];
+  const filesToCopy = ['robots.txt', '404.html', '_redirects', '_headers', 'favicon.svg', 'favicon.ico', 'site.webmanifest', 'manifest.json'];
   for (const file of filesToCopy) {
     const src = path.resolve(rootDir, 'public', file);
     if (fs.existsSync(src)) {
